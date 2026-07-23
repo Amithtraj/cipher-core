@@ -21,6 +21,7 @@ OVERRIDE_FEATURE_DEFAULT_STATES({{
     {kNtpDriveModule, base::FEATURE_DISABLED_BY_DEFAULT},
     {kNtpDriveModuleLink, base::FEATURE_DISABLED_BY_DEFAULT},
     {kNtpModulesMaxColumnCount, base::FEATURE_DISABLED_BY_DEFAULT},
+    {kNtpSimplificationBookmarkBar, base::FEATURE_ENABLED_BY_DEFAULT},
 }});
 
 }  // namespace ntp_features
