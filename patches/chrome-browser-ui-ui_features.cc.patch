@@ -1,5 +1,5 @@
 diff --git a/chrome/browser/ui/ui_features.cc b/chrome/browser/ui/ui_features.cc
-index b41ed22c0ab92738b1b1fc52347e58cc047e55b6..7cf6a4a49bd46bf4355cd2a0dc589da8ca1b5d0d 100644
+index fda722e1fed5adfb6236220a582e178e0939bc31..7b9de455697012d5165759c0bec5b703222657fc 100644
 --- a/chrome/browser/ui/ui_features.cc
 +++ b/chrome/browser/ui/ui_features.cc
 @@ -106,7 +106,8 @@ bool IsWebuiRefresh2026Enabled() {
@@ -20,9 +20,9 @@ index b41ed22c0ab92738b1b1fc52347e58cc047e55b6..7cf6a4a49bd46bf4355cd2a0dc589da8
 +// kPdfInfoBar feature state is enforced via plaster rewrite.
 +BASE_FEATURE(kPdfInfoBar, base::FEATURE_DISABLED_BY_DEFAULT);
  
- BASE_FEATURE(kSeparateDefaultAndPinPrompt, base::FEATURE_DISABLED_BY_DEFAULT);
- BASE_FEATURE_PARAM(int,
-@@ -246,13 +248,9 @@ bool IsTabGroupHoverCardsEnabled() {
+ BASE_FEATURE(kSeparateDefaultAndPinPrompt,
+ #if BUILDFLAG(IS_WIN)
+@@ -234,13 +236,9 @@ bool IsTabGroupHoverCardsEnabled() {
  
  // Enables preview images in tab-hover cards.
  // https://crbug.com/41439486
@@ -36,5 +36,5 @@ index b41ed22c0ab92738b1b1fc52347e58cc047e55b6..7cf6a4a49bd46bf4355cd2a0dc589da8
 -);
 +base::FEATURE_DISABLED_BY_DEFAULT);
  
- BASE_FEATURE(kTabStripNewTabButtonFlickerFix, base::FEATURE_ENABLED_BY_DEFAULT);
+ BASE_FEATURE(kTabModalUsesDesktopWidget, base::FEATURE_DISABLED_BY_DEFAULT);
  
