@@ -204,6 +204,13 @@ extern const base::FeatureParam<std::string> kAIChatConversationShareBaseUrl;
 COMPONENT_EXPORT(AI_CHAT_COMMON)
 BASE_DECLARE_FEATURE(kAIChatExportJSON);
 
+// Enables rendering LaTeX expressions in assistant responses as typeset math.
+// Kill switch: this changes how every assistant response is parsed, so it must
+// remain remotely disableable.
+// https://github.com/brave/brave-browser/issues/56523
+COMPONENT_EXPORT(AI_CHAT_COMMON)
+BASE_DECLARE_FEATURE(kAIChatMathRendering);
+
 }  // namespace ai_chat::features
 
 #endif  // BRAVE_COMPONENTS_AI_CHAT_CORE_COMMON_FEATURES_H_
