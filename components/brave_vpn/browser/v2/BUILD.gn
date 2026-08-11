@@ -24,7 +24,13 @@ static_library("browser") {
   if (is_android) {
     sources += [ "brave_vpn_service_impl_android.cc" ]
   } else if (is_linux || is_mac || is_win) {
-    sources += [ "brave_vpn_service_impl_desktop.cc" ]
+    sources += [
+      "agent_client.cc",
+      "agent_client.h",
+      "brave_vpn_service_impl_desktop.cc",
+      "browser_endpoint_impl.cc",
+      "browser_endpoint_impl.h",
+    ]
   }
 
   public_deps = [
@@ -34,6 +40,13 @@ static_library("browser") {
     "//brave/components/skus/common:mojom",
     "//mojo/public/cpp/bindings",
   ]
+  if (is_linux || is_mac || is_win) {
+    public_deps += [
+      "//brave/components/brave_vpn/common/mojom:agent",
+      "//mojo/public/cpp/platform",
+      "//net",
+    ]
+  }
 
   deps = [
     "api",
@@ -47,6 +60,36 @@ static_library("browser") {
     "//ui/base",
     "//url",
   ]
+  if (is_linux || is_mac || is_win) {
+    deps += [
+      "//brave/components/brave_vpn/common/v2:common",
+      "//components/named_mojo_ipc_server",
+      "//mojo/public/cpp/system",
+    ]
+  }
+}
+
+source_set("test_support") {
+  testonly = true
+
+  sources = []
+  public_deps = []
+
+  if (is_linux || is_mac || is_win) {
+    sources += [
+      "test/fake_agent.cc",
+      "test/fake_agent.h",
+    ]
+
+    public_deps = [
+      ":browser",
+      "//base",
+      "//brave/components/brave_vpn/common/mojom",
+      "//mojo/public/cpp/bindings",
+      "//mojo/public/cpp/platform",
+      "//mojo/public/cpp/system",
+    ]
+  }
 }
 
 source_set("unit_tests") {
@@ -62,8 +105,13 @@ source_set("unit_tests") {
     "skus_service_client_unittest.cc",
   ]
 
+  if (is_linux || is_mac || is_win) {
+    sources += [ "agent_client_unittest.cc" ]
+  }
+
   deps = [
     ":browser",
+    ":test_support",
     "api",
     "//base",
     "//base:i18n",

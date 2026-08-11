@@ -16,6 +16,10 @@
 #include "brave/components/brave_vpn/browser/v2/skus_service_client.h"
 #include "build/build_config.h"
 
+#if !BUILDFLAG(IS_ANDROID)
+#include "brave/components/brave_vpn/browser/v2/agent_client.h"
+#endif  // !BUILDFLAG(IS_ANDROID)
+
 namespace network {
 class SharedURLLoaderFactory;
 }  // namespace network
@@ -27,7 +31,12 @@ namespace brave_vpn::v2 {
 class BraveVpnApiClient;
 class PurchasedStateManager;
 
-class BraveVpnServiceImpl : public BraveVpnService {
+class BraveVpnServiceImpl : public BraveVpnService
+#if !BUILDFLAG(IS_ANDROID)
+    ,
+                            public AgentClient::Observer
+#endif  // !BUILDFLAG(IS_ANDROID)
+{
  public:
   BraveVpnServiceImpl(
       PrefService* local_prefs,
@@ -127,8 +136,20 @@ class BraveVpnServiceImpl : public BraveVpnService {
   // KeyedService overrides:
   void Shutdown() override;
 
-  // BraveVpnService overrides:
 #if !BUILDFLAG(IS_ANDROID)
+  // Brings the agent connection in line with |state|. The subscription is what
+  // decides whether this profile has any business holding a connection, so this
+  // is the one place that opens or drops one.
+  void UpdateAgentConnection(mojom::PurchasedState state);
+
+  // AgentClient::Observer overrides:
+  void OnAgentConnected() override;
+  void OnAgentDisconnected() override;
+  void OnAgentUnavailable(
+      std::optional<mojom::BrowserAuthResult> result) override;
+  void OnAgentNotRunning() override;
+
+  // BraveVpnService overrides:
   void SetConnectionStateForTesting(mojom::ConnectionState state) override;
   void SetPurchasedStateForTesting(const std::string& env,
                                    mojom::PurchasedState state) override;
@@ -140,7 +161,11 @@ class BraveVpnServiceImpl : public BraveVpnService {
   const raw_ref<PrefService> profile_prefs_;
   std::unique_ptr<BraveVpnApiClient> api_client_;
   std::unique_ptr<SkusServiceClient> skus_client_;
+#if !BUILDFLAG(IS_ANDROID)
+  std::unique_ptr<AgentClient> agent_client_;
+#endif  // !BUILDFLAG(IS_ANDROID)
   std::unique_ptr<PurchasedStateManager> purchased_state_manager_;
+
   [[maybe_unused]] mojom::ConnectionState connection_state_;
 };
 

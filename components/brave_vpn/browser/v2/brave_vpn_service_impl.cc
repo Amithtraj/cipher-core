@@ -20,6 +20,7 @@
 #include "brave/components/brave_vpn/browser/v2/purchased_state_manager.h"
 #include "brave/components/brave_vpn/browser/v2/skus_service_client.h"
 #include "brave/components/brave_vpn/common/brave_vpn_utils.h"
+#include "build/build_config.h"
 #include "services/network/public/cpp/shared_url_loader_factory.h"
 
 namespace brave_vpn::v2 {
@@ -36,6 +37,10 @@ BraveVpnServiceImpl::BraveVpnServiceImpl(
           std::make_unique<SkusServiceClient>(std::move(skus_service_getter))),
       connection_state_(mojom::ConnectionState::DISCONNECTED) {
   DCHECK(IsBraveVPNFeatureEnabled());
+#if !BUILDFLAG(IS_ANDROID)
+  agent_client_ = std::make_unique<AgentClient>();
+  agent_client_->AddObserver(this);
+#endif  // !BUILDFLAG(IS_ANDROID)
   purchased_state_manager_ = std::make_unique<PurchasedStateManager>(
       local_prefs, api_client_.get(), skus_client_.get(),
       base::BindRepeating(&BraveVpnServiceImpl::OnPurchasedStateChanged,
@@ -90,6 +95,12 @@ void BraveVpnServiceImpl::GetAllRegions(GetAllRegionsCallback callback) {
 }
 
 void BraveVpnServiceImpl::Shutdown() {
+#if !BUILDFLAG(IS_ANDROID)
+  if (agent_client_) {
+    agent_client_->RemoveObserver(this);
+    agent_client_.reset();
+  }
+#endif  // !BUILDFLAG(IS_ANDROID)
   purchased_state_manager_.reset();
   api_client_.reset();
   skus_client_->Reset();
@@ -100,12 +111,17 @@ void BraveVpnServiceImpl::OnPurchasedStateChanged(
     mojom::PurchasedState state,
     std::optional<std::string> description) {
   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
+
+#if !BUILDFLAG(IS_ANDROID)
+  UpdateAgentConnection(state);
+#endif  // !BUILDFLAG(IS_ANDROID)
+
   NotifyPurchasedStateChanged(state, description);
 
   // TODO: If purchased state changed to PURCHASED on desktop, we can attempt to
-  // install VPN apps, connect to the agent, etc. We also need to make sure
-  // agent gets connected and fetches the region data - BEFORE we actually send
-  // a notification to the UI.
+  // install VPN helper, etc. We also need to make sure the agent, once
+  // connected, fetches the region data - BEFORE we actually send a notification
+  // to the UI.
 }
 
 }  // namespace brave_vpn::v2

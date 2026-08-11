@@ -66,6 +66,21 @@ class BraveVpnServiceImplTest : public testing::Test {
 
   void ShutdownService() { service_->Shutdown(); }
 
+  void BlockVPNByPolicy(bool value) {
+    profile_pref_service_.SetManagedPref(prefs::kManagedBraveVPNDisabled,
+                                         base::Value(value));
+    EXPECT_EQ(brave_vpn::IsBraveVPNDisabledByPolicy(&profile_pref_service_),
+              value);
+  }
+
+#if !BUILDFLAG(IS_ANDROID)
+  void UpdateAgentConnection(mojom::PurchasedState state) {
+    service_->UpdateAgentConnection(state);
+  }
+
+  AgentClient* agent_client() { return service_->agent_client_.get(); }
+#endif  // !BUILDFLAG(IS_ANDROID)
+
  protected:
   base::test::TaskEnvironment task_environment_;
   base::test::ScopedFeatureList scoped_feature_list_;
@@ -124,6 +139,9 @@ TEST_F(BraveVpnServiceImplTest, SafeDefaultsAfterShutdown) {
     EXPECT_EQ(info->description, std::nullopt);
   }
 #if !BUILDFLAG(IS_ANDROID)
+  // The agent client is gone; the mapping must not dereference it.
+  UpdateAgentConnection(mojom::PurchasedState::PURCHASED);
+  UpdateAgentConnection(mojom::PurchasedState::NOT_PURCHASED);
   {
     base::test::TestFuture<bool, std::string> future;
     service_->CreateSupportTicket(
@@ -134,5 +152,39 @@ TEST_F(BraveVpnServiceImplTest, SafeDefaultsAfterShutdown) {
   }
 #endif  // !BUILDFLAG(IS_ANDROID)
 }
+
+#if !BUILDFLAG(IS_ANDROID)
+
+TEST_F(BraveVpnServiceImplTest, PurchasedStateDrivesAgentConnection) {
+  CreateService();
+  ASSERT_TRUE(agent_client());
+  ASSERT_EQ(agent_client()->state(), AgentClient::State::kDisconnected);
+
+  UpdateAgentConnection(mojom::PurchasedState::PURCHASED);
+  EXPECT_EQ(agent_client()->state(), AgentClient::State::kConnecting);
+
+  // The recoverable states leave a live connection alone: each can coexist with
+  // a running tunnel, and the person still has to be able to disconnect it.
+  for (const auto state :
+       {mojom::PurchasedState::LOADING, mojom::PurchasedState::SESSION_EXPIRED,
+        mojom::PurchasedState::FAILED,
+        mojom::PurchasedState::OUT_OF_CREDENTIALS}) {
+    UpdateAgentConnection(state);
+    EXPECT_EQ(agent_client()->state(), AgentClient::State::kConnecting)
+        << "dropped the connection on " << static_cast<int>(state);
+  }
+
+  UpdateAgentConnection(mojom::PurchasedState::NOT_PURCHASED);
+  EXPECT_EQ(agent_client()->state(), AgentClient::State::kDisconnected);
+}
+
+TEST_F(BraveVpnServiceImplTest, PolicyDisabledKeepsAgentDisconnected) {
+  BlockVPNByPolicy(true);
+  CreateService();
+  UpdateAgentConnection(mojom::PurchasedState::PURCHASED);
+  EXPECT_EQ(agent_client()->state(), AgentClient::State::kDisconnected);
+}
+
+#endif  // !BUILDFLAG(IS_ANDROID)
 
 }  // namespace brave_vpn::v2
