@@ -5,7 +5,7 @@
 
 #include "base/feature_override.h"
 
-#include <components/metrics/private_metrics/private_insights/private_insights_features.cc>
+#include <components/private_insights/private_insights_features.cc>
 
 namespace private_insights {
 

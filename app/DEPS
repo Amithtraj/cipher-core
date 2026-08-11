@@ -88,6 +88,7 @@ specific_include_rules = {
     "+components/metrics/private_metrics/private_metrics_features.h",
     "+components/passage_embeddings/core/passage_embeddings_features.h",
     "+components/personal_context/core/personal_context_features.h",
+    "+components/private_insights/private_insights_features.h",
     "+components/skills/features.h",
     "+extensions/common/extension_features.h",
     "+gpu/config/gpu_finch_features.h",
