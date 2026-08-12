@@ -1,0 +1,29 @@
+# Copyright (c) 2026 The Brave Authors. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+substitutions:
+  - description: |-
+      Give kNotStarted its own no-op case in downloadUpdated:.
+
+      kCancelled needs to notify the delegate that the download finished, so it
+      can no longer share the no-op fall-through with kNotStarted.
+    regex:
+      re_pattern: '(case web::DownloadTask::State::kNotStarted:)'
+      replace: |-
+        \1
+              break;
+
+  - description: |-
+      Report a cancelled download to the CWVDownloadTaskDelegate.
+
+      A cancelled task never transitions to kComplete and carries no error code,
+      so didFinishWithError: is never called. Notify explicitly with
+      net::ERR_ABORTED so the delegate learns of the cancellation.
+    regex:
+      re_pattern: '(kCancelled:\s*\{.*?)(\n\s*break;)'
+      re_flags: [DOTALL]
+      replace: |-
+        \1
+              [self notifyFinishWithErrorCode:net::ERR_ABORTED];\2
