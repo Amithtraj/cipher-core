@@ -5737,7 +5737,8 @@ TEST_F(ConversationHandlerUnitTest, PermissionChallenge) {
                     mojom::PermissionChallenge::New(
                         "Server determined this tool use "
                         "is off-topic",  // assessment
-                        std::nullopt),   // plan
+                        std::nullopt,    // plan
+                        std::nullopt),   // description
                     false);
                 callback.Run(EngineConsumer::GenerationResultData(
                     mojom::ConversationEntryEvent::NewToolUseEvent(
@@ -5851,8 +5852,9 @@ TEST_F(ConversationHandlerUnitTest, PermissionChallenge_ToolReturnsChallenge) {
       .WillByDefault([](const mojom::ToolUseEvent& tool_use) {
         return std::variant<bool, mojom::PermissionChallengePtr>(
             mojom::PermissionChallenge::New(
-                std::nullopt,                             // assessment
-                "This tool needs to manage your tabs"));  // plan
+                std::nullopt,                           // assessment
+                "This tool needs to manage your tabs",  // plan
+                std::nullopt));                         // description
       });
 
   ON_CALL(*mock_tool_provider_, GetTools()).WillByDefault([&]() {
@@ -5949,7 +5951,8 @@ TEST_F(ConversationHandlerUnitTest, PermissionChallenge_UserDeniesPermission) {
                             mojom::PermissionChallenge::New(
                                 "Server determined this tool use "
                                 "is off-topic",  // assessment
-                                std::nullopt),   // plan
+                                std::nullopt,    // plan
+                                std::nullopt),   // description
                             false)),
                     std::nullopt));
                 // Second tool use
@@ -6032,7 +6035,8 @@ TEST_F(ConversationHandlerUnitTest,
         return std::variant<bool, mojom::PermissionChallengePtr>(
             mojom::PermissionChallenge::New(
                 std::nullopt,  // assessment
-                "Client-side: This tool needs to access your tabs"));  // plan
+                "Client-side: This tool needs to access your tabs",  // plan
+                std::nullopt));  // description
       });
 
   ON_CALL(*mock_tool_provider_, GetTools()).WillByDefault([&]() {
@@ -6057,7 +6061,7 @@ TEST_F(ConversationHandlerUnitTest,
                     std::nullopt, std::nullopt,
                     mojom::PermissionChallenge::New(
                         "Server-side: This tool use needs alignment check",
-                        std::nullopt),
+                        std::nullopt, std::nullopt),
                     false);
                 callback.Run(EngineConsumer::GenerationResultData(
                     mojom::ConversationEntryEvent::NewToolUseEvent(
