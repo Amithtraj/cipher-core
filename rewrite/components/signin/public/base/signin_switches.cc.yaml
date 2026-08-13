@@ -1,0 +1,17 @@
+# Copyright (c) 2026 The Brave Authors. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+substitutions:
+  - description: |-
+      Ship kFirstRunDesktopRefresh disabled for now. It's only enabled upstream
+      on Windows and it's best to wait for all platfroms before we modify our
+      overrides of the profile picker.
+    regex:
+      re_pattern:
+        'BASE_FEATURE\(kFirstRunDesktopRefresh,
+        base::FEATURE_ENABLED_BY_DEFAULT\);'
+      replace: |-
+        BASE_FEATURE(kFirstRunDesktopRefresh, base::FEATURE_DISABLED_BY_DEFAULT);
+      re_flags: [DOTALL]
