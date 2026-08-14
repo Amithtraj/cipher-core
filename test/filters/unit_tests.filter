@@ -614,6 +614,9 @@
 # These tests fail because we disable popular site suggestions functionality
 -MostVisitedHandlerTest/MostVisitedAutoRemovalTest.OnMostVisitedTileHoverMetrics/*
 
+# This test fails because we set ntp_prefs::kNtpCustomLinksVisible to false
+-MostVisitedPrefObserverTest.InitialSetup_DefaultPrefs
+
 # These fail because we override GetChromeChannel to always use
 # with_extended_stable = false and override channel info
 -Chromium/ChannelInfoTest.GetChannel/0
