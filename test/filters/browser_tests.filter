@@ -69,7 +69,7 @@
 -WebUIToolbarWebViewBrowserTest.DropSearchTextOnToolbar
 
 # Client side phishing detection is disabled in Brave
--All/PhishingClassifierDelegateTest.*/*
+-All/ContentPhishingClassifierDelegateTest.*/*
 -PhishingClassifierDelegateTest.*
 
 # This is only enabled for safe_browsing_mode == 2
@@ -101,6 +101,8 @@
 -All/NewTabPageUtilDisableFlagBrowserTest.*
 -All/NewTabPageUtilEnableFlagBrowserTest.*
 -All/OnDeviceSpeechRecognitionImplQualityBrowserTest.AvailableAndInstall/*
+-All/OutOfTurnNavigationBrowserTest.*
+-All/OutOfTurnTaskStoppedBrowserTest.*
 -All/PageContentAnnotationsServiceContentExtractionResponseCodeTest.SameDocumentNonErrorNavigation/*
 -AttemptFormFillingToolNoPreClickTest.*
 -AttemptFormFillingToolPreClickTest.*
@@ -311,6 +313,7 @@
 # These tests fail because they expect the infobar count to be 1, but we
 # display an additional confirmation infobar for P3A
 -All/InfoBarContainerSplitTabTest.InfobarsAreIndependentInSplitTabs/Prioritization*
+-All/KnownInterceptionDisclosurePlatformBrowserTest.*
 -BrowserInfoBarManagerBrowserTest.ButtonConfiguration
 -BrowserInfoBarManagerBrowserTest.CentralizedMetrics
 -BrowserInfoBarManagerBrowserTest.FullscreenHiding
@@ -326,7 +329,6 @@
 -InfoBarContainerSplitTabTest.InfobarsAreIndependentInSplitTabs
 -InfoBarRefreshViewBrowserTest.InfoBarBackgroundColorUpdatesOnThemeChange
 -InfoBarViewBrowserTest.ThemeAppliesToContentContainerLabels
--KnownInterceptionDisclosurePlatformBrowserTest.*
 -PageSpecificSiteDataDialogBrowserTest.*
 
 # These tests fail because they expect an additional Manifest V2 deprecation
@@ -392,6 +394,8 @@
 -DiscardEligibilityPolicyWebAppBrowserTest.CannotDiscardWebApp
 
 # These tests fail because we disable features::kPwaNavigationCapturing
+-All/WebInstallCurrentDocumentBrowserTest.NestedScopeLaunchesManifestApp/*
+-All/WebInstallCurrentDocumentBrowserTest.OutOfScopeLinkingPageLaunchesInstalledApp/*
 -All_*Click/NavCaptureParameterizedBrowserTest.VerifyNavCapture/*
 -Capturable/NavCaptureParameterizedBrowserTest.VerifyNavCapture/*
 -CapturableToBrowserTabApp/NavCaptureParameterizedBrowserTest.*/*
@@ -675,6 +679,7 @@
 -PasskeyUnlockManagerBrowserTest.NotifyObserversOnEnclaveStateUpdated
 -PasskeyUnlockManagerBrowserTest.OpensNewTabWithPasskeyUnlockUrl
 -PasskeyUpgradeConfirmationBubbleTest.InvokeUi_default
+-PaymentsChurnedUsersBubbleViewsBrowserTest.*
 -PeopleHandlerSignoutTest.SignoutNotAllowedSyncOn
 -PowerBookmarkBubbleViewBrowserTest.InvokeUi_bookmark_details_on_trackable_product
 -PriceTrackingBubbleDialogViewBrowserTest.*
@@ -748,6 +753,10 @@
 -All/FamilyLinkUrlFilteringServiceCommonBrowserTest.*/*
 -All/SupervisedUserParentAccessObserverTest.CompletionCallbackExecution/*
 -ClassifyUrlNavigationThrottleTest.*
+-FamilyLinkBlockModeTest.*
+-FamilyLinkUrlFilteringServiceCommonBrowserTest.*
+-FamilyLinkUrlFilterPrerenderingTest.OnURLChecked
+-FamilyLinkUrlFilterTest.*
 -SupervisedUserExtensionWebstorePrivateApiTest.InstallAlwaysAllowed
 -SupervisedUserExtensionWebstorePrivateApiTest.InstallSuccessfulWhenExtensionsToggleOn
 -SupervisedUserParentAccessViewErrorScreenUiTest.ShowAndCloseErrorScreen
@@ -854,6 +863,7 @@
 -PredictionManagerModelDownloadingBrowserTest.*
 -PredictionManagerModelPackageOverrideTest.*
 -PredictionModelStoreBrowserTest.*
+-PredictionServiceAILikelihoodOrRelevanceTest/PredictionServiceAILikelihoodOrRelevanceBrowserTest.TestAILikelihoodOrRelevanceWorkflow/*
 -PredictionServiceAIP92Test/PredictionServiceAIP92BrowserTest.*/*
 -PredictionServiceBrowserTestBase.*
 -PredictionServiceHoldbackTest/PredictionServiceHoldbackBrowserTest.TestOverallTimeout/*
@@ -1151,6 +1161,10 @@
 -IndigoBrowserTest.ShowToolbarWhileInactiveDeferred
 -IndigoBrowserTest.TabSwitchPreservesToolbarState
 -IndigoPolicyTest.*
+-MetricsConsentMigrationBrowserTest.*MigrateSignedIn_*
+-MetricsConsentMigrationMultiProfileBrowserTest.*
+-MetricsConsentMigrationRollbackBrowserTest.*
+-MetricsConsentMigrationRollbackMultiProfileBrowserTest.*
 -MultistepFilterBrowserTest.*
 -MultistepFilterDisabledBrowserTest.ServiceNotCreatedWhenFeatureDisabled
 -MultistepFilterOptimizationGuideBrowserTest.*
@@ -1691,6 +1705,7 @@
 -GarbageCollectStoragePartitionsCommandBrowserTest.UninstalledAppsHaveStoragePartitionsCleanedUp
 -GetIsolatedWebApp*.*
 -IWACaptivePortalBrowserTest.*
+-IwaDevHandlerUpdateManifestBrowserTest.*
 -IWAProtocolTest*.*
 -IWAProtocolTestLocalFile*.*
 -IWAServiceWorkerLifetimeKeepaliveBrowsertest.*
@@ -1920,8 +1935,14 @@
 -SearchTest.ProcessIsolation*
 
 # This test fails because we stub IsChromeLabsEnabled to return false
+-All/ChromeLabsFeatureBrowserTest.ChangeSelectedOption/*
 -ChromeLabsBrowserTest.ClosesWithoutCrashing
+-ChromeLabsButtonNoExperimentsAvailableTest.*
+-ChromeLabsButtonTest.*
+-ChromeLabsCoordinatorBrowserTest.*
 -ChromeLabsModelBrowserTest.NoChromeLabsModel
+-ChromeLabsButtonOnlyExpiredFeaturesAvailableTest.*
+-ChromeLabsViewControllerBrowserTest.*
 
 # These tests are flakey in cr140 at the moment due to
 # https://issues.chromium.org/issues/430608016
@@ -1968,6 +1989,7 @@
 # https://source.chromium.org/chromium/chromium/src/+/b1e66bdb
 # see https://github.com/brave/brave-browser/issues/49422
 -LocalNetworkAccessBrowserTest.HtmlScriptSrcAllowPermission
+-LocalNetworkAccessHtmlScriptBrowserTest.HtmlScriptSrcAllowPermission
 
 # Disabled due to crash with tab group dragging.
 # https://github.com/brave/brave-browser/issues/49752
@@ -2173,6 +2195,7 @@
 -WebUILocationBarBrowserTest.*
 -WebUIPinnedToolbarActionsBrowserTest.*
 -WebUIReadOnlyOmniboxDragDropBrowserTest.Drop*
+-WebUIToolbarFullyEnabledBrowserTest.*
 -WebUIToolbarLifecyclePrewarmedBrowserTest.*
 -WebUIToolbarLifecyclePrewarmedDeferredBrowserTest.DeferredLoad
 -WebUIToolbarLifecycleNonPrewarmedBrowserTest.DynamicLoad
@@ -2180,6 +2203,7 @@
 -WebUIToolbarLocationBarBrowserTest.FlexSpecificationBoundaryButtonsPriority
 -WebUIToolbarLocationBarPriorityBrowserTest.FlexSpecificationBoundaryLocationBarPriority
 -WebUIToolbarPrewarmSandboxBrowserTest.SandboxInitialization
+-WebUIToolbarWebViewContentSettingsBrowserTest.ContentSettingIconSuppressionE2E
 -WebUIToolbarWebViewContentSettingsBrowserTest.ExplanatoryTextAndAnimation
 -WebUIToolbarWebViewContentSettingsBrowserTest.IconVisibilityAndState
 -WebUIToolbarWebViewContentSettingsBrowserTest.MultipleIcons
@@ -2309,6 +2333,7 @@
 
 # These tests fail because we override IdentityManager::GetAccountsInCookieJar
 # to return an empty list.
+-GlicMessagingWebContinuityBrowserTest.InvokeWebContinuity
 -GlicMessagingWebViewGuestTest.WebViewGuest
 -GlicMessagingWebViewGuestTest.WebViewGuestInvoke
 
