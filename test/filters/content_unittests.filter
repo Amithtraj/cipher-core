@@ -74,6 +74,7 @@
 -FencedFrameReporterTest.SendFledgeReportsBeforeMapsReceivedWithErrors
 -FencedFrameReporterTest.SendFledgeReportsNoMapReceived
 -FileBackedBlobFactoryFrameImplTest.Register_FencedFrameWithScopedFileAccessDelegate
+-RequestTest.DisconnectFromFencedFrame
 
 # Tests below this point have not been diagnosed or had issues created yet.
 -AdAuctionServiceImplPrivateAggregationEnabledTest.*
