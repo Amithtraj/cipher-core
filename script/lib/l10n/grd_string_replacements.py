@@ -25,6 +25,10 @@ branding_replacements = [
 # Strings we want to replace but that we need to use Crowdin for
 # to translate the XTB files
 default_replacements = [
+    # Upstream actor strings name Gemini as the agent; ours is Leo. Scoped to
+    # this phrase because most other Gemini mentions are genuine Google product
+    # names (e.g. "Gemini Apps Activity").
+    (r'Gemini\sis\sworking\son\syour\stask', r'Leo is working on your task'),
     (r'Brave Web Store', r'Web Store'),
     (r'You\'re incognito', r'This is a private window'),
     (r'an incognito', r'a private'),
