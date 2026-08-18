@@ -6,6 +6,7 @@
 #include "brave/components/ai_chat/content/browser/content_tool.h"
 
 #include <algorithm>
+#include <iterator>
 #include <optional>
 #include <string>
 #include <string_view>
@@ -47,6 +48,16 @@ std::string EscapeMarkdown(const std::string& text) {
     escaped.push_back(c);
   }
   return escaped;
+}
+
+// Removes all ASCII whitespace from `text`, which EscapeMarkdown() doesn't
+// escape.
+std::string RemoveWhitespace(const std::string& text) {
+  std::string stripped;
+  stripped.reserve(text.size());
+  std::copy_if(text.begin(), text.end(), std::back_inserter(stripped),
+               [](char c) { return !absl::ascii_isspace(c); });
+  return stripped;
 }
 
 }  // namespace
@@ -140,8 +151,9 @@ std::optional<std::string> ContentTool::GetPermissionChallengeDescription(
     const mojom::ToolUseEvent& tool_use) const {
   // Provide a human-readable, markdown-formatted description naming the
   // site-registered tool and the site's origin, instead of the mangled
-  // model-facing tool name. The tool name is site-controlled, so escape it
-  // to prevent the site injecting markdown into the prompt.
+  // model-facing tool name. The tool name is site-controlled, so strip its
+  // whitespace and escape it to prevent the site injecting markdown into the
+  // prompt.
   content::RenderFrameHost* rfh = rfh_.AsRenderFrameHostIfValid();
   if (!rfh) {
     return std::nullopt;
@@ -158,7 +170,7 @@ std::optional<std::string> ContentTool::GetPermissionChallengeDescription(
                       : origin.Serialize();
   return l10n_util::GetStringFUTF8(
       IDS_CHAT_UI_PERMISSION_CHALLENGE_WEB_TOOL_SUMMARY,
-      base::UTF8ToUTF16(EscapeMarkdown(internal_tool_name_)),
+      base::UTF8ToUTF16(EscapeMarkdown(RemoveWhitespace(internal_tool_name_))),
       base::UTF8ToUTF16(site_display));
 }
 
