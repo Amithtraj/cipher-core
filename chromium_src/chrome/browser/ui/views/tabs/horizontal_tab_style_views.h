@@ -6,9 +6,9 @@
 #ifndef BRAVE_CHROMIUM_SRC_CHROME_BROWSER_UI_VIEWS_TABS_HORIZONTAL_TAB_STYLE_VIEWS_H_
 #define BRAVE_CHROMIUM_SRC_CHROME_BROWSER_UI_VIEWS_TABS_HORIZONTAL_TAB_STYLE_VIEWS_H_
 
-#include <memory>
-
 #include <chrome/browser/ui/views/tabs/horizontal_tab_style_views.h>  // IWYU pragma: export
+
+#include <memory>
 
 // Constructs a BraveVerticalTabStyle instance.
 std::unique_ptr<HorizontalTabStyleViews> CreateBraveVerticalTabStyle(
