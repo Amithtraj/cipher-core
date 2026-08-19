@@ -59,6 +59,8 @@ constexpr char kGateJuniorMnemonic[] =
     "jelly art frequent fence middle ice moral wage toddler attitude sign "
     "lesson grain";
 
+constexpr uint32_t kDefaultCommitmentSeed = 1;
+
 std::array<uint8_t, 32> GetTxId(const std::string& hex_string) {
   std::vector<uint8_t> vec;
   std::array<uint8_t, 32> sized_vec;
@@ -217,6 +219,10 @@ class ZCashWalletServiceUnitTest : public testing::Test {
   std::map<mojom::AccountIdPtr, std::unique_ptr<ZCashAutoSyncManager>>&
   auto_sync_managers() {
     return zcash_wallet_service_->auto_sync_managers_;
+  }
+
+  void MaybeInitAutoSyncManagers() {
+    zcash_wallet_service_->MaybeInitAutoSyncManagers();
   }
 
   MockOrchardSyncState& mock_orchard_sync_state() {
@@ -1998,6 +2004,332 @@ TEST_F(ZCashWalletServiceUnitTest, ResetSyncStateWithAccountBirthday) {
   EXPECT_EQ(mojom::ZCashAccountShieldBirthday::New(
                 100000u - kChainReorgBlockDelta, "new_hash"),
             account_info->account_shield_birthday);
+}
+
+TEST_F(ZCashWalletServiceUnitTest,
+       ResetSyncStateToIronwoodActivation_NoOpBeforeActivation) {
+  base::test::ScopedFeatureList feature_list;
+  feature_list.InitAndEnableFeatureWithParameters(
+      features::kBraveWalletZCashFeature,
+      {{"zcash_shielded_transactions_enabled", "true"}});
+
+  auto account_id_1 = account_id();
+  base::test::TestFuture<
+      base::expected<OrchardStorage::Result, OrchardStorage::Error>>
+      register_account_future;
+  zcash_wallet_service_->sync_state()
+      .AsyncCall(&OrchardSyncState::RegisterAccount)
+      .WithArgs(account_id_1.Clone(), 100u)
+      .Then(register_account_future.GetCallback());
+  ASSERT_TRUE(register_account_future.Take().has_value());
+
+  base::test::TestFuture<const std::optional<std::string>&> reset_sync_future;
+  zcash_wallet_service_->ResetSyncStateToIronwoodActivation(
+      account_id_1.Clone(), reset_sync_future.GetCallback());
+  EXPECT_EQ(std::nullopt, reset_sync_future.Take());
+  EXPECT_TRUE(
+      keyring_service()->GetZCashIronwoodSyncStateReset(account_id_1.Clone()));
+}
+
+TEST_F(ZCashWalletServiceUnitTest,
+       ResetSyncStateToIronwoodActivation_RewindsWhenPastActivation) {
+  base::test::ScopedFeatureList feature_list;
+  feature_list.InitAndEnableFeatureWithParameters(
+      features::kBraveWalletZCashFeature,
+      {{"zcash_shielded_transactions_enabled", "true"},
+       {"zcash_ironwood_enabled", "true"}});
+
+  constexpr uint32_t kActivation = kIronwoodActivationHeightMainnet;
+  constexpr uint32_t kPastActivation = kActivation + 57u;
+  constexpr char kActivationHash[] =
+      "0xe99a69a926bd0d078d39445fdf237c08ddfd3f7a59f7dc266aef610000000000";
+  constexpr char kRpcActivationHash[] =
+      "000000000061ef6a26dcf7597a3ffddd087c23df5f44398d070dbd26a9699ae9";
+
+  auto account_id_1 = account_id();
+  base::test::TestFuture<
+      base::expected<OrchardStorage::Result, OrchardStorage::Error>>
+      register_account_future;
+  zcash_wallet_service_->sync_state()
+      .AsyncCall(&OrchardSyncState::RegisterAccount)
+      .WithArgs(account_id_1.Clone(), 100u)
+      .Then(register_account_future.GetCallback());
+  ASSERT_TRUE(register_account_future.Take().has_value());
+
+  {
+    std::vector<OrchardCommitment> orchard_commitments;
+    orchard_commitments.push_back(
+        CreateCommitment(CreateMockCommitmentValue(0, kDefaultCommitmentSeed),
+                         false, kActivation));
+    auto result = CreateResultForTesting(OrchardTreeState(),
+                                         std::move(orchard_commitments),
+                                         kActivation, kActivationHash);
+    base::test::TestFuture<
+        base::expected<OrchardStorage::Result, OrchardStorage::Error>>
+        apply_scan_results_future;
+    zcash_wallet_service_->sync_state()
+        .AsyncCall(&OrchardSyncState::ApplyScanResults)
+        .WithArgs(account_id_1.Clone(), std::move(result))
+        .Then(apply_scan_results_future.GetCallback());
+    ASSERT_TRUE(apply_scan_results_future.Take().has_value());
+  }
+
+  {
+    OrchardTreeState tree_state;
+    tree_state.block_height = kActivation;
+    tree_state.tree_size = 1;
+    std::vector<OrchardCommitment> orchard_commitments;
+    orchard_commitments.push_back(
+        CreateCommitment(CreateMockCommitmentValue(1, kDefaultCommitmentSeed),
+                         false, kPastActivation));
+    auto result = CreateResultForTesting(std::move(tree_state),
+                                         std::move(orchard_commitments),
+                                         kPastActivation, "past_hash");
+    base::test::TestFuture<
+        base::expected<OrchardStorage::Result, OrchardStorage::Error>>
+        apply_scan_results_future;
+    zcash_wallet_service_->sync_state()
+        .AsyncCall(&OrchardSyncState::ApplyScanResults)
+        .WithArgs(account_id_1.Clone(), std::move(result))
+        .Then(apply_scan_results_future.GetCallback());
+    ASSERT_TRUE(apply_scan_results_future.Take().has_value());
+  }
+
+  EXPECT_CALL(zcash_rpc(), GetTreeState(_, _, _))
+      .WillOnce([&](const std::string& chain_id,
+                    zcash::mojom::BlockIDPtr block_id,
+                    ZCashRpc::GetTreeStateCallback callback) {
+        EXPECT_EQ(chain_id, mojom::kZCashMainnet);
+        EXPECT_EQ(block_id->height, kActivation);
+        auto tree_state = zcash::mojom::TreeState::New(
+            "main", kActivation, kRpcActivationHash, 123, "", "", "");
+        std::move(callback).Run(std::move(tree_state));
+      });
+
+  base::test::TestFuture<const std::optional<std::string>&> reset_sync_future;
+  zcash_wallet_service_->ResetSyncStateToIronwoodActivation(
+      account_id_1.Clone(), reset_sync_future.GetCallback());
+  EXPECT_EQ(std::nullopt, reset_sync_future.Take());
+
+  base::test::TestFuture<base::expected<
+      std::optional<OrchardStorage::AccountMeta>, OrchardStorage::Error>>
+      account_meta_future;
+  zcash_wallet_service_->sync_state()
+      .AsyncCall(&OrchardSyncState::GetAccountMeta)
+      .WithArgs(account_id_1.Clone())
+      .Then(account_meta_future.GetCallback());
+  auto account_meta = account_meta_future.Take();
+  ASSERT_TRUE(account_meta.has_value());
+  ASSERT_TRUE(account_meta.value());
+  EXPECT_EQ(kActivation, account_meta.value()->latest_scanned_block_id);
+  EXPECT_EQ(kActivationHash, account_meta.value()->latest_scanned_block_hash);
+  EXPECT_EQ(100u, account_meta.value()->account_birthday);
+  EXPECT_TRUE(
+      keyring_service()->GetZCashIronwoodSyncStateReset(account_id_1.Clone()));
+}
+
+TEST_F(ZCashWalletServiceUnitTest,
+       MaybeInitAutoSyncManagers_IronwoodMigration_RewindsWhenNeeded) {
+  base::test::ScopedFeatureList feature_list;
+  feature_list.InitAndEnableFeatureWithParameters(
+      features::kBraveWalletZCashFeature,
+      {{"zcash_shielded_transactions_enabled", "true"},
+       {"zcash_ironwood_enabled", "true"}});
+
+  constexpr uint32_t kActivation = kIronwoodActivationHeightMainnet;
+  constexpr uint32_t kPastActivation = kActivation + 57u;
+  constexpr char kActivationHash[] =
+      "0xe99a69a926bd0d078d39445fdf237c08ddfd3f7a59f7dc266aef610000000000";
+  constexpr char kRpcActivationHash[] =
+      "000000000061ef6a26dcf7597a3ffddd087c23df5f44398d070dbd26a9699ae9";
+
+  auto account_id_1 = account_id();
+  keyring_service()->SetZCashAccountBirthday(
+      account_id_1.Clone(),
+      mojom::ZCashAccountShieldBirthday::New(100u, "hash"));
+  EXPECT_FALSE(
+      keyring_service()->GetZCashIronwoodSyncStateReset(account_id_1.Clone()));
+
+  base::test::TestFuture<
+      base::expected<OrchardStorage::Result, OrchardStorage::Error>>
+      register_account_future;
+  zcash_wallet_service_->sync_state()
+      .AsyncCall(&OrchardSyncState::RegisterAccount)
+      .WithArgs(account_id_1.Clone(), 100u)
+      .Then(register_account_future.GetCallback());
+  ASSERT_TRUE(register_account_future.Take().has_value());
+
+  {
+    std::vector<OrchardCommitment> orchard_commitments;
+    orchard_commitments.push_back(
+        CreateCommitment(CreateMockCommitmentValue(0, kDefaultCommitmentSeed),
+                         false, kActivation));
+    auto result = CreateResultForTesting(OrchardTreeState(),
+                                         std::move(orchard_commitments),
+                                         kActivation, kActivationHash);
+    base::test::TestFuture<
+        base::expected<OrchardStorage::Result, OrchardStorage::Error>>
+        apply_scan_results_future;
+    zcash_wallet_service_->sync_state()
+        .AsyncCall(&OrchardSyncState::ApplyScanResults)
+        .WithArgs(account_id_1.Clone(), std::move(result))
+        .Then(apply_scan_results_future.GetCallback());
+    ASSERT_TRUE(apply_scan_results_future.Take().has_value());
+  }
+
+  {
+    OrchardTreeState tree_state;
+    tree_state.block_height = kActivation;
+    tree_state.tree_size = 1;
+    std::vector<OrchardCommitment> orchard_commitments;
+    orchard_commitments.push_back(
+        CreateCommitment(CreateMockCommitmentValue(1, kDefaultCommitmentSeed),
+                         false, kPastActivation));
+    auto result = CreateResultForTesting(std::move(tree_state),
+                                         std::move(orchard_commitments),
+                                         kPastActivation, "past_hash");
+    base::test::TestFuture<
+        base::expected<OrchardStorage::Result, OrchardStorage::Error>>
+        apply_scan_results_future;
+    zcash_wallet_service_->sync_state()
+        .AsyncCall(&OrchardSyncState::ApplyScanResults)
+        .WithArgs(account_id_1.Clone(), std::move(result))
+        .Then(apply_scan_results_future.GetCallback());
+    ASSERT_TRUE(apply_scan_results_future.Take().has_value());
+  }
+
+  EXPECT_CALL(zcash_rpc(), GetTreeState(_, _, _))
+      .WillOnce([&](const std::string& chain_id,
+                    zcash::mojom::BlockIDPtr block_id,
+                    ZCashRpc::GetTreeStateCallback callback) {
+        EXPECT_EQ(chain_id, mojom::kZCashMainnet);
+        EXPECT_EQ(block_id->height, kActivation);
+        auto tree_state = zcash::mojom::TreeState::New(
+            "main", kActivation, kRpcActivationHash, 123, "", "", "");
+        std::move(callback).Run(std::move(tree_state));
+      });
+
+  base::test::TestFuture<const std::optional<std::string>&> reset_sync_future;
+  zcash_wallet_service_->ResetSyncStateToIronwoodActivation(
+      account_id_1.Clone(), reset_sync_future.GetCallback());
+  EXPECT_EQ(std::nullopt, reset_sync_future.Take());
+
+  base::test::TestFuture<base::expected<
+      std::optional<OrchardStorage::AccountMeta>, OrchardStorage::Error>>
+      account_meta_future;
+  zcash_wallet_service_->sync_state()
+      .AsyncCall(&OrchardSyncState::GetAccountMeta)
+      .WithArgs(account_id_1.Clone())
+      .Then(account_meta_future.GetCallback());
+  auto account_meta = account_meta_future.Take();
+  ASSERT_TRUE(account_meta.has_value());
+  ASSERT_TRUE(account_meta.value());
+  EXPECT_EQ(kActivation, account_meta.value()->latest_scanned_block_id);
+  EXPECT_TRUE(
+      keyring_service()->GetZCashIronwoodSyncStateReset(account_id_1.Clone()));
+
+  MaybeInitAutoSyncManagers();
+  EXPECT_TRUE(auto_sync_managers().contains(account_id_1));
+}
+
+TEST_F(ZCashWalletServiceUnitTest,
+       MaybeInitAutoSyncManagers_IronwoodMigration_SkipsWhenFlagSet) {
+  base::test::ScopedFeatureList feature_list;
+  feature_list.InitAndEnableFeatureWithParameters(
+      features::kBraveWalletZCashFeature,
+      {{"zcash_shielded_transactions_enabled", "true"},
+       {"zcash_ironwood_enabled", "true"}});
+
+  constexpr uint32_t kActivation = kIronwoodActivationHeightMainnet;
+  constexpr uint32_t kPastActivation = kActivation + 57u;
+
+  auto account_id_1 = account_id();
+  keyring_service()->SetZCashAccountBirthday(
+      account_id_1.Clone(),
+      mojom::ZCashAccountShieldBirthday::New(100u, "hash"));
+  ASSERT_TRUE(keyring_service()->SetZCashIronwoodSyncStateReset(
+      account_id_1.Clone(), true));
+
+  base::test::TestFuture<
+      base::expected<OrchardStorage::Result, OrchardStorage::Error>>
+      register_account_future;
+  zcash_wallet_service_->sync_state()
+      .AsyncCall(&OrchardSyncState::RegisterAccount)
+      .WithArgs(account_id_1.Clone(), 100u)
+      .Then(register_account_future.GetCallback());
+  ASSERT_TRUE(register_account_future.Take().has_value());
+
+  {
+    OrchardTreeState tree_state;
+    tree_state.block_height = kActivation;
+    tree_state.tree_size = 1;
+    std::vector<OrchardCommitment> orchard_commitments;
+    orchard_commitments.push_back(
+        CreateCommitment(CreateMockCommitmentValue(0, kDefaultCommitmentSeed),
+                         false, kPastActivation));
+    auto result = CreateResultForTesting(std::move(tree_state),
+                                         std::move(orchard_commitments),
+                                         kPastActivation, "past_hash");
+    base::test::TestFuture<
+        base::expected<OrchardStorage::Result, OrchardStorage::Error>>
+        apply_scan_results_future;
+    zcash_wallet_service_->sync_state()
+        .AsyncCall(&OrchardSyncState::ApplyScanResults)
+        .WithArgs(account_id_1.Clone(), std::move(result))
+        .Then(apply_scan_results_future.GetCallback());
+    ASSERT_TRUE(apply_scan_results_future.Take().has_value());
+  }
+
+  MaybeInitAutoSyncManagers();
+
+  base::test::TestFuture<base::expected<
+      std::optional<OrchardStorage::AccountMeta>, OrchardStorage::Error>>
+      account_meta_future;
+  zcash_wallet_service_->sync_state()
+      .AsyncCall(&OrchardSyncState::GetAccountMeta)
+      .WithArgs(account_id_1.Clone())
+      .Then(account_meta_future.GetCallback());
+  auto account_meta = account_meta_future.Take();
+  ASSERT_TRUE(account_meta.has_value());
+  ASSERT_TRUE(account_meta.value());
+  EXPECT_EQ(kPastActivation, account_meta.value()->latest_scanned_block_id);
+  EXPECT_TRUE(auto_sync_managers().contains(account_id_1));
+}
+
+TEST_F(ZCashWalletServiceUnitTest,
+       MaybeInitAutoSyncManagers_IronwoodMigration_NoOpSetsFlag) {
+  base::test::ScopedFeatureList feature_list;
+  feature_list.InitAndEnableFeatureWithParameters(
+      features::kBraveWalletZCashFeature,
+      {{"zcash_shielded_transactions_enabled", "true"},
+       {"zcash_ironwood_enabled", "true"}});
+
+  auto account_id_1 = account_id();
+  keyring_service()->SetZCashAccountBirthday(
+      account_id_1.Clone(),
+      mojom::ZCashAccountShieldBirthday::New(100u, "hash"));
+  EXPECT_FALSE(
+      keyring_service()->GetZCashIronwoodSyncStateReset(account_id_1.Clone()));
+
+  base::test::TestFuture<
+      base::expected<OrchardStorage::Result, OrchardStorage::Error>>
+      register_account_future;
+  zcash_wallet_service_->sync_state()
+      .AsyncCall(&OrchardSyncState::RegisterAccount)
+      .WithArgs(account_id_1.Clone(), 100u)
+      .Then(register_account_future.GetCallback());
+  ASSERT_TRUE(register_account_future.Take().has_value());
+
+  base::test::TestFuture<const std::optional<std::string>&> reset_sync_future;
+  zcash_wallet_service_->ResetSyncStateToIronwoodActivation(
+      account_id_1.Clone(), reset_sync_future.GetCallback());
+  EXPECT_EQ(std::nullopt, reset_sync_future.Take());
+
+  MaybeInitAutoSyncManagers();
+
+  EXPECT_TRUE(
+      keyring_service()->GetZCashIronwoodSyncStateReset(account_id_1.Clone()));
+  EXPECT_TRUE(auto_sync_managers().contains(account_id_1));
 }
 
 // Disabled on android due timeout failures

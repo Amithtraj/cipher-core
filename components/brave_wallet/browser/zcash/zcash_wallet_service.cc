@@ -665,6 +665,79 @@ void ZCashWalletService::ResetSyncState(mojom::AccountIdPtr account_id,
   }
 }
 
+void ZCashWalletService::ResetSyncStateToIronwoodActivation(
+    mojom::AccountIdPtr account_id,
+    ResetSyncStateToIronwoodActivationCallback callback) {
+  ResetSyncStateToIronwoodActivationInternal(std::move(account_id),
+                                             /*persist_flag_on_success=*/true,
+                                             std::move(callback));
+}
+
+void ZCashWalletService::ResetSyncStateToIronwoodActivationInternal(
+    mojom::AccountIdPtr account_id,
+    bool persist_flag_on_success,
+    ResetSyncStateToIronwoodActivationCallback callback) {
+  if (!IsZCashShieldedTransactionsEnabled()) {
+    std::move(callback).Run(
+        l10n_util::GetStringUTF8(IDS_WALLET_METHOD_NOT_SUPPORTED_ERROR));
+    return;
+  }
+
+  if (shield_sync_services_.find(account_id) != shield_sync_services_.end()) {
+    std::move(callback).Run("Sync in progress");
+    return;
+  }
+
+  sync_state()
+      .AsyncCall(&OrchardSyncState::GetAccountMeta)
+      .WithArgs(account_id.Clone())
+      .Then(base::BindOnce(
+          &ZCashWalletService::
+              OnGetAccountMetaForResetSyncStateToIronwoodActivation,
+          weak_ptr_factory_.GetWeakPtr(), account_id.Clone(),
+          persist_flag_on_success, std::move(callback)));
+}
+
+void ZCashWalletService::StartAutoSyncManagerForAccount(
+    mojom::AccountIdPtr account_id) {
+  if (auto_sync_managers_.contains(account_id)) {
+    return;
+  }
+
+  auto async_manager = std::make_unique<ZCashAutoSyncManager>(
+      *this, CreateActionContext(account_id));
+  async_manager->Start();
+  auto_sync_managers_[account_id.Clone()] = std::move(async_manager);
+}
+
+void ZCashWalletService::OnIronwoodSyncStateResetForAutoSync(
+    mojom::AccountIdPtr account_id,
+    const std::optional<std::string>& error) {
+  if (error) {
+    return;
+  }
+
+  StartAutoSyncManagerForAccount(std::move(account_id));
+}
+
+void ZCashWalletService::MaybeInitAutoSyncManagerForAccount(
+    mojom::AccountIdPtr account_id) {
+  if (auto_sync_managers_.contains(account_id)) {
+    return;
+  }
+
+  if (IsZCashIronwoodEnabled() &&
+      !keyring_service_->GetZCashIronwoodSyncStateReset(account_id)) {
+    ResetSyncStateToIronwoodActivationInternal(
+        account_id.Clone(), /*persist_flag_on_success=*/true,
+        base::BindOnce(&ZCashWalletService::OnIronwoodSyncStateResetForAutoSync,
+                       weak_ptr_factory_.GetWeakPtr(), account_id.Clone()));
+    return;
+  }
+
+  StartAutoSyncManagerForAccount(std::move(account_id));
+}
+
 void ZCashWalletService::MaybeInitAutoSyncManagers() {
   if (!IsZCashShieldedTransactionsEnabled()) {
     return;
@@ -688,14 +761,7 @@ void ZCashWalletService::MaybeInitAutoSyncManagers() {
       continue;
     }
 
-    if (auto_sync_managers_.contains(account->account_id)) {
-      continue;
-    }
-
-    auto async_manager = std::make_unique<ZCashAutoSyncManager>(
-        *this, CreateActionContext(account->account_id));
-    async_manager->Start();
-    auto_sync_managers_[account->account_id.Clone()] = std::move(async_manager);
+    MaybeInitAutoSyncManagerForAccount(account->account_id.Clone());
   }
 }
 
@@ -970,6 +1036,96 @@ void ZCashWalletService::OnResetSyncState(
   }
 
   std::move(callback).Run(result.error().message);
+}
+
+void ZCashWalletService::OnGetAccountMetaForResetSyncStateToIronwoodActivation(
+    mojom::AccountIdPtr account_id,
+    bool persist_flag_on_success,
+    ResetSyncStateToIronwoodActivationCallback callback,
+    base::expected<std::optional<OrchardStorage::AccountMeta>,
+                   OrchardStorage::Error> result) {
+  if (!result.has_value()) {
+    std::move(callback).Run(result.error().message);
+    return;
+  }
+
+  if (!result.value() || !result.value()->latest_scanned_block_id) {
+    if (persist_flag_on_success) {
+      keyring_service_->SetZCashIronwoodSyncStateReset(account_id, true);
+    }
+    std::move(callback).Run(std::nullopt);
+    return;
+  }
+
+  const auto chain_id = GetNetworkForZCashKeyring(account_id->keyring_id);
+  const uint32_t ironwood_activation_height =
+      GetIronwoodActivationHeight(chain_id);
+  if (result.value()->latest_scanned_block_id.value() <=
+      ironwood_activation_height) {
+    if (persist_flag_on_success) {
+      keyring_service_->SetZCashIronwoodSyncStateReset(account_id, true);
+    }
+    std::move(callback).Run(std::nullopt);
+    return;
+  }
+
+  auto block_id = zcash::mojom::BlockID::New(ironwood_activation_height,
+                                             std::vector<uint8_t>());
+  zcash_rpc_->GetTreeState(
+      chain_id, std::move(block_id),
+      base::BindOnce(&ZCashWalletService::
+                         OnGetTreeStateForResetSyncStateToIronwoodActivation,
+                     weak_ptr_factory_.GetWeakPtr(), account_id.Clone(),
+                     ironwood_activation_height, persist_flag_on_success,
+                     std::move(callback)));
+}
+
+void ZCashWalletService::OnGetTreeStateForResetSyncStateToIronwoodActivation(
+    mojom::AccountIdPtr account_id,
+    uint32_t ironwood_activation_height,
+    bool persist_flag_on_success,
+    ResetSyncStateToIronwoodActivationCallback callback,
+    base::expected<zcash::mojom::TreeStatePtr, std::string> result) {
+  if (!result.has_value() || !result.value() ||
+      result.value()->height != ironwood_activation_height) {
+    std::move(callback).Run("Failed to retrieve tree state");
+    return;
+  }
+
+  auto reverted_hash = RevertHex(result.value()->hash);
+  if (!reverted_hash) {
+    std::move(callback).Run("Wrong block hash format");
+    return;
+  }
+
+  sync_state()
+      .AsyncCall(&OrchardSyncState::Rewind)
+      .WithArgs(account_id.Clone(), ironwood_activation_height, *reverted_hash)
+      .Then(base::BindOnce(
+          &ZCashWalletService::OnRewindForResetSyncStateToIronwoodActivation,
+          weak_ptr_factory_.GetWeakPtr(), account_id.Clone(),
+          persist_flag_on_success, std::move(callback)));
+}
+
+void ZCashWalletService::OnRewindForResetSyncStateToIronwoodActivation(
+    mojom::AccountIdPtr account_id,
+    bool persist_flag_on_success,
+    ResetSyncStateToIronwoodActivationCallback callback,
+    base::expected<OrchardStorage::Result, OrchardStorage::Error> result) {
+  if (!result.has_value()) {
+    std::move(callback).Run(result.error().message);
+    return;
+  }
+
+  if (result.value() != OrchardStorage::Result::kSuccess) {
+    std::move(callback).Run("Failed to rewind sync state");
+    return;
+  }
+
+  if (persist_flag_on_success) {
+    keyring_service_->SetZCashIronwoodSyncStateReset(account_id, true);
+  }
+  std::move(callback).Run(std::nullopt);
 }
 
 void ZCashWalletService::OnGetChainTipStatusResult(

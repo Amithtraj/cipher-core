@@ -115,6 +115,10 @@ class ZCashWalletService : public mojom::ZCashWalletService,
                       uint32_t account_birthday_block,
                       ResetSyncStateCallback callback) override;
 
+  void ResetSyncStateToIronwoodActivation(
+      mojom::AccountIdPtr account_id,
+      ResetSyncStateToIronwoodActivationCallback callback) override;
+
   void RunDiscovery(mojom::AccountIdPtr account_id,
                     RunDiscoveryCallback callback);
 
@@ -272,6 +276,15 @@ class ZCashWalletService : public mojom::ZCashWalletService,
       base::expected<ZCashTransaction, std::string> result);
 
   void MaybeInitAutoSyncManagers();
+  void MaybeInitAutoSyncManagerForAccount(mojom::AccountIdPtr account_id);
+  void StartAutoSyncManagerForAccount(mojom::AccountIdPtr account_id);
+  void ResetSyncStateToIronwoodActivationInternal(
+      mojom::AccountIdPtr account_id,
+      bool persist_flag_on_success,
+      ResetSyncStateToIronwoodActivationCallback callback);
+  void OnIronwoodSyncStateResetForAutoSync(
+      mojom::AccountIdPtr account_id,
+      const std::optional<std::string>& error);
 
   void OnCreateOrchardToTransparentTransactionTaskDone(
       ZCashCreateOrchardToTransparentTransactionTask* task,
@@ -339,6 +352,26 @@ class ZCashWalletService : public mojom::ZCashWalletService,
       mojom::AccountIdPtr account_id,
       mojom::ZCashAccountShieldBirthdayPtr account_birthday,
       ResetSyncStateCallback callback,
+      base::expected<OrchardStorage::Result, OrchardStorage::Error> result);
+
+  void OnGetAccountMetaForResetSyncStateToIronwoodActivation(
+      mojom::AccountIdPtr account_id,
+      bool persist_flag_on_success,
+      ResetSyncStateToIronwoodActivationCallback callback,
+      base::expected<std::optional<OrchardStorage::AccountMeta>,
+                     OrchardStorage::Error> result);
+
+  void OnGetTreeStateForResetSyncStateToIronwoodActivation(
+      mojom::AccountIdPtr account_id,
+      uint32_t ironwood_activation_height,
+      bool persist_flag_on_success,
+      ResetSyncStateToIronwoodActivationCallback callback,
+      base::expected<zcash::mojom::TreeStatePtr, std::string> result);
+
+  void OnRewindForResetSyncStateToIronwoodActivation(
+      mojom::AccountIdPtr account_id,
+      bool persist_flag_on_success,
+      ResetSyncStateToIronwoodActivationCallback callback,
       base::expected<OrchardStorage::Result, OrchardStorage::Error> result);
 
   void UpdateNextUnusedAddressForAccount(const mojom::AccountIdPtr& account_id,

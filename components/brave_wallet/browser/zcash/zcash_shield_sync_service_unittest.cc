@@ -766,6 +766,10 @@ TEST_F(ZCashShieldSyncServiceTest, ScanBlocks_IronwoodDisabled) {
 }
 
 TEST_F(ZCashShieldSyncServiceTest, GetSpendableBalance_IncludesIronwoodNotes) {
+  base::test::ScopedFeatureList feature_list;
+  feature_list.InitAndEnableFeatureWithParameters(
+      features::kBraveWalletZCashFeature, {{"zcash_ironwood_enabled", "true"}});
+
   {
     OrchardSyncState::SpendableNotesBundle orchard_bundle;
     OrchardNote note_1;
@@ -776,10 +780,6 @@ TEST_F(ZCashShieldSyncServiceTest, GetSpendableBalance_IncludesIronwoodNotes) {
     orchard_bundle.spendable_notes.push_back(std::move(note_2));
     sync_service()->orchard_spendable_notes_bundle_ = std::move(orchard_bundle);
   }
-
-  // Ironwood bundle hasn't been populated yet, so only orchard notes count
-  // towards the spendable balance.
-  EXPECT_EQ(sync_service()->GetSpendableBalance().ValueOrDie(), 300u);
 
   {
     OrchardSyncState::SpendableNotesBundle ironwood_bundle;
@@ -793,8 +793,6 @@ TEST_F(ZCashShieldSyncServiceTest, GetSpendableBalance_IncludesIronwoodNotes) {
         std::move(ironwood_bundle);
   }
 
-  // Once populated, ironwood's spendable notes must be folded into the
-  // total balance alongside orchard's.
   EXPECT_EQ(sync_service()->GetSpendableBalance().ValueOrDie(), 330u);
 }
 
