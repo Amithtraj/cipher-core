@@ -1,8 +1,8 @@
 diff --git a/components/signin/public/base/signin_switches.cc b/components/signin/public/base/signin_switches.cc
-index b4bac32e265d103642ef96656f9b68fb897245bc..d3cf8a12dd14b44a5b3227814ac82bf3d8013770 100644
+index 775f70052cc7628762560ebaf293df3671fcb900..8fc0be254aa63107c11cd0e5fcc9308e8db45a24 100644
 --- a/components/signin/public/base/signin_switches.cc
 +++ b/components/signin/public/base/signin_switches.cc
-@@ -638,7 +638,7 @@ BASE_FEATURE(kFetchAccountInfoOnRestart, base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -642,7 +642,7 @@ BASE_FEATURE(kFetchAccountInfoOnRestart, base::FEATURE_DISABLED_BY_DEFAULT);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  #if BUILDFLAG(IS_WIN)
