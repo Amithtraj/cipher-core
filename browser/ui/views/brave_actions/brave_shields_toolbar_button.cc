@@ -14,6 +14,7 @@
 #include "ui/base/l10n/l10n_util.h"
 #include "ui/base/metadata/metadata_impl_macros.h"
 #include "ui/gfx/geometry/point.h"
+#include "ui/gfx/geometry/size.h"
 #include "ui/gfx/geometry/skia_conversions.h"
 #include "ui/views/controls/button/menu_button_controller.h"
 #include "ui/views/controls/highlight_path_generator.h"
@@ -78,8 +79,15 @@ void BraveShieldsToolbarButton::OnControllerStateChanged() {
 }
 
 void BraveShieldsToolbarButton::Update() {
+  // Only notify the parent layout when the size actually changes. Update()
+  // runs on nearly every Shields state change (e.g. each blocked resource),
+  // and an unconditional PreferredSizeChanged() here would re-lay-out the
+  // whole web app title bar every time, even when nothing visually changed.
+  const gfx::Size old_size = GetPreferredSize();
   controller_->RefreshButtonImages(this);
-  PreferredSizeChanged();
+  if (GetPreferredSize() != old_size) {
+    PreferredSizeChanged();
+  }
 }
 
 views::Widget* BraveShieldsToolbarButton::GetBubbleWidget() {

@@ -72,6 +72,15 @@ class BraveTabStripModel : public TabStripModel {
   // a tree-tab parent to select its whole subtree.
   std::vector<int> GetTreeTabDescendantIndices(int index);
 
+  // Returns true iff the current selection consists of exactly |active_index|
+  // and its tree tab descendants (no more, no fewer, no other tabs/trees).
+  // Always false when tree tabs are disabled or the tab has no descendants.
+  // Used by chrome::CloseTab()/ReloadInternal() to detect an ordinary
+  // subtree-selection-on-activate (see GetTreeTabDescendantIndices() above)
+  // so those commands can be scoped to just the active tab, mirroring how
+  // they already handle split tabs.
+  bool IsOnlyActiveTabAndTreeDescendantsSelected(int active_index);
+
   // TabStripModel:
   void SelectRelativeTab(TabRelativeDirection direction,
                          TabStripUserGestureDetails detail) override;

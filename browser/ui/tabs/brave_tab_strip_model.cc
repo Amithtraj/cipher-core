@@ -116,6 +116,37 @@ std::vector<int> BraveTabStripModel::GetTreeTabDescendantIndices(int index) {
   return descendant_indices;
 }
 
+bool BraveTabStripModel::IsOnlyActiveTabAndTreeDescendantsSelected(
+    int active_index) {
+  const auto& selected_indices =
+      selection_model().GetListSelectionModel().selected_indices();
+  CHECK(!selected_indices.empty());
+
+  // When automatically selecting a tree tab, active index should be the
+  // smallest index of selected indices
+  if (active_index != static_cast<int>(*selected_indices.begin())) {
+    return false;
+  }
+
+  std::vector<int> descendant_indices =
+      GetTreeTabDescendantIndices(active_index);
+  if (descendant_indices.empty()) {
+    return false;
+  }
+
+  // `descendant_ids does not include the root tab.
+  if (selected_indices.size() != descendant_indices.size() + 1) {
+    return false;
+  }
+
+  return std::ranges::all_of(
+             descendant_indices,
+             [&selected_indices](int index) {
+               return selected_indices.contains(static_cast<size_t>(index));
+             }) &&
+         selected_indices.contains(static_cast<size_t>(active_index));
+}
+
 void BraveTabStripModel::SelectMRUTab(TabRelativeDirection direction,
                                       TabStripUserGestureDetails detail) {
   if (mru_cycle_list_.empty()) {
