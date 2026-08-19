@@ -841,7 +841,6 @@
 -ExtensionSyncTypeTest.UserScriptNoUpdateUrl
 -ExtensionTelemetryServiceSystemTimeTest.PersistsReportsWithUnspecifiedManagementAuthorityOnShutdown
 -ExtensionTelemetryServiceTest.*
--ExtensionsMenuMainPageViewUnitTest.PinnedExtensions
 -GCMProfileServiceTest.*
 -GetUserPopulationForProfileTest.PopulatesPopulation
 -HostContentSettingsMapTest.IncognitoInheritSaaAndRenew

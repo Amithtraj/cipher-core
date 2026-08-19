@@ -62,6 +62,7 @@
 # These tests fail because the default search engine is Brave instead of Google.
 -All/SearchOverriddenParamsProvidersBrowserTest.GetExtensionControllingSearch/ExplicitChoice
 -All/SearchOverriddenParamsProvidersBrowserTest.GetExtensionControllingSearch/KeepOrBack
+-ClearBrowsingDataHandlerBrowserTest.UpdateSyncState_GoogleDse
 -DevToolsTest.TestOpenSearchResultsInNewTab
 -ExtensionControllingSearchExplicitChoiceParamsBrowserTest.NewExtensionOrPreviousGoogleSearch
 -ExtensionControllingSearchExplicitChoiceParamsBrowserTest.PrepopulatedSearches
@@ -1481,6 +1482,7 @@
 # These tests fail because we disable field trials via
 # disable_fieldtrial_testing_config
 -All/FieldTrialsOnOffBrowserTest.Test/On
+-GlicInstanceHelperBrowserTest.AutoOpenPdfLogsUkmOnTabSwitch
 -MemorySaverBubbleViewTest.ShowDialogWithoutExcludeSiteButtonInGuestMode
 -TabSearchUIBundledCodeCacheBrowserTest.SuccessfullyLoadsCodeCache/BundledCodeCacheDisabled_WithFieldTrials
 -TabSearchUIBundledCodeCacheBrowserTest.SuccessfullyLoadsCodeCache/BundledCodeCacheEnabled_WithFieldTrials
@@ -1781,6 +1783,7 @@
 -All/SearchEnginePreconnectorWithPreconnect2FeatureBrowserTest.*
 -All/SearchEnginePreconnectorWithResetConnectionFailureOnSessionUsedBrowserTest.PreconnectSearchAfterOnCloseWithShortSessionAndUsed/*
 -ChromeAutocompleteProviderClientTest.StartServiceWorker
+-DeviceBoundSessionBrowserTest.OmniboxQueryWithExpiredCookieTriggersRefresh
 -OmniboxSearchAggregator*Test.*
 -SearchEnginePreconnectorDeviceBoundSessionBrowserTest.PrewarmsDeviceBoundSessionOnStart
 
@@ -2486,6 +2489,10 @@
 # These tests crash because pinned_toolbar_actions_container_ in
 # BraveToolbarView is set to nullptr
 -PinnedToolbarActionsContainerTest.*
+
+# Theis test fails because the three dots menu icon in Brave is replaced with
+# hamburger icon (kBrowserToolsChromeRefreshOldIcon vs kLeoMoreVerticalIcon)
+-ExtensionsMenuMainPageViewBrowserTest.PinnedExtensions
 
 # Tests below this point have not been diagnosed or had issues created yet.
 -All/DeclarativeNetRequestBrowserTest.RendererCacheCleared/*
