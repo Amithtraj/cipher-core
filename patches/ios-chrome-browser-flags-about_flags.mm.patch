@@ -1,8 +1,8 @@
 diff --git a/ios/chrome/browser/flags/about_flags.mm b/ios/chrome/browser/flags/about_flags.mm
-index 99c97bf5a9ea99884f529fb83887f56aca16dfb9..79eded2a3f7295859efd41d9184f2beb63f8623c 100644
+index 77383ef4e0ef36066fe22a21c0c9d16a3bbcd572..27ff4a3ca0e662c71d3ba39d88ea058afe024eae 100644
 --- a/ios/chrome/browser/flags/about_flags.mm
 +++ b/ios/chrome/browser/flags/about_flags.mm
-@@ -1342,6 +1342,7 @@ const FeatureEntry::FeatureVariation kCrossDeviceSigninVariations[] = {
+@@ -1411,6 +1411,7 @@ const FeatureEntry::FeatureVariation kNewTabPageRedesignVariations[] = {
  //
  // When adding a new choice, add it to the end of the list.
  constexpr auto kFeatureEntries = std::to_array<flags_ui::FeatureEntry>({

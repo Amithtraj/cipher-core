@@ -1,8 +1,8 @@
 diff --git a/chrome/browser/ui/omnibox/omnibox_popup_view.h b/chrome/browser/ui/omnibox/omnibox_popup_view.h
-index 95c7dc653156559d4fd123c51da33b2082f776ed..7fa8ad685e9586a8a1cfb5a83e0be273784946ad 100644
+index 26b199944d786e8c09bbf92d890915702aad21b8..250abcb1ae697e54380625ff767f138dbc501b94 100644
 --- a/chrome/browser/ui/omnibox/omnibox_popup_view.h
 +++ b/chrome/browser/ui/omnibox/omnibox_popup_view.h
-@@ -99,6 +99,7 @@ class OmniboxPopupView {
+@@ -109,6 +109,7 @@ class OmniboxPopupView {
    base::TimeTicks construction_time() const { return construction_time_; }
  
   protected:
