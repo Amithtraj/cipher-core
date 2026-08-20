@@ -565,7 +565,13 @@ IN_PROC_BROWSER_TEST_F(EmailAliasesBrowserTest, ContextMenuAuthorizedCancel) {
   EXPECT_TRUE(AwaitText("#type-email", ""));  // text not changed
 }
 IN_PROC_BROWSER_TEST_F(EmailAliasesBrowserTest, LogInLogOut) {
+  browser()->GetProfile()->GetPrefs()->SetBoolean(prefs::kPromoShown, false);
+
   SetBraveAccountLoggedIn();
+
+  // Login stops promo showing.
+  EXPECT_TRUE(
+      browser()->GetProfile()->GetPrefs()->GetBoolean(prefs::kPromoShown));
 
   // Settings in logged-in state
   Navigate(GURL("chrome://settings/email-aliases"));
@@ -574,6 +580,8 @@ IN_PROC_BROWSER_TEST_F(EmailAliasesBrowserTest, LogInLogOut) {
 
   SetBraveAccountLoggedOut();
   WaitDisappear("#create-new-item-button");  // Settings in sing-in state.
+  EXPECT_TRUE(
+      browser()->GetProfile()->GetPrefs()->GetBoolean(prefs::kPromoShown));
 
   SetBraveAccountLoggedIn();
   Wait("#create-new-item-button");  // Logged-in state.
