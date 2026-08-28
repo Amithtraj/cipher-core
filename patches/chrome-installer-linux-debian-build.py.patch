@@ -1,17 +1,19 @@
 diff --git a/chrome/installer/linux/debian/build.py b/chrome/installer/linux/debian/build.py
-index 2d023ed81b760dde4efa72b1a7a58ce536a6aa78..27cc9692240c71d8f202607695e80629bf4b709a 100755
+index 2d023ed81b760dde4efa72b1a7a58ce536a6aa78..acb81d6e48e704bd754cd5ca4b6164b013e72be6 100755
 --- a/chrome/installer/linux/debian/build.py
 +++ b/chrome/installer/linux/debian/build.py
-@@ -168,6 +168,8 @@ def main() -> None:
+@@ -168,6 +168,10 @@ def main() -> None:
          logging.info(f"Packaging {args.arch}...")
          config.deb_pre_depends = config.common_predeps
          config.deb_depends = config.common_deps
-+        # Ensure that our signing key is up-to-date (brave/brave-browser#4205).
-+        config.deb_depends = f"brave-keyring, {config.common_deps}"
++        # Cipher has no apt repo / signing-key package of its own (unlike
++        # upstream Brave's brave-keyring dependency, brave/brave-browser#4205)
++        # so no extra Depends: entry is added here — doing so would make the
++        # package uninstallable outside a Cipher apt repo that doesn't exist.
          config.deb_provides = "www-browser"
  
          installer.gen_changelog(config, deb_changelog)
-@@ -179,6 +181,8 @@ def main() -> None:
+@@ -179,6 +183,8 @@ def main() -> None:
  
          os.environ["DEB_HOST_ARCH"] = args.arch
          pkg_name = f"{config.package_orig}-{config.channel}"

@@ -71,7 +71,14 @@ brave_dist_dir = "$root_out_dir/dist"
 if (is_brave_origin_branded) {
   _product_brand = "Origin"
   brave_dist_name = "brave-origin"
-  brave_linux_package_name = "brave-origin"
+  # Must match PACKAGE= in
+  # chromium_src/chrome/installer/linux/common/brave-origin/
+  # chromium-browser.info -- that shell variable is what
+  # chrome/installer/linux/debian/build.py actually names the .deb it
+  # writes, while this GN value is what chrome/installer/linux/BUILD.gn
+  # declares as the expected ninja build output. The two must agree or
+  # the stable_deb build step fails with "missing local outputs".
+  brave_linux_package_name = "cipher-browser"
 } else {
   _product_brand = "Browser"
   brave_dist_name = "brave"
