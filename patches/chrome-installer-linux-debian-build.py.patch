@@ -1,5 +1,5 @@
 diff --git a/chrome/installer/linux/debian/build.py b/chrome/installer/linux/debian/build.py
-index 2d023ed81b760dde4efa72b1a7a58ce536a6aa78..acb81d6e48e704bd754cd5ca4b6164b013e72be6 100755
+index 2d023ed81b760dde4efa72b1a7a58ce536a6aa78..054516aaabff5a61438ca8d744eb9bf3aead1ec7 100755
 --- a/chrome/installer/linux/debian/build.py
 +++ b/chrome/installer/linux/debian/build.py
 @@ -168,6 +168,10 @@ def main() -> None:
@@ -13,12 +13,11 @@ index 2d023ed81b760dde4efa72b1a7a58ce536a6aa78..acb81d6e48e704bd754cd5ca4b6164b0
          config.deb_provides = "www-browser"
  
          installer.gen_changelog(config, deb_changelog)
-@@ -179,6 +183,8 @@ def main() -> None:
+@@ -179,6 +183,7 @@ def main() -> None:
  
          os.environ["DEB_HOST_ARCH"] = args.arch
          pkg_name = f"{config.package_orig}-{config.channel}"
 +        if config.channel == "stable": pkg_name = f"{config.package_orig}"
-+        zip_path = (output_dir / f"{pkg_name}-{config.versionfull}-linux-{args.arch}.zip").resolve(); subprocess.check_call(["zip", "-qr", str(zip_path), "."], cwd=str(install_dir))
  
          if deb_control.exists():
              gen_control(
