@@ -6,7 +6,13 @@
 import("//brave/components/brave_origin/buildflags/buildflags.gni")
 
 declare_args() {
-  brave_stats_updater_url = "https://usage-ping.brave.com"
+  # Disabled for Cipher: .invalid (RFC 2606) keeps this a well-formed,
+  # non-empty URL for the assert() below while guaranteeing no request
+  # ever reaches a real brave.com stats-ping endpoint. Note the stats
+  # updater feature itself is already compiled out below for Cipher
+  # (is_brave_origin_branded is true), so this value is also unreachable
+  # dead code in practice; kept non-live for defense in depth.
+  brave_stats_updater_url = "https://usage-ping.invalid"
 
   enable_brave_stats_updater = !is_brave_origin_branded
 }

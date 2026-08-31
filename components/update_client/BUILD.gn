@@ -6,8 +6,12 @@
 import("//build/buildflag_header.gni")
 
 declare_args() {
-  updater_dev_endpoint = "https://go-updater-dev.bravesoftware.com/extensions"
-  updater_prod_endpoint = "https://go-updater.brave.com/extensions"
+  # Disabled for Cipher: .invalid (RFC 2606) keeps these well-formed,
+  # non-empty URLs for the assert() below while guaranteeing no request
+  # ever reaches a real brave.com/bravesoftware.com component-updater
+  # (extension update) endpoint.
+  updater_dev_endpoint = "https://go-updater-dev.invalid/extensions"
+  updater_prod_endpoint = "https://go-updater.invalid/extensions"
 }
 
 if (is_official_build) {

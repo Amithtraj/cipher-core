@@ -20,8 +20,10 @@ namespace syncer {
 
 namespace {
 std::string AppendBraveServiceKeyHeaderString() {
-  return base::StrCat(
-      {"\r\n", kBraveServicesKeyHeader, ": ", BUILDFLAG(BRAVE_SERVICES_KEY)});
+  // Disabled for Cipher: the sync endpoint is neutralized (see
+  // components/brave_sync/BUILD.gn), so no BraveServiceKey header is ever
+  // appended to the sync access token.
+  return "";
 }
 }  // namespace
 

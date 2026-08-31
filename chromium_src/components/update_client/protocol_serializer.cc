@@ -20,10 +20,11 @@ base::flat_map<std::string, std::string> BuildUpdateCheckExtraRequestHeaders(
     const base::Version& browser_version,
     const std::vector<std::string>& ids,
     bool is_foreground) {
-  auto headers = BuildUpdateCheckExtraRequestHeaders_ChromiumImpl(
+  // Disabled for Cipher: the component-updater endpoint is neutralized (see
+  // components/update_client/BUILD.gn), so this header is never attached to
+  // any component-updater/Omaha protocol request.
+  return BuildUpdateCheckExtraRequestHeaders_ChromiumImpl(
       prod_id, browser_version, ids, is_foreground);
-  headers.insert({"BraveServiceKey", BUILDFLAG(BRAVE_SERVICES_KEY)});
-  return headers;
 }
 
 }  // namespace update_client

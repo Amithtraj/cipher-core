@@ -40,10 +40,12 @@ int OnBeforeStartTransaction_BraveServiceKey(
     net::HttpRequestHeaders* headers,
     const ResponseCallback& next_callback,
     T<BraveRequestInfo> ctx) {
+  // UPDATER_DEV_ENDPOINT/UPDATER_PROD_ENDPOINT are disabled for Cipher (see
+  // components/update_client/BUILD.gn), so they are intentionally left out
+  // of this allow-list: keeping them would still attach the services-key
+  // header to the now-inert component-updater requests.
   static const base::NoDestructor<std::vector<std::string>> allowed_domains{{
       kExtensionUpdaterDomain,
-      std::string(GURL(BUILDFLAG(UPDATER_DEV_ENDPOINT)).host()),
-      std::string(GURL(BUILDFLAG(UPDATER_PROD_ENDPOINT)).host()),
 // Gate3 is used by both Rewards and Wallet, but only Rewards OAuth requests
 // go through this network delegate path. Wallet gate3 requests use
 // APIRequestHelper which adds the services key explicitly.

@@ -4,7 +4,10 @@
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
 declare_args() {
-  brave_variations_server_url = "https://variations.brave.com/seed"
+  # Disabled for Cipher: .invalid (RFC 2606) keeps this a well-formed,
+  # non-empty URL for the assert() below while guaranteeing no request
+  # ever reaches a real brave.com variations endpoint.
+  brave_variations_server_url = "https://variations.invalid/seed"
 }
 
 if (is_official_build) {

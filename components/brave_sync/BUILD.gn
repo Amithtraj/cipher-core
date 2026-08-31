@@ -10,7 +10,11 @@ import("//tools/grit/grit_rule.gni")
 import("//tools/grit/repack.gni")
 
 declare_args() {
-  brave_sync_endpoint = "https://sync-v2.brave.com/v2"
+  # Disabled for Cipher: point at an RFC 2606 .invalid host so the value
+  # stays a well-formed, non-empty URL (required by the assert() below for
+  # official builds) while guaranteeing no request ever reaches a real
+  # brave.com/bravesoftware.com sync endpoint.
+  brave_sync_endpoint = "https://sync-v2.invalid/v2"
 }
 
 if (is_official_build) {
