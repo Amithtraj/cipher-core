@@ -5,11 +5,11 @@
 
 substitutions:
   - description: |
-      Display the brave:// scheme instead of chrome:// for internal tab URLs
+      Display the cipher:// scheme instead of chrome:// for internal tab URLs
       in the Tab Search dialog.
 
       Upstream prepends a hardcoded 'chrome://' text node to the secondary
-      text of chrome-internal tabs. Brave shows such URLs with the brave://
+      text of chrome-internal tabs. Brave shows such URLs with the cipher://
       scheme everywhere else (location bar, hover cards, etc.) via
       brave_utils::ReplaceChromeToBraveScheme, but that C++ display formatting
       never runs for this WebUI dialog. Swap the displayed prefix to match.
@@ -18,4 +18,4 @@ substitutions:
       scheme used for navigation.
     regex:
       re_pattern: "(document\\.createTextNode\\(')chrome://('\\))"
-      replace: '\1brave://\2'
+      replace: '\1cipher://\2'

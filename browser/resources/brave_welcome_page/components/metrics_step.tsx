@@ -63,7 +63,7 @@ export function MetricsStep(props: StepComponentProps) {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  brave://settings/privacy
+                  cipher://settings/privacy
                 </a>
               ),
               $2: (content) => (

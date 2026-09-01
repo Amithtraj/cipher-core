@@ -21,14 +21,14 @@ namespace content {
 
 const std::u16string& NavigationEntryImpl::GetTitleForDisplay() const {
   const std::u16string& result = GetTitleForDisplay_ChromiumImpl();
-  // brave:// is a display-only scheme that maps to chrome:// internally. When
-  // the page title is empty, GetTitleForDisplay falls back to formatting the
-  // virtual URL as the display title. Since brave:// URLs are stored as
-  // chrome:// internally, that fallback shows "chrome://host" instead of
-  // "brave://host". Convert it for display.
+  // cipher:// is a display-only scheme that maps to chrome:// internally.
+  // When the page title is empty, GetTitleForDisplay falls back to
+  // formatting the virtual URL as the display title. Since cipher:// URLs
+  // are stored as chrome:// internally, that fallback shows "chrome://host"
+  // instead of "cipher://host". Convert it for display.
   if (title_.empty() && !cached_display_title_.empty()) {
     static constexpr char16_t kChromePrefix[] = u"chrome://";
-    static constexpr char16_t kBravePrefix[] = u"brave://";
+    static constexpr char16_t kBravePrefix[] = u"cipher://";
     if (cached_display_title_.starts_with(kChromePrefix)) {
       cached_display_title_.replace(0, std::size(kChromePrefix) - 1,
                                     kBravePrefix);
@@ -37,10 +37,10 @@ const std::u16string& NavigationEntryImpl::GetTitleForDisplay() const {
   return result;
 }
 
-// Virtual url should never be set to brave
+// Virtual url should never be set to cipher
 void NavigationEntryImpl::SetVirtualURL(const GURL& url) {
   DCHECK(!url.SchemeIs(kBraveUIScheme))
-      << "Virtual URL should not use brave:// scheme";
+      << "Virtual URL should not use cipher:// scheme";
   SetVirtualURL_ChromiumImpl(url);
 }
 

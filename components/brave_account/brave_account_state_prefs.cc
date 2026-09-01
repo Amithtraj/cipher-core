@@ -99,9 +99,9 @@ void AccountStatePrefs::SetVerificationVerifiedEmail(
   CHECK(!verification_verified_email.empty());
 
   // The verification slot can be cleared concurrently from another surface,
-  // e.g. by clicking the cancel button in a `brave://settings` tab while a
+  // e.g. by clicking the cancel button in a `cipher://settings` tab while a
   // verification step is still in flight in a different tab showing the
-  // `brave://account` WebUI. `ClearVerification()` is a same-alternative
+  // `cipher://account` WebUI. `ClearVerification()` is a same-alternative
   // transition, so the in-flight request and its callback survive and may still
   // arrive here after the slot is gone. Drop the write in that case rather than
   // crashing: the cancel won, so there is no slot left to record the verified

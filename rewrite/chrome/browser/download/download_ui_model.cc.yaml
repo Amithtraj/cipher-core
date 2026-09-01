@@ -19,10 +19,10 @@ substitutions:
             case DownloadCommands::COPY_DOWNLOAD_LINK:
 
   - description: |
-      There's inconsistency between the download bubble and brave://downloads
+      There's inconsistency between the download bubble and cipher://downloads
       page in showing "File removed" status for removed files. To keep the
       consistency, use IDS_DOWNLOAD_FILE_REMOVED so both the download bubble and
-      brave://downloads page show "Deleted" for removed files.
+      cipher://downloads page show "Deleted" for removed files.
     regex:
       pattern: 'IDS_DOWNLOAD_STATUS_REMOVED'
       replace: 'IDS_DOWNLOAD_FILE_REMOVED'

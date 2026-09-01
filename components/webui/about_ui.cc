@@ -23,9 +23,9 @@ std::string ReplaceAboutUIChromeURLs(std::string chrome_urls) {
   constexpr std::string_view kChromeInternalPagesHeader =
       "List of chrome://internals pages";
   constexpr std::string_view kBraveInternalPagesHeader =
-      "List of brave://internals pages";
+      "List of cipher://internals pages";
   constexpr std::string_view kChromeURLList = ">chrome://";
-  constexpr std::string_view kBraveURLList = ">brave://";
+  constexpr std::string_view kBraveURLList = ">cipher://";
 
   RE2::GlobalReplace(&chrome_urls, kChromeHeader, kBraveHeader);
   RE2::GlobalReplace(&chrome_urls, kChromePagesHeader, kBravePagesHeader);
@@ -37,7 +37,7 @@ std::string ReplaceAboutUIChromeURLs(std::string chrome_urls) {
   auto html_lines = base::SplitStringPiece(
       chrome_urls, "\n", base::KEEP_WHITESPACE, base::SPLIT_WANT_ALL);
   constexpr auto kURLsToRemove = base::MakeFixedFlatSet<std::string_view>({
-      "brave://memories",
+      "cipher://memories",
   });
   // URLs in html should be sorted so it's okay to iterate over sorted
   // kURLsToRemove.

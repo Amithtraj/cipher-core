@@ -19,7 +19,7 @@ interface InputCheckboxProps {
 }
 
 const changeSettingsNote = formatLocale('braveWelcomeChangeSettingsNote', {
-  $1: content => <a href="brave://settings/privacy" onClick={() => {
+  $1: content => <a href="cipher://settings/privacy" onClick={() => {
     WelcomeBrowserProxyImpl.getInstance().openSettingsPage()
   }}>
     {content}

@@ -25,7 +25,7 @@
 namespace {
 
 constexpr char kChromeSchema[] = "chrome://";
-constexpr char kBraveSchema[] = "brave://";
+constexpr char kBraveSchema[] = "cipher://";
 
 }  // namespace
 

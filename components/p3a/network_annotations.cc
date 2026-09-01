@@ -30,7 +30,7 @@ net::NetworkTrafficAnnotationTag GetRandomnessRequestAnnotation() {
     policy {
       cookies_allowed: NO
       setting:
-        "Users can enable or disable it in brave://settings/privacy"
+        "Users can enable or disable it in cipher://settings/privacy"
        policy_exception_justification:
          "Not implemented."
     })");
@@ -55,7 +55,7 @@ net::NetworkTrafficAnnotationTag GetRandomnessServerInfoAnnotation() {
     policy {
       cookies_allowed: NO
       setting:
-        "Users can enable or disable it in brave://settings/privacy"
+        "Users can enable or disable it in cipher://settings/privacy"
        policy_exception_justification:
          "Not implemented."
     })");
@@ -80,7 +80,7 @@ net::NetworkTrafficAnnotationTag GetP3AUploadAnnotation() {
       policy {
         cookies_allowed: NO
         setting:
-          "Users can enable or disable it in brave://settings/privacy"
+          "Users can enable or disable it in cipher://settings/privacy"
           policy_exception_justification:
             "Not implemented."
       })");

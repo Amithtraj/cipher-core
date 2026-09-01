@@ -77,7 +77,7 @@
 </message>
 
 <message name="IDS_BRAVE_WELCOME_CHANGE_SETTINGS_NOTE" desc="A footnote with a link to change settings.">
-  Change these choices at any time in Cipher at <ph name="LINK_BEFORE1">$1</ph>brave://settings/privacy<ph name="LINK_AFTER2">/$1</ph>.
+  Change these choices at any time in Cipher at <ph name="LINK_BEFORE1">$1</ph>cipher://settings/privacy<ph name="LINK_AFTER2">/$1</ph>.
 </message>
 
 <message name="IDS_BRAVE_WELCOME_PRIVACY_POLICY_NOTE" desc="A footnote with a link to Cipher's privacy polcy.">
