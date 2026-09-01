@@ -108,7 +108,7 @@ const maybeLoadFeedView = (feed?: FeedV2): FeedView => {
 }
 
 const fetchFeed = (feedView: FeedView) => {
-  if (!loadTimeData.getBoolean('featureFlagBraveNewsFeedV2Enabled')) return Promise.resolve(undefined)
+  if (!loadTimeData.getBoolean('featureFlagCipherNewsFeedV2Enabled')) return Promise.resolve(undefined)
   let promise: Promise<{ feed: FeedV2 }> | undefined
   if (feedView.startsWith('publishers/')) {
     promise = getBraveNewsController().getPublisherFeed(feedView.split('/')[1]);

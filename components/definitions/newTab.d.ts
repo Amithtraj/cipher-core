@@ -124,25 +124,25 @@ declare namespace NewTab {
     clockFormat: string
     showTopSites: boolean
     showRewards: boolean
-    showBraveTalk: boolean
-    showBraveVPN: boolean
+    showCipherTalk: boolean
+    showCipherVPN: boolean
     showSearchBox: boolean
     lastUsedNtpSearchEngine: string
     promptEnableSearchSuggestions: boolean
     searchSuggestionsEnabled: boolean
     hideAllWidgets: boolean
-    isBraveNewsOptedIn: boolean
-    isBraveNewsDisabledByPolicy: boolean
-    isBraveTalkDisabledByPolicy: boolean
+    isCipherNewsOptedIn: boolean
+    isCipherNewsDisabledByPolicy: boolean
+    isCipherTalkDisabledByPolicy: boolean
     isBrandedWallpaperNotificationDismissed: boolean
   }
 
   export type EphemeralState = Preferences & {
     initialDataLoaded: boolean
     textDirection: string
-    featureFlagBraveNTPSponsoredImagesWallpaper: boolean
-    featureFlagBraveNewsPromptEnabled: boolean
-    featureFlagBraveNewsFeedV2Enabled: boolean
+    featureFlagCipherNTPSponsoredImagesWallpaper: boolean
+    featureFlagCipherNewsPromptEnabled: boolean
+    featureFlagCipherNewsFeedV2Enabled: boolean
     searchPromotionEnabled: boolean
     featureCustomBackgroundEnabled: boolean
     isIncognito: boolean

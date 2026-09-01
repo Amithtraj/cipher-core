@@ -69,7 +69,7 @@ export interface Props {
   brandedWallpaperOptIn: boolean
   allowBackgroundCustomization: boolean
   showRewards: boolean
-  showBraveTalk: boolean
+  showCipherTalk: boolean
   braveRewardsSupported: boolean
   braveTalkSupported: boolean
   setActiveTab?: TabType
@@ -114,11 +114,11 @@ export default function Settings(props: Props) {
   const allowedTabTypes = React.useMemo(() => tabTypes.filter(t =>
     (props.allowBackgroundCustomization || t !== TabType.BackgroundImage) &&
     (featureFlagSearchWidget || t !== TabType.Search) &&
-    (!props.newTabData.isBraveNewsDisabledByPolicy ||
+    (!props.newTabData.isCipherNewsDisabledByPolicy ||
       t !== TabType.BraveNews)
   ), [
     props.allowBackgroundCustomization,
-    props.newTabData.isBraveNewsDisabledByPolicy
+    props.newTabData.isCipherNewsDisabledByPolicy
   ])
   const [activeTab, setActiveTab] = React.useState(props.allowBackgroundCustomization
     ? TabType.BackgroundImage
@@ -193,7 +193,7 @@ export default function Settings(props: Props) {
             toggleCards={props.toggleCards}
             cardsHidden={props.cardsHidden}
             toggleShowBraveTalk={props.toggleShowBraveTalk}
-            showBraveTalk={props.showBraveTalk}
+            showCipherTalk={props.showCipherTalk}
             braveTalkSupported={props.braveTalkSupported}
             toggleShowRewards={props.toggleShowRewards}
             braveRewardsSupported={props.braveRewardsSupported}

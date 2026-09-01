@@ -15,7 +15,7 @@ import {
 jest.mock('../../../../common/loadTimeData', () => ({
   loadTimeData: {
     getString: jest.fn((key: string) => {
-      if (key === 'braveWalletTrezorBridgeUrl') {
+      if (key === 'cipherWalletTrezorBridgeUrl') {
         return 'chrome-untrusted://trezor-bridge'
       }
       return key

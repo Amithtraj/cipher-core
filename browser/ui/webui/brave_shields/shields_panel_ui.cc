@@ -66,7 +66,7 @@ ShieldsPanelUI::ShieldsPanelUI(content::WebUI* web_ui)
 
   source->AddBoolean("isTorProfile", profile_->IsTor());
 
-  source->AddBoolean("isBraveForgetFirstPartyStorageFeatureEnabled",
+  source->AddBoolean("isCipherForgetFirstPartyStorageFeatureEnabled",
                      base::FeatureList::IsEnabled(
                          net::features::kBraveForgetFirstPartyStorage));
 

@@ -43,7 +43,7 @@ const StyledButton = styled(Button) <{ float: boolean }>`
 
 interface Props {
   toggleShowBraveTalk: () => void
-  showBraveTalk: boolean
+  showCipherTalk: boolean
   braveTalkSupported: boolean
   toggleShowRewards: () => void
   showRewards: boolean
@@ -61,14 +61,14 @@ const ToggleButton = ({ on, toggleFunc, float }: { on: boolean, toggleFunc: any,
   </StyledButton>
 }
 
-function CardSettings({ toggleShowBraveTalk, showBraveTalk, braveTalkSupported, toggleShowRewards, showRewards, braveRewardsSupported, toggleCards, cardsHidden }: Props) {
-  const [showBraveVPN, saveShowBraveVPN] = useNewTabPref('showBraveVPN')
-  const [isBraveTalkDisabledByPolicy] = useNewTabPref(
-    'isBraveTalkDisabledByPolicy'
+function CardSettings({ toggleShowBraveTalk, showCipherTalk, braveTalkSupported, toggleShowRewards, showRewards, braveRewardsSupported, toggleCards, cardsHidden }: Props) {
+  const [showCipherVPN, saveShowBraveVPN] = useNewTabPref('showCipherVPN')
+  const [isCipherTalkDisabledByPolicy] = useNewTabPref(
+    'isCipherTalkDisabledByPolicy'
   )
 
   return <StyledWidgetSettings>
-    {braveTalkSupported && !isBraveTalkDisabledByPolicy &&
+    {braveTalkSupported && !isCipherTalkDisabledByPolicy &&
       <FeaturedSettingsWidget>
       <StyledBannerImage src={braveTalkBanner} />
       <StyledSettingsInfo>
@@ -79,7 +79,7 @@ function CardSettings({ toggleShowBraveTalk, showBraveTalk, braveTalkSupported, 
           {getLocale('braveTalkWidgetWelcomeTitle')}
         </StyledSettingsCopy>
       </StyledSettingsInfo>
-      <ToggleButton on={showBraveTalk} toggleFunc={toggleShowBraveTalk} float />
+      <ToggleButton on={showCipherTalk} toggleFunc={toggleShowBraveTalk} float />
     </FeaturedSettingsWidget>}
     {braveRewardsSupported && <SettingsWidget>
       <StyledBannerImage src={rewardsBanner} />
@@ -103,7 +103,7 @@ function CardSettings({ toggleShowBraveTalk, showBraveTalk, braveTalkSupported, 
           {getLocale('braveVpnWidgetSettingDesc')}
         </StyledSettingsCopy>
       </StyledSettingsInfo>
-      <ToggleButton on={showBraveVPN!} toggleFunc={() => saveShowBraveVPN(!showBraveVPN)} />
+      <ToggleButton on={showCipherVPN!} toggleFunc={() => saveShowBraveVPN(!showCipherVPN)} />
     </SettingsWidget>}
     <FeaturedSettingsWidget>
       <ToggleCardsWrapper>

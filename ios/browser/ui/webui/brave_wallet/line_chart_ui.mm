@@ -46,7 +46,7 @@ UntrustedLineChartUI::UntrustedLineChartUI(web::WebUIIOS* web_ui,
   untrusted_source->OverrideContentSecurityPolicy(
       network::mojom::CSPDirectiveName::FontSrc,
       std::string("font-src 'self' data: chrome-untrusted://resources;"));
-  untrusted_source->AddString("braveWalletLineChartBridgeUrl",
+  untrusted_source->AddString("cipherWalletLineChartBridgeUrl",
                               kUntrustedLineChartURL);
   untrusted_source->OverrideContentSecurityPolicy(
       network::mojom::CSPDirectiveName::ImgSrc,

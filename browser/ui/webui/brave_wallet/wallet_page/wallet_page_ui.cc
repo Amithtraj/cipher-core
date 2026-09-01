@@ -110,11 +110,11 @@ WalletPageUI::WalletPageUI(content::WebUI* web_ui)
       std::string("frame-src ") + kUntrustedTrezorURL + " " +
           kUntrustedLedgerURL + " " + kUntrustedNftURL + " " +
           kUntrustedLineChartURL + " " + kUntrustedMarketURL + ";");
-  source->AddString("braveWalletLedgerBridgeUrl", kUntrustedLedgerURL);
-  source->AddString("braveWalletTrezorBridgeUrl", kUntrustedTrezorURL);
-  source->AddString("braveWalletNftBridgeUrl", kUntrustedNftURL);
-  source->AddString("braveWalletLineChartBridgeUrl", kUntrustedLineChartURL);
-  source->AddString("braveWalletMarketUiBridgeUrl", kUntrustedMarketURL);
+  source->AddString("cipherWalletLedgerBridgeUrl", kUntrustedLedgerURL);
+  source->AddString("cipherWalletTrezorBridgeUrl", kUntrustedTrezorURL);
+  source->AddString("cipherWalletNftBridgeUrl", kUntrustedNftURL);
+  source->AddString("cipherWalletLineChartBridgeUrl", kUntrustedLineChartURL);
+  source->AddString("cipherWalletMarketUiBridgeUrl", kUntrustedMarketURL);
   source->AddBoolean("isMobile", IsMobile());
   source->AddBoolean("isIOS", false);
   source->AddBoolean("rewardsFeatureEnabled", IsRewardsFeatureEnabled(profile));

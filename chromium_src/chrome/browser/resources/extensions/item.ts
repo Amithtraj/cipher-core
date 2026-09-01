@@ -14,7 +14,7 @@ declare module './item-chromium.js' {
 }
 
 ExtensionsItemElement.prototype.isBraveHosted_ = (extensionId: string) => {
-  return loadTimeData.getString('braveHostedExtensions').includes(extensionId)
+  return loadTimeData.getString('cipherHostedExtensions').includes(extensionId)
 }
 
 export * from './item-chromium.js'

@@ -46,12 +46,12 @@ UntrustedNftUI::UntrustedNftUI(web::WebUIIOS* web_ui, const GURL& url)
   untrusted_source->AddResourcePath("load_time_data_deprecated.js",
                                     IDR_WEBUI_JS_LOAD_TIME_DATA_DEPRECATED_JS);
   untrusted_source->UseStringsJs();
-  untrusted_source->AddString("braveWalletNftBridgeUrl", kUntrustedNftURL);
-  untrusted_source->AddString("braveWalletTrezorBridgeUrl",
+  untrusted_source->AddString("cipherWalletNftBridgeUrl", kUntrustedNftURL);
+  untrusted_source->AddString("cipherWalletTrezorBridgeUrl",
                               kUntrustedTrezorURL);
-  untrusted_source->AddString("braveWalletLedgerBridgeUrl",
+  untrusted_source->AddString("cipherWalletLedgerBridgeUrl",
                               kUntrustedLedgerURL);
-  untrusted_source->AddString("braveWalletMarketUiBridgeUrl",
+  untrusted_source->AddString("cipherWalletMarketUiBridgeUrl",
                               kUntrustedMarketURL);
   untrusted_source->OverrideContentSecurityPolicy(
       network::mojom::CSPDirectiveName::ImgSrc,

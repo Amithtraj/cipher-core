@@ -11,7 +11,7 @@ import { loadTimeData } from '../../common/loadTimeData'
 import { BraveWallet, MeldCryptoCurrency } from '../constants/types'
 import { isComponentInStorybook } from '../utils/string-utils'
 
-const marketUiOrigin = loadTimeData.getString('braveWalletMarketUiBridgeUrl')
+const marketUiOrigin = loadTimeData.getString('cipherWalletMarketUiBridgeUrl')
 export const braveWalletPanelOrigin = 'chrome://wallet-panel.top-chrome'
 
 // remove trailing /

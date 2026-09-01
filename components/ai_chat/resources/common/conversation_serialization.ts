@@ -202,7 +202,7 @@ export function serializeConversationForSharing(
   const payload: SerializedConversation = {
     // The Brave client version that produced this payload, so the viewer can
     // choose the correct parsing algorithm for the data below.
-    version: loadTimeData.getString('braveVersion'),
+    version: loadTimeData.getString('cipherVersion'),
     data: stringifyConversationData(data),
   }
 

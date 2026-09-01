@@ -360,7 +360,7 @@ function ForgetFirstPartyStorageControls() {
   const { data: siteSettings } = api.useGetSiteSettings()
   const { data: siteBlockInfo } = api.useGetSiteBlockInfo()
   const forgetFeatureEnabled =
-    api.useIsBraveForgetFirstPartyStorageFeatureEnabledData()
+    api.useIsCipherForgetFirstPartyStorageFeatureEnabledData()
 
   if (!siteBlockInfo || !siteSettings) {
     return null

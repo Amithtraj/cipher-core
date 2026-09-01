@@ -70,7 +70,7 @@ export const newTabReducer: Reducer<NewTab.State | undefined> = (state: NewTab.S
         // Update feature flag if this is super referral wallpaper.
         state = {
           ...state,
-          featureFlagBraveNTPSponsoredImagesWallpaper: false
+          featureFlagCipherNTPSponsoredImagesWallpaper: false
         }
       }
       // Set default if we can't get both.

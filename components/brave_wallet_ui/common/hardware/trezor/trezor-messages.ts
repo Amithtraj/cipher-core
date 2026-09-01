@@ -13,7 +13,7 @@ import {
   EthereumSignTypedHash,
 } from './trezor-connect-types'
 export const kTrezorBridgeUrl = loadTimeData.getString(
-  'braveWalletTrezorBridgeUrl',
+  'cipherWalletTrezorBridgeUrl',
 )
 
 export enum TrezorCommand {

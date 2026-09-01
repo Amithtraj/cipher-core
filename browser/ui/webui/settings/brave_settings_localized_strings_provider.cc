@@ -1124,7 +1124,7 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
   };
 
   html_source->AddLocalizedStrings(localized_strings);
-  html_source->AddString("braveShieldsExampleTemplate", "example.com");
+  html_source->AddString("cipherShieldsExampleTemplate", "example.com");
   html_source->AddString("webRTCLearnMoreURL", kWebRTCLearnMoreURL);
   html_source->AddString("googleLoginLearnMoreURL", kGoogleLoginLearnMoreURL);
   html_source->AddString("deAmpLearnMoreURL", kDeAmpLearnMoreUrl);
@@ -1157,7 +1157,7 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
           confirmation_phrase));
 #if BUILDFLAG(ENABLE_AI_CHAT)
   html_source->AddString(
-      "braveLeoAssistantInputDefaultContextSize",
+      "cipherLeoAssistantInputDefaultContextSize",
       base::NumberToString16(ai_chat::kDefaultCustomModelContextSize));
 
   html_source->AddString("braveLeoAssistantTabOrganizationDesc",
@@ -1171,7 +1171,7 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
           IDS_SETTINGS_LEO_ASSISTANT_TAB_ORGANIZATION_MODEL_DESC,
           kTabOrganizationLearnMoreURL));
 
-  html_source->AddString("braveLeoAssistantTabOrganizationLearnMoreURL",
+  html_source->AddString("cipherLeoAssistantTabOrganizationLearnMoreURL",
                          kTabOrganizationLearnMoreURL);
 
   html_source->AddBoolean("isTabOrganizationFeatureEnabled",
@@ -1251,7 +1251,7 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
                                  kLeoMemoryLearnMoreURL));
 #endif
 
-  html_source->AddString("braveSurveyPanelistLearnMoreURL",
+  html_source->AddString("cipherSurveyPanelistLearnMoreURL",
                          kSurveyPanelistLearnMoreURL);
 
   html_source->AddString(
@@ -1306,7 +1306,7 @@ void BraveAddEmailAliasesStrings(content::WebUIDataSource* html_source) {
 void BraveAddBraveAccountStrings(content::WebUIDataSource* html_source) {
   if (brave_account::features::IsBraveAccountEnabled()) {
     html_source->AddLocalizedStrings(webui::kBraveAccountSettingsStrings);
-    html_source->AddString("braveAccountLearnMoreURL",
+    html_source->AddString("cipherAccountLearnMoreURL",
                            kBraveAccountLearnMoreURL);
   }
 }

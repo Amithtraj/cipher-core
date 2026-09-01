@@ -173,9 +173,9 @@ export const getNFTTokenStandard = (token: BraveWallet.BlockchainToken) => {
  */
 export const isComponentInStorybook = () => {
   const nftDisplayOrigin =
-    loadTimeData.getString('braveWalletNftBridgeUrl') || ''
+    loadTimeData.getString('cipherWalletNftBridgeUrl') || ''
   return (
-    nftDisplayOrigin === 'braveWalletNftBridgeUrl' || nftDisplayOrigin === ''
+    nftDisplayOrigin === 'cipherWalletNftBridgeUrl' || nftDisplayOrigin === ''
   )
 }
 

@@ -49,7 +49,7 @@ UntrustedLedgerUI::UntrustedLedgerUI(content::WebUI* web_ui)
   untrusted_source->AddResourcePath("load_time_data_deprecated.js",
                                     IDR_WEBUI_JS_LOAD_TIME_DATA_DEPRECATED_JS);
   untrusted_source->UseStringsJs();
-  untrusted_source->AddString("braveWalletLedgerBridgeUrl",
+  untrusted_source->AddString("cipherWalletLedgerBridgeUrl",
                               kUntrustedLedgerURL);
   untrusted_source->AddBoolean("isLedgerMojoBridgeEnabled",
                                brave_wallet::IsMojoForHardwareWalletEnabled());

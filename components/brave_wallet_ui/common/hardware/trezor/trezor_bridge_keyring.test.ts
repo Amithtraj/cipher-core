@@ -36,7 +36,7 @@ const createTransport = (
 ) => {
   hardwareTransport.windowListeners_ = {}
   hardwareTransport.getTrezorBridgeOrigin = () => {
-    return 'braveWalletTrezorBridgeUrl'
+    return 'cipherWalletTrezorBridgeUrl'
   }
   hardwareTransport.addWindowMessageListener = () => {
     hardwareTransport.expectWindowMessageSubscribers(0)

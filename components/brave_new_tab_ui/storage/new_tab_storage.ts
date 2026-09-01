@@ -13,9 +13,9 @@ export const keyName = 'new-tab-data'
 export const defaultState: NewTab.State = {
   initialDataLoaded: false,
   textDirection: loadTimeData.getString('textdirection'),
-  featureFlagBraveNTPSponsoredImagesWallpaper: loadTimeData.getBoolean('featureFlagBraveNTPSponsoredImagesWallpaper'),
-  featureFlagBraveNewsPromptEnabled: loadTimeData.getBoolean('featureFlagBraveNewsPromptEnabled'),
-  featureFlagBraveNewsFeedV2Enabled: loadTimeData.getBoolean('featureFlagBraveNewsFeedV2Enabled'),
+  featureFlagCipherNTPSponsoredImagesWallpaper: loadTimeData.getBoolean('featureFlagCipherNTPSponsoredImagesWallpaper'),
+  featureFlagCipherNewsPromptEnabled: loadTimeData.getBoolean('featureFlagCipherNewsPromptEnabled'),
+  featureFlagCipherNewsFeedV2Enabled: loadTimeData.getBoolean('featureFlagCipherNewsFeedV2Enabled'),
   featureCustomBackgroundEnabled: loadTimeData.getBoolean('featureCustomBackgroundEnabled'),
   searchPromotionEnabled: false,
   showBackgroundImage: false,
@@ -27,8 +27,8 @@ export const defaultState: NewTab.State = {
   customLinksEnabled: false,
   customLinksNum: 0,
   showRewards: false,
-  showBraveTalk: false,
-  showBraveVPN: false,
+  showCipherTalk: false,
+  showCipherVPN: false,
   showSearchBox: true,
   lastUsedNtpSearchEngine: defaultSearchHost,
   promptEnableSearchSuggestions: true,
@@ -37,9 +37,9 @@ export const defaultState: NewTab.State = {
   hideAllWidgets: false,
   brandedWallpaperOptIn: false,
   isBrandedWallpaperNotificationDismissed: true,
-  isBraveNewsOptedIn: false,
-  isBraveNewsDisabledByPolicy: false,
-  isBraveTalkDisabledByPolicy: false,
+  isCipherNewsOptedIn: false,
+  isCipherNewsDisabledByPolicy: false,
+  isCipherTalkDisabledByPolicy: false,
   showEmptyPage: false,
   braveRewardsSupported: false,
   braveTalkSupported: false,
@@ -113,18 +113,18 @@ export const addNewStackWidget = (state: NewTab.State) => {
 export const replaceStackWidgets = (state: NewTab.State) => {
   const {
     showRewards,
-    showBraveTalk,
+    showCipherTalk,
     braveRewardsSupported,
     braveTalkSupported,
-    isBraveTalkDisabledByPolicy
+    isCipherTalkDisabledByPolicy
   } = state
   const displayLookup: { [p: string]: { display: boolean } } = {
     'rewards': {
       display: braveRewardsSupported && showRewards
     },
     'braveTalk': {
-      display: braveTalkSupported && showBraveTalk &&
-        !isBraveTalkDisabledByPolicy
+      display: braveTalkSupported && showCipherTalk &&
+        !isCipherTalkDisabledByPolicy
     }
   }
   for (const key in displayLookup) {

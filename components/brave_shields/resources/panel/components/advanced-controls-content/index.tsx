@@ -160,8 +160,8 @@ function AdvancedControlsContent() {
   const showStrictFingerprintingMode = loadTimeData.getBoolean('showStrictFingerprintingMode')
   const isWebcompatExceptionsServiceEnabled = loadTimeData.getBoolean('isWebcompatExceptionsServiceEnabled')
   const isTorProfile = loadTimeData.getBoolean('isTorProfile')
-  const isBraveForgetFirstPartyStorageFeatureEnabled = loadTimeData.getBoolean(
-    'isBraveForgetFirstPartyStorageFeatureEnabled'
+  const isCipherForgetFirstPartyStorageFeatureEnabled = loadTimeData.getBoolean(
+    'isCipherForgetFirstPartyStorageFeatureEnabled'
   )
   const isEnforced =
     siteSettings?.scriptsBlockedOverrideStatus?.overrideSource !== undefined
@@ -298,7 +298,7 @@ function AdvancedControlsContent() {
             </PanelDropdown>
           </div>
         </S.ControlGroup>
-        {isBraveForgetFirstPartyStorageFeatureEnabled && <S.ControlGroup>
+        {isCipherForgetFirstPartyStorageFeatureEnabled && <S.ControlGroup>
           <label>
             <span>{getLocale('braveShieldsForgetFirstPartyStorage')}</span>
             <Toggle

@@ -143,7 +143,7 @@ class BraveLeoAssistantPageElement extends BraveLeoAssistantPageBase {
     }
 
     openTabOrganizationLearnMore_() {
-      window.open(loadTimeData.getString('braveLeoAssistantTabOrganizationLearnMoreURL'), "_blank", "noopener noreferrer")
+      window.open(loadTimeData.getString('cipherLeoAssistantTabOrganizationLearnMoreURL'), "_blank", "noopener noreferrer")
     }
 
     openCustomizationPage_() {

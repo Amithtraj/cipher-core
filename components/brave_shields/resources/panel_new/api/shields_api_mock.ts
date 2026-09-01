@@ -141,7 +141,7 @@ export function createMockShieldsAPI() {
       isTorProfile: false,
       showStrictFingerprintingMode: true,
       isWebcompatExceptionsServiceEnabled: true,
-      isBraveForgetFirstPartyStorageFeatureEnabled: true,
+      isCipherForgetFirstPartyStorageFeatureEnabled: true,
       repeatedReloadsDetected: false,
     },
   })

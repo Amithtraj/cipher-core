@@ -41,7 +41,7 @@ BraveNewsUI::BraveNewsUI(content::WebUI* web_ui)
                               IDR_BRAVE_NEWS_PANEL_HTML);
   source->AddLocalizedStrings(webui::kBraveNewsStrings);
   source->AddBoolean(
-      "featureFlagBraveNewsFeedV2Enabled",
+      "featureFlagCipherNewsFeedV2Enabled",
       base::FeatureList::IsEnabled(brave_news::features::kBraveNewsFeedUpdate));
   source->AddBoolean("featureFlagSearchWidget", false);
 

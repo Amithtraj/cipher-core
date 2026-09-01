@@ -22,7 +22,7 @@ export class BraveAddSiteDialogElement extends BaseElement {
   override ready() {
     super.ready()
     const is_brave_shields = this.category === 'braveShields'
-    const resource_id = is_brave_shields ? 'braveShieldsExampleTemplate'
+    const resource_id = is_brave_shields ? 'cipherShieldsExampleTemplate'
                                          : 'addSiteExceptionPlaceholder'
     this.sitePlaceholder = loadTimeData.getString(resource_id)
   }

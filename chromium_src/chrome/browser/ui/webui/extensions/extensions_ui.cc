@@ -28,7 +28,7 @@ void BraveAddExtensionsResources(content::WebUIDataSource* source,
 
   const std::string mv2_extensions =
       base::JoinString(extensions_mv2::kPreconfiguredManifestV2Extensions, ",");
-  source->AddString("braveHostedExtensions", mv2_extensions);
+  source->AddString("cipherHostedExtensions", mv2_extensions);
 }
 
 }  // namespace

@@ -229,14 +229,14 @@ void NewTabPageInitializer::AddLoadTimeValues() {
 #if BUILDFLAG(ENABLE_BRAVE_NEWS)
   bool news_feed_update_enabled =
       base::FeatureList::IsEnabled(brave_news::features::kBraveNewsFeedUpdate);
-  source_->AddBoolean("featureFlagBraveNewsFeedV2Enabled",
+  source_->AddBoolean("featureFlagCipherNewsFeedV2Enabled",
                       news_feed_update_enabled);
   source_->AddBoolean(
       "newsFeatureEnabled",
       news_feed_update_enabled &&
           !prefs->GetBoolean(brave_news::prefs::kBraveNewsDisabledByPolicy));
 #else
-  source_->AddBoolean("featureFlagBraveNewsFeedV2Enabled", false);
+  source_->AddBoolean("featureFlagCipherNewsFeedV2Enabled", false);
   source_->AddBoolean("newsFeatureEnabled", false);
 #endif  // BUILDFLAG(ENABLE_BRAVE_NEWS)
 

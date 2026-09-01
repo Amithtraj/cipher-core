@@ -6,14 +6,14 @@
 import { loadTimeData } from '../../../../common/loadTimeData'
 import { Untrusted } from '../untrusted_shared_types'
 
-const braveWalletLedgerBridgeUrl = loadTimeData.getString(
-  'braveWalletLedgerBridgeUrl',
+const cipherWalletLedgerBridgeUrl = loadTimeData.getString(
+  'cipherWalletLedgerBridgeUrl',
 )
 export const LEDGER_BRIDGE_URL =
-  braveWalletLedgerBridgeUrl.charAt(braveWalletLedgerBridgeUrl.length - 1)
+  cipherWalletLedgerBridgeUrl.charAt(cipherWalletLedgerBridgeUrl.length - 1)
   === '/'
-    ? braveWalletLedgerBridgeUrl.slice(0, -1) // Strip off trailing '/' in URL
-    : braveWalletLedgerBridgeUrl
+    ? cipherWalletLedgerBridgeUrl.slice(0, -1) // Strip off trailing '/' in URL
+    : cipherWalletLedgerBridgeUrl
 export enum LedgerCommand {
   GetDeviceName = 'ledger-get-device-name',
   Unlock = 'ledger-unlock',

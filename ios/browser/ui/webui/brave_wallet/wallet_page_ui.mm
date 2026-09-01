@@ -53,11 +53,11 @@ WalletPageUI::WalletPageUI(web::WebUIIOS* web_ui, const GURL& url)
   source->AddBoolean("isMobile", true);
   source->AddBoolean("isIOS", true);
   source->AddBoolean("walletDebug", brave_wallet::IsWalletDebugEnabled());
-  source->AddString("braveWalletLedgerBridgeUrl", kUntrustedLedgerURL);
-  source->AddString("braveWalletTrezorBridgeUrl", kUntrustedTrezorURL);
-  source->AddString("braveWalletNftBridgeUrl", kUntrustedNftURL);
-  source->AddString("braveWalletLineChartBridgeUrl", kUntrustedLineChartURL);
-  source->AddString("braveWalletMarketUiBridgeUrl", kUntrustedMarketURL);
+  source->AddString("cipherWalletLedgerBridgeUrl", kUntrustedLedgerURL);
+  source->AddString("cipherWalletTrezorBridgeUrl", kUntrustedTrezorURL);
+  source->AddString("cipherWalletNftBridgeUrl", kUntrustedNftURL);
+  source->AddString("cipherWalletLineChartBridgeUrl", kUntrustedLineChartURL);
+  source->AddString("cipherWalletMarketUiBridgeUrl", kUntrustedMarketURL);
 
   source->OverrideContentSecurityPolicy(
       network::mojom::CSPDirectiveName::FrameSrc,

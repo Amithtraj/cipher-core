@@ -29,7 +29,7 @@ class BraveSurveyPanelistPageElement extends BraveSurveyPanelistPageBaseElement 
   }
 
   onSurveyPanelistLearnMoreLinkClick_() {
-    window.open(loadTimeData.getString('braveSurveyPanelistLearnMoreURL'), "_blank", "noopener noreferrer")
+    window.open(loadTimeData.getString('cipherSurveyPanelistLearnMoreURL'), "_blank", "noopener noreferrer")
   }
 }
 

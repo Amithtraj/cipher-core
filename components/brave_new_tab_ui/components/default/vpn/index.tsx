@@ -43,7 +43,7 @@ const VPNWidgetInternal = createWidget((props: VPNProps) => {
 })
 
 export const VPNWidget = (props: WidgetProps & VPNProps) => {
-  const [, saveShowBraveVPN] = useNewTabPref('showBraveVPN')
+  const [, saveShowBraveVPN] = useNewTabPref('showCipherVPN')
 
   return (
     <VPNWidgetInternal

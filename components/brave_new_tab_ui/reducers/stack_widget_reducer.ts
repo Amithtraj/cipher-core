@@ -8,8 +8,8 @@ import { types } from '../constants/stack_widget_types'
 
 const widgets: Record<NewTab.StackWidget, keyof NewTab.State> = {
   'rewards': 'showRewards',
-  'braveTalk': 'showBraveTalk',
-  'braveVPN': 'showBraveVPN',
+  'braveTalk': 'showCipherTalk',
+  'braveVPN': 'showCipherVPN',
   'bitcoinDotCom': 'showBitcoinDotCom',
   '': undefined as any
 }

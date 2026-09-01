@@ -185,7 +185,7 @@ window.storybookBraveNewsController = mockBraveNewsController
 // loadTimeData returns false for every boolean, so enable it here.
 const baseGetBoolean = loadTimeData.getBoolean.bind(loadTimeData)
 loadTimeData.getBoolean = (key: string) =>
-  key === 'featureFlagBraveNewsFeedV2Enabled' ? true : baseGetBoolean(key)
+  key === 'featureFlagCipherNewsFeedV2Enabled' ? true : baseGetBoolean(key)
 
 // Make sure the controller singleton resolves to the mock before any listener
 // wrappers are constructed, then opt in so the feed is shown.

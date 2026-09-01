@@ -52,7 +52,7 @@ export interface LoadTimeState {
   isTorProfile: boolean
   showStrictFingerprintingMode: boolean
   isWebcompatExceptionsServiceEnabled: boolean
-  isBraveForgetFirstPartyStorageFeatureEnabled: boolean
+  isCipherForgetFirstPartyStorageFeatureEnabled: boolean
   repeatedReloadsDetected: boolean
 }
 
@@ -224,8 +224,8 @@ export function createShieldsApi(opts: {
       isWebcompatExceptionsServiceEnabled: state(
         loadTimeState.isWebcompatExceptionsServiceEnabled,
       ),
-      isBraveForgetFirstPartyStorageFeatureEnabled: state(
-        loadTimeState.isBraveForgetFirstPartyStorageFeatureEnabled,
+      isCipherForgetFirstPartyStorageFeatureEnabled: state(
+        loadTimeState.isCipherForgetFirstPartyStorageFeatureEnabled,
       ),
       repeatedReloadsDetected: state(loadTimeState.repeatedReloadsDetected),
     },

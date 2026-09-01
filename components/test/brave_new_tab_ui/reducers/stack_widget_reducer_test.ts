@@ -85,25 +85,25 @@ describe('stackWidgetReducer', () => {
     it('puts a widget in the forgeround if it is being turned back on', () => {
       const oldState = {
         ...storage.defaultState,
-        showBraveTalk: false
+        showCipherTalk: false
       }
       const newState = {
         ...storage.defaultState,
-        showBraveTalk: true
+        showCipherTalk: true
       }
       const expectedState = {
         ...storage.defaultState,
-        showBraveTalk: true,
+        showCipherTalk: true,
         widgetStackOrder: ['rewards', 'braveVPN', 'braveTalk']
       }
       const assertion = handleWidgetPrefsChange(newState, oldState)
       expect(assertion).toEqual(expectedState)
 
       // Test again for vpn widget.
-      newState.showBraveTalk = false
-      expectedState.showBraveTalk = false;
-      newState.showBraveVPN = true
-      expectedState.showBraveVPN = true
+      newState.showCipherTalk = false
+      expectedState.showCipherTalk = false;
+      newState.showCipherVPN = true
+      expectedState.showCipherVPN = true
       expectedState.widgetStackOrder = ['rewards', 'braveVPN']
 
       const assertionForVPN = handleWidgetPrefsChange(newState, oldState)
@@ -112,15 +112,15 @@ describe('stackWidgetReducer', () => {
     it('removes a widget from the stack if its being turned off', () => {
       const oldState = {
         ...storage.defaultState,
-        showBraveTalk: true
+        showCipherTalk: true
       }
       const newState = {
         ...storage.defaultState,
-        showBraveTalk: false
+        showCipherTalk: false
       }
       const expectedState = {
         ...storage.defaultState,
-        showBraveTalk: false,
+        showCipherTalk: false,
         removedStackWidgets: ['braveTalk']
       }
       const assertion = handleWidgetPrefsChange(newState, oldState)

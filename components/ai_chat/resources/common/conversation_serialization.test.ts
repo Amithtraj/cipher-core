@@ -7,7 +7,7 @@
 
 // Set up loadTimeData mock BEFORE importing the module under test
 ;(window as any).loadTimeData = {
-  getString: (key: string) => (key === 'braveVersion' ? '1.93.8' : ''),
+  getString: (key: string) => (key === 'cipherVersion' ? '1.93.8' : ''),
 }
 
 import { describe, it, expect } from '@jest/globals'

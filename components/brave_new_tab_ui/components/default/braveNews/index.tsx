@@ -18,7 +18,7 @@ const FeedV2 = React.lazy(() => import('../../../../brave_news/browser/resources
 
 // When FeedV2 is enabled, immediately start loading the Brave News chunk,
 // rather than waiting for the parent component to render.
-if (defaultState.featureFlagBraveNewsFeedV2Enabled) {
+if (defaultState.featureFlagCipherNewsFeedV2Enabled) {
   import('../../../../brave_news/browser/resources/Page')
 }
 
@@ -50,7 +50,7 @@ const intersectionOptions = { root: null, rootMargin: '0px', threshold: 0.25 }
 
 export default function BraveNewsSection(props: Props) {
   const dispatch = useDispatch()
-  const [optedIn] = useNewTabPref('isBraveNewsOptedIn')
+  const [optedIn] = useNewTabPref('isCipherNewsOptedIn')
 
   // Don't ask for initial data more than once
   const hasRequestedLoad = React.useRef(false)
@@ -118,9 +118,9 @@ export default function BraveNewsSection(props: Props) {
         style={{ position: 'sticky', top: '100px' }}
       />
       {!optedIn && <CardOptIn />}
-      {shouldDisplayContent && <React.Suspense fallback={defaultState.featureFlagBraveNewsFeedV2Enabled ? null : <CardLoading />}>
-        {defaultState.featureFlagBraveNewsPromptEnabled
-          && (defaultState.featureFlagBraveNewsFeedV2Enabled
+      {shouldDisplayContent && <React.Suspense fallback={defaultState.featureFlagCipherNewsFeedV2Enabled ? null : <CardLoading />}>
+        {defaultState.featureFlagCipherNewsPromptEnabled
+          && (defaultState.featureFlagCipherNewsFeedV2Enabled
             ? <FeedV2 />
             : <Content {...props} />)}
       </React.Suspense>}

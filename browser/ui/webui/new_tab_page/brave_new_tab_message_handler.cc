@@ -109,21 +109,21 @@ base::DictValue GetPreferencesDictionary(PrefService* prefs) {
   pref_data.Set("isBrandedWallpaperNotificationDismissed",
                 prefs->GetBoolean(kBrandedWallpaperNotificationDismissed));
 #if BUILDFLAG(ENABLE_BRAVE_NEWS)
-  pref_data.Set("isBraveNewsOptedIn",
+  pref_data.Set("isCipherNewsOptedIn",
                 prefs->GetBoolean(brave_news::prefs::kBraveNewsOptedIn));
   pref_data.Set(
-      "isBraveNewsDisabledByPolicy",
+      "isCipherNewsDisabledByPolicy",
       prefs->GetBoolean(brave_news::prefs::kBraveNewsDisabledByPolicy));
 #endif  // BUILDFLAG(ENABLE_BRAVE_NEWS)
   pref_data.Set("hideAllWidgets", prefs->GetBoolean(kNewTabPageHideAllWidgets));
 #if BUILDFLAG(ENABLE_BRAVE_TALK)
-  pref_data.Set("showBraveTalk",
+  pref_data.Set("showCipherTalk",
                 prefs->GetBoolean(brave_talk::prefs::kNewTabPageShowBraveTalk));
-  pref_data.Set("isBraveTalkDisabledByPolicy",
+  pref_data.Set("isCipherTalkDisabledByPolicy",
                 prefs->GetBoolean(brave_talk::prefs::kDisabledByPolicy));
 #endif
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
-  pref_data.Set("showBraveVPN", prefs->GetBoolean(kNewTabPageShowBraveVPN));
+  pref_data.Set("showCipherVPN", prefs->GetBoolean(kNewTabPageShowBraveVPN));
 #endif
   pref_data.Set(
       "showSearchBox",
@@ -188,7 +188,7 @@ BraveNewTabMessageHandler* BraveNewTabMessageHandler::Create(
     is_ads_supported_locale = brave_ads::IsSupportedRegion();
   }
 
-  source->AddBoolean("featureFlagBraveNTPSponsoredImagesWallpaper",
+  source->AddBoolean("featureFlagCipherNTPSponsoredImagesWallpaper",
                      is_ads_supported_locale);
 #endif  // BUILDFLAG(ENABLE_BRAVE_ADS)
 
@@ -418,7 +418,7 @@ void BraveNewTabMessageHandler::HandleSaveNewTabPagePref(
   // state from triggering the "shown & changed" answer for the
   // customize dialog metric.
   if (settings_key_input != "showToday" &&
-      settings_key_input != "isBraveNewsOptedIn" &&
+      settings_key_input != "isCipherNewsOptedIn" &&
       settings_key_input != "isBrandedWallpaperNotificationDismissed") {
     p3a::RecordValueIfGreater<NTPCustomizeUsage>(
         NTPCustomizeUsage::kOpenedAndEdited, kCustomizeUsageHistogramName,
@@ -459,7 +459,7 @@ void BraveNewTabMessageHandler::HandleSaveNewTabPagePref(
 #if BUILDFLAG(ENABLE_BRAVE_NEWS)
   } else if (settings_key_input == "showToday") {
     settings_key = brave_news::prefs::kNewTabPageShowToday;
-  } else if (settings_key_input == "isBraveNewsOptedIn") {
+  } else if (settings_key_input == "isCipherNewsOptedIn") {
     settings_key = brave_news::prefs::kBraveNewsOptedIn;
 #endif  // BUILDFLAG(ENABLE_BRAVE_NEWS)
   } else if (settings_key_input == "showRewards") {
@@ -469,11 +469,11 @@ void BraveNewTabMessageHandler::HandleSaveNewTabPagePref(
   } else if (settings_key_input == "hideAllWidgets") {
     settings_key = kNewTabPageHideAllWidgets;
 #if BUILDFLAG(ENABLE_BRAVE_TALK)
-  } else if (settings_key_input == "showBraveTalk") {
+  } else if (settings_key_input == "showCipherTalk") {
     settings_key = brave_talk::prefs::kNewTabPageShowBraveTalk;
 #endif
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
-  } else if (settings_key_input == "showBraveVPN") {
+  } else if (settings_key_input == "showCipherVPN") {
     settings_key = kNewTabPageShowBraveVPN;
 #endif
   } else if (settings_key_input == "showSearchBox") {

@@ -249,10 +249,10 @@ class NewTabPage extends React.Component<Props, State> {
   maybePeekBraveNews () {
     const hasPromptedBraveNews = !!this.braveNewsPromptTimerId
     const shouldPromptBraveNews =
-      !this.props.newTabData.isBraveNewsDisabledByPolicy &&
+      !this.props.newTabData.isCipherNewsDisabledByPolicy &&
       !hasPromptedBraveNews && // Don't start a prompt if we already did
       window.scrollY === 0 && // Don't start a prompt if we are scrolled
-      this.props.newTabData.featureFlagBraveNewsPromptEnabled &&
+      this.props.newTabData.featureFlagCipherNewsPromptEnabled &&
       this.props.newTabData.initialDataLoaded && // Wait for accurate showToday
       this.props.newTabData.showToday &&
       // Don't prompt if the user has navigated back and we're going to scroll
@@ -362,7 +362,7 @@ class NewTabPage extends React.Component<Props, State> {
   }
 
   toggleShowBraveTalk = () => {
-    this.props.saveShowBraveTalk(!this.props.newTabData.showBraveTalk)
+    this.props.saveShowBraveTalk(!this.props.newTabData.showCipherTalk)
   }
 
   disableBrandedWallpaper = () => {
@@ -451,9 +451,9 @@ class NewTabPage extends React.Component<Props, State> {
       braveRewardsSupported,
       braveTalkSupported,
       showRewards,
-      showBraveTalk,
-      showBraveVPN,
-      isBraveTalkDisabledByPolicy
+      showCipherTalk,
+      showCipherVPN,
+      isCipherTalkDisabledByPolicy
     } = this.props.newTabData
 
     const lookup: { [p: string]: { display: boolean, render: any } } = {
@@ -462,12 +462,12 @@ class NewTabPage extends React.Component<Props, State> {
         render: this.renderRewardsWidget.bind(this)
       },
       'braveVPN': {
-        display: this.braveVPNSupported && showBraveVPN,
+        display: this.braveVPNSupported && showCipherVPN,
         render: this.renderBraveVPNWidget
       },
       'braveTalk': {
-        display: braveTalkSupported && showBraveTalk &&
-          !isBraveTalkDisabledByPolicy,
+        display: braveTalkSupported && showCipherTalk &&
+          !isCipherTalkDisabledByPolicy,
         render: this.renderBraveTalkWidget.bind(this)
       }
     }
@@ -499,16 +499,16 @@ class NewTabPage extends React.Component<Props, State> {
       braveRewardsSupported,
       braveTalkSupported,
       showRewards,
-      showBraveTalk,
-      showBraveVPN,
+      showCipherTalk,
+      showCipherVPN,
       hideAllWidgets,
-      isBraveTalkDisabledByPolicy
+      isCipherTalkDisabledByPolicy
     } = this.props.newTabData
     return hideAllWidgets || [
       braveRewardsSupported && showRewards,
-      braveTalkSupported && showBraveTalk &&
-        !isBraveTalkDisabledByPolicy,
-      this.braveVPNSupported && showBraveVPN,
+      braveTalkSupported && showCipherTalk &&
+        !isCipherTalkDisabledByPolicy,
+      this.braveVPNSupported && showCipherVPN,
     ].every((widget: boolean) => !widget)
   }
 
@@ -559,13 +559,13 @@ class NewTabPage extends React.Component<Props, State> {
   renderBraveTalkWidget (showContent: boolean, position: number) {
     const { newTabData } = this.props
     const {
-      showBraveTalk,
+      showCipherTalk,
       textDirection,
       braveTalkSupported,
-      isBraveTalkDisabledByPolicy
+      isCipherTalkDisabledByPolicy
     } = newTabData
 
-    if (!showBraveTalk || !braveTalkSupported || isBraveTalkDisabledByPolicy) {
+    if (!showCipherTalk || !braveTalkSupported || isCipherTalkDisabledByPolicy) {
       return null
     }
 
@@ -645,9 +645,9 @@ class NewTabPage extends React.Component<Props, State> {
         imageHasLoaded={this.state.backgroundHasLoaded}
         colorForBackground={colorForBackground}
         hasSponsoredRichMediaBackground={hasSponsoredRichMediaBackground}
-        data-show-news-prompt={((this.state.backgroundHasLoaded || colorForBackground) && this.state.isPromptingBraveNews && !defaultState.featureFlagBraveNewsFeedV2Enabled) ? true : undefined}>
+        data-show-news-prompt={((this.state.backgroundHasLoaded || colorForBackground) && this.state.isPromptingBraveNews && !defaultState.featureFlagCipherNewsFeedV2Enabled) ? true : undefined}>
         <OverrideReadabilityColor override={ this.shouldOverrideReadabilityColor(this.props.newTabData) } />
-        <NewsProvider disabled={newTabData.isBraveNewsDisabledByPolicy}>
+        <NewsProvider disabled={newTabData.isCipherNewsDisabledByPolicy}>
         <EngineContextProvider>
 
         {
@@ -770,8 +770,8 @@ class NewTabPage extends React.Component<Props, State> {
                     <SearchPlaceholder />
                   </React.Suspense>}
                                 {newTabData.showToday &&
-                  !newTabData.isBraveNewsDisabledByPolicy && (
-                  defaultState.featureFlagBraveNewsFeedV2Enabled
+                  !newTabData.isCipherNewsDisabledByPolicy && (
+                  defaultState.featureFlagCipherNewsFeedV2Enabled
                   ? <React.Suspense fallback={null}>
                     <BraveNewsPeek/>
                   </React.Suspense>
@@ -779,7 +779,7 @@ class NewTabPage extends React.Component<Props, State> {
                 )}
               </Page.GridItemPageFooter>
           </Page.Page>
-        { newTabData.showToday && !newTabData.isBraveNewsDisabledByPolicy &&
+        { newTabData.showToday && !newTabData.isCipherNewsDisabledByPolicy &&
         <BraveNews
           feed={this.props.todayData.feed}
           articleToScrollTo={this.props.todayData.articleScrollTo}
@@ -825,7 +825,7 @@ class NewTabPage extends React.Component<Props, State> {
           toggleShowRewards={this.toggleShowRewards}
           braveTalkSupported={newTabData.braveTalkSupported}
           toggleShowBraveTalk={this.toggleShowBraveTalk}
-          showBraveTalk={newTabData.showBraveTalk}
+          showCipherTalk={newTabData.showCipherTalk}
           cardsHidden={this.allWidgetsHidden()}
           toggleCards={this.props.saveSetAllStackWidgets}
           newTabData={this.props.newTabData}

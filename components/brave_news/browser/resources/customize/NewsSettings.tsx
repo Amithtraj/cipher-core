@@ -60,7 +60,7 @@ export default function NewsSettings() {
   } = useBraveNews()
 
   const feedV2Enabled = loadTimeData.getBoolean(
-    'featureFlagBraveNewsFeedV2Enabled',
+    'featureFlagCipherNewsFeedV2Enabled',
   )
   const controlsDisabled = !isShowOnNTPPrefEnabled
 

@@ -46,7 +46,7 @@ class LedgerBridgeRegistry {
     if (document.getElementById(kLedgerMojoFrameId)) {
       return
     }
-    const url = loadTimeData.getString('braveWalletLedgerBridgeUrl')
+    const url = loadTimeData.getString('cipherWalletLedgerBridgeUrl')
     const element = document.createElement('iframe')
     element.id = kLedgerMojoFrameId
     element.src = url

@@ -123,16 +123,16 @@ BraveNewTabUI::BraveNewTabUI(
 
   // Let frontend know about feature flags
 #if BUILDFLAG(ENABLE_BRAVE_NEWS)
-  source->AddBoolean("featureFlagBraveNewsPromptEnabled",
+  source->AddBoolean("featureFlagCipherNewsPromptEnabled",
                      base::FeatureList::IsEnabled(
                          brave_news::features::kBraveNewsCardPeekFeature));
 
   source->AddBoolean(
-      "featureFlagBraveNewsFeedV2Enabled",
+      "featureFlagCipherNewsFeedV2Enabled",
       base::FeatureList::IsEnabled(brave_news::features::kBraveNewsFeedUpdate));
 #else
-  source->AddBoolean("featureFlagBraveNewsPromptEnabled", false);
-  source->AddBoolean("featureFlagBraveNewsFeedV2Enabled", false);
+  source->AddBoolean("featureFlagCipherNewsPromptEnabled", false);
+  source->AddBoolean("featureFlagCipherNewsFeedV2Enabled", false);
 #endif
 
   source->AddBoolean(

@@ -76,7 +76,7 @@ WalletPanelUI::WalletPanelUI(content::WebUI* web_ui)
   web_ui->AddMessageHandler(std::move(plural_string_handler));
   webui::SetupWebUIDataSource(source, base::span(kBraveWalletPanelGenerated),
                               IDR_WALLET_PANEL_HTML);
-  source->AddString("braveWalletLedgerBridgeUrl", kUntrustedLedgerURL);
+  source->AddString("cipherWalletLedgerBridgeUrl", kUntrustedLedgerURL);
   source->OverrideContentSecurityPolicy(
       network::mojom::CSPDirectiveName::FrameSrc,
       base::JoinString({"frame-src", kUntrustedTrezorURL, kUntrustedLedgerURL,
@@ -93,10 +93,10 @@ WalletPanelUI::WalletPanelUI(content::WebUI* web_ui)
            "chrome://erc-token-images", "chrome://favicon2", "chrome://image",
            "https://assets.cgproxy.brave.com", base::StrCat({"data:", ";"})},
           " "));
-  source->AddString("braveWalletTrezorBridgeUrl", kUntrustedTrezorURL);
-  source->AddString("braveWalletNftBridgeUrl", kUntrustedNftURL);
-  source->AddString("braveWalletLineChartBridgeUrl", kUntrustedLineChartURL);
-  source->AddString("braveWalletMarketUiBridgeUrl", kUntrustedMarketURL);
+  source->AddString("cipherWalletTrezorBridgeUrl", kUntrustedTrezorURL);
+  source->AddString("cipherWalletNftBridgeUrl", kUntrustedNftURL);
+  source->AddString("cipherWalletLineChartBridgeUrl", kUntrustedLineChartURL);
+  source->AddString("cipherWalletMarketUiBridgeUrl", kUntrustedMarketURL);
   source->AddBoolean("isMobile", false);
   source->AddBoolean("isIOS", false);
 #if BUILDFLAG(ENABLE_BRAVE_REWARDS)

@@ -31,7 +31,7 @@ export function saveShowRewards (value: boolean): void {
 }
 
 export function saveShowBraveTalk (value: boolean): void {
-  sendSavePref('showBraveTalk', value)
+  sendSavePref('showCipherTalk', value)
 }
 
 export function saveBrandedWallpaperOptIn (value: boolean): void {

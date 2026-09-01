@@ -39,8 +39,8 @@ function createBrowserShieldsApi() {
       isWebcompatExceptionsServiceEnabled: loadTimeData.getBoolean(
         'isWebcompatExceptionsServiceEnabled',
       ),
-      isBraveForgetFirstPartyStorageFeatureEnabled: loadTimeData.getBoolean(
-        'isBraveForgetFirstPartyStorageFeatureEnabled',
+      isCipherForgetFirstPartyStorageFeatureEnabled: loadTimeData.getBoolean(
+        'isCipherForgetFirstPartyStorageFeatureEnabled',
       ),
       repeatedReloadsDetected: hasReloadsDetectedFlag(),
     },

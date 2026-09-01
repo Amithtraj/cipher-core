@@ -88,7 +88,7 @@ export function getHtml(this: BraveAccountLoggedOutRowElement) {
                   BraveAccountSettingsStrings
                        .SETTINGS_BRAVE_ACCOUNT_LOGGED_OUT_ROW_DESCRIPTION,
                   {tags: ['a']})}
-                .linkUrl=${this.i18n('braveAccountLearnMoreURL')}>
+                .linkUrl=${this.i18n('cipherAccountLearnMoreURL')}>
             </localized-link>
           </div>
         </div>
