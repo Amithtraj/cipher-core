@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <grit-part>
   <message name="IDS_PERMISSIONS_BUBBLE_LIFETIME_COMBOBOX_LABEL" desc="The label that is used to describe a combobox with permission lifetime choices.">
     Remember my decision
@@ -22,9 +22,9 @@
     site permission
   </message>
   <message name="IDS_OPEN_AI_CHAT_PERMISSION_FRAGMENT" desc="Label for Leo AI chat permission prompt.">
-    Allow opening Leo AI conversations in Brave?
+    Allow opening Leo AI conversations in Cipher?
   </message>
   <message name="IDS_OPEN_AI_CHAT_INFOBAR_TEXT" desc="Label for Leo AI chat permission prompt (Android).">
-    Allow <ph name="URL">$1<ex>search.brave.com</ex></ph> to open Leo AI conversations in Brave?
+    Allow <ph name="URL">$1<ex>search.brave.com</ex></ph> to open Leo AI conversations in Cipher?
   </message>
 </grit-part>
