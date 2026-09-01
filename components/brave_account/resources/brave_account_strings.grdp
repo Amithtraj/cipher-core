@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <grit-part>
-  <message name="IDS_BRAVE_ACCOUNT_TITLE" desc="Title for the Cipher Account page/section" formatter_data="webui=BraveAccount,BraveAccountSettings android_java">
-    Cipher Account
+  <message name="IDS_BRAVE_ACCOUNT_TITLE" desc="Title for the SecureOut Account page/section" formatter_data="webui=BraveAccount,BraveAccountSettings android_java">
+    SecureOut Account
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ACCOUNT_LOGGED_OUT_ROW_TITLE" desc="Title inviting users to sign in or create a Cipher Account, shown in the Get started settings page" formatter_data="webui=BraveAccountSettings">
-    Log in or create a Cipher account
+  <message name="IDS_SETTINGS_BRAVE_ACCOUNT_LOGGED_OUT_ROW_TITLE" desc="Title inviting users to sign in or create a SecureOut Account, shown in the Get started settings page" formatter_data="webui=BraveAccountSettings">
+    Log in or create a SecureOut account
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ACCOUNT_GET_STARTED_BUTTON_LABEL" desc="Label for the button that opens the Cipher Account dialog when clicked" formatter_data="webui=BraveAccountSettings android_java">
+  <message name="IDS_SETTINGS_BRAVE_ACCOUNT_GET_STARTED_BUTTON_LABEL" desc="Label for the button that opens the SecureOut Account dialog when clicked" formatter_data="webui=BraveAccountSettings android_java">
     Get Started
   </message>
   <message name="IDS_SETTINGS_BRAVE_ACCOUNT_VERIFICATION_ROW_TITLE" desc="Title shown when user has registered but is awaiting email verification" formatter_data="webui=BraveAccountSettings android_java">
@@ -69,22 +69,22 @@
   </message>
 
   <!-- 'Entry' dialog: -->
-  <message name="IDS_BRAVE_ACCOUNT_ENTRY_DIALOG_TITLE" desc="Title for the dialog where the user can choose to create a Cipher Account, or sign in" formatter_data="webui=BraveAccount">
-    Get started with your Cipher account
+  <message name="IDS_BRAVE_ACCOUNT_ENTRY_DIALOG_TITLE" desc="Title for the dialog where the user can choose to create a SecureOut Account, or sign in" formatter_data="webui=BraveAccount">
+    Get started with your SecureOut account
   </message>
   <message name="IDS_BRAVE_ACCOUNT_ENTRY_DIALOG_CREATE_BRAVE_ACCOUNT_BUTTON_LABEL" desc="Label for the button that takes the user to the 'Create' dialog" formatter_data="webui=BraveAccount">
-    Create a Cipher account
+    Create a SecureOut account
   </message>
   <message name="IDS_BRAVE_ACCOUNT_ALREADY_HAVE_ACCOUNT_SIGN_IN_BUTTON_LABEL" desc="Label for the button that takes the user to the 'Sign In' dialog" formatter_data="webui=BraveAccount">
     Already have an account? Log in
   </message>
 
   <!-- 'Credentials' dialog: -->
-  <message name="IDS_BRAVE_ACCOUNT_CREATE_DIALOG_TITLE" desc="Title for the dialog where the user can create their Cipher Account" formatter_data="webui=BraveAccount">
+  <message name="IDS_BRAVE_ACCOUNT_CREATE_DIALOG_TITLE" desc="Title for the dialog where the user can create their SecureOut Account" formatter_data="webui=BraveAccount">
     Create your account
   </message>
-  <message name="IDS_BRAVE_ACCOUNT_EMAIL_INPUT_ERROR_MESSAGE" desc="Error message for when the user tries to use a @bravealias.com email address when creating their Cipher Account" formatter_data="webui=BraveAccount">
-    You can't use @bravealias.com addresses for creating Cipher accounts. Please try again with a different domain.
+  <message name="IDS_BRAVE_ACCOUNT_EMAIL_INPUT_ERROR_MESSAGE" desc="Error message for when the user tries to use a @bravealias.com email address when creating their SecureOut Account" formatter_data="webui=BraveAccount">
+    You can't use @bravealias.com addresses for creating SecureOut accounts. Please try again with a different domain.
   </message>
   <message name="IDS_BRAVE_ACCOUNT_CREATE_PASSWORD_INPUT_LABEL" desc="Label for the 'Create a password' input field" formatter_data="webui=BraveAccount">
     Create a password
@@ -133,7 +133,7 @@
   </message>
 
   <!-- 'Sign In' dialog: -->
-  <message name="IDS_BRAVE_ACCOUNT_SIGN_IN_DIALOG_TITLE" desc="Title for the dialog where the user can sign in to their Cipher Account" formatter_data="webui=BraveAccount">
+  <message name="IDS_BRAVE_ACCOUNT_SIGN_IN_DIALOG_TITLE" desc="Title for the dialog where the user can sign in to their SecureOut Account" formatter_data="webui=BraveAccount">
     Log in to your account
   </message>
   <message name="IDS_BRAVE_ACCOUNT_PASSWORD_INPUT_LABEL" desc="Label for the 'Password' input field" formatter_data="webui=BraveAccount">
@@ -147,11 +147,11 @@
   </message>
 
   <!-- 'Forgot Password' dialog: -->
-  <message name="IDS_BRAVE_ACCOUNT_FORGOT_PASSWORD_DIALOG_TITLE" desc="Title for the dialog where the user can reset their Cipher Account password" formatter_data="webui=BraveAccount">
+  <message name="IDS_BRAVE_ACCOUNT_FORGOT_PASSWORD_DIALOG_TITLE" desc="Title for the dialog where the user can reset their SecureOut Account password" formatter_data="webui=BraveAccount">
     Forgot your password?
   </message>
-  <message name="IDS_BRAVE_ACCOUNT_FORGOT_PASSWORD_DIALOG_DESCRIPTION" desc="Description for the dialog where the user can reset their Cipher Account password" formatter_data="webui=BraveAccount">
-    Confirm your Cipher account email and you'll then receive a code to reset your password. The code will only be valid for 15 minutes.
+  <message name="IDS_BRAVE_ACCOUNT_FORGOT_PASSWORD_DIALOG_DESCRIPTION" desc="Description for the dialog where the user can reset their SecureOut Account password" formatter_data="webui=BraveAccount">
+    Confirm your SecureOut account email and you'll then receive a code to reset your password. The code will only be valid for 15 minutes.
   </message>
   <message name="IDS_BRAVE_ACCOUNT_RESET_PASSWORD_BUTTON_LABEL" desc="Label for the button that submits the 'Forgot Password' dialog" formatter_data="webui=BraveAccount">
     Reset your password
@@ -223,16 +223,16 @@
 
   <!-- Common: -->
   <if expr="not is_android and not is_ios">
-    <message name="IDS_BRAVE_ACCOUNT_DESCRIPTION" desc="Description explaining the benefits of having a Cipher Account" formatter_data="webui=BraveAccount">
-      A Cipher account lets you create and manage your email aliases.
+    <message name="IDS_BRAVE_ACCOUNT_DESCRIPTION" desc="Description explaining the benefits of having a SecureOut Account" formatter_data="webui=BraveAccount">
+      A SecureOut account lets you create and manage your email aliases.
     </message>
-    <message name="IDS_SETTINGS_BRAVE_ACCOUNT_LOGGED_OUT_ROW_DESCRIPTION" desc="Description explaining the benefits of having a Cipher Account, shown in the Get started settings page. Ends with a link to a support article." formatter_data="webui=BraveAccountSettings">
-      A Cipher account lets you create and manage your email aliases. <ph name="BEGIN_LINK">&lt;a&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
+    <message name="IDS_SETTINGS_BRAVE_ACCOUNT_LOGGED_OUT_ROW_DESCRIPTION" desc="Description explaining the benefits of having a SecureOut Account, shown in the Get started settings page. Ends with a link to a support article." formatter_data="webui=BraveAccountSettings">
+      A SecureOut account lets you create and manage your email aliases. <ph name="BEGIN_LINK">&lt;a&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
     </message>
   </if>
   <if expr="is_android or is_ios">
-    <message name="IDS_BRAVE_ACCOUNT_DESCRIPTION" desc="Description explaining the benefits of having a Cipher Account" formatter_data="webui=BraveAccount">
-      A Cipher account will allow you to easily access Cipher services.
+    <message name="IDS_BRAVE_ACCOUNT_DESCRIPTION" desc="Description explaining the benefits of having a SecureOut Account" formatter_data="webui=BraveAccount">
+      A SecureOut account will allow you to easily access SecureOut services.
     </message>
   </if>
   <message name="IDS_BRAVE_ACCOUNT_BACK_BUTTON_LABEL" desc="Label for the back button" formatter_data="webui=BraveAccount">

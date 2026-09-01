@@ -17,8 +17,8 @@
     Background Image
   </message>
 
-  <message name="IDS_NEW_TAB_BRAVE_BACKGROUND_LABEL" desc="Label for Cipher background option" formatter_data="webui=BraveNewTabPage">
-    Cipher backgrounds
+  <message name="IDS_NEW_TAB_BRAVE_BACKGROUND_LABEL" desc="Label for SecureOut background option" formatter_data="webui=BraveNewTabPage">
+    SecureOut backgrounds
   </message>
 
   <message name="IDS_NEW_TAB_CANCEL_BUTTON_LABEL" desc="Label for cancel button" formatter_data="webui=BraveNewTabPage">
@@ -89,16 +89,16 @@
     Hide VPN card
   </message>
 
-  <message name="IDS_NEW_TAB_MAKE_SEARCH_DEFAULT_CONFIRM_LABEL" desc="Label for the confirm button on the Make Cipher Search Default dialog" formatter_data="webui=BraveNewTabPage">
+  <message name="IDS_NEW_TAB_MAKE_SEARCH_DEFAULT_CONFIRM_LABEL" desc="Label for the confirm button on the Make SecureOut Search Default dialog" formatter_data="webui=BraveNewTabPage">
     Set as default
   </message>
 
-  <message name="IDS_NEW_TAB_MAKE_SEARCH_DEFAULT_TEXT" desc="Body text of the Make Cipher Search Default dialog" formatter_data="webui=BraveNewTabPage">
-    Cipher will be used as the search engine in the address bar for normal windows.
+  <message name="IDS_NEW_TAB_MAKE_SEARCH_DEFAULT_TEXT" desc="Body text of the Make SecureOut Search Default dialog" formatter_data="webui=BraveNewTabPage">
+    SecureOut will be used as the search engine in the address bar for normal windows.
   </message>
 
-  <message name="IDS_NEW_TAB_MAKE_SEARCH_DEFAULT_TITLE" desc="Title of the Make Cipher Search Default dialog" formatter_data="webui=BraveNewTabPage">
-    Set Cipher as the default search engine?
+  <message name="IDS_NEW_TAB_MAKE_SEARCH_DEFAULT_TITLE" desc="Title of the Make SecureOut Search Default dialog" formatter_data="webui=BraveNewTabPage">
+    Set SecureOut as the default search engine?
   </message>
 
   <message name="IDS_NEW_TAB_NEWS_CUSTOMIZE_BUTTON_LABEL" desc="Label for button that opens the News settings modal" formatter_data="webui=BraveNewTabPage">
@@ -113,11 +113,11 @@
     Hide News
   </message>
 
-  <message name="IDS_NEW_TAB_NEWS_WIDGET_TITLE" desc="Title for Cipher News widget" formatter_data="webui=BraveNewTabPage">
+  <message name="IDS_NEW_TAB_NEWS_WIDGET_TITLE" desc="Title for SecureOut News widget" formatter_data="webui=BraveNewTabPage">
     NEWS
   </message>
 
-  <message name="IDS_NEW_TAB_PHOTO_CREDITS_TEXT" desc="Photographer credits for Cipher background images" formatter_data="webui=BraveNewTabPage">
+  <message name="IDS_NEW_TAB_PHOTO_CREDITS_TEXT" desc="Photographer credits for SecureOut background images" formatter_data="webui=BraveNewTabPage">
     Photo by <ph name="AUTHOR">$1</ph>
   </message>
 
@@ -170,7 +170,7 @@
   </message>
 
   <message name="IDS_NEW_TAB_REWARDS_ONBOARDING_BUTTON_LABEL" desc="Label for the Rewards onboarding button" formatter_data="webui=BraveNewTabPage">
-    Start using Cipher Rewards
+    Start using SecureOut Rewards
   </message>
 
   <message name="IDS_NEW_TAB_REWARDS_ONBOARDING_LINK" desc="Text for Rewards onboarding link" formatter_data="webui=BraveNewTabPage">
@@ -193,11 +193,11 @@
     Search and AI
   </message>
 
-  <message name="IDS_NEW_TAB_SEARCH_BOX_PLACEHOLDER_TEXT" desc="Placeholder text for when Cipher is not the selected search engine" formatter_data="webui=BraveNewTabPage">
+  <message name="IDS_NEW_TAB_SEARCH_BOX_PLACEHOLDER_TEXT" desc="Placeholder text for when SecureOut is not the selected search engine" formatter_data="webui=BraveNewTabPage">
     Search the web
   </message>
 
-  <message name="IDS_NEW_TAB_SEARCH_BOX_PLACEHOLDER_TEXT_BRAVE" desc="Placeholder text for when Cipher is the selected search engine" formatter_data="webui=BraveNewTabPage">
+  <message name="IDS_NEW_TAB_SEARCH_BOX_PLACEHOLDER_TEXT_BRAVE" desc="Placeholder text for when SecureOut is the selected search engine" formatter_data="webui=BraveNewTabPage">
     Ask anything, find anything...
   </message>
 
@@ -241,12 +241,12 @@
     Show clock
   </message>
 
-  <message name="IDS_NEW_TAB_SHOW_NEWS_WIDGET_LABEL" desc="Label for showing or hiding the Cipher News widget on the NTP" formatter_data="webui=BraveNewTabPage">
-    Cipher News
+  <message name="IDS_NEW_TAB_SHOW_NEWS_WIDGET_LABEL" desc="Label for showing or hiding the SecureOut News widget on the NTP" formatter_data="webui=BraveNewTabPage">
+    SecureOut News
   </message>
 
   <message name="IDS_NEW_TAB_SHOW_REWARDS_WIDGET_LABEL" desc="Label for enabling the Rewards widget on the NTP" formatter_data="webui=BraveNewTabPage">
-    Cipher Rewards
+    SecureOut Rewards
   </message>
 
   <message name="IDS_NEW_TAB_SHOW_SEARCH_BOX_LABEL" desc="Label for enabling the searchbox on the NTP" formatter_data="webui=BraveNewTabPage">
@@ -254,7 +254,7 @@
   </message>
 
   <message name="IDS_NEW_TAB_SHOW_SPONSORED_IMAGES_EARNING_TEXT" desc="Text describing earning for new tab page ads" formatter_data="webui=BraveNewTabPage">
-    With <ph name="REWARDS_LINK_BEGIN">$1</ph>Cipher Rewards<ph name="REWARDS_LINK_END">/$1</ph>, you can earn for seeing New Tab Page ads. <ph name="LEARN_MORE_LINK_BEGIN">$2</ph>Learn more<ph name="LEARN_MORE_LINK_END">/$2</ph>.
+    With <ph name="REWARDS_LINK_BEGIN">$1</ph>SecureOut Rewards<ph name="REWARDS_LINK_END">/$1</ph>, you can earn for seeing New Tab Page ads. <ph name="LEARN_MORE_LINK_BEGIN">$2</ph>Learn more<ph name="LEARN_MORE_LINK_END">/$2</ph>.
   </message>
 
   <message name="IDS_NEW_TAB_SHOW_SPONSORED_IMAGES_LABEL" desc="Text for setting to opt-in to Branded Wallpapers on New Tab Page" formatter_data="webui=BraveNewTabPage">
@@ -265,20 +265,20 @@
     Show sponsored sites
   </message>
 
-  <message name="IDS_NEW_TAB_SHOW_STATS_LABEL" desc="Label for showing or hiding Cipher Stats on the NTP" formatter_data="webui=BraveNewTabPage">
-    Cipher Stats
+  <message name="IDS_NEW_TAB_SHOW_STATS_LABEL" desc="Label for showing or hiding SecureOut Stats on the NTP" formatter_data="webui=BraveNewTabPage">
+    SecureOut Stats
   </message>
 
-  <message name="IDS_NEW_TAB_SHOW_TALK_WIDGET_LABEL" desc="Label for showing or hiding the Cipher Talk widget on the NTP" formatter_data="webui=BraveNewTabPage">
-    Cipher Talk
+  <message name="IDS_NEW_TAB_SHOW_TALK_WIDGET_LABEL" desc="Label for showing or hiding the SecureOut Talk widget on the NTP" formatter_data="webui=BraveNewTabPage">
+    SecureOut Talk
   </message>
 
   <message name="IDS_NEW_TAB_SHOW_TOP_SITES_LABEL" desc="Label for control that toggles top sites visibility" formatter_data="webui=BraveNewTabPage">
     Show top sites
   </message>
 
-  <message name="IDS_NEW_TAB_SHOW_VPN_WIDGET_LABEL" desc="Label for showing or hiding the Cipher VPN NTP widget" formatter_data="webui=BraveNewTabPage">
-    Cipher VPN
+  <message name="IDS_NEW_TAB_SHOW_VPN_WIDGET_LABEL" desc="Label for showing or hiding the SecureOut VPN NTP widget" formatter_data="webui=BraveNewTabPage">
+    SecureOut VPN
   </message>
 
   <message name="IDS_NEW_TAB_SOLID_BACKGROUND_LABEL" desc="Solid background colors title" formatter_data="webui=BraveNewTabPage">
@@ -286,11 +286,11 @@
   </message>
 
   <message name="IDS_NEW_TAB_SPONSORED_SITE_TOOLTIP_TEXT" desc="Tooltip text shown when hovering a sponsored site tile. $1 is the site name." formatter_data="webui=BraveNewTabPage">
-    Sponsored sites help keep Cipher free. If you use <ph name="SITE_NAME">$1<ex>Amazon</ex></ph>, you're supporting Cipher's mission. Disable them anytime. <ph name="LINK_BEGIN">$2</ph>Learn more<ph name="LINK_END">/$2</ph>.
+    Sponsored sites help keep SecureOut free. If you use <ph name="SITE_NAME">$1<ex>Amazon</ex></ph>, you're supporting SecureOut's mission. Disable them anytime. <ph name="LINK_BEGIN">$2</ph>Learn more<ph name="LINK_END">/$2</ph>.
   </message>
 
   <message name="IDS_NEW_TAB_SPONSORED_SITES_DESCRIPTION" desc="Description shown below the toggle that controls sponsored site visibility in top sites, explaining what sponsored sites are." formatter_data="webui=BraveNewTabPage">
-    Sponsored sites help keep Cipher free. If you use them, you're supporting Cipher's mission. <ph name="LINK_BEGIN">$1</ph>Learn more<ph name="LINK_END">/$1</ph>.
+    Sponsored sites help keep SecureOut free. If you use them, you're supporting SecureOut's mission. <ph name="LINK_BEGIN">$1</ph>Learn more<ph name="LINK_END">/$1</ph>.
   </message>
 
   <message name="IDS_NEW_TAB_STATS_ADS_BLOCKED_TEXT" desc="Text for trackers and ads blocked stat" formatter_data="webui=BraveNewTabPage">
@@ -305,19 +305,19 @@
     Time saved
   </message>
 
-  <message name="IDS_NEW_TAB_STATS_TITLE" desc="Title for Cipher Stats widget" formatter_data="webui=BraveNewTabPage">
+  <message name="IDS_NEW_TAB_STATS_TITLE" desc="Title for SecureOut Stats widget" formatter_data="webui=BraveNewTabPage">
     STATS
   </message>
 
-  <message name="IDS_NEW_TAB_TALK_ABOUT_DATA_LINK" desc="Text for link to page describing Cipher Talk data policies" formatter_data="webui=BraveNewTabPage">
+  <message name="IDS_NEW_TAB_TALK_ABOUT_DATA_LINK" desc="Text for link to page describing SecureOut Talk data policies" formatter_data="webui=BraveNewTabPage">
     About your data
   </message>
 
-  <message name="IDS_NEW_TAB_TALK_DESCRIPTION_TEXT" desc="Description text for Cipher Talk widget" formatter_data="webui=BraveNewTabPage">
-    Encrypted video calls with Cipher Talk
+  <message name="IDS_NEW_TAB_TALK_DESCRIPTION_TEXT" desc="Description text for SecureOut Talk widget" formatter_data="webui=BraveNewTabPage">
+    Encrypted video calls with SecureOut Talk
   </message>
 
-  <message name="IDS_NEW_TAB_TALK_DESCRIPTION_TITLE" desc="Description title for Cipher Talk widget" formatter_data="webui=BraveNewTabPage">
+  <message name="IDS_NEW_TAB_TALK_DESCRIPTION_TITLE" desc="Description title for SecureOut Talk widget" formatter_data="webui=BraveNewTabPage">
     Privacy-First Calls
   </message>
 
@@ -325,7 +325,7 @@
     Start call
   </message>
 
-  <message name="IDS_NEW_TAB_TALK_WIDGET_TITLE" desc="Title for Cipher Talk NTP widget" formatter_data="webui=BraveNewTabPage">
+  <message name="IDS_NEW_TAB_TALK_WIDGET_TITLE" desc="Title for SecureOut Talk NTP widget" formatter_data="webui=BraveNewTabPage">
     TALK
   </message>
 
@@ -389,15 +389,15 @@
     Change
   </message>
 
-  <message name="IDS_NEW_TAB_VPN_FEATURE_TEXT1" desc="Cipher VPN product feature text item 1" formatter_data="webui=BraveNewTabPage">
+  <message name="IDS_NEW_TAB_VPN_FEATURE_TEXT1" desc="SecureOut VPN product feature text item 1" formatter_data="webui=BraveNewTabPage">
     Extra privacy &amp; security online
   </message>
 
-  <message name="IDS_NEW_TAB_VPN_FEATURE_TEXT2" desc="Cipher VPN product feature text item 2" formatter_data="webui=BraveNewTabPage">
+  <message name="IDS_NEW_TAB_VPN_FEATURE_TEXT2" desc="SecureOut VPN product feature text item 2" formatter_data="webui=BraveNewTabPage">
     Hide your IP &amp; change your location
   </message>
 
-  <message name="IDS_NEW_TAB_VPN_FEATURE_TEXT3" desc="Cipher VPN product feature text item 3" formatter_data="webui=BraveNewTabPage">
+  <message name="IDS_NEW_TAB_VPN_FEATURE_TEXT3" desc="SecureOut VPN product feature text item 3" formatter_data="webui=BraveNewTabPage">
     Protect every app on your device
   </message>
 
@@ -405,7 +405,7 @@
     Already purchased?
   </message>
 
-  <message name="IDS_NEW_TAB_VPN_START_TRIAL_LABEL" desc="Label for button to start a Cipher VPN free trial" formatter_data="webui=BraveNewTabPage">
+  <message name="IDS_NEW_TAB_VPN_START_TRIAL_LABEL" desc="Label for button to start a SecureOut VPN free trial" formatter_data="webui=BraveNewTabPage">
     Start free trial
   </message>
 
@@ -433,7 +433,7 @@
     Disconnecting
   </message>
 
-  <message name="IDS_NEW_TAB_VPN_WIDGET_TITLE" desc="Title of the Cipher VPN NTP widget" formatter_data="webui=BraveNewTabPage">
+  <message name="IDS_NEW_TAB_VPN_WIDGET_TITLE" desc="Title of the SecureOut VPN NTP widget" formatter_data="webui=BraveNewTabPage">
     BRAVE VPN
   </message>
 

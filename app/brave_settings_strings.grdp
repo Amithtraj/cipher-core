@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- Cipher Settings WebUI strings (included from brave_generated_resources.grd). -->
+<!-- SecureOut Settings WebUI strings (included from brave_generated_resources.grd). -->
 <grit-part>
 
   <!--Add new items to the appropriate sections below -->
 
   <!-- Strings not associated with a particular section-->
-  <message name="IDS_SETTINGS_RESTART_NOTICE" desc="Notifies the user that they need to relaunch Cipher">
-    Your changes will take effect the next time you relaunch Cipher.
+  <message name="IDS_SETTINGS_RESTART_NOTICE" desc="Notifies the user that they need to relaunch SecureOut">
+    Your changes will take effect the next time you relaunch SecureOut.
   </message>
-  <message name="IDS_SETTINGS_RELAUNCH_BUTTON_LABEL" desc="Notifies the user that they need to relaunch Cipher">
+  <message name="IDS_SETTINGS_RELAUNCH_BUTTON_LABEL" desc="Notifies the user that they need to relaunch SecureOut">
     Relaunch Now
   </message>
   <message name="IDS_SETTINGS_SELECT_VALUE_YES" desc="Select value">
@@ -47,7 +47,7 @@
 
   <!-- Settings / Appearance -->
   <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_BRAVE_THEMES" desc="The label for brave theme change setting options">
-    Cipher colors
+    SecureOut colors
   </message>
   <message name="IDS_BRAVE_THEME_TYPE_LIGHT" desc="Text for light theme type">
     Light
@@ -83,7 +83,7 @@
     Get more themes
   </message>
   <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_BRAVE_DEFAULT_IMAGES_OPTION_LABEL" desc="The label for choosing default images over super referral">
-    Cipher default images
+    SecureOut default images
   </message>
   <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_TOOLBAR_SECTION" desc="The label for section containing settings related to toolbar">
     Toolbar
@@ -243,8 +243,8 @@
   <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_USE_AUTOCOMPLETE_LEO" desc="The label for settings checkbox en/disabling autcomplete provider with Leo assistant">
     Leo AI Assistant
   </message>
-  <message name="IDS_SETTINGS_SHOW_BRAVE_NEWS_BUTTON_LABEL" desc="The label for the settings switch controlling whether the Cipher News button is shown in the toolbar">
-    Show Cipher News button
+  <message name="IDS_SETTINGS_SHOW_BRAVE_NEWS_BUTTON_LABEL" desc="The label for the settings switch controlling whether the SecureOut News button is shown in the toolbar">
+    Show SecureOut News button
   </message>
   <message name="IDS_SETTINGS_SHOW_LEO_BUTTON_LABEL" desc="The label for the settings switch controlling whether the Leo button is shown in the toolbar">
     Show Leo AI button
@@ -322,8 +322,8 @@
   <message name="IDS_SETTINGS_NEW_TAB" desc="The text label for the New Tab settings page">
     New Tab Page
   </message>
-  <message name="IDS_SETTINGS_NEW_TAB_BRAVE_REWARDS" desc="The label for Cipher Rewards show/hide feature toggle">
-    Cipher Rewards
+  <message name="IDS_SETTINGS_NEW_TAB_BRAVE_REWARDS" desc="The label for SecureOut Rewards show/hide feature toggle">
+    SecureOut Rewards
   </message>
   <message name="IDS_SETTINGS_NEW_TAB_NEW_TAB_PAGE_SHOWS" desc="The label for New Tab Page shows customization">
     New tab page shows
@@ -354,7 +354,7 @@
         Click Pin and confirm in the following Windows notification
       </message>
       <message name="IDS_SETTINGS_SHORTCUT_PINNED" desc="The label for pinned state description">
-        Cipher is already pinned
+        SecureOut is already pinned
       </message>
     </if>
     <if expr="is_macosx">
@@ -365,7 +365,7 @@
         Dock
       </message>
       <message name="IDS_SETTINGS_SHORTCUT_PINNED" desc="The label for docked state description">
-        Cipher is already in Dock
+        SecureOut is already in Dock
       </message>
     </if>
   </if>
@@ -386,19 +386,19 @@
   <message name="IDS_SETTINGS_SITE_SETTINGS_SHIELDS_DOWN" desc="Label for shields status down site settings.">
     Shields Down
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_TITLE" desc="The title for Cipher shields section in settings">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_TITLE" desc="The title for SecureOut shields section in settings">
     Shields
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_TITLE" desc="The title for Cipher shields Defaults sub-section in settings">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_TITLE" desc="The title for SecureOut shields Defaults sub-section in settings">
     Block trackers and ads which follow you across the web
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_DESCRIPTION_1" desc="The description for Cipher shields Defaults sub-section in settings">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_DESCRIPTION_1" desc="The description for SecureOut shields Defaults sub-section in settings">
     These are the default Shields settings. They apply to all websites unless you change something in the Shields panel on a particular site. Changing these won't affect your existing per-site settings.
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_DESCRIPTION_2" desc="The description for Cipher shields Defaults sub-section in settings.">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_DESCRIPTION_2" desc="The description for SecureOut shields Defaults sub-section in settings.">
     This will block most ads on websites.
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_SHOW_STATS_BLOCKED_BADGE_LABEL" desc="Default Cipher show stats blocked badge control setting label">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_SHOW_STATS_BLOCKED_BADGE_LABEL" desc="Default SecureOut show stats blocked badge control setting label">
     Show the number of blocked items on the Shields icon
   </message>
   <message name="IDS_SETTINGS_DE_AMP_LABEL" desc="The label to activate De-AMP feature">
@@ -413,13 +413,13 @@
   <message name="IDS_SETTINGS_DEBOUNCE_SUB_LABEL" desc="The sub-label describing debounce feature">
     Enable support for bypassing top-level redirect tracking URLs.
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_REDUCE_LANGUAGE_CONTROL_LABEL" desc="Default Cipher reduce language control setting label">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_REDUCE_LANGUAGE_CONTROL_LABEL" desc="Default SecureOut reduce language control setting label">
     Prevent sites from fingerprinting me based on my language preferences
   </message>
   <message name="IDS_SETTINGS_BRAVE_SHIELDS_REDUCE_LANGUAGE_SUBITEM" desc="Description that shows under main toggle setting for reduce language control setting label">
     Enabling this setting reduces how much web sites can learn about your language preferences
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_AD_CONTROL_LABEL" desc="Default Cipher block cross-site trackers control setting label">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_AD_CONTROL_LABEL" desc="Default SecureOut block cross-site trackers control setting label">
     Trackers &amp; ads blocking
   </message>
   <message name="IDS_SETTINGS_BLOCK_ADS_TRACKERS_AGGRESSIVE" desc="Select value">
@@ -431,10 +431,10 @@
   <message name="IDS_SETTINGS_ALLOW_ADS_TRACKERS" desc="Select value">
     Disabled
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_NO_SCRIPT_CONTROL_LABEL" desc="Default Cipher script blocking control setting label">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_NO_SCRIPT_CONTROL_LABEL" desc="Default SecureOut script blocking control setting label">
     Block scripts
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_FINGERPRINTING_CONTROL_LABEL" desc="Default Cipher fingerprinting control setting label">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_FINGERPRINTING_CONTROL_LABEL" desc="Default SecureOut fingerprinting control setting label">
     Block fingerprinting
   </message>
   <message name="IDS_SETTINGS_STANDARD_FINGERPRINTING" desc="Select value">
@@ -446,7 +446,7 @@
   <message name="IDS_SETTINGS_STRICT_FINGERPRINTING" desc="Select value">
     Strict, may break sites
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_HTTPS_UPGRADE_CONTROL_LABEL" desc="Default Cipher https upgrade control setting label">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_HTTPS_UPGRADE_CONTROL_LABEL" desc="Default SecureOut https upgrade control setting label">
     Upgrade connections to HTTPS
   </message>
   <message name="IDS_SETTINGS_STANDARD_HTTPS_UPGRADE" desc="Select value">
@@ -458,7 +458,7 @@
   <message name="IDS_SETTINGS_STRICT_HTTPS_UPGRADE" desc="Select value">
     Strict
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_COOKIE_CONTROL_LABEL" desc="Default Cipher cookies control setting label">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_COOKIE_CONTROL_LABEL" desc="Default SecureOut cookies control setting label">
     Block cookies
   </message>
   <message name="IDS_SETTINGS_BRAVE_SHIELDS_COOKIE_CONTROL_BLOCK_ALL_DEPRECATED_LABEL" desc="Block all cookies deprecation warning">
@@ -473,13 +473,13 @@
   <message name="IDS_SETTINGS_BLOCK_ALL_COOKIES" desc="Select value">
     Block all cookies
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_DEFAULT_VIEW_LABEL" desc="Default Cipher view title label">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_DEFAULT_VIEW_LABEL" desc="Default SecureOut view title label">
     Default view
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_SIMPLE_VIEW_LABEL" desc="Default Cipher simple view title label">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_SIMPLE_VIEW_LABEL" desc="Default SecureOut simple view title label">
     Simple view
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_ADVANCED_VIEW_LABEL" desc="Default Cipher advanced view title label">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_ADVANCED_VIEW_LABEL" desc="Default SecureOut advanced view title label">
     Advanced view
   </message>
 
@@ -615,109 +615,109 @@
     Shortcuts
   </message>
 
-  <!-- Settings / Cipher -->
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_TITLE" desc="The title for the Cipher section in settings">
-    Cipher
+  <!-- Settings / SecureOut -->
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_TITLE" desc="The title for the SecureOut section in settings">
+    SecureOut
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_RESTART_NOTICE" desc="Notifies the user that a browser restart is needed for all Cipher changes to fully take effect">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_RESTART_NOTICE" desc="Notifies the user that a browser restart is needed for all SecureOut changes to fully take effect">
     Some changes require a browser restart to fully take effect.
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ADS_SECTION_TITLE" desc="The title for the 'ads' section of Cipher in settings">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ADS_SECTION_TITLE" desc="The title for the 'ads' section of SecureOut in settings">
     Ads
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_REWARDS_TOGGLE_TITLE" desc="The title for toggling the 'Rewards' feature on/off for Cipher">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_REWARDS_TOGGLE_TITLE" desc="The title for toggling the 'Rewards' feature on/off for SecureOut">
     Rewards
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ANALYTICS_SECTION_TITLE" desc="The title for the 'analytics' section of Cipher in settings">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ANALYTICS_SECTION_TITLE" desc="The title for the 'analytics' section of SecureOut in settings">
     Analytics
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_FEATURES_SECTION_TITLE" desc="The title for the 'features' section of Cipher in settings">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_FEATURES_SECTION_TITLE" desc="The title for the 'features' section of SecureOut in settings">
     Features
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_LEO_AI_TOGGLE_TITLE" desc="The title for toggling the 'Leo AI' feature on/off for Cipher">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_LEO_AI_TOGGLE_TITLE" desc="The title for toggling the 'Leo AI' feature on/off for SecureOut">
     Leo AI
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_LOCAL_AI_TOGGLE_TITLE" desc="The title for toggling the 'On-Device AI' master switch (history embeddings and any future on-device AI features) on/off for Cipher">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_LOCAL_AI_TOGGLE_TITLE" desc="The title for toggling the 'On-Device AI' master switch (history embeddings and any future on-device AI features) on/off for SecureOut">
     On-Device AI
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_NEWS_TOGGLE_TITLE" desc="The title for toggling the 'News' feature on/off for Cipher">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_NEWS_TOGGLE_TITLE" desc="The title for toggling the 'News' feature on/off for SecureOut">
     News
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_TALK_TOGGLE_TITLE" desc="The title for toggling the 'News' feature on/off for Cipher">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_TALK_TOGGLE_TITLE" desc="The title for toggling the 'News' feature on/off for SecureOut">
     Talk
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_WAYBACK_MACHINE_TOGGLE_TITLE" desc="The title for toggling the 'wayback machine' feature on/off for Cipher">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_WAYBACK_MACHINE_TOGGLE_TITLE" desc="The title for toggling the 'wayback machine' feature on/off for SecureOut">
     Wayback Machine
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_SPEED_READER_TOGGLE_TITLE" desc="The title for toggling the 'speedreader' feature on/off for Cipher">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_SPEED_READER_TOGGLE_TITLE" desc="The title for toggling the 'speedreader' feature on/off for SecureOut">
     Speedreader
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_PLAYLIST_TOGGLE_TITLE" desc="The title for toggling the 'playlist' feature on/off for Cipher">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_PLAYLIST_TOGGLE_TITLE" desc="The title for toggling the 'playlist' feature on/off for SecureOut">
     Playlist
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_EMAIL_ALIASES_TOGGLE_TITLE" desc="The title for toggling the 'email aliases' feature on/off for Cipher">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_EMAIL_ALIASES_TOGGLE_TITLE" desc="The title for toggling the 'email aliases' feature on/off for SecureOut">
     Email Aliases
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_WEB_DISCOVERY_PROJECT_TOGGLE_TITLE" desc="The title for toggling the 'web discovery project' feature on/off for Cipher">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_WEB_DISCOVERY_PROJECT_TOGGLE_TITLE" desc="The title for toggling the 'web discovery project' feature on/off for SecureOut">
     Web Discovery Project
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_P3A_TOGGLE_TITLE" desc="The title for toggling the 'privacy preserving analytics' feature on/off for Cipher">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_P3A_TOGGLE_TITLE" desc="The title for toggling the 'privacy preserving analytics' feature on/off for SecureOut">
     Privacy preserving analytics
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_STATS_REPORTING_TOGGLE_TITLE" desc="The title for toggling the 'statistics reporting' feature on/off for Cipher">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_STATS_REPORTING_TOGGLE_TITLE" desc="The title for toggling the 'statistics reporting' feature on/off for SecureOut">
     Statistics reporting
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_TOR_WINDOWS_TOGGLE_TITLE" desc="The title for toggling the 'tor windows' feature on/off for Cipher">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_TOR_WINDOWS_TOGGLE_TITLE" desc="The title for toggling the 'tor windows' feature on/off for SecureOut">
     Tor windows
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_VPN_TOGGLE_TITLE" desc="The title for toggling the 'vpn' feature on/off for Cipher">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_VPN_TOGGLE_TITLE" desc="The title for toggling the 'vpn' feature on/off for SecureOut">
     VPN
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_WALLET_TOGGLE_TITLE" desc="The title for toggling the 'wallet' feature on/off for Cipher">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_WALLET_TOGGLE_TITLE" desc="The title for toggling the 'wallet' feature on/off for SecureOut">
     Wallet
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_CROSS_PROFILE_SUB_LABEL" desc="The sub-label shown under Cipher toggles that apply browser-wide rather than to the current profile">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_CROSS_PROFILE_SUB_LABEL" desc="The sub-label shown under SecureOut toggles that apply browser-wide rather than to the current profile">
     Affects all browser profiles
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_RESET_TO_DEFAULTS_TITLE" desc="The title for resetting the toggles for Cipher back to their default values">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_RESET_TO_DEFAULTS_TITLE" desc="The title for resetting the toggles for SecureOut back to their default values">
     Reset to defaults
   </message>
 
-  <!-- Settings / Cipher Onboarding -->
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_TITLE" desc="The section title for the Cipher onboarding in settings">
-    Cipher
+  <!-- Settings / SecureOut Onboarding -->
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_TITLE" desc="The section title for the SecureOut onboarding in settings">
+    SecureOut
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_HEADING_TITLE" desc="The heading title for the Cipher onboarding section">
-    Customize your browser while still supporting Cipher
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_HEADING_TITLE" desc="The heading title for the SecureOut onboarding section">
+    Customize your browser while still supporting SecureOut
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_DESCRIPTION" desc="The first paragraph describing Cipher in the onboarding section">
-    Cipher is a paid version of the browser for users who don't need all the features that support Cipher as a business, but still want the privacy that only Cipher offers. Origin users will continue to benefit from our industry-leading privacy, adblock, and speed (via Shields), as well as regular software updates, Chromium patches, and security and privacy improvements.
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_DESCRIPTION" desc="The first paragraph describing SecureOut in the onboarding section">
+    SecureOut is a paid version of the browser for users who don't need all the features that support SecureOut as a business, but still want the privacy that only SecureOut offers. Origin users will continue to benefit from our industry-leading privacy, adblock, and speed (via Shields), as well as regular software updates, Chromium patches, and security and privacy improvements.
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_BUY_NOW" desc="The label for the Buy now button in Cipher onboarding">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_BUY_NOW" desc="The label for the Buy now button in SecureOut onboarding">
     Buy now
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_RESTORE_PURCHASE" desc="The label for the button to restore a previous Cipher purchase">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_RESTORE_PURCHASE" desc="The label for the button to restore a previous SecureOut purchase">
     Restore purchase
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_LEARN_MORE" desc="The label for the Learn more link in Cipher onboarding">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_LEARN_MORE" desc="The label for the Learn more link in SecureOut onboarding">
     Learn more
   </message>
 
-  <!-- Settings / Cipher Rewards -->
+  <!-- Settings / SecureOut Rewards -->
   <message name="IDS_SETTINGS_BRAVE_REWARDS_TITLE" desc="The text label for the Rewards settings page">
-    Cipher Rewards
+    SecureOut Rewards
   </message>
   <message name="IDS_SETTINGS_BRAVE_REWARDS_DISABLED_LABEL" desc="The text label for the Rewards disabled state">
-    Cipher Rewards is disabled
+    SecureOut Rewards is disabled
   </message>
   <message name="IDS_SETTINGS_BRAVE_REWARDS_DISABLED_SUB_LABEL" desc="The text sublabel for the Rewards disabled state">
     Open Rewards panel to enable and get started
   </message>
   <message name="IDS_SETTINGS_BRAVE_REWARDS_PAGE_LABEL" desc="The text label for the link to the Rewards settings page">
-    Open full Cipher Rewards settings
+    Open full SecureOut Rewards settings
   </message>
-  <message name="IDS_SETTINGS_BRAVE_REWARDS_SHOW_BRAVE_REWARDS_BUTTON_LABEL" desc="The label for settings switch controlling the visibility of Cipher Rewards button">
-    Show Cipher Rewards button
+  <message name="IDS_SETTINGS_BRAVE_REWARDS_SHOW_BRAVE_REWARDS_BUTTON_LABEL" desc="The label for settings switch controlling the visibility of SecureOut Rewards button">
+    Show SecureOut Rewards button
   </message>
 
   <!-- Settings / Adblock-Only mode -->
@@ -728,13 +728,13 @@
     Use Adblock-Only mode
   </message>
   <message name="IDS_SETTINGS_AD_BLOCK_ONLY_MODE_DESC" desc="The description for settings option to enable shields Adblock-Only mode">
-    Adblock-Only mode retains core ad blocking rules of Cipher Shields. Warning: removes all privacy protections. Please note that for individual websites broken by Cipher's privacy protections, you can set Shields to DOWN. This is an experimental mode. <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
+    Adblock-Only mode retains core ad blocking rules of SecureOut Shields. Warning: removes all privacy protections. Please note that for individual websites broken by SecureOut's privacy protections, you can set Shields to DOWN. This is an experimental mode. <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_SETTINGS_AD_BLOCK_ONLY_MODE_ALERT_TITLE" desc="Title for the alert shown when Adblock-Only mode is enabled">
     Shields options are currently disabled.
   </message>
   <message name="IDS_SETTINGS_AD_BLOCK_ONLY_MODE_ALERT_DESC" desc="Description for the alert shown when Adblock-Only mode is enabled">
-    Adblock-Only mode retains core ad blocking rules of Cipher Shields and turns off privacy protections. If you would like to enable standard Shields, please disable this mode.
+    Adblock-Only mode retains core ad blocking rules of SecureOut Shields and turns off privacy protections. If you would like to enable standard Shields, please disable this mode.
   </message>
   <message name="IDS_SETTINGS_AD_BLOCK_ONLY_MODE_ALERT_TURN_OFF_BUTTON" desc="Alert button text to turn off Adblock-Only mode">
     Turn off Adblock-Only mode
@@ -757,13 +757,13 @@
 
   <!-- Settings / Privacy and security -->
   <message name="IDS_SETTINGS_COOKIE_CONTROLLED_BY_SHIELDS_HEADER_TEXT" desc="Text for the header explaining some cookies controlled by Shields settings.">
-    Some cookie settings are controlled by Cipher Shields. You can see them &lt;a href="/content/braveShields"&gt;here&lt;/a&gt;.
+    Some cookie settings are controlled by SecureOut Shields. You can see them &lt;a href="/content/braveShields"&gt;here&lt;/a&gt;.
   </message>
   <message name="IDS_SETTINGS_BRAVE_BLOCK_COOKIES_LINK_ROW_LABEL" desc="This text is the label of a page. Here, it serves as a button that opens the new page.">
     Block cookies
   </message>
   <message name="IDS_SETTINGS_COOKIE_CONTROLLED_BY_SHIELDS_TOOLTIP_TEXT" desc="Text for the tooltip explaining cookies generated by Shields settings.">
-    This setting is controlled by Cipher Shields.
+    This setting is controlled by SecureOut Shields.
   </message>
   <message name="IDS_SETTINGS_COOKIE_CONTROLLED_BY_GOOGLE_SIGN_IN_TOOLTIP_TEXT" desc="Text for the tooltip explaining cookies generated by Google Sign-in settings.">
     This setting is controlled by Google Sign-in.
@@ -796,7 +796,7 @@
     Local history retention
   </message>
   <message name="IDS_SETTINGS_HISTORY_RETENTION_SUB_LABEL" desc="Description for the setting that controls how long browsing history is retained">
-    How long Cipher stores your browsing history locally
+    How long SecureOut stores your browsing history locally
   </message>
   <message name="IDS_SETTINGS_HISTORY_RETENTION_ONE_DAY" desc="Dropdown option that keeps browsing history for one day">
     1 day
@@ -827,7 +827,7 @@
     Automatically send diagnostic reports
   </message>
   <message name="IDS_BRAVE_DIAGNOSTIC_REPORTS_PREF_DESC" desc="The description of the checkbox to enable/disable sending diagnostic reports (crashes, hangs).">
-    Help improve Cipher's product stability by automatically sending diagnostic reports when the Cipher Browser crashes or freezes
+    Help improve SecureOut's product stability by automatically sending diagnostic reports when the SecureOut Browser crashes or freezes
   </message>
   <!-- Request OTR -->
   <if expr="enable_request_otr">
@@ -852,9 +852,9 @@
       Show Privacy settings tuning notification on compatible sites
     </message>
     <message name="IDS_SETTINGS_PSST_SUB_LABEL" desc="Privacy settings tuning sub-label">
-      Allows Cipher to automatically suggest (and adjust) site-specific privacy settings.
+      Allows SecureOut to automatically suggest (and adjust) site-specific privacy settings.
     </message>
-    <message name="IDS_SETTINGS_BRAVE_ORIGIN_PSST_TOGGLE_TITLE" desc="The title for toggling the 'psst' feature on/off for Cipher">
+    <message name="IDS_SETTINGS_BRAVE_ORIGIN_PSST_TOGGLE_TITLE" desc="The title for toggling the 'psst' feature on/off for SecureOut">
       Privacy Settings Tuning Tool
     </message>
   </if>
@@ -863,7 +863,7 @@
       Block Microsoft Recall
     </message>
     <message name="IDS_SETTINGS_WINDOWS_RECALL_DISABLED_SUBLABEL" desc="Windows Recall setting sub-label">
-      Block the Recall feature on Microsoft Windows computers from automatically taking screenshots of any open Cipher tabs.
+      Block the Recall feature on Microsoft Windows computers from automatically taking screenshots of any open SecureOut tabs.
     </message>
   </if>
   <!-- Data collection -->
@@ -875,17 +875,17 @@
   <message name="IDS_SETTINGS_BRAVE_ON_EXIT" desc="Clear Browsing Data dialog On exit tab label">
     Delete data on exit
   </message>
-  <message name="IDS_SETTINGS_CLEAR_BRAVE_ADS_DATA" desc="The label for the link to clear 'Cipher Ads' data">
-    Clear Cipher Ads data...
+  <message name="IDS_SETTINGS_CLEAR_BRAVE_ADS_DATA" desc="The label for the link to clear 'SecureOut Ads' data">
+    Clear SecureOut Ads data...
   </message>
-  <message name="IDS_SETTINGS_CLEAR_BRAVE_ADS_DATA_TOAST_LABEL" desc="The label for the toast shown after Cipher Ads data is cleared">
-    Cipher Ads data cleared
+  <message name="IDS_SETTINGS_CLEAR_BRAVE_ADS_DATA_TOAST_LABEL" desc="The label for the toast shown after SecureOut Ads data is cleared">
+    SecureOut Ads data cleared
   </message>
-  <message name="IDS_SETTINGS_CLEAR_BRAVE_ADS_DATA_ERROR_TOAST_LABEL" desc="The label for the toast shown when clearing Cipher Ads data fails">
-    Couldn't clear Cipher Ads data. Try again.
+  <message name="IDS_SETTINGS_CLEAR_BRAVE_ADS_DATA_ERROR_TOAST_LABEL" desc="The label for the toast shown when clearing SecureOut Ads data fails">
+    Couldn't clear SecureOut Ads data. Try again.
   </message>
   <message name="IDS_SETTINGS_RESET_REWARDS_DATA" desc="The label for opening rewards manage wallet dialog">
-    Reset Cipher Rewards data...
+    Reset SecureOut Rewards data...
   </message>
 
   <!-- Settings / Privacy and security / Cookies and other site data -->
@@ -968,7 +968,7 @@
   <!-- Settings / Privacy and security / Security -->
   <!-- Safe browsing -->
   <message name="IDS_SETTINGS_BRAVE_SAFEBROWSING_STANDARD_BULLET_TWO" desc="Second bullet point under the safe browsing standard protection mode">
-    Checks URLs with a list of unsafe sites stored in Cipher.
+    Checks URLs with a list of unsafe sites stored in SecureOut.
   </message>
   <message name="IDS_SETTINGS_BRAVE_SAFEBROWSING_NONE_DESC" desc="Description for safe browsing no protection mode">
     Does not protect you against dangerous websites, downloads, and extensions.
@@ -1050,55 +1050,55 @@
   </message>
 
   <!-- Settings / Sync -->
-  <message name="IDS_SETTINGS_BRAVE_SYNC_TITLE" desc="The title for Cipher Sync in settings">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_TITLE" desc="The title for SecureOut Sync in settings">
     Sync
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_SETUP_ACTION_LABEL" desc="Cipher Sync setup action label">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_SETUP_ACTION_LABEL" desc="SecureOut Sync setup action label">
     Start using sync
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_SETUP_TITLE" desc="Title for the Cipher Sync settings setup section">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_SETUP_TITLE" desc="Title for the SecureOut Sync settings setup section">
     Sync Setup
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_SETUP_SUBTITLE" desc="Subtitle for the Cipher Sync settings setup section">
-    To start, you will need Cipher installed on all the devices you plan to sync. Then, securely link them together with a sync code.
+  <message name="IDS_SETTINGS_BRAVE_SYNC_SETUP_SUBTITLE" desc="Subtitle for the SecureOut Sync settings setup section">
+    To start, you will need SecureOut installed on all the devices you plan to sync. Then, securely link them together with a sync code.
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_MANAGE_ACTION_LABEL" desc="Cipher Sync manage action label">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_MANAGE_ACTION_LABEL" desc="SecureOut Sync manage action label">
     Manage your synced devices
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_COULD_NOT_SYNC_ACTION_LABEL" desc="Could not sync devices action label. It is displayed in the case when Cipher Sync could not decrypt code words and start work">
-    Could not sync Cipher on your devices
+  <message name="IDS_SETTINGS_BRAVE_SYNC_COULD_NOT_SYNC_ACTION_LABEL" desc="Could not sync devices action label. It is displayed in the case when SecureOut Sync could not decrypt code words and start work">
+    Could not sync SecureOut on your devices
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_MANAGER_TITLE" desc="Cipher Sync manager title">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_MANAGER_TITLE" desc="SecureOut Sync manager title">
     Sync Manager
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_SETTINGS_TITLE" desc="Cipher Sync settings title">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_SETTINGS_TITLE" desc="SecureOut Sync settings title">
     Sync Settings
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_SETTINGS_SUBTITLE" desc="Cipher Sync settings subtitle">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_SETTINGS_SUBTITLE" desc="SecureOut Sync settings subtitle">
     Manage what information you would like to sync between devices. These settings only affect this device.
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_TITLE" desc="Cipher Sync device list title">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_TITLE" desc="SecureOut Sync device list title">
     Device List
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_SUBTITLE" desc="Cipher Sync device list subtitle">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_SUBTITLE" desc="SecureOut Sync device list subtitle">
     The device list below includes all devices in your sync chain. Each device can be managed from any other device.
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_NAME_COLUMN" desc="Cipher Sync device list table column title for device name">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_NAME_COLUMN" desc="SecureOut Sync device list table column title for device name">
     Device Name
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_NAME_THIS_DEVICE" desc="Cipher Sync device list label for device which is the device the user is currently using">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_NAME_THIS_DEVICE" desc="SecureOut Sync device list label for device which is the device the user is currently using">
     <ph name="DEVICE_NAME">$1<ex>my-computer-1</ex></ph> (This Device)
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_LAST_ACTIVE_COLUMN" desc="Cipher Sync device list table column title for last active date">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_LAST_ACTIVE_COLUMN" desc="SecureOut Sync device list table column title for last active date">
     Last Active
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_REMOVE_COLUMN" desc="Cipher Sync device list table column title for remove other device buttons">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_REMOVE_COLUMN" desc="SecureOut Sync device list table column title for remove other device buttons">
     Remove
   </message>
-  <message name="IDS_BRAVE_SYNC_SETUP_TITLE" desc="The Cipher Sync title.">
+  <message name="IDS_BRAVE_SYNC_SETUP_TITLE" desc="The SecureOut Sync title.">
     Sync Setup
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_WORD_COUNT" desc="Text for Cipher Sync word count message.">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_WORD_COUNT" desc="Text for SecureOut Sync word count message.">
     Word count: <ph name="WORD_COUNT">$1<ex>24</ex></ph>
   </message>
   <message name="IDS_SETTINGS_BRAVE_SYNC_COPIED_TEXT" desc="The success state telling the user that a secret code was copied to the clipboard">
@@ -1111,7 +1111,7 @@
     There was an error displaying the QR code, please refresh and try again.
   </message>
   <message name="IDS_BRAVE_SYNC_SETUP_DESCRIPTION" desc="The Sync phrase explaining what happens when you start a new sync chain. Appears when sync is disabled.">
-    To start, you will need Cipher installed on all the devices you plan to sync. To chain them together, start a sync chain that you will use to securely link all of your devices together.
+    To start, you will need SecureOut installed on all the devices you plan to sync. To chain them together, start a sync chain that you will use to securely link all of your devices together.
   </message>
   <message name="IDS_BRAVE_SYNC_START_NEW_CHAIN_BUTTON" desc="The Sync button that triggers a modal to start a new sync chian">
     Start a new Sync Chain
@@ -1132,7 +1132,7 @@
     Sync Chain QR Code
   </message>
   <message name="IDS_BRAVE_SYNC_SCAN_CODE_DESCRIPTION_PARTIAL_1" desc="The Sync instructions for the `scan sync code` modal partial phrase (1)">
-    On your mobile device, navigate to Cipher Sync in the Settings panel and click the button
+    On your mobile device, navigate to SecureOut Sync in the Settings panel and click the button
   </message>
   <message name="IDS_BRAVE_SYNC_SCAN_CODE_DESCRIPTION_PARTIAL_2" desc="The Sync instructions for the `scan sync code` modal partial phrase (2)">
     “Scan Sync Code”.
@@ -1144,7 +1144,7 @@
     Sync Chain Code
   </message>
   <message name="IDS_BRAVE_SYNC_VIEW_CODE_DESCRIPTION_PARTIAL_1" desc="The Sync instructions for the `view sync code` modal partial phrase (1)">
-    On your target computer, navigate to Cipher Sync in settings and click the button
+    On your target computer, navigate to SecureOut Sync in settings and click the button
   </message>
   <message name="IDS_BRAVE_SYNC_VIEW_CODE_DESCRIPTION_PARTIAL_2" desc="The Sync instructions for the `view sync code` modal partial phrase (2)">
     “I have a Sync Code”.
@@ -1189,7 +1189,7 @@
     Internal account delete error
   </message>
   <message name="IDS_BRAVE_SYNC_CODE_FROM_DEPRECATED_VERSION" desc="Text for error when trying to use old version sync code after v1 sunset date.">
-    This code was generated by a deprecated version of Cipher, please upgrade your other device first
+    This code was generated by a deprecated version of SecureOut, please upgrade your other device first
   </message>
   <message name="IDS_BRAVE_SYNC_CODE_EXPIRED" desc="Text for error when trying to use the sync code which has expired.">
     This code has expired. Please generate a new one on your other device and try again.
@@ -1207,17 +1207,17 @@
     Are you sure you want to remove the selected device from the sync chain?
   </message>
   <message name="IDS_BRAVE_SYNC_FINAL_SECURITY_WARNING_TEXT" desc="Confirmation message prompt to make sure the user aware his data will be shared with other devices in chain">
-    Warning: this will share your Cipher data, including potentially your passwords, with the device that generated these code words.
+    Warning: this will share your SecureOut data, including potentially your passwords, with the device that generated these code words.
 
     Please double check that these code words were generated by a device that you own.
 
     Are you sure you want to do this?
   </message>
-  <message name="IDS_BRAVE_SYNC_PASSPHRASE_DECRYPTION_ERROR_MESSAGE" desc="Warning message that informs user about Cipher Sync is not running and browser needs to have access to secure OS passwords store">
-    Cipher could not access your operating system's safe storage. This is what's used to secure data such as passwords and cookies; it's also required for Cipher Sync to connect your browser profile between devices. This means Cipher Sync is not running. To resolve this issue, please see the <ph name="BEGIN_LINK_SYNC_GUIDE">&lt;a target="_blank" href="$1"&gt;</ph>Cipher Sync troubleshooting guide<ph name="END_LINK_SYNC_GUIDE">&lt;/a&gt;</ph>.
+  <message name="IDS_BRAVE_SYNC_PASSPHRASE_DECRYPTION_ERROR_MESSAGE" desc="Warning message that informs user about SecureOut Sync is not running and browser needs to have access to secure OS passwords store">
+    SecureOut could not access your operating system's safe storage. This is what's used to secure data such as passwords and cookies; it's also required for SecureOut Sync to connect your browser profile between devices. This means SecureOut Sync is not running. To resolve this issue, please see the <ph name="BEGIN_LINK_SYNC_GUIDE">&lt;a target="_blank" href="$1"&gt;</ph>SecureOut Sync troubleshooting guide<ph name="END_LINK_SYNC_GUIDE">&lt;/a&gt;</ph>.
   </message>
   <message name="IDS_BRAVE_SYNC_PASSPHRASE_DECRYPTION_SS_UNLOCKED_ERROR_MESSAGE" desc="Warning">
-    It looks like the sync encryption key is different from the one used when you first set up Cipher Sync. The easiest fix here is to reset and re-join the sync chain using the passphrase from one of your other synced devices.
+    It looks like the sync encryption key is different from the one used when you first set up SecureOut Sync. The easiest fix here is to reset and re-join the sync chain using the passphrase from one of your other synced devices.
   </message>
   <message name="IDS_BRAVE_SYNC_LEAVE_AND_REJOIN_THE_CHAIN_BUTTON" desc="Button which does reset the sync and offers to re-join the sync chain">
     Reset and re-join sync chain
@@ -1229,7 +1229,7 @@
     Permanently delete account
   </message>
   <message name="IDS_BRAVE_SYNC_DELETE_ACCOUNT_DESCRIPTION_PARTIAL_1" desc="">
-    Deleting your account will remove your encrypted data from Cipher servers and disable Sync on all of your connected devices.
+    Deleting your account will remove your encrypted data from SecureOut servers and disable Sync on all of your connected devices.
   </message>
   <message name="IDS_BRAVE_SYNC_DELETE_ACCOUNT_DESCRIPTION_PARTIAL_2" desc="">
     It will not however delete the data that is stored locally on those devices.
@@ -1262,7 +1262,7 @@
     Improve search suggestions
   </message>
   <message name="IDS_SETTINGS_BRAVE_SEARCH_ENGINES_SEARCH_SUGGEST_DESC" desc="The desc of the option to enable/disable sending omnibox input to the user's default search engine to get additional suggestions.">
-    When on, Cipher sends what you type in the address bar or search box to your default search engine to get better suggestions. When off, Cipher only shows suggestions generated on your device. This is always off in private windows.
+    When on, SecureOut sends what you type in the address bar or search box to your default search engine to get better suggestions. When off, SecureOut only shows suggestions generated on your device. This is always off in private windows.
   </message>
   <message name="IDS_SETTINGS_NORMAL_PROFILE_SEARCH_EXPLANATION" desc="Explanation for the search engine setting.">
     Search engine used in the address bar.
@@ -1279,18 +1279,18 @@
   <message name="IDS_SETTINGS_PRIVATE_PROFILE_SEARCH_ENGINE_TITLE" desc="Name of the settings page which displays search engine preferences for private profiles.">
     Search engine for Private Windows
   </message>
-  <message name="IDS_SETTINGS_PRIVATE_PROFILE_SEARCH_ENGINE_CHOICE_SETTINGS_CONFIRMATION_TOAST_LABEL" desc="This confirmation message is intended to help users understand that their choice is now saved. It appears after the user changes their default private search engine in Cipher settings. (A search engine provides answers to search queries; this is different from a browser, which displays web pages. A search engine powers many experiences within a browser.)">
-    <ph name="SEARCH_ENGINE_NAME">$1<ex>Cipher</ex></ph> is now your default search engine for private windows
+  <message name="IDS_SETTINGS_PRIVATE_PROFILE_SEARCH_ENGINE_CHOICE_SETTINGS_CONFIRMATION_TOAST_LABEL" desc="This confirmation message is intended to help users understand that their choice is now saved. It appears after the user changes their default private search engine in SecureOut settings. (A search engine provides answers to search queries; this is different from a browser, which displays web pages. A search engine powers many experiences within a browser.)">
+    <ph name="SEARCH_ENGINE_NAME">$1<ex>SecureOut</ex></ph> is now your default search engine for private windows
   </message>
-  <message name="IDS_SETTINGS_SEARCH_ENGINE_LIST_BRAVE_SEARCH_DESCRIPTION" desc="The description shown with the Cipher Search radio button in the search engines list.">
-    Cipher Search is recommended for the best browsing experience while using Cipher browser.
+  <message name="IDS_SETTINGS_SEARCH_ENGINE_LIST_BRAVE_SEARCH_DESCRIPTION" desc="The description shown with the SecureOut Search radio button in the search engines list.">
+    SecureOut Search is recommended for the best browsing experience while using SecureOut browser.
   </message>
-  <message name="IDS_SETTINGS_SEARCH_ENGINE_LIST_BRAVE_SEARCH_RECOMMENDED" desc="The label shown in the Cipher Search radio button in the search engines list.">
+  <message name="IDS_SETTINGS_SEARCH_ENGINE_LIST_BRAVE_SEARCH_RECOMMENDED" desc="The label shown in the SecureOut Search radio button in the search engines list.">
     Recommended
   </message>
 
   <!-- Settings / Extensions -->
-  <message name="IDS_SETTINGS_BRAVE_DEFAULT_EXTENSIONS_TITLE" desc="The title for Cipher default extensions in settings">
+  <message name="IDS_SETTINGS_BRAVE_DEFAULT_EXTENSIONS_TITLE" desc="The title for SecureOut default extensions in settings">
     Extensions
   </message>
   <message name="IDS_SETTINGS_GOOGLE_LOGIN_FOR_EXTENSIONS" desc="Label for a switch control which allows Google login for extension">
@@ -1402,10 +1402,10 @@
     Manifest V2 extensions
   </message>
   <message name="IDS_SETTINGS_MANAGE_EXTENSIONS_V2_SUBLABEL" desc="The sub label of manage v2 extensions link in settings">
-    The following Manifest V2 extensions will be removed from the Chrome Web Store, but are still supported in Cipher. Toggle to download and install, or to uninstall.
+    The following Manifest V2 extensions will be removed from the Chrome Web Store, but are still supported in SecureOut. Toggle to download and install, or to uninstall.
   </message>
   <message name="IDS_SETTINGS_MANAGE_EXTENSIONS_V2_WARN" desc="The warning message in v2 extensions in settings.">
-    Cipher hosts these Manifest V2 extensions on Cipher servers, but does not review or verify their content, security, or behavior. Please see each extension's official page for help. Read Cipher's plans for Manifest V2 <ph name="BEGIN_LINK">&lt;a target="_blank" rel="noreferrer" href="$1"&gt;</ph>here<ph name="END_LINK">&lt;/a&gt;</ph>.
+    SecureOut hosts these Manifest V2 extensions on SecureOut servers, but does not review or verify their content, security, or behavior. Please see each extension's official page for help. Read SecureOut's plans for Manifest V2 <ph name="BEGIN_LINK">&lt;a target="_blank" rel="noreferrer" href="$1"&gt;</ph>here<ph name="END_LINK">&lt;/a&gt;</ph>.
   </message>
   <message name="IDS_SETTINGS_MANAGE_EXTENSIONS_V2_TOAST_CONFIRM" desc="The label of the error toast button in settings">
     Close
@@ -1458,7 +1458,7 @@
     Default Cardano wallet
   </message>
   <message name="IDS_BRAVE_WALLET_WEB3_PROVIDER_BRAVE" desc="Select control value for which web3 provider to use">
-    Cipher Wallet
+    SecureOut Wallet
   </message>
   <message name="IDS_BRAVE_WALLET_WEB3_PROVIDER_ASK" desc="Select control value for which web3 provider to use">
     Ask
@@ -1467,7 +1467,7 @@
     Extensions (no fallback)
   </message>
   <message name="IDS_BRAVE_WALLET_WEB3_PROVIDER_BRAVE_PREFER_EXTENSIONS" desc="Select control value for which web3 provider to use">
-    Extensions (Cipher Wallet fallback)
+    Extensions (SecureOut Wallet fallback)
   </message>
   <message name="IDS_SETTINGS_DEFAULT_BASE_CURRENCY_DESC" desc="The default base currency to use for the wallet prices">
     Default base currency
@@ -1475,8 +1475,8 @@
   <message name="IDS_SETTINGS_DEFAULT_BASE_CRYPTOCURRENCY_DESC" desc="The default base cryptocurrency to use for the wallet prices">
     Default base cryptocurrency
   </message>
-  <message name="IDS_SETTINGS_SHOW_BRAVE_WALLET_ICON_ON_TOOLBAR" desc="The description for showing the Cipher wallet panel icon on the toolbar">
-    Show Cipher Wallet button
+  <message name="IDS_SETTINGS_SHOW_BRAVE_WALLET_ICON_ON_TOOLBAR" desc="The description for showing the SecureOut wallet panel icon on the toolbar">
+    Show SecureOut Wallet button
   </message>
   <message name="IDS_SETTINGS_ENABLE_NFT_DISCOVERY_LABEL" desc="The label for enabling NFT discovery">
     Enable NFT discovery
@@ -1485,16 +1485,16 @@
     Automatically add NFTs you own to the Wallet using third party APIs.
   </message>
   <message name="IDS_SETTINGS_ENABLE_BRAVE_WALLET_IN_PRIVATE_WINDOWS_LABEL" desc="The label for enabling private window support">
-    Enable Cipher Wallet in Private Windows
+    Enable SecureOut Wallet in Private Windows
   </message>
   <message name="IDS_SETTINGS_ENABLE_BRAVE_WALLET_IN_PRIVATE_WINDOWS_DESC" desc="The description for enabling private window support">
     Warning: Reusing a wallet address in a private window session can enable a site to link a private window session to a non-private window session
   </message>
-  <message name="IDS_SETTINGS_AUTO_LOCK_MINUTES" desc="The title for the amount of minutes it takes for the Cipher Wallet to automatically lock">
-    Automatically lock Cipher Wallet
+  <message name="IDS_SETTINGS_AUTO_LOCK_MINUTES" desc="The title for the amount of minutes it takes for the SecureOut Wallet to automatically lock">
+    Automatically lock SecureOut Wallet
   </message>
-  <message name="IDS_SETTINGS_AUTO_LOCK_MINUTES_DESC" desc="The description for the amount of minutes it takes for the Cipher Wallet to automatically lock">
-    The number of minutes to wait until the Cipher Wallet is automatically locked
+  <message name="IDS_SETTINGS_AUTO_LOCK_MINUTES_DESC" desc="The description for the amount of minutes it takes for the SecureOut Wallet to automatically lock">
+    The number of minutes to wait until the SecureOut Wallet is automatically locked
   </message>
   <message name="IDS_SETTINGS_WALLET_NETWORKS_ITEM" desc="The label for opening wallet networks list">
     Wallet Networks
@@ -1561,7 +1561,7 @@
   <message name="IDS_SETTINGS_WALLET_POLKADOT_NETWORK_LIST_TITLE" desc="The title of the list with wallet Polkadot networks">
     Polkadot networks
   </message>
-  <message name="IDS_SETTINGS_SHOW_BRAVE_WALLET_TEST_NETWORKS" desc="The description for showing the Cipher wallet test networks">
+  <message name="IDS_SETTINGS_SHOW_BRAVE_WALLET_TEST_NETWORKS" desc="The description for showing the SecureOut wallet test networks">
     Show test networks
   </message>
 
@@ -1677,7 +1677,7 @@
   </message>
 
   <!-- Settings / Leo Assistant -->
-  <message name="IDS_SETTINGS_LEO_ASSISTANT" desc="Title for an item in the 'Leo Assistant' section of Cipher Settings">
+  <message name="IDS_SETTINGS_LEO_ASSISTANT" desc="Title for an item in the 'Leo Assistant' section of SecureOut Settings">
     Leo
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_SHOW_ICON_ON_TOOLBAR_LABEL" desc="The text for settings option">
@@ -1714,7 +1714,7 @@
     Clear Leo data
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_RESET_AND_CLEAR_DATA_CONFIRMATION_LABEL" desc="The confirmation window message for reset option">
-    Resetting Leo AI will require you to opt-in to use Cipher Leo AI in the future and will also clear your chat history, customizations, and memories. Clearing your chat history will delete all your previous conversations with Cipher Leo AI. This action can't be undone.
+    Resetting Leo AI will require you to opt-in to use SecureOut Leo AI in the future and will also clear your chat history, customizations, and memories. Clearing your chat history will delete all your previous conversations with SecureOut Leo AI. This action can't be undone.
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_AUTOCOMPLETE_LINK" desc="A label for a link to settings page to adjust autocomplete suggestion based on Leo">
     Adjust autocomplete suggestions
@@ -1729,10 +1729,10 @@
     About Leo AI
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_ABOUT_LEO_DESC_1" desc="Description for the about Leo assistant section">
-    Cipher Leo provides privacy-first AI chat and other AI-powered interfaces in the browser. Leo never learns from your data or uses it for model training. All requests are proxied through an anonymizing server.
+    SecureOut Leo provides privacy-first AI chat and other AI-powered interfaces in the browser. Leo never learns from your data or uses it for model training. All requests are proxied through an anonymizing server.
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_ABOUT_LEO_DESC_2" desc="Description for learning more about Leo privacy policy">
-    Read more about how Cipher protects your use of AI in Leo's privacy policy. <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
+    Read more about how SecureOut protects your use of AI in Leo's privacy policy. <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_MODEL_SELECTION_LABEL" desc="Label for selecting default model">
     Default model for new conversations
@@ -1804,7 +1804,7 @@
     The maximum number of tokens the model can process in a single interaction. A larger context size allows the model to handle longer conversations. Different models support different maximum context sizes.
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_PROXY_NOTE" desc="A note for users when adding model server info">
-    Cipher doesn't proxy these requests, please read privacy terms of the chosen provider.
+    SecureOut doesn't proxy these requests, please read privacy terms of the chosen provider.
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_ENDPOINT_ERROR" desc="An error note for users when url is invalidated">
     Non-local endpoints should employ the HTTPS protocol for secure data transmission.
@@ -1819,7 +1819,7 @@
     Private IPs Not Allowed
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_PRIVATE_IP_NOT_ALLOWED_BODY" desc="Body text for private IP not allowed dialog">
-    The address you entered appears to be from a private network—like your router or a local server. Cipher blocks these automatically to keep you safe, but you can enable them if you're confident it's secure.
+    The address you entered appears to be from a private network—like your router or a local server. SecureOut blocks these automatically to keep you safe, but you can enable them if you're confident it's secure.
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_PRIVATE_IP_NOT_ALLOWED_INSTRUCTIONS" desc="Instructions on how to enable private IPs">
     To proceed, visit brave://flags/, search for "brave-ai-chat-allow-private-ips," and enable the feature. Once enabled, you can use private network addresses in Leo settings.
@@ -1955,14 +1955,14 @@
   </message>
 
   <!-- Settings / Survey Panelist -->
-  <message name="IDS_SETTINGS_SURVEY_PANELIST" desc="Title for an item in the 'Survey Panelist' section of Cipher Settings">
+  <message name="IDS_SETTINGS_SURVEY_PANELIST" desc="Title for an item in the 'Survey Panelist' section of SecureOut Settings">
     Survey Panelist
   </message>
   <message name="IDS_SETTINGS_SURVEY_PANELIST_LABEL" desc="The text for settings option to enable survey panelist">
-    Allow Cipher surveys
+    Allow SecureOut surveys
   </message>
   <message name="IDS_SETTINGS_SURVEY_PANELIST_DESC" desc="The description for settings option to enable survey panelist">
-    Allows Cipher to show links to private surveys in the new tab page. Surveys help us build better features and measure the effectiveness of browser-based ad campaigns. <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
+    Allows SecureOut to show links to private surveys in the new tab page. Surveys help us build better features and measure the effectiveness of browser-based ad campaigns. <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
   </message>
 
   <!-- Settings / Playlist -->
@@ -1999,7 +1999,7 @@
   </message>
   <if expr="not is_android">
     <message name="IDS_BRAVE_AVATAR_LABEL_56" desc="The label for the avatar_edgy_brave.png avatar.">
-      Avatar Edgy Cipher
+      Avatar Edgy SecureOut
     </message>
     <message name="IDS_BRAVE_AVATAR_LABEL_57" desc="The label for the avatar_edgy_ocean.png avatar.">
       Avatar Edgy Ocean
@@ -2020,7 +2020,7 @@
       Avatar Paladin Rewards
     </message>
     <message name="IDS_BRAVE_AVATAR_LABEL_63" desc="The label for the avatar_paladin_brave.png avatar.">
-      Avatar Paladin Cipher
+      Avatar Paladin SecureOut
     </message>
     <message name="IDS_BRAVE_AVATAR_LABEL_64" desc="The label for the avatar_paladin_ocean.png avatar.">
       Avatar Paladin Ocean
@@ -2041,7 +2041,7 @@
       Avatar Gleam Rewards
     </message>
     <message name="IDS_BRAVE_AVATAR_LABEL_70" desc="The label for the avatar_gleam_brave.png avatar.">
-      Avatar Gleam Cipher
+      Avatar Gleam SecureOut
     </message>
     <message name="IDS_BRAVE_AVATAR_LABEL_71" desc="The label for the avatar_gleam_ocean.png avatar.">
       Avatar Gleam Ocean
@@ -2062,7 +2062,7 @@
       Avatar Oval Rewards
     </message>
     <message name="IDS_BRAVE_AVATAR_LABEL_77" desc="The label for the avatar_oval_brave.png avatar.">
-      Avatar Oval Cipher
+      Avatar Oval SecureOut
     </message>
     <message name="IDS_BRAVE_AVATAR_LABEL_78" desc="The label for the avatar_oval_ocean.png avatar.">
       Avatar Oval Ocean
@@ -2083,7 +2083,7 @@
       Avatar Bonbon Rewards
     </message>
     <message name="IDS_BRAVE_AVATAR_LABEL_84" desc="The label for the avatar_bonbon_brave.png avatar.">
-      Avatar Bonbon Cipher
+      Avatar Bonbon SecureOut
     </message>
     <message name="IDS_BRAVE_AVATAR_LABEL_85" desc="The label for the avatar_bonbon_ocean.png avatar.">
       Avatar Bonbon Ocean

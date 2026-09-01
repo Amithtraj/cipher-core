@@ -1,31 +1,31 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <grit-part>
-  <message name="IDS_BRAVE_ORIGIN_STARTUP_TITLE" desc="Title for the Cipher startup dialog" formatter_data="webui=BraveOriginStartup">
-    Cipher
+  <message name="IDS_BRAVE_ORIGIN_STARTUP_TITLE" desc="Title for the SecureOut startup dialog" formatter_data="webui=BraveOriginStartup">
+    SecureOut
   </message>
 
-  <message name="IDS_BRAVE_ORIGIN_STARTUP_DESCRIPTION" desc="First paragraph of description on the Cipher startup dialog" formatter_data="webui=BraveOriginStartup">
-    Welcome to Cipher. To continue, please buy or restore your Cipher purchase.
+  <message name="IDS_BRAVE_ORIGIN_STARTUP_DESCRIPTION" desc="First paragraph of description on the SecureOut startup dialog" formatter_data="webui=BraveOriginStartup">
+    Welcome to SecureOut. To continue, please buy or restore your SecureOut purchase.
   </message>
 
-  <message name="IDS_BRAVE_ORIGIN_STARTUP_DESCRIPTION2" desc="Second paragraph of description on the Cipher startup dialog" formatter_data="webui=BraveOriginStartup">
-    You need an active Cipher purchase to use this browser.
+  <message name="IDS_BRAVE_ORIGIN_STARTUP_DESCRIPTION2" desc="Second paragraph of description on the SecureOut startup dialog" formatter_data="webui=BraveOriginStartup">
+    You need an active SecureOut purchase to use this browser.
   </message>
 
-  <message name="IDS_BRAVE_ORIGIN_STARTUP_RESTORE_BUTTON" desc="Button label to restore a Cipher purchase" formatter_data="webui=BraveOriginStartup">
-    Restore Cipher purchase
+  <message name="IDS_BRAVE_ORIGIN_STARTUP_RESTORE_BUTTON" desc="Button label to restore a SecureOut purchase" formatter_data="webui=BraveOriginStartup">
+    Restore SecureOut purchase
   </message>
 
-  <message name="IDS_BRAVE_ORIGIN_STARTUP_BUY_BUTTON" desc="Button label to buy Cipher" formatter_data="webui=BraveOriginStartup">
-    Buy Cipher
+  <message name="IDS_BRAVE_ORIGIN_STARTUP_BUY_BUTTON" desc="Button label to buy SecureOut" formatter_data="webui=BraveOriginStartup">
+    Buy SecureOut
   </message>
 
-  <message name="IDS_BRAVE_ORIGIN_STARTUP_RESTORE_TITLE" desc="Title for the restore view of the Cipher startup dialog" formatter_data="webui=BraveOriginStartup">
+  <message name="IDS_BRAVE_ORIGIN_STARTUP_RESTORE_TITLE" desc="Title for the restore view of the SecureOut startup dialog" formatter_data="webui=BraveOriginStartup">
     Restore Purchase
   </message>
 
-  <message name="IDS_BRAVE_ORIGIN_STARTUP_RESTORE_DESCRIPTION" desc="Description for the restore view of the Cipher startup dialog" formatter_data="webui=BraveOriginStartup">
-    Enter your purchase ID to activate your Cipher purchase.
+  <message name="IDS_BRAVE_ORIGIN_STARTUP_RESTORE_DESCRIPTION" desc="Description for the restore view of the SecureOut startup dialog" formatter_data="webui=BraveOriginStartup">
+    Enter your purchase ID to activate your SecureOut purchase.
   </message>
 
   <message name="IDS_BRAVE_ORIGIN_STARTUP_PURCHASE_ID_LABEL" desc="Label for the purchase ID input field" formatter_data="webui=BraveOriginStartup">
@@ -44,16 +44,16 @@
     Verifying… This may take a minute.
   </message>
 
-  <message name="IDS_BRAVE_ORIGIN_STARTUP_LINUX_DESCRIPTION" desc="First paragraph of description on the Linux-specific Cipher startup dialog" formatter_data="webui=BraveOriginStartup">
-    Thanks for installing Cipher, a version of the browser for users who don't need all the features that support Cipher as a business, but still want the privacy that only Cipher offers. Origin users will continue to benefit from Cipher's industry-leading privacy, adblock, and speed (via Shields), as well as regular software updates, Chromium patches, and security and privacy improvements. Origin will remove most other features from the browser.
+  <message name="IDS_BRAVE_ORIGIN_STARTUP_LINUX_DESCRIPTION" desc="First paragraph of description on the Linux-specific SecureOut startup dialog" formatter_data="webui=BraveOriginStartup">
+    Thanks for installing SecureOut, a version of the browser for users who don't need all the features that support SecureOut as a business, but still want the privacy that only SecureOut offers. Origin users will continue to benefit from SecureOut's industry-leading privacy, adblock, and speed (via Shields), as well as regular software updates, Chromium patches, and security and privacy improvements. Origin will remove most other features from the browser.
   </message>
 
-  <message name="IDS_BRAVE_ORIGIN_STARTUP_LINUX_DESCRIPTION2" desc="Second paragraph on the Linux-specific Cipher startup dialog with a link placeholder" formatter_data="webui=BraveOriginStartup">
-    Origin is free to use on Linux devices, but still <ph name="BEGIN_LINK">$1<ex>&lt;a&gt;</ex></ph>available for purchase<ph name="END_LINK">$2<ex>&lt;/a&gt;</ex></ph> if you'd like to support Cipher as a business. Purchasing would also unlock the ability to use Origin on Android, iOS, macOS, and Windows devices.
+  <message name="IDS_BRAVE_ORIGIN_STARTUP_LINUX_DESCRIPTION2" desc="Second paragraph on the Linux-specific SecureOut startup dialog with a link placeholder" formatter_data="webui=BraveOriginStartup">
+    Origin is free to use on Linux devices, but still <ph name="BEGIN_LINK">$1<ex>&lt;a&gt;</ex></ph>available for purchase<ph name="END_LINK">$2<ex>&lt;/a&gt;</ex></ph> if you'd like to support SecureOut as a business. Purchasing would also unlock the ability to use Origin on Android, iOS, macOS, and Windows devices.
   </message>
 
-  <message name="IDS_BRAVE_ORIGIN_STARTUP_LINUX_BUY_BUTTON" desc="Button label to support Cipher by purchasing Origin on Linux" formatter_data="webui=BraveOriginStartup">
-    Support Cipher by purchasing Origin
+  <message name="IDS_BRAVE_ORIGIN_STARTUP_LINUX_BUY_BUTTON" desc="Button label to support SecureOut by purchasing Origin on Linux" formatter_data="webui=BraveOriginStartup">
+    Support SecureOut by purchasing Origin
   </message>
 
   <message name="IDS_BRAVE_ORIGIN_STARTUP_LINUX_FREE_BUTTON" desc="Button label to proceed with Origin for free on Linux" formatter_data="webui=BraveOriginStartup">
@@ -63,24 +63,24 @@
   <!-- The IDS_BRAVE_ORIGIN_STARTUP_ERROR_* messages are returned to the UI
        through the mojo VerifyPurchaseId callback and localized in C++ via
        l10n_util, so they are intentionally excluded from the WebUI JS bundle
-       (no formatter_data="webui=CipherOriginStartup"). -->
-  <message name="IDS_BRAVE_ORIGIN_STARTUP_ERROR_SKUS_CONNECTION" desc="Error message shown when the browser cannot connect to the purchase service while verifying a Cipher purchase ID">
+       (no formatter_data="webui=SecureOutOriginStartup"). -->
+  <message name="IDS_BRAVE_ORIGIN_STARTUP_ERROR_SKUS_CONNECTION" desc="Error message shown when the browser cannot connect to the purchase service while verifying a SecureOut purchase ID">
     Unable to connect to SKU service
   </message>
 
-  <message name="IDS_BRAVE_ORIGIN_STARTUP_ERROR_EMPTY_PURCHASE_ID" desc="Error message shown when the user submits an empty purchase ID in the Cipher restore dialog">
+  <message name="IDS_BRAVE_ORIGIN_STARTUP_ERROR_EMPTY_PURCHASE_ID" desc="Error message shown when the user submits an empty purchase ID in the SecureOut restore dialog">
     Purchase ID is empty
   </message>
 
-  <message name="IDS_BRAVE_ORIGIN_STARTUP_ERROR_INVALID_PURCHASE_ID" desc="Error message shown when the entered Cipher purchase ID is not valid">
+  <message name="IDS_BRAVE_ORIGIN_STARTUP_ERROR_INVALID_PURCHASE_ID" desc="Error message shown when the entered SecureOut purchase ID is not valid">
     Invalid purchase ID
   </message>
 
-  <message name="IDS_BRAVE_ORIGIN_STARTUP_ERROR_FETCH_CREDENTIALS" desc="Error message shown when fetching the credentials for a Cipher purchase fails">
+  <message name="IDS_BRAVE_ORIGIN_STARTUP_ERROR_FETCH_CREDENTIALS" desc="Error message shown when fetching the credentials for a SecureOut purchase fails">
     Failed to fetch credentials
   </message>
 
-  <message name="IDS_BRAVE_ORIGIN_STARTUP_ERROR_PURCHASE_NOT_FOUND" desc="Error message shown when no Cipher purchase is found for the entered purchase ID">
+  <message name="IDS_BRAVE_ORIGIN_STARTUP_ERROR_PURCHASE_NOT_FOUND" desc="Error message shown when no SecureOut purchase is found for the entered purchase ID">
     Purchase not found
   </message>
 </grit-part>

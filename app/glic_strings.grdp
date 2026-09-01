@@ -21,21 +21,21 @@
       $1<ex>Wikipedia</ex>
     </ph> - You're sharing this tab with Gemini for the duration of this conversation
   </message>
-  <message name="IDS_GLIC_PROMO_BODY" desc="Text for a promo pointing to the Gemini icon in Cipher.">
+  <message name="IDS_GLIC_PROMO_BODY" desc="Text for a promo pointing to the Gemini icon in SecureOut.">
     Chat with voice or text to get answers, key takeaways, and more as you browse
   </message>
   <if expr="is_win or is_linux or is_chromeos or is_android">
-    <message name="IDS_GLIC_STATUS_ICON_MENU_CUSTOMIZE_KEYBOARD_SHORTCUT" desc="Menu text for the Gemini icon on the system try to open Cipher settings and change the keyboard shortcut for opening Gemini in Cipher.">
+    <message name="IDS_GLIC_STATUS_ICON_MENU_CUSTOMIZE_KEYBOARD_SHORTCUT" desc="Menu text for the Gemini icon on the system try to open SecureOut settings and change the keyboard shortcut for opening Gemini in SecureOut.">
       Customize keyboard shortcut
     </message>
   </if>
   <if expr="is_macosx">
-    <message name="IDS_GLIC_STATUS_ICON_MENU_CUSTOMIZE_KEYBOARD_SHORTCUT" desc="Menu text for the Gemini icon on the system try to open Cipher settings and change the keyboard shortcut for opening Gemini in Cipher. [With ellipsis]">
+    <message name="IDS_GLIC_STATUS_ICON_MENU_CUSTOMIZE_KEYBOARD_SHORTCUT" desc="Menu text for the Gemini icon on the system try to open SecureOut settings and change the keyboard shortcut for opening Gemini in SecureOut. [With ellipsis]">
       Customize Keyboard Shortcut...
     </message>
   </if>
   <if expr="is_win or is_linux or is_chromeos or is_android">
-    <message name="IDS_GLIC_STATUS_ICON_MENU_EXIT" desc="This is the menu item for exiting Cipher.">
+    <message name="IDS_GLIC_STATUS_ICON_MENU_EXIT" desc="This is the menu item for exiting SecureOut.">
       Exit
     </message>
   </if>
@@ -113,7 +113,7 @@
     Your organization has turned off this feature
   </message>
   <message name="IDS_GLIC_INELIGIBLE_ACCOUNT_NOTICE_HEADER" desc="This is the headline on the Gemini ineligible account notice.">
-    Your account doesn't have access to Gemini in Cipher
+    Your account doesn't have access to Gemini in SecureOut
   </message>
   <message name="IDS_GLIC_INELIGIBLE_ACCOUNT_NOTICE" desc="This is the text of the Gemini ineligible account notice.">
     Check that you're eligible and meet the requirements
@@ -143,7 +143,7 @@
     Don't show the floating menu when text is selected
   </message>
   <message name="IDS_SETTINGS_SITE_SETTINGS_INLINE_CUE_MENU_DESCRIPTION" desc="Description for the inline cue menu setting page.">
-    Cipher can show a floating menu with actions when you select text on a site.
+    SecureOut can show a floating menu with actions when you select text on a site.
   </message>
   <message name="IDS_SETTINGS_SITE_SETTINGS_INLINE_CUE_MENU_BLOCKED_EXCEPTIONS" desc="Header for the list of sites blocked from showing the inline cue menu.">
     Sites where the floating menu is blocked
@@ -172,19 +172,19 @@
   <message name="IDS_SETTINGS_GLIC_KEYBOARD_SHORTCUT_CLEAR_LABEL" desc="Label of the clear keyboard shortcut setting button.">
     Clear keyboard shortcut
   </message>
-  <message name="IDS_SETTINGS_GLIC_KEYBOARD_SHORTCUT_LEARN_MORE_LABEL" desc="Label for the 'Learn more' link in the sublabel for Gemini in Cipher settings.">
+  <message name="IDS_SETTINGS_GLIC_KEYBOARD_SHORTCUT_LEARN_MORE_LABEL" desc="Label for the 'Learn more' link in the sublabel for Gemini in SecureOut settings.">
     Learn more
   </message>
-  <message name="IDS_SETTINGS_GLIC_KEYBOARD_SHORTCUT_LEARN_MORE_ARIA_LABEL" desc="Aria label for the 'Learn more' link for the keyboard shortcut setting in Gemini in Cipher settings.">
+  <message name="IDS_SETTINGS_GLIC_KEYBOARD_SHORTCUT_LEARN_MORE_ARIA_LABEL" desc="Aria label for the 'Learn more' link for the keyboard shortcut setting in Gemini in SecureOut settings.">
     Learn more about the keyboard shortcut
   </message>
-  <message name="IDS_SETTINGS_GLIC_NAVIGATION_SHORTCUT_LEARN_MORE_ARIA_LABEL" desc="Aria label for the 'Learn more' link for the navigation shortcut setting in Gemini in Cipher settings.">
+  <message name="IDS_SETTINGS_GLIC_NAVIGATION_SHORTCUT_LEARN_MORE_ARIA_LABEL" desc="Aria label for the 'Learn more' link for the navigation shortcut setting in Gemini in SecureOut settings.">
     Learn more about the navigation shortcut
   </message>
-  <message name="IDS_SETTINGS_GLIC_SELECTION_SHORTCUT_LEARN_MORE_ARIA_LABEL" desc="Aria label for the 'Learn more' link for the selection shortcut setting in Gemini in Cipher settings.">
+  <message name="IDS_SETTINGS_GLIC_SELECTION_SHORTCUT_LEARN_MORE_ARIA_LABEL" desc="Aria label for the 'Learn more' link for the selection shortcut setting in Gemini in SecureOut settings.">
     Learn more about the selection shortcut
   </message>
-  <message name="IDS_SETTINGS_GLIC_NAVIGATION_SHORTCUT" desc="Title for the navigation shortcut setting to leave and return to Gemini in Cipher." formatter_data="android_java">
+  <message name="IDS_SETTINGS_GLIC_NAVIGATION_SHORTCUT" desc="Title for the navigation shortcut setting to leave and return to Gemini in SecureOut." formatter_data="android_java">
     Navigation shortcut
   </message>
   <message name="IDS_SETTINGS_GLIC_NAVIGATION_SHORTCUT_EDIT_LABEL" desc="Label of the edit navigation shortcut setting button.">
@@ -193,7 +193,7 @@
   <message name="IDS_SETTINGS_GLIC_NAVIGATION_SHORTCUT_CLEAR_LABEL" desc="Label of the clear navigation shortcut setting button.">
     Clear navigation shortcut
   </message>
-  <message name="IDS_SETTINGS_GLIC_SELECTION_SHORTCUT" desc="Title for the selection shortcut setting to trigger selection mode in Gemini in Cipher.">
+  <message name="IDS_SETTINGS_GLIC_SELECTION_SHORTCUT" desc="Title for the selection shortcut setting to trigger selection mode in Gemini in SecureOut.">
     Selection shortcut
   </message>
   <message name="IDS_SETTINGS_GLIC_SELECTION_SHORTCUT_EDIT_LABEL" desc="Label of the edit selection shortcut setting button.">
@@ -269,7 +269,7 @@
     You can easily ask Gemini questions about your current tab as you browse
   </message>
   <message name="IDS_SETTINGS_GLIC_PERMISSIONS_TAB_ACCESS_CONSIDER_1" desc="First point in 'things to consider' column of the 'tab access' expando">
-    When you choose to share the current tab with Gemini, the tab’s full content, media and URL are sent to Cipher.
+    When you choose to share the current tab with Gemini, the tab’s full content, media and URL are sent to SecureOut.
   </message>
   <message name="IDS_SETTINGS_GLIC_PERMISSIONS_TAB_ACCESS_CONSIDER_1_LEARN_MORE_LABEL" desc="Label for the 'Learn more' link in the 'things to consider' section.">
     Learn more
@@ -284,7 +284,7 @@
     Tabs opened from a chat or a shared tab are also shared with Gemini.
   </message>
   <message name="IDS_SETTINGS_GLIC_PERMISSIONS_DEFAULT_TAB_ACCESS_CONSIDER_1" desc="First point in 'things to consider' column of the 'default tab access' expands" formatter_data="android_java">
-    When tabs are shared, their page contents, media and URLs are sent to Cipher and may be reviewed for safety.
+    When tabs are shared, their page contents, media and URLs are sent to SecureOut and may be reviewed for safety.
   </message>
   <message name="IDS_SETTINGS_GLIC_PERMISSIONS_DEFAULT_TAB_ACCESS_CONSIDER_2" desc="Second point in 'things to consider' column of the 'default tab access' expands">
     Conversations about shared tabs may be seen by human reviewers to improve Gemini.
@@ -305,22 +305,22 @@
        and will be finalized and replaced next week. This also includes finalizing the links for
        "Learn more about Gemini Spark" and "unexpected actions". -->
   <message name="IDS_GLIC_EXPERIMENTAL_OPT_IN_TITLE" desc="Title for the experimental opt-in dialog" is_accessibility_with_no_ui="true">
-    First, turn on Cipher auto browse for this device
+    First, turn on SecureOut auto browse for this device
   </message>
   <message name="IDS_SETTINGS_GLIC_EXPERIMENTAL_TRIGGERING_TOGGLE" desc="Label for the Gemini experimental triggering setting">
     Let Gemini Spark browse on this device
   </message>
   <message name="IDS_SETTINGS_GLIC_EXPERIMENTAL_TRIGGERING_SUB_LABEL" desc="Sublabel explaining Gemini Spark feature.">
-    Gemini Spark can use Cipher auto browse on this device to interact with sites and complete tasks on your behalf. <ph name="LINK_BEGIN">&lt;a href="#"&gt;</ph>Learn more<ph name="LINK_END">&lt;/a&gt;</ph>
+    Gemini Spark can use SecureOut auto browse on this device to interact with sites and complete tasks on your behalf. <ph name="LINK_BEGIN">&lt;a href="#"&gt;</ph>Learn more<ph name="LINK_END">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_SETTINGS_GLIC_EXPERIMENTAL_TRIGGERING_SUB_LABEL_V2" desc="Sublabel explaining Gemini Spark feature with accessible link attributes.">
-    Gemini Spark can use Cipher auto browse on this device to interact with sites and complete tasks on your behalf. <ph name="LINK_BEGIN">&lt;a href="$1" target="_blank" aria-label="$2" aria-description="$3"&gt;</ph>Learn more<ph name="LINK_END">&lt;/a&gt;</ph>
+    Gemini Spark can use SecureOut auto browse on this device to interact with sites and complete tasks on your behalf. <ph name="LINK_BEGIN">&lt;a href="$1" target="_blank" aria-label="$2" aria-description="$3"&gt;</ph>Learn more<ph name="LINK_END">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_SETTINGS_GLIC_EXPERIMENTAL_TRIGGERING_SUB_LABEL_LEARN_MORE_LINK_LABEL" desc="Accessible name for the 'Learn more' link in the Gemini Spark toggle sublabel." is_accessibility_with_no_ui="true">
     Learn more about Gemini Spark
   </message>
   <message name="IDS_SETTINGS_GLIC_EXPERIMENTAL_TRIGGERING_WHEN_ON_1" desc="Bullet point explaining what happens when Gemini Spark is enabled.">
-    Gemini Spark can only use auto browse on this device if the device is awake and Cipher is running.
+    Gemini Spark can only use auto browse on this device if the device is awake and SecureOut is running.
   </message>
   <message name="IDS_SETTINGS_GLIC_EXPERIMENTAL_TRIGGERING_WHEN_ON_2" desc="Bullet point explaining notifications when Gemini Spark is enabled.">
     Gemini Spark will decide which actions to take based on the tasks you start or update.
@@ -329,7 +329,7 @@
     Gemini Spark will have access to the same sites as you, including the sites you’re signed in to. It will share necessary info with third parties, which could include personal info you might find sensitive.
   </message>
   <message name="IDS_SETTINGS_GLIC_EXPERIMENTAL_TRIGGERING_CONSIDER_2" desc="Bullet point explaining access risk when enabling Gemini Spark.">
-    Anybody with access to your Gemini Spark agent could control your Cipher browser.
+    Anybody with access to your Gemini Spark agent could control your SecureOut browser.
   </message>
   <message name="IDS_SETTINGS_GLIC_EXPERIMENTAL_TRIGGERING_CONSIDER_3" desc="Bullet point explaining user responsibility and risks for Gemini Spark.">
     Gemini Spark is experimental and may do things like share your info or make purchases without asking. <ph name="LINK_BEGIN">&lt;a href="$1" target="_blank"&gt;</ph>Review the risks<ph name="LINK_END">&lt;/a&gt;</ph>.
@@ -341,16 +341,16 @@
     Review the risks of Gemini Spark
   </message>
   <message name="IDS_SETTINGS_GLIC_PERMISSIONS_CHROME_WEB_ACTUATION_TOGGLE" desc="Title for the Gemini feature introduction screen" formatter_data="android_java">
-    Let Cipher browse for you
+    Let SecureOut browse for you
   </message>
   <message name="IDS_SETTINGS_GLIC_PERMISSIONS_CHROME_WEB_ACTUATION_TOGGLE_SUBLABEL" desc="Subheader explaining what the Gemini feature does" formatter_data="android_java">
-    Gemini in Cipher uses auto browse to work in your tabs and complete tasks you give it. <ph name="LINK_BEGIN">&lt;a href="#"&gt;</ph>Learn more<ph name="LINK_END">&lt;/a&gt;</ph>
+    Gemini in SecureOut uses auto browse to work in your tabs and complete tasks you give it. <ph name="LINK_BEGIN">&lt;a href="#"&gt;</ph>Learn more<ph name="LINK_END">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_SETTINGS_GLIC_PERMISSIONS_CHROME_WEB_ACTUATION_TOGGLE_SUBLABEL_V2" desc="Subheader explaining what the Gemini feature does (WebUI version)">
-    Gemini in Cipher uses auto browse to work in your tabs and complete tasks you give it. <ph name="LINK_BEGIN">&lt;a href="#" target="_blank" aria-label="$1" aria-description="$2"&gt;</ph>Learn more<ph name="LINK_END">&lt;/a&gt;</ph>
+    Gemini in SecureOut uses auto browse to work in your tabs and complete tasks you give it. <ph name="LINK_BEGIN">&lt;a href="#" target="_blank" aria-label="$1" aria-description="$2"&gt;</ph>Learn more<ph name="LINK_END">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_SETTINGS_GLIC_PERMISSIONS_CHROME_WEB_ACTUATION_TOGGLE_LEARN_MORE_ARIA_LABEL" desc="Accessible label for the 'Learn more' link in the Gemini auto browse sublabel." is_accessibility_with_no_ui="true">
-    Learn more about Cipher auto browse
+    Learn more about SecureOut auto browse
   </message>
   <message name="IDS_SETTINGS_GLIC_PERMISSIONS_WEB_ACTUATION_TOGGLE_WHEN_ON_1" desc="First point in 'when on' column of the 'let Gemini browse for you' expands" formatter_data="android_java">
     Gemini can help you book appointments, create shopping carts, or do other tasks you give it.
@@ -359,7 +359,7 @@
     Gemini shows its steps and tries to confirm before taking sensitive ones. You can stop or take over anytime.
   </message>
   <message name="IDS_SETTINGS_GLIC_PERMISSIONS_WEB_ACTUATION_TOGGLE_CONSIDER_1" desc="First point in 'things to consider' column of the 'let Gemini browse for you' expands" formatter_data="android_java">
-    The page content and URLs that Gemini uses during a task will be shared with Cipher and may be reviewed for safety.
+    The page content and URLs that Gemini uses during a task will be shared with SecureOut and may be reviewed for safety.
   </message>
   <message name="IDS_SETTINGS_GLIC_PERMISSIONS_WEB_ACTUATION_TOGGLE_CONSIDER_2" desc="Second point in 'things to consider' column of the 'let Gemini browse for you' expands" formatter_data="android_java">
     Use Gemini carefully and <ph name="BEGIN_LINK1">&lt;a href="$1" target="_blank"&gt;</ph>safely<ph name="LINK_END1">&lt;/a&gt;</ph>. You are responsible for Gemini's actions during a task, including mistakes and <ph name="BEGIN_LINK2">&lt;a href="$2" target="_blank"&gt;</ph>unexpected results<ph name="LINK_END2">&lt;/a&gt;</ph> like purchases.
@@ -487,16 +487,16 @@
   </message>
 
   <!-- Gemini tab strip button label -->
-  <message name="IDS_GLIC_SETTING_LABEL" desc="Label in setting list used to open Gemini in Cipher settings." formatter_data="android_java">
-    Gemini in Cipher
+  <message name="IDS_GLIC_SETTING_LABEL" desc="Label in setting list used to open Gemini in SecureOut settings." formatter_data="android_java">
+    Gemini in SecureOut
   </message>
-  <message name="IDS_GLIC_BUTTON_ENTRYPOINT_LABEL" desc="Label on the button used to open Gemini in Cipher." formatter_data="android_java">
+  <message name="IDS_GLIC_BUTTON_ENTRYPOINT_LABEL" desc="Label on the button used to open Gemini in SecureOut." formatter_data="android_java">
     Gemini
   </message>
-  <message name="IDS_GLIC_BUTTON_ENTRYPOINT_PINNED_LABEL" desc="Label on the button used to open Gemini in Cipher when pinned." formatter_data="android_java">
+  <message name="IDS_GLIC_BUTTON_ENTRYPOINT_PINNED_LABEL" desc="Label on the button used to open Gemini in SecureOut when pinned." formatter_data="android_java">
     Toolbar shortcut
   </message>
-  <message name="IDS_GLIC_BUTTON_ENTRYPOINT_ASK_GEMINI_LABEL" desc="Label on the button used to open Gemini in Cipher." formatter_data="android_java">
+  <message name="IDS_GLIC_BUTTON_ENTRYPOINT_ASK_GEMINI_LABEL" desc="Label on the button used to open Gemini in SecureOut." formatter_data="android_java">
     Ask Gemini
   </message>
   <message name="IDS_GLIC_SELECTION_CTA_TELL_ME" desc="Experimental CTA label on selection button.">
@@ -505,7 +505,7 @@
   <message name="IDS_GLIC_SELECTION_CTA_EXPLAIN" desc="Experimental CTA label on selection button.">
     Explain
   </message>
-  <message name="IDS_GLIC_BUTTON_ENTRYPOINT_ASK_ABOUT_THIS_PAGE_LABEL" desc="Label on the button used to open Gemini in Cipher.">
+  <message name="IDS_GLIC_BUTTON_ENTRYPOINT_ASK_ABOUT_THIS_PAGE_LABEL" desc="Label on the button used to open Gemini in SecureOut.">
     Ask about this page?
   </message>
   <message name="IDS_GLIC_SELECTION_AUTO_SEND_PROMPT_TELL_ME" desc="Default prompt text sent to Gemini when auto-send prompt is enabled on text selection.">
@@ -537,19 +537,19 @@
   <if expr="not use_titlecase">
     <message name="IDS_GLIC_PROMO_CONFIRM" desc="The button that a user clicks to open Gemini.">Try now</message>
   </if>
-  <message name="IDS_GLIC_TRYIT_TITLE" desc="Title for a promo pointing to the Gemini icon in Cipher, that opens Gemini in Cipher if selected.">
+  <message name="IDS_GLIC_TRYIT_TITLE" desc="Title for a promo pointing to the Gemini icon in SecureOut, that opens Gemini in SecureOut if selected.">
     Get help with your tasks
   </message>
-  <message name="IDS_GLIC_TRYIT_BODY" desc="Text for a promo pointing to the Gemini icon in Cipher, that opens Gemini in Cipher if selected.">
-    Chat with Gemini in Cipher to get answers, key takeaways, and more as you browse
+  <message name="IDS_GLIC_TRYIT_BODY" desc="Text for a promo pointing to the Gemini icon in SecureOut, that opens Gemini in SecureOut if selected.">
+    Chat with Gemini in SecureOut to get answers, key takeaways, and more as you browse
   </message>
 
   <!-- Shortcut IPH -->
   <message name="IDS_GLIC_SHORTCUT_IPH_TEXT_TEMPLATE" desc="Placeholder for string to be shown for IPH informing users about Glic keyboard shortcut.">
-    <ph name="message">$1<ex>Use Ctrl+⌘+G to open Gemini in Cipher</ex></ph>
+    <ph name="message">$1<ex>Use Ctrl+⌘+G to open Gemini in SecureOut</ex></ph>
   </message>
-  <message name="IDS_GLIC_SHORTCUT_IPH_TEXT" desc="Title for a promo pointing to the Gemini icon in Cipher. It informs the user about a keyboard shortcut for quicly opening Gemini in Cipher.">
-    Use <ph name="FOCUS_TOGGLE_HOTKEY">$1<ex>Ctrl+⌘+G</ex></ph> to open Gemini in Cipher
+  <message name="IDS_GLIC_SHORTCUT_IPH_TEXT" desc="Title for a promo pointing to the Gemini icon in SecureOut. It informs the user about a keyboard shortcut for quicly opening Gemini in SecureOut.">
+    Use <ph name="FOCUS_TOGGLE_HOTKEY">$1<ex>Ctrl+⌘+G</ex></ph> to open Gemini in SecureOut
   </message>
 
   <!-- Selection Nudge -->
@@ -565,10 +565,10 @@
 
   <!-- Educational Tip -->
   <message name="IDS_EDUCATIONAL_TIP_GLIC_TITLE" desc="Title for the Glic educational tip card." formatter_data="android_java">
-    Meet Gemini on Cipher
+    Meet Gemini on SecureOut
   </message>
   <message name="IDS_EDUCATIONAL_TIP_GLIC_DESCRIPTION" desc="Description for the Glic educational tip card." formatter_data="android_java">
-    Get the best of Cipher AI. Pin Gemini to your toolbar for easy access, or open it anytime from the Cipher menu.
+    Get the best of SecureOut AI. Pin Gemini to your toolbar for easy access, or open it anytime from the SecureOut menu.
   </message>
   <message name="IDS_EDUCATIONAL_TIP_GLIC_BUTTON" desc="Button text for the Glic educational tip card." formatter_data="android_java">
     Pin on toolbar
@@ -596,10 +596,10 @@
     Gemini
   </message>
   <message name="IDS_GLIC_LOCATION_MISMATCH_NOTICE_HEADER" desc="Headline on the notice when Gemini is unavailable in the current dynamic location.">
-    Gemini in Cipher isn't available
+    Gemini in SecureOut isn't available
   </message>
   <message name="IDS_GLIC_LOCATION_MISMATCH_NOTICE" desc="Text of the notice explaining location mismatch for travelers or VPN users.">
-    Gemini in Cipher is expanding to different locations but isn't available everywhere
+    Gemini in SecureOut is expanding to different locations but isn't available everywhere
   </message>
   <message name="IDS_GLIC_GET_HELP" desc="Link or button label text to open help documentation.">
     Get help

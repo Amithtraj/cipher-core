@@ -260,7 +260,7 @@
     Dev tools inspect
   </message>
   <message name="IDS_IDC_UPGRADE_DIALOG">
-    Upgrade Cipher
+    Upgrade SecureOut
   </message>
   <message name="IDS_IDC_SHOW_AVATAR_MENU">
     Show avatar menu
@@ -356,31 +356,31 @@
     Toggle Leo AI
   </message>
   <message name="IDS_IDC_SHOW_BRAVE_WALLET_PANEL">
-    Show Cipher Wallet panel
+    Show SecureOut Wallet panel
   </message>
   <message name="IDS_IDC_CLOSE_BRAVE_WALLET_PANEL">
-    Close Cipher Wallet panel
+    Close SecureOut Wallet panel
   </message>
   <message name="IDS_IDC_SHOW_BRAVE_VPN_PANEL">
-    Show Cipher VPN panel
+    Show SecureOut VPN panel
   </message>
   <message name="IDS_IDC_TOGGLE_BRAVE_VPN_TOOLBAR_BUTTON">
-    Toggle Cipher VPN toolbar button
+    Toggle SecureOut VPN toolbar button
   </message>
   <message name="IDS_IDC_TOGGLE_BRAVE_VPN_TRAY_ICON">
-    Toggle Cipher VPN tray icon
+    Toggle SecureOut VPN tray icon
   </message>
   <message name="IDS_IDC_SEND_BRAVE_VPN_FEEDBACK">
-    Send Cipher VPN feedback
+    Send SecureOut VPN feedback
   </message>
   <message name="IDS_IDC_ABOUT_BRAVE_VPN">
-    About Cipher VPN
+    About SecureOut VPN
   </message>
   <message name="IDS_IDC_MANAGE_BRAVE_VPN_PLAN">
-    Manage Cipher VPN plan
+    Manage SecureOut VPN plan
   </message>
   <message name="IDS_IDC_TOGGLE_BRAVE_VPN">
-    Toggle Cipher VPN
+    Toggle SecureOut VPN
   </message>
   <message name="IDS_IDC_TOGGLE_TAB_MUTE">
     Toggle tab mute
@@ -401,7 +401,7 @@
     Toggle Playlist side panel
   </message>
   <message name="IDS_IDC_TOGGLE_BRAVE_NEWS_SIDE_PANEL">
-    Toggle Cipher News side panel
+    Toggle SecureOut News side panel
   </message>
   <message name="IDS_IDC_TOGGLE_VERTICAL_TABS">
     Toggle vertical tabs
@@ -410,13 +410,13 @@
     Toggle vertical tabs window title
   </message>
   <message name="IDS_IDC_CONFIGURE_BRAVE_NEWS">
-    Configure Cipher News
+    Configure SecureOut News
   </message>
   <message name="IDS_IDC_CONFIGURE_SHORTCUTS">
     Configure shortcuts
   </message>
   <message name="IDS_IDC_SHOW_BRAVE_TALK">
-    Show Cipher Talk
+    Show SecureOut Talk
   </message>
   <message name="IDS_IDC_BRAVE_BOOKMARK_BAR_ALWAYS">
     Always show bookmark bar
