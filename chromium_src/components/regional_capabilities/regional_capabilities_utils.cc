@@ -129,6 +129,10 @@ constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_NAVER,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DAUM,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
+        // Cipher: KR's list otherwise carries no DuckDuckGo variant, so add
+        // the general one to make it available as the default (see
+        // GetDefaultEngine() below).
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO,
 };
 // LINT.ThenChange(//brave/components/search_engines/brave_prepopulated_engines.h:kBraveCurrentDataVersion)
 
@@ -227,6 +231,23 @@ GetBravePrepopulatedEnginesForCountryID(country_codes::CountryId country_id) {
   DCHECK(engines.size() == brave_engine_ids.size());
 
   return engines;
+}
+
+// Cipher: picks the DuckDuckGo variant (general, or a country-localized one
+// such as the German or AU/NZ/IE builds) that appears in this country's
+// engine list, so the chosen id is guaranteed to resolve via
+// TemplateURLPrepopulateData::GetPrepopulatedFallbackSearch(). Falls back to
+// the general id if, somehow, no DuckDuckGo variant is present.
+TemplateURLPrepopulateData::BravePrepopulatedEngineID
+GetDuckDuckGoEngineIdForCountry(country_codes::CountryId country_id) {
+  for (const auto& engine :
+       GetBravePrepopulatedEnginesForCountryID(country_id)) {
+    if (engine->type == SEARCH_ENGINE_DUCKDUCKGO) {
+      return static_cast<TemplateURLPrepopulateData::BravePrepopulatedEngineID>(
+          engine->id);
+    }
+  }
+  return TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO;
 }
 
 // A versioned map tracking the singular default search engine per-country.
@@ -698,6 +719,16 @@ TemplateURLPrepopulateData::BravePrepopulatedEngineID GetDefaultSearchEngine(
        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX},
   });
   // LINT.ThenChange(//brave/components/search_engines/brave_prepopulated_engines.h:kBraveCurrentDataVersion)
+
+  // Cipher: DuckDuckGo is the default search engine for every locale,
+  // regardless of any Brave-era per-country deal recorded above. This only
+  // applies to newly-created profiles (which stamp
+  // `kBraveCurrentDataVersion`); the maps below are left untouched so a
+  // profile that recorded an older version still migrates exactly as it did
+  // upstream when `kBraveCurrentDataVersion` is bumped in the future.
+  if (version > 33) {
+    return GetDuckDuckGoEngineIdForCountry(country_id);
+  }
 
   const TemplateURLPrepopulateData::BravePrepopulatedEngineID* content;
 

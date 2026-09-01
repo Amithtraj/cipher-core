@@ -5,6 +5,7 @@
 
 #include "brave/browser/search_engines/search_engine_provider_util.h"
 
+#include <array>
 #include <memory>
 #include <string>
 #include <string_view>
@@ -36,15 +37,33 @@ constexpr auto kTargetCountriesForEnableSearchSuggestionsByDefault =
     base::MakeFixedFlatSet<std::string_view>({"AR", "AT", "BR", "CA", "DE",
                                               "ES", "FR", "GB", "IN", "IT",
                                               "MX", "US"});
-}
+
+// Cipher: DuckDuckGo variants, tried in order, so that whichever one is
+// present in the profile's regional engine list (general, or a
+// country-localized build such as the German or AU/NZ/IE ones) is used.
+constexpr auto kDuckDuckGoEngineIds =
+    std::to_array<TemplateURLPrepopulateData::BravePrepopulatedEngineID>({
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO_DE,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO_AU_NZ_IE,
+    });
+}  // namespace
 
 void SetBraveAsDefaultPrivateSearchProvider(Profile& profile) {
   auto& prefs = *profile.GetPrefs();
   auto* prepopulate_data_resolver =
       TemplateURLPrepopulateData::ResolverFactory::GetForProfile(&profile);
-  const auto template_url_data =
-      prepopulate_data_resolver->GetPrepopulatedEngine(
-          TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE);
+
+  // Cipher: default the private window's search provider to DuckDuckGo
+  // instead of Brave Search.
+  std::unique_ptr<TemplateURLData> template_url_data;
+  for (auto engine_id : kDuckDuckGoEngineIds) {
+    template_url_data =
+        prepopulate_data_resolver->GetPrepopulatedEngine(engine_id);
+    if (template_url_data) {
+      break;
+    }
+  }
   DCHECK(template_url_data);
   prefs.SetString(prefs::kSyncedDefaultPrivateSearchProviderGUID,
                   template_url_data->sync_guid);
@@ -62,7 +81,7 @@ void UpdateDefaultPrivateSearchProviderData(Profile& profile) {
 
   if (private_provider_guid.empty()) {
     // This can happen while resetting whole settings.
-    // In this case, set brave as a default search provider.
+    // In this case, set DuckDuckGo as a default search provider.
     SetBraveAsDefaultPrivateSearchProvider(profile);
     return;
   }
@@ -77,7 +96,7 @@ void UpdateDefaultPrivateSearchProviderData(Profile& profile) {
 
   // When user delete current private search provder from provider list in
   // settings page, |private_provider_guid| will not be existed in the list. Use
-  // Brave.
+  // DuckDuckGo.
   SetBraveAsDefaultPrivateSearchProvider(profile);
 }
 
@@ -86,8 +105,9 @@ void PrepareDefaultPrivateSearchProviderDataIfNeeded(Profile& profile) {
   auto* preference =
       prefs.FindPreference(prefs::kSyncedDefaultPrivateSearchProviderGUID);
 
-  if (!preference)
+  if (!preference) {
     return;
+  }
 
   auto* service = TemplateURLServiceFactory::GetForProfile(&profile);
   DCHECK(service->loaded());
@@ -95,7 +115,7 @@ void PrepareDefaultPrivateSearchProviderDataIfNeeded(Profile& profile) {
   const std::string private_provider_guid =
       prefs.GetString(prefs::kSyncedDefaultPrivateSearchProviderGUID);
 
-  // Set Brave as a private window's initial search provider.
+  // Set DuckDuckGo as a private window's initial search provider.
   if (private_provider_guid.empty()) {
     SetBraveAsDefaultPrivateSearchProvider(profile);
     return;
@@ -111,7 +131,7 @@ void PrepareDefaultPrivateSearchProviderDataIfNeeded(Profile& profile) {
     } else {
       // This could happen with update default provider list when brave is not
       // updated for longtime. So it doesn't have any chance to cache url data.
-      // Set Brave as default private search provider.
+      // Set DuckDuckGo as default private search provider.
       SetBraveAsDefaultPrivateSearchProvider(profile);
     }
     return;

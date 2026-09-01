@@ -26,7 +26,8 @@ namespace TemplateURLPrepopulateData {
 // For more info, see:
 // ComputeMergeEnginesRequirements in components/search_engines/util.cc;
 
-inline constexpr int kBraveCurrentDataVersion = 33;
+// v34: Cipher sets DuckDuckGo as the default search engine everywhere.
+inline constexpr int kBraveCurrentDataVersion = 34;
 
 // DO NOT CHANGE THIS ONE. Used for backfilling kBraveDefaultSearchVersion.
 inline constexpr int kBraveFirstTrackedDataVersion = 6;
