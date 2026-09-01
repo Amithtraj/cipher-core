@@ -59,7 +59,7 @@ constexpr net::NetworkTrafficAnnotationTag kTorBridgesMoatAnnotation =
     net::DefineNetworkTrafficAnnotation("brave_tor_bridges", R"(
     semantics {
       sender:
-        "Brave Tor Handler"
+        "Cipher Tor Handler"
       description:
         "This service sends requests to the Tor bridges server."
       trigger:

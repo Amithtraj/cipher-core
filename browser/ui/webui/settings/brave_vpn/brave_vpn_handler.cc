@@ -49,7 +49,7 @@ void BraveVpnHandler::RegisterMessages() {
       base::BindRepeating(&BraveVpnHandler::HandleIsWireguardServiceInstalled,
                           base::Unretained(this)));
   web_ui()->RegisterMessageCallback(
-      "isBraveVpnConnected",
+      "isCipherVpnConnected",
       base::BindRepeating(&BraveVpnHandler::HandleIsBraveVpnConnected,
                           base::Unretained(this)));
 #if BUILDFLAG(IS_WIN)

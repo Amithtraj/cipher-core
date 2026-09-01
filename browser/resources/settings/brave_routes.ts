@@ -96,7 +96,7 @@ export default function addBraveRoutes(r: Partial<SettingsRoutes>) {
     }
     // <if expr="enable_ai_chat">
     const isOpenAIChatFromBraveSearchEnabled =
-      loadTimeData.getBoolean('isOpenAIChatFromBraveSearchEnabled')
+      loadTimeData.getBoolean('isOpenAIChatFromCipherSearchEnabled')
     if (isOpenAIChatFromBraveSearchEnabled) {
       r.SITE_SETTINGS_BRAVE_OPEN_AI_CHAT =
         r.SITE_SETTINGS.createChild('braveOpenAIChat')
@@ -105,7 +105,7 @@ export default function addBraveRoutes(r: Partial<SettingsRoutes>) {
     // <if expr="enable_brave_wallet">
     const isCardanoDappSupportFeatureEnabled =
       loadTimeData.getBoolean('isCardanoDappSupportFeatureEnabled')
-    const isBraveWalletAllowed = loadTimeData.getBoolean('isBraveWalletAllowed')
+    const isBraveWalletAllowed = loadTimeData.getBoolean('isCipherWalletAllowed')
     if (isBraveWalletAllowed) {
       r.SITE_SETTINGS_ETHEREUM = r.SITE_SETTINGS.createChild('ethereum')
       r.SITE_SETTINGS_SOLANA = r.SITE_SETTINGS.createChild('solana')

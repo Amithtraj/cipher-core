@@ -18,7 +18,7 @@ export class BraveVPNBrowserProxyImpl implements BraveVPNBrowserProxy {
   }
 
   isBraveVpnConnected () {
-    return sendWithPromise<boolean>('isBraveVpnConnected');
+    return sendWithPromise<boolean>('isCipherVpnConnected');
   }
 
   showInSystemTray () {

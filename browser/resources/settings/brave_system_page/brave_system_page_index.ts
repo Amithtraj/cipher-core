@@ -73,16 +73,16 @@ export class SettingsBraveSystemPageIndexElement extends
       // <if expr="enable_brave_vpn_wireguard">
       showVPNPage_: {
         type: Boolean,
-        value: () => loadTimeData.getBoolean('isBraveVPNEnabled')
+        value: () => loadTimeData.getBoolean('isCipherVPNEnabled')
           // <if expr="is_macosx">
-          && loadTimeData.getBoolean('isBraveVPNWireguardEnabledOnMac')
+          && loadTimeData.getBoolean('isCipherVPNWireguardEnabledOnMac')
         // </if>
       },
       // </if>
       showOriginOnboarding_: {
         type: Boolean,
-        value: () => loadTimeData.getBoolean('isBraveOriginFeatureEnabled') &&
-                     !loadTimeData.getBoolean('isBraveOriginBrandedBuild'),
+        value: () => loadTimeData.getBoolean('isCipherOriginFeatureEnabled') &&
+                     !loadTimeData.getBoolean('isCipherOriginBrandedBuild'),
       },
     };
   }

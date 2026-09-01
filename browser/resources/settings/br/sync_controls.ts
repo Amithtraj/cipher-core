@@ -25,7 +25,7 @@ RegisterPolymerTemplateModifications({
 
     // <if expr="enable_ai_chat">
     // Add AI Chat sync toggle if the feature is enabled.
-    if (loadTimeData.getBoolean('isBraveSyncAIChatEnabled')) {
+    if (loadTimeData.getBoolean('isCipherSyncAIChatEnabled')) {
       const syncDataTypes =
         templateContent.querySelector('#sync-data-types')
       if (syncDataTypes) {

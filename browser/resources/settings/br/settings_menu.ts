@@ -290,7 +290,7 @@ RegisterPolymerTemplateModifications({
 
     // Add web3 item
     // <if expr="enable_brave_wallet">
-    if (loadTimeData.getBoolean('isBraveWalletAllowed')) {
+    if (loadTimeData.getBoolean('isCipherWalletAllowed')) {
       const web3El = createMenuElement(
         loadTimeData.getString('braveWeb3'),
         '/web3',
@@ -385,7 +385,7 @@ RegisterPolymerTemplateModifications({
 
     const versionEl = document.createElement('span')
     versionEl.setAttribute('class', 'brave-about-item brave-about-menu-version')
-    versionEl.textContent = `v ${loadTimeData.getString('braveProductVersion')}`
+    versionEl.textContent = `v ${loadTimeData.getString('cipherProductVersion')}`
 
     parent.appendChild(newAboutEl)
     newAboutEl.appendChild(graphicsEl)

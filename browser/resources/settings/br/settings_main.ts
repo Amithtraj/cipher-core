@@ -124,7 +124,7 @@ RegisterPolymerTemplateModifications({
 
     // Insert the web3 page into the view manager
     // <if expr="enable_brave_wallet">
-    const isBraveWalletAllowed = loadTimeData.getBoolean('isBraveWalletAllowed')
+    const isBraveWalletAllowed = loadTimeData.getBoolean('isCipherWalletAllowed')
     if (isBraveWalletAllowed) {
       switcher.appendChild(
         html`

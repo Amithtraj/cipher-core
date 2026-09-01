@@ -84,7 +84,7 @@ RegisterPolymerTemplateModifications({
       // <if expr="enable_ai_chat">
       // AI Chat feature
       const isOpenAIChatFromBraveSearchEnabled =
-        loadTimeData.getBoolean('isOpenAIChatFromBraveSearchEnabled')
+        loadTimeData.getBoolean('isOpenAIChatFromCipherSearchEnabled')
       if (isOpenAIChatFromBraveSearchEnabled) {
         insertBefore(firstPermissionItem, html`<site-details-permission
              category="[[contentSettingsTypesEnum_.BRAVE_OPEN_AI_CHAT]]"
@@ -106,7 +106,7 @@ RegisterPolymerTemplateModifications({
       const isCardanoDappSupportFeatureEnabled =
           loadTimeData.getBoolean('isCardanoDappSupportFeatureEnabled')
       const isBraveWalletAllowed =
-          loadTimeData.getBoolean('isBraveWalletAllowed')
+          loadTimeData.getBoolean('isCipherWalletAllowed')
       if (isBraveWalletAllowed) {
         insertBefore(firstPermissionItem, html`<site-details-permission
              category="[[contentSettingsTypesEnum_.ETHEREUM]]"

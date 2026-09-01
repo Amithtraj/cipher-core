@@ -128,7 +128,7 @@ RegisterPolymerComponentReplacement(
             }
             // <if expr="enable_ai_chat">
             const isOpenAIChatFromBraveSearchEnabled =
-              loadTimeData.getBoolean('isOpenAIChatFromBraveSearchEnabled')
+              loadTimeData.getBoolean('isOpenAIChatFromCipherSearchEnabled')
             if (isOpenAIChatFromBraveSearchEnabled) {
               currentIndex++
               const AIChatItem = {
@@ -147,7 +147,7 @@ RegisterPolymerComponentReplacement(
             const isCardanoDappSupportFeatureEnabled =
               loadTimeData.getBoolean('isCardanoDappSupportFeatureEnabled')
             const isBraveWalletAllowed =
-              loadTimeData.getBoolean('isBraveWalletAllowed')
+              loadTimeData.getBoolean('isCipherWalletAllowed')
             if (isBraveWalletAllowed) {
               currentIndex++
               const ethereumItem = {

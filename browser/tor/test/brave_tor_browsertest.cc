@@ -619,10 +619,10 @@ IN_PROC_BROWSER_TEST_F(BraveTorBrowserTest,
       browser()->tab_strip_model()->GetActiveWebContents();
   ASSERT_TRUE(web_contents);
 
-  // Check that braveTorDisabledByPolicy is false when disabled by user (not
+  // Check that cipherTorDisabledByPolicy is false when disabled by user (not
   // policy)
   std::string script = R"(
-    loadTimeData.getBoolean('braveTorDisabledByPolicy');
+    loadTimeData.getBoolean('cipherTorDisabledByPolicy');
   )";
 
   EXPECT_EQ(false, content::EvalJs(web_contents, script));

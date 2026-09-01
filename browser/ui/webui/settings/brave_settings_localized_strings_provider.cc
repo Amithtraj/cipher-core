@@ -1176,7 +1176,7 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
 
   html_source->AddBoolean("isTabOrganizationFeatureEnabled",
                           ai_chat::features::IsTabOrganizationEnabled());
-  html_source->AddBoolean("isBraveSyncAIChatEnabled",
+  html_source->AddBoolean("isCipherSyncAIChatEnabled",
                           ai_chat::features::IsBraveSyncAIChatEnabled());
 #endif
 
@@ -1341,7 +1341,7 @@ void BraveAddLocalizedStrings(content::WebUIDataSource* html_source,
           brave_shields::features::kBraveShowStrictFingerprintingMode));
 
 #if BUILDFLAG(ENABLE_TOR)
-  html_source->AddBoolean("braveTorDisabledByPolicy",
+  html_source->AddBoolean("cipherTorDisabledByPolicy",
                           TorProfileServiceFactory::IsTorDisabled(profile) &&
                               TorProfileServiceFactory::IsTorManaged(profile));
 #endif

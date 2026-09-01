@@ -91,7 +91,7 @@ export class SettingsBraveOriginPageElement
         this.boundOnPolicyValueChanged_)
 
     // For branded builds, always show as purchased
-    if (loadTimeData.getBoolean('isBraveOriginBrandedBuild')) {
+    if (loadTimeData.getBoolean('isCipherOriginBrandedBuild')) {
       this.isPurchased_ = true
       return
     }

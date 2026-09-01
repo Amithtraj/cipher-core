@@ -42,13 +42,13 @@ void BraveClearBrowsingDataHandler::RegisterMessages() {
   ClearBrowsingDataHandler::RegisterMessages();
 
   web_ui()->RegisterMessageCallback(
-      "getBraveRewardsEnabled",
+      "getCipherRewardsEnabled",
       base::BindRepeating(
           &BraveClearBrowsingDataHandler::HandleGetBraveRewardsEnabled,
           base::Unretained(this)));
 #if BUILDFLAG(ENABLE_BRAVE_ADS)
   web_ui()->RegisterMessageCallback(
-      "clearBraveAdsData",
+      "clearCipherAdsData",
       base::BindRepeating(
           &BraveClearBrowsingDataHandler::HandleClearBraveAdsData,
           base::Unretained(this)));

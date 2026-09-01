@@ -102,7 +102,7 @@ function getPageVisibility () {
     // custom properties
     braveSync: !loadTimeData.getBoolean('isSyncDisabled'),
     // <if expr="enable_brave_wallet">
-    braveWallet: loadTimeData.getBoolean('isBraveWalletAllowed'),
+    braveWallet: loadTimeData.getBoolean('isCipherWalletAllowed'),
     // </if>
     // <if expr="enable_ai_chat">
     leoAssistant: loadTimeData.getBoolean('isLeoAssistantAllowed'),
@@ -120,7 +120,7 @@ function getPageVisibility () {
     speedreader: loadTimeData.getBoolean('isSpeedreaderAllowed'),
     // </if>
     // <if expr="enable_tor">
-    braveTor: !loadTimeData.getBoolean('braveTorDisabledByPolicy') ||
+    braveTor: !loadTimeData.getBoolean('cipherTorDisabledByPolicy') ||
               loadTimeData.getBoolean('shouldExposeElementsForTesting'),
     // </if>
     // <if expr="enable_email_aliases">
@@ -129,8 +129,8 @@ function getPageVisibility () {
     // <if expr="enable_psst">
     psst: loadTimeData.getBoolean('isPsstEnabled'),
     // </if>
-    origin: loadTimeData.getBoolean('isBraveOriginPurchased') &&
-            !loadTimeData.getBoolean('isBraveOriginBrandedBuild'),
+    origin: loadTimeData.getBoolean('isCipherOriginPurchased') &&
+            !loadTimeData.getBoolean('isCipherOriginBrandedBuild'),
   }
   // Proxy so we can respond to any other property
   return new Proxy(staticProps, {

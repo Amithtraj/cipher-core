@@ -33,7 +33,7 @@ export class BraveSettingsGettingStarted extends SettingsViewMixin(PolymerElemen
     return {
       isBraveAccountEnabled_: {
         type: Boolean,
-        value: () => loadTimeData.getBoolean('isBraveAccountEnabled'),
+        value: () => loadTimeData.getBoolean('isCipherAccountEnabled'),
       },
     }
   }

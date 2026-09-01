@@ -229,8 +229,8 @@ IN_PROC_BROWSER_TEST_P(BraveWalletPolicyTest, Web3MenuVisibility) {
   // Check the JavaScript values that control Web3 menu visibility
   const std::string web3_script = R"(
     (function() {
-      // The Web3 menu should be visible if isBraveWalletAllowed is true
-      return loadTimeData.getBoolean('isBraveWalletAllowed');
+      // The Web3 menu should be visible if isCipherWalletAllowed is true
+      return loadTimeData.getBoolean('isCipherWalletAllowed');
     })();
   )";
 

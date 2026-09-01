@@ -14,11 +14,11 @@
     implements BraveClearBrowsingDataDialogBrowserProxy {
 
    getBraveRewardsEnabled() {
-    return sendWithPromise<boolean>('getBraveRewardsEnabled')
+    return sendWithPromise<boolean>('getCipherRewardsEnabled')
   }
 
   clearBraveAdsData() {
-    return sendWithPromise<boolean>('clearBraveAdsData')
+    return sendWithPromise<boolean>('clearCipherAdsData')
   }
 
   static getInstance(): BraveClearBrowsingDataDialogBrowserProxyImpl {

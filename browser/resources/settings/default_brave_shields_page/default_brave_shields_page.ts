@@ -133,7 +133,7 @@ class BraveShieldsPage extends BraveShieldsPageBase {
       },
       isShowBraveShieldsInPageInfoEnabled_: {
         type: Boolean,
-        value: loadTimeData.getBoolean('isShowBraveShieldsInPageInfoEnabled')
+        value: loadTimeData.getBoolean('isShowCipherShieldsInPageInfoEnabled')
       },
       isHttpsByDefaultEnabled_: {
         type: Boolean,

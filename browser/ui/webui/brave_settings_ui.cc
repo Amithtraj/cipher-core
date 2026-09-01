@@ -206,17 +206,17 @@ void BraveSettingsUI::AddResources(content::WebUIDataSource* html_source,
 
   html_source->AddBoolean("isSyncDisabled", !syncer::IsSyncAllowedByFlag());
   html_source->AddString(
-      "braveProductVersion",
+      "cipherProductVersion",
       version_info::GetBraveVersionWithoutChromiumMajorVersion());
   html_source->AddBoolean(
       "isIdleDetectionFeatureEnabled",
       base::FeatureList::IsEnabled(features::kIdleDetection));
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
-  html_source->AddBoolean("isBraveVPNEnabled",
+  html_source->AddBoolean("isCipherVPNEnabled",
                           brave_vpn::IsBraveVPNEnabled(profile));
 #if BUILDFLAG(IS_MAC) && BUILDFLAG(ENABLE_BRAVE_VPN_WIREGUARD)
   html_source->AddBoolean(
-      "isBraveVPNWireguardEnabledOnMac",
+      "isCipherVPNWireguardEnabledOnMac",
       base::FeatureList::IsEnabled(
           brave_vpn::features::kBraveVPNEnableWireguardForOSX));
 #endif  // BUILDFLAG(IS_MAC) && BUILDFLAG(ENABLE_BRAVE_VPN_WIREGUARD)
@@ -233,7 +233,7 @@ void BraveSettingsUI::AddResources(content::WebUIDataSource* html_source,
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
   html_source->AddBoolean("isCardanoDappSupportFeatureEnabled",
                           brave_wallet::IsCardanoDAppSupportEnabled());
-  html_source->AddBoolean("isBraveWalletAllowed",
+  html_source->AddBoolean("isCipherWalletAllowed",
                           brave_wallet::IsAllowedForContext(profile));
 #endif
   html_source->AddBoolean("isForgetFirstPartyStorageFeatureEnabled",
@@ -244,10 +244,10 @@ void BraveSettingsUI::AddResources(content::WebUIDataSource* html_source,
       base::FeatureList::IsEnabled(
           brave_shields::features::kBraveShieldsElementPicker));
 #if BUILDFLAG(ENABLE_BRAVE_REWARDS)
-  html_source->AddBoolean("isBraveRewardsSupported",
+  html_source->AddBoolean("isCipherRewardsSupported",
                           brave_rewards::IsSupportedForProfile(profile));
 #else
-  html_source->AddBoolean("isBraveRewardsSupported", false);
+  html_source->AddBoolean("isCipherRewardsSupported", false);
 #endif
   html_source->AddBoolean(
       "areShortcutsSupported",
@@ -318,25 +318,25 @@ void BraveSettingsUI::AddResources(content::WebUIDataSource* html_source,
       base::FeatureList::IsEnabled(containers::features::kContainers));
 #endif
   html_source->AddBoolean(
-      "isBraveAccountEnabled",
+      "isCipherAccountEnabled",
       brave_account::features::IsBraveAccountEnabledForProfile(
           CHECK_DEREF(profile->GetPrefs())));
-  html_source->AddBoolean("isBraveOriginBrandedBuild",
+  html_source->AddBoolean("isCipherOriginBrandedBuild",
                           BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED));
-  html_source->AddBoolean("isBraveOriginPurchased",
+  html_source->AddBoolean("isCipherOriginPurchased",
                           brave_origin::IsBraveOriginPurchased());
-  html_source->AddBoolean("isBraveOriginFeatureEnabled",
+  html_source->AddBoolean("isCipherOriginFeatureEnabled",
                           brave_origin::IsBraveOriginFeatureEnabled());
   // STAGING for unofficial builds; official builds always resolve to prod.
   html_source->AddString(
-      "braveOriginBuyUrl",
+      "cipherOriginBuyUrl",
       base::StrCat(
           {"https://",
            brave_domains::GetServicesDomain(
                "account", brave_domains::ServicesEnvironment::STAGING),
            "/?intent=checkout&product=origin&mtm_campaign=browser-settings"}));
   html_source->AddString(
-      "braveOriginRestoreUrl",
+      "cipherOriginRestoreUrl",
       base::StrCat(
           {"https://",
            brave_domains::GetServicesDomain(
@@ -347,14 +347,14 @@ void BraveSettingsUI::AddResources(content::WebUIDataSource* html_source,
   html_source->AddBoolean(
       "isScrollableHorizontalTabStripEnabled",
       base::FeatureList::IsEnabled(tabs::kBraveScrollableTabStrip));
-  html_source->AddString("braveSearchEngineName",
+  html_source->AddString("cipherSearchEngineName",
                          TemplateURLPrepopulateData::brave_search.name);
   html_source->AddBoolean("isLocaleJapan", IsLocaleJapan(profile));
   html_source->AddBoolean(
       "isHideVerticalTabCompletelyFlagEnabled",
       base::FeatureList::IsEnabled(tabs::kBraveVerticalTabHideCompletely));
   html_source->AddBoolean(
-      "isShowBraveShieldsInPageInfoEnabled",
+      "isShowCipherShieldsInPageInfoEnabled",
       page_info::features::IsShowBraveShieldsInPageInfoEnabled());
 }
 

@@ -35,14 +35,14 @@ export class SettingsBraveOriginOnboardingElement extends
 
   private onBuyNowClick_() {
     window.open(
-        loadTimeData.getString('braveOriginBuyUrl'),
+        loadTimeData.getString('cipherOriginBuyUrl'),
         '_blank',
         'noopener');
   }
 
   private onRestorePurchaseClick_() {
     window.open(
-        loadTimeData.getString('braveOriginRestoreUrl'),
+        loadTimeData.getString('cipherOriginRestoreUrl'),
         '_blank',
         'noopener');
   }

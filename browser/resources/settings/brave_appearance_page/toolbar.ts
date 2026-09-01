@@ -45,7 +45,7 @@ class SettingsBraveAppearanceToolbarElement extends SettingsBraveAppearanceToolb
     return {
       isShowBraveShieldsInPageInfoEnabled_: {
         type: Boolean,
-        value: loadTimeData.getBoolean('isShowBraveShieldsInPageInfoEnabled'),
+        value: loadTimeData.getBoolean('isShowCipherShieldsInPageInfoEnabled'),
       },
       compactModeToggleEnabled_: {
         type: Boolean,
@@ -121,11 +121,11 @@ class SettingsBraveAppearanceToolbarElement extends SettingsBraveAppearanceToolb
   }
 
   private isBraveRewardsSupported_() {
-    return loadTimeData.getBoolean('isBraveRewardsSupported')
+    return loadTimeData.getBoolean('isCipherRewardsSupported')
   }
 
   private showBraveVPNOption_() {
-    return loadTimeData.getBoolean('isBraveVPNEnabled')
+    return loadTimeData.getBoolean('isCipherVPNEnabled')
   }
 
   // <if expr="enable_ai_chat">

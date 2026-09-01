@@ -145,7 +145,7 @@ RegisterPolymerTemplateModifications({
     `)
 
     // <if expr="enable_ai_chat">
-    if (loadTimeData.getBoolean('isOpenAIChatFromBraveSearchEnabled')) {
+    if (loadTimeData.getBoolean('isOpenAIChatFromCipherSearchEnabled')) {
       viewManager.appendChild(html`
         <template is="dom-if" if="[[renderView_(
                   routes_.SITE_SETTINGS_BRAVE_OPEN_AI_CHAT, currentRoute,
@@ -163,7 +163,7 @@ RegisterPolymerTemplateModifications({
     // </if>
 
     // <if expr="enable_brave_wallet">
-    if (loadTimeData.getBoolean('isBraveWalletAllowed')) {
+    if (loadTimeData.getBoolean('isCipherWalletAllowed')) {
       viewManager.appendChild(html`
         <template is="dom-if" if="[[renderView_(
             routes_.SITE_SETTINGS_ETHEREUM, currentRoute,

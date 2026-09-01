@@ -115,7 +115,7 @@ export class SettingsPrivateSearchEngineListDialogElement extends
   }
 
   private isBraveSearchEngine_(engine: SearchEngine): boolean {
-    return engine.name === loadTimeData.getString('braveSearchEngineName')
+    return engine.name === loadTimeData.getString('cipherSearchEngineName')
         && engine.isPrepopulated === true
   }
 
