@@ -27,6 +27,7 @@ import org.chromium.base.Log;
 import org.chromium.base.supplier.MonotonicObservableSupplier;
 import org.chromium.base.supplier.ObservableSuppliers;
 import org.chromium.base.supplier.SettableMonotonicObservableSupplier;
+import org.chromium.chrome.browser.BraveConfig;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.flags.ChromeFeatureList;
 import org.chromium.chrome.browser.password_manager.settings.ReauthenticationManager;
@@ -120,7 +121,8 @@ public class BraveManageSyncSettings extends ManageSyncSettings {
         if (prefAutofill != null) prefAutofill.setTitle(R.string.brave_sync_autofill);
 
         assertNonNull(mSyncTypeSwitchPreferencesMap);
-        if (ChromeFeatureList.isEnabled(BraveFeatureList.BRAVE_SYNC_AI_CHAT)) {
+        if (BraveConfig.ENABLE_AI_CHAT
+                && ChromeFeatureList.isEnabled(BraveFeatureList.BRAVE_SYNC_AI_CHAT)) {
             ChromeSwitchPreference syncAIChat =
                     new ChromeSwitchPreference(getPreferenceManager().getContext(), null);
             syncAIChat.setKey(PREF_SYNC_AI_CHAT);
@@ -359,7 +361,8 @@ public class BraveManageSyncSettings extends ManageSyncSettings {
 
                 @Override
                 public void updateDynamicPreferences(Context context, SettingsIndexData indexData) {
-                    if (ChromeFeatureList.isEnabled(BraveFeatureList.BRAVE_SYNC_AI_CHAT)) {
+                    if (BraveConfig.ENABLE_AI_CHAT
+                            && ChromeFeatureList.isEnabled(BraveFeatureList.BRAVE_SYNC_AI_CHAT)) {
                         indexData.addEntryForKey(
                                 ManageSyncSettings.class.getName(),
                                 PREF_SYNC_AI_CHAT,

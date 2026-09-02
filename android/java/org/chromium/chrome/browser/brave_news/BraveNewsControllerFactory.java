@@ -15,6 +15,7 @@ import org.chromium.base.task.TaskTraits;
 import org.chromium.brave_news.mojom.BraveNewsController;
 import org.chromium.build.annotations.NullMarked;
 import org.chromium.build.annotations.Nullable;
+import org.chromium.chrome.browser.BraveConfig;
 import org.chromium.chrome.browser.profiles.Profile;
 import org.chromium.mojo.bindings.ConnectionErrorHandler;
 import org.chromium.mojo.bindings.Interface;
@@ -45,6 +46,13 @@ public class BraveNewsControllerFactory {
     public Promise<@Nullable BraveNewsController> getForProfile(
             Profile profile, @Nullable ConnectionErrorHandler connectionErrorHandler) {
         final Promise<@Nullable BraveNewsController> promise = new Promise<>();
+
+        // Brave News is not compiled into this build (ENABLE_BRAVE_NEWS=false); the native
+        // implementation backing this JNI factory does not exist, so never attempt to call it.
+        if (!BraveConfig.ENABLE_BRAVE_NEWS) {
+            promise.fulfill(null);
+            return promise;
+        }
 
         mTaskRunner.execute(
                 () -> {

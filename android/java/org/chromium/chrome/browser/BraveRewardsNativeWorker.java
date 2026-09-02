@@ -58,7 +58,13 @@ public class BraveRewardsNativeWorker {
     private static BraveRewardsNativeWorker sInstance;
     private static final Object sLock = new Object();
 
+    @Nullable
     public static BraveRewardsNativeWorker getInstance() {
+        // Rewards is not compiled into this build (ENABLE_BRAVE_REWARDS=false); the native
+        // implementation backing this JNI worker does not exist, so never attempt to create it.
+        if (!BraveConfig.ENABLE_BRAVE_REWARDS) {
+            return null;
+        }
         synchronized (sLock) {
             if (sInstance == null) {
                 sInstance = new BraveRewardsNativeWorker();

@@ -3,7 +3,13 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
+import("//brave/components/brave_news/common/buildflags/buildflags.gni")
+import("//brave/components/brave_rewards/core/buildflags/buildflags.gni")
+import("//brave/components/brave_talk/buildflags/buildflags.gni")
+import("//brave/components/brave_vpn/common/buildflags/buildflags.gni")
 import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
+import("//brave/components/playlist/core/common/buildflags/buildflags.gni")
 import("//brave/components/email_aliases/buildflags/buildflags.gni")
 import(
     "//brave/components/policy/resources/templates/policy_definitions/brave_policies.gni")
@@ -30,6 +36,13 @@ java_cpp_template("brave_config_java") {
     "BRAVE_ANDROID_WEBCOMPAT_REPORT_ENDPOINT=\"$webcompat_report_api_endpoint\"",
     "BRAVE_ANDROID_WEB_DISCOVERY_ENABLED=$enable_web_discovery_native",
     "BRAVE_ANDROID_ENABLE_EMAIL_ALIASES=$enable_email_aliases",
+    "BRAVE_ANDROID_ENABLE_BRAVE_REWARDS=$enable_brave_rewards",
+    "BRAVE_ANDROID_ENABLE_BRAVE_VPN=$enable_brave_vpn",
+    "BRAVE_ANDROID_ENABLE_BRAVE_TALK=$enable_brave_talk",
+    "BRAVE_ANDROID_ENABLE_BRAVE_NEWS=$enable_brave_news",
+    "BRAVE_ANDROID_ENABLE_AI_CHAT=$enable_ai_chat",
+    "BRAVE_ANDROID_ENABLE_PLAYLIST=$enable_playlist",
+    "BRAVE_ANDROID_ENABLE_BRAVE_WALLET=$enable_brave_wallet",
   ]
 }
 

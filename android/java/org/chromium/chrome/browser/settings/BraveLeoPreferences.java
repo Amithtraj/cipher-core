@@ -25,6 +25,7 @@ import org.chromium.base.supplier.MonotonicObservableSupplier;
 import org.chromium.base.supplier.ObservableSuppliers;
 import org.chromium.base.supplier.SettableMonotonicObservableSupplier;
 import org.chromium.chrome.R;
+import org.chromium.chrome.browser.BraveConfig;
 import org.chromium.chrome.browser.billing.InAppPurchaseWrapper;
 import org.chromium.chrome.browser.billing.LinkSubscriptionUtils;
 import org.chromium.chrome.browser.brave_leo.BraveLeoMojomHelper;
@@ -91,7 +92,9 @@ public class BraveLeoPreferences extends BravePreferenceFragment
             mHistory = (ChromeSwitchPreference) history;
             mHistory.setOnPreferenceChangeListener(this);
             mHistory.setChecked(BraveLeoPrefUtils.getIsHistoryEnabled());
-            mHistory.setVisible(ChromeFeatureList.isEnabled(BraveFeatureList.AI_CHAT_HISTORY));
+            mHistory.setVisible(
+                    BraveConfig.ENABLE_AI_CHAT
+                            && ChromeFeatureList.isEnabled(BraveFeatureList.AI_CHAT_HISTORY));
         }
 
         BraveLeoUtils.verifySubscription(
@@ -239,7 +242,8 @@ public class BraveLeoPreferences extends BravePreferenceFragment
                     indexData.removeEntryForKey(frag, PREF_LINK_SUBSCRIPTION);
                     indexData.removeEntryForKey(frag, PREF_MANAGE_SUBSCRIPTION);
                     indexData.removeEntryForKey(frag, PREF_GO_PREMIUM);
-                    if (!ChromeFeatureList.isEnabled(BraveFeatureList.AI_CHAT_HISTORY)) {
+                    if (!BraveConfig.ENABLE_AI_CHAT
+                            || !ChromeFeatureList.isEnabled(BraveFeatureList.AI_CHAT_HISTORY)) {
                         indexData.removeEntryForKey(frag, PREF_HISTORY);
                     }
                 }

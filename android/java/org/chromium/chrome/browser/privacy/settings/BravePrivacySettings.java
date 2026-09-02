@@ -502,12 +502,12 @@ public class BravePrivacySettings extends PrivacySettings {
         removePreferenceIfPresent(PREF_PRIVACY_GUIDE);
         removePreferenceIfPresent(PREF_PASSWORD_LEAK_DETECTION);
 
-        // Hide decentralized DNS settings when wallet is disabled by policy
-        if (BraveWalletPolicy.isDisabledByPolicy(getProfile())) {
-            removePreferenceIfPresent(PREF_UNSTOPPABLE_DOMAINS);
-            removePreferenceIfPresent(PREF_ENS);
-            removePreferenceIfPresent(PREF_SNS);
-        }
+        // Decentralized DNS settings depend on Brave Wallet, which this build does not compile
+        // in (ENABLE_BRAVE_WALLET=false); always hide them, in addition to hiding them when
+        // wallet is disabled by policy on builds that do compile Wallet in.
+        removePreferenceIfPresent(PREF_UNSTOPPABLE_DOMAINS);
+        removePreferenceIfPresent(PREF_ENS);
+        removePreferenceIfPresent(PREF_SNS);
 
         if (!ChromeFeatureList.isEnabled(BraveFeatureList.BRAVE_ANDROID_SAFE_BROWSING)) {
             removePreferenceIfPresent(PREF_SAFE_BROWSING);

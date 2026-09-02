@@ -7,9 +7,13 @@
 
 package org.chromium.chrome.browser.vpn;
 
+import androidx.annotation.Nullable;
+
 import org.jni_zero.CalledByNative;
 import org.jni_zero.JNINamespace;
 import org.jni_zero.NativeMethods;
+
+import org.chromium.chrome.browser.BraveConfig;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +26,13 @@ public class BraveVpnNativeWorker {
 
     private final List<BraveVpnObserver> mObservers;
 
+    @Nullable
     public static BraveVpnNativeWorker getInstance() {
+        // VPN is not compiled into this build (ENABLE_BRAVE_VPN=false); the native
+        // implementation backing this JNI worker does not exist, so never attempt to create it.
+        if (!BraveConfig.ENABLE_BRAVE_VPN) {
+            return null;
+        }
         synchronized (sLock) {
             if (sInstance == null) {
                 sInstance = new BraveVpnNativeWorker();

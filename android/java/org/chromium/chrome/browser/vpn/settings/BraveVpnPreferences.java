@@ -31,6 +31,7 @@ import org.chromium.base.supplier.ObservableSuppliers;
 import org.chromium.base.supplier.SettableMonotonicObservableSupplier;
 import org.chromium.base.task.PostTask;
 import org.chromium.base.task.TaskTraits;
+import org.chromium.chrome.browser.BraveConfig;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.InternetConnection;
 import org.chromium.chrome.browser.billing.InAppPurchaseWrapper;
@@ -209,7 +210,8 @@ public class BraveVpnPreferences extends BravePreferenceFragment implements Brav
                 getResources().getString(R.string.link_subscription_text));
         mLinkSubscriptionPreference.setKey(PREF_LINK_SUBSCRIPTION);
         mLinkSubscriptionPreference.setVisible(
-                ChromeFeatureList.isEnabled(BraveFeatureList.BRAVE_VPN_LINK_SUBSCRIPTION_ANDROID_UI)
+                BraveConfig.ENABLE_BRAVE_VPN
+                && ChromeFeatureList.isEnabled(BraveFeatureList.BRAVE_VPN_LINK_SUBSCRIPTION_ANDROID_UI)
                 && BraveVpnPrefUtils.isSubscriptionPurchase());
         mLinkSubscriptionPreference.setOnPreferenceClickListener(
                 new Preference.OnPreferenceClickListener() {
@@ -272,7 +274,8 @@ public class BraveVpnPreferences extends BravePreferenceFragment implements Brav
         }
         if (mLinkSubscriptionPreference != null) {
             mLinkSubscriptionPreference.setVisible(
-                    ChromeFeatureList.isEnabled(
+                    BraveConfig.ENABLE_BRAVE_VPN
+                            && ChromeFeatureList.isEnabled(
                                     BraveFeatureList.BRAVE_VPN_LINK_SUBSCRIPTION_ANDROID_UI)
                             && BraveVpnPrefUtils.isSubscriptionPurchase());
         }

@@ -39,11 +39,12 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import org.xmlpull.v1.XmlSerializer;
 
 import org.chromium.base.ContextUtils;
+import org.chromium.base.supplier.MonotonicObservableSupplier;
 import org.chromium.chrome.browser.app.BraveActivity;
 import org.chromium.chrome.browser.content.WebContentsFactory;
-import org.chromium.chrome.browser.crypto_wallet.util.Utils;
-import org.chromium.chrome.browser.crypto_wallet.util.WalletConstants;
 import org.chromium.chrome.browser.profiles.Profile;
+import org.chromium.chrome.browser.profiles.ProfileManager;
+import org.chromium.chrome.browser.tabmodel.TabModelSelector;
 import org.chromium.chrome.browser.ui.favicon.FaviconHelper;
 import org.chromium.chrome.browser.util.ConfigurationUtils;
 import org.chromium.components.image_fetcher.ImageDataFetchResult;
@@ -74,9 +75,31 @@ public class ImageLoader {
     private static final String ATT_VALUE_1000_PX = "1000px";
     private static final String SVG_TAG = "svg";
     private static final String DATA_IMAGE_SVG_UTF8_PREFIX = "data:image/svg+xml;utf8,";
+    private static final int MAX_BITMAP_SIZE_FOR_DOWNLOAD = 2048;
 
     private static FaviconHelper sFaviconHelper;
     private static FaviconHelper.DefaultFaviconHelper sFaviconThemeHelper;
+
+    private static Profile getProfile() {
+        BraveActivity activity = null;
+        try {
+            activity = BraveActivity.getBraveActivity();
+        } catch (BraveActivity.BraveActivityNotFoundException e) {
+            // Fall through to the last-used-profile lookup below.
+        }
+        if (activity != null) {
+            MonotonicObservableSupplier<TabModelSelector> supplier =
+                    activity.getTabModelSelectorSupplier();
+            TabModelSelector selector = supplier.get();
+            if (selector != null) {
+                Profile profile = selector.getModel(/* incognito= */ false).getProfile();
+                if (profile != null) {
+                    return profile;
+                }
+            }
+        }
+        return ProfileManager.getLastUsedRegularProfile();
+    }
 
     private static void downloadImage(String url, final RequestManager requestManager,
             final boolean isCircular, final int roundedCorners, final ImageView imageView,
@@ -87,7 +110,7 @@ public class ImageLoader {
         }
 
         Resources resources = ContextUtils.getApplicationContext().getResources();
-        Profile profile = Utils.getProfile(false);
+        Profile profile = getProfile();
         if (isSvg(url)) {
             final String validUrl;
             if (URLUtil.isDataUrl(url)) {
@@ -119,7 +142,7 @@ public class ImageLoader {
             webContents.downloadImage(
                     new GURL(validUrl), // Url
                     false, // isFavIcon
-                    WalletConstants.MAX_BITMAP_SIZE_FOR_DOWNLOAD, // maxBitmapSize
+                    MAX_BITMAP_SIZE_FOR_DOWNLOAD, // maxBitmapSize
                     false, // bypassCache
                     (id, httpStatusCode, imageUrl, bitmaps, originalImageSizes) -> { // callback
                         ImageFetcherFacade imageFetcherFacade;

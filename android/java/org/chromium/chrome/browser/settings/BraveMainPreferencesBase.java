@@ -26,6 +26,7 @@ import org.chromium.brave.browser.customize_menu.CustomizeBraveMenu;
 import org.chromium.build.annotations.NullMarked;
 import org.chromium.build.annotations.Nullable;
 import org.chromium.chrome.R;
+import org.chromium.chrome.browser.BraveConfig;
 import org.chromium.chrome.browser.accessibility.BraveAccessibilitySettings;
 import org.chromium.chrome.browser.autofill.settings.AutofillAndPasswordsFragment;
 import org.chromium.chrome.browser.autofill.settings.options.BraveAutofillOptionsSearchIndex;
@@ -261,8 +262,21 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
         removePreferenceIfPresent(PREF_BRAVE_VPN_CALLOUT);
         removePreferenceIfPresent(MainSettings.PREF_SETTINGS_PROMO_CARD);
 
-        if (!ChromeFeatureList.isEnabled(BraveFeatureList.BRAVE_PLAYLIST)) {
+        if (!BraveConfig.ENABLE_PLAYLIST
+                || !ChromeFeatureList.isEnabled(BraveFeatureList.BRAVE_PLAYLIST)) {
             removePreferenceIfPresent(PREF_BRAVE_PLAYLIST);
+        }
+        if (!BraveConfig.ENABLE_BRAVE_NEWS) {
+            removePreferenceIfPresent(PREF_BRAVE_NEWS_V2);
+        }
+        if (!BraveConfig.ENABLE_BRAVE_WALLET) {
+            removePreferenceIfPresent(PREF_BRAVE_WALLET);
+        }
+        if (!BraveConfig.ENABLE_BRAVE_VPN) {
+            removePreferenceIfPresent(PREF_BRAVE_VPN);
+        }
+        if (!BraveConfig.ENABLE_AI_CHAT) {
+            removePreferenceIfPresent(PREF_BRAVE_LEO);
         }
         updateSearchEnginePreference();
 
@@ -343,11 +357,21 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
         setPreferenceOrder(PREF_FEATURES_SECTION, ++featuresSectionOrder);
 
         setPreferenceOrder(PREF_SHIELDS_AND_PRIVACY, ++featuresSectionOrder);
-        setPreferenceOrder(PREF_BRAVE_NEWS_V2, ++featuresSectionOrder);
 
-        setPreferenceOrder(PREF_BRAVE_WALLET, ++featuresSectionOrder);
+        if (BraveConfig.ENABLE_BRAVE_NEWS) {
+            setPreferenceOrder(PREF_BRAVE_NEWS_V2, ++featuresSectionOrder);
+        } else {
+            removePreferenceIfPresent(PREF_BRAVE_NEWS_V2);
+        }
 
-        if (ChromeFeatureList.isEnabled(BraveFeatureList.BRAVE_PLAYLIST)) {
+        if (BraveConfig.ENABLE_BRAVE_WALLET) {
+            setPreferenceOrder(PREF_BRAVE_WALLET, ++featuresSectionOrder);
+        } else {
+            removePreferenceIfPresent(PREF_BRAVE_WALLET);
+        }
+
+        if (BraveConfig.ENABLE_PLAYLIST
+                && ChromeFeatureList.isEnabled(BraveFeatureList.BRAVE_PLAYLIST)) {
             setPreferenceOrder(PREF_BRAVE_PLAYLIST, ++featuresSectionOrder);
         } else {
             removePreferenceIfPresent(PREF_BRAVE_PLAYLIST);
@@ -649,21 +673,21 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
 
     /** Checks if Leo AI is disabled by policy and removes the preference if so. */
     private void checkLeoPolicyAndUpdatePreference() {
-        if (BraveLeoPrefUtils.isLeoDisabledByPolicy(getProfile())) {
+        if (!BraveConfig.ENABLE_AI_CHAT || BraveLeoPrefUtils.isLeoDisabledByPolicy(getProfile())) {
             removePreferenceIfPresent(PREF_BRAVE_LEO);
         }
     }
 
     /** Checks if News is disabled by policy via Brave Origin and removes the preference if so. */
     private void checkNewsPolicyAndUpdatePreference() {
-        if (BraveNewsPolicy.isDisabledByPolicy(getProfile())) {
+        if (!BraveConfig.ENABLE_BRAVE_NEWS || BraveNewsPolicy.isDisabledByPolicy(getProfile())) {
             removePreferenceIfPresent(PREF_BRAVE_NEWS_V2);
         }
     }
 
     /** Checks if Brave VPN is disabled by policy and removes the preference if so. */
     private void checkVpnPolicyAndUpdatePreference() {
-        if (BraveVpnPolicy.isDisabledByPolicy(getProfile())) {
+        if (!BraveConfig.ENABLE_BRAVE_VPN || BraveVpnPolicy.isDisabledByPolicy(getProfile())) {
             removePreferenceIfPresent(PREF_BRAVE_VPN);
             removePreferenceIfPresent(PREF_BRAVE_VPN_CALLOUT);
         }
@@ -671,7 +695,8 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
 
     /** Checks if Brave Wallet is disabled by policy and removes the preference if so. */
     private void checkWalletPolicyAndUpdatePreference() {
-        if (BraveWalletPolicy.isDisabledByPolicy(getProfile())) {
+        if (!BraveConfig.ENABLE_BRAVE_WALLET
+                || BraveWalletPolicy.isDisabledByPolicy(getProfile())) {
             removePreferenceIfPresent(PREF_BRAVE_WALLET);
         }
     }
@@ -860,17 +885,22 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
                     if (!BraveSearchWidgetUtils.isRequestPinAppWidgetSupported()) {
                         indexData.removeEntry(getUniqueId(PREF_HOME_SCREEN_WIDGET));
                     }
-                    // Remove features disabled by Brave Origin or enterprise policy.
-                    if (BraveLeoPrefUtils.isLeoDisabledByPolicy(profile)) {
+                    // Remove features disabled by Brave Origin or enterprise policy, or not
+                    // compiled into this build.
+                    if (!BraveConfig.ENABLE_AI_CHAT
+                            || BraveLeoPrefUtils.isLeoDisabledByPolicy(profile)) {
                         indexData.removeEntry(getUniqueId(PREF_BRAVE_LEO));
                     }
-                    if (BraveNewsPolicy.isDisabledByPolicy(profile)) {
+                    if (!BraveConfig.ENABLE_BRAVE_NEWS
+                            || BraveNewsPolicy.isDisabledByPolicy(profile)) {
                         indexData.removeEntry(getUniqueId(PREF_BRAVE_NEWS_V2));
                     }
-                    if (BraveVpnPolicy.isDisabledByPolicy(profile)) {
+                    if (!BraveConfig.ENABLE_BRAVE_VPN
+                            || BraveVpnPolicy.isDisabledByPolicy(profile)) {
                         indexData.removeEntry(getUniqueId(PREF_BRAVE_VPN));
                     }
-                    if (BraveWalletPolicy.isDisabledByPolicy(profile)) {
+                    if (!BraveConfig.ENABLE_BRAVE_WALLET
+                            || BraveWalletPolicy.isDisabledByPolicy(profile)) {
                         indexData.removeEntry(getUniqueId(PREF_BRAVE_WALLET));
                         // Also remove wallet-related entries from site settings.
                         String siteSettingsFrag = SiteSettings.class.getName();

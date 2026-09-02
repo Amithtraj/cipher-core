@@ -6,9 +6,8 @@
 #include "brave/browser/android/safe_browsing/features.h"
 #include "brave/browser/android/youtube_script_injector/features.h"
 #include "brave/browser/brave_browser_features.h"
-#include "brave/components/ai_chat/core/common/features.h"
+#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_ads/buildflags/buildflags.h"
-#include "brave/components/brave_news/common/features.h"
 #include "brave/components/brave_origin/features.h"
 #include "brave/components/brave_rewards/core/features.h"
 #include "brave/components/brave_search_conversion/features.h"
@@ -19,12 +18,20 @@
 #include "brave/components/email_aliases/buildflags/buildflags.h"
 #include "brave/components/google_sign_in_permission/features.h"
 #include "brave/components/ntp_background_images/browser/features.h"
-#include "brave/components/playlist/core/common/features.h"
+#include "brave/components/playlist/core/common/buildflags/buildflags.h"
 #include "brave/components/request_otr/common/features.h"
 #include "brave/components/web_discovery/buildflags/buildflags.h"
 #include "brave/components/webcompat/core/common/features.h"
 #include "net/base/features.h"
 #include "third_party/blink/public/common/features.h"
+
+#if BUILDFLAG(ENABLE_AI_CHAT)
+#include "brave/components/ai_chat/core/common/features.h"
+#endif
+
+#if BUILDFLAG(ENABLE_PLAYLIST)
+#include "brave/components/playlist/core/common/features.h"
+#endif
 
 #if BUILDFLAG(ENABLE_BRAVE_ADS)
 #include "brave/components/brave_ads/core/public/ad_units/new_tab_page_ad/new_tab_page_ad_feature.h"
@@ -42,10 +49,23 @@
 #include "brave/components/email_aliases/features.h"
 #endif
 
+#if BUILDFLAG(ENABLE_AI_CHAT)
 // CHROMIUM_SRC_INTERNAL_USE
 #define BRAVE_AI_CHAT_FLAGS                                        \
   &ai_chat::features::kAIChat, &ai_chat::features::kAIChatHistory, \
       &ai_chat::features::kBraveSyncAIChat,
+#else
+// CHROMIUM_SRC_INTERNAL_USE
+#define BRAVE_AI_CHAT_FLAGS
+#endif  // BUILDFLAG(ENABLE_AI_CHAT)
+
+#if BUILDFLAG(ENABLE_PLAYLIST)
+// CHROMIUM_SRC_INTERNAL_USE
+#define BRAVE_PLAYLIST_FLAG &playlist::features::kPlaylist,
+#else
+// CHROMIUM_SRC_INTERNAL_USE
+#define BRAVE_PLAYLIST_FLAG
+#endif  // BUILDFLAG(ENABLE_PLAYLIST)
 
 #if BUILDFLAG(ENABLE_BRAVE_ADS)
 // CHROMIUM_SRC_INTERNAL_USE
@@ -90,7 +110,7 @@
     EMAIL_ALIASES_FLAG                                                         \
     &brave_rewards::features::kBraveRewards,                                   \
     &brave_search_conversion::features::kOmniboxBanner,                        \
-    &playlist::features::kPlaylist,                                            \
+    BRAVE_PLAYLIST_FLAG                                                        \
     &download::features::kParallelDownloading,                                 \
     &preferences::features::kBraveBackgroundVideoPlayback,                     \
     &preferences::features::kBravePictureInPictureForYouTubeVideos,            \
@@ -118,6 +138,7 @@
 #include <chrome/browser/flags/android/chrome_feature_list.cc>
 #undef kForceWebContentsDarkMode
 #undef BRAVE_AI_CHAT_FLAGS
+#undef BRAVE_PLAYLIST_FLAG
 #undef BRAVE_NEW_TAB_PAGE_AD_FLAG
 #undef BRAVE_WEB_DISCOVERY_FLAG
 #undef BRAVE_VPN_FLAG

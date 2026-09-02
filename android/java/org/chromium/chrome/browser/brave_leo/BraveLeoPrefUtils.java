@@ -9,6 +9,7 @@ import org.chromium.base.BraveFeatureList;
 import org.chromium.base.ContextUtils;
 import org.chromium.base.Log;
 import org.chromium.build.annotations.Nullable;
+import org.chromium.chrome.browser.BraveConfig;
 import org.chromium.chrome.browser.app.BraveActivity;
 import org.chromium.chrome.browser.flags.ChromeFeatureList;
 import org.chromium.chrome.browser.preferences.BravePref;
@@ -67,7 +68,7 @@ public class BraveLeoPrefUtils {
         // (see ai_chat::prefs::RegisterProfilePrefs, gated on IsAIChatEnabled()). Reading an
         // unregistered pref trips a CHECK in PrefService, so bail out when AI Chat is disabled.
         // No AI Chat means no Leo subscription anyway, so returning false is correct.
-        if (!ChromeFeatureList.isEnabled(BraveFeatureList.AI_CHAT)) {
+        if (!BraveConfig.ENABLE_AI_CHAT || !ChromeFeatureList.isEnabled(BraveFeatureList.AI_CHAT)) {
             return false;
         }
         Profile profileToUse = profile == null ? BraveLeoPrefUtils.getProfile() : profile;
@@ -161,7 +162,7 @@ public class BraveLeoPrefUtils {
     }
 
     public static boolean isLeoEnabled() {
-        if (!ChromeFeatureList.isEnabled(BraveFeatureList.AI_CHAT)) {
+        if (!BraveConfig.ENABLE_AI_CHAT || !ChromeFeatureList.isEnabled(BraveFeatureList.AI_CHAT)) {
             return false;
         }
 
