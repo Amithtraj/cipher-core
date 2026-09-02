@@ -46,6 +46,20 @@ java_cpp_template("brave_config_java") {
   ]
 }
 
+# Chromium's own docs (build/android/docs/java_optimization.md) say a
+# .srcjar can only be depended on by a single Java target within any given
+# APK target -- depending on it from more than one target compiles two
+# independent copies of the same class, which is silently tolerated by a
+# plain D8 dex merge in a debug build but is a hard "defined multiple
+# times" error under R8 in a release/optimized build. Wrap the raw
+# brave_config_java srcjar in this thin android_library so every consumer
+# depends on the *same* compiled BraveConfig.class via `deps`, instead of
+# each independently compiling brave_config_java's srcjar into its own
+# jar via `srcjar_deps`.
+android_library("brave_config_java_lib") {
+  srcjar_deps = [ ":brave_config_java" ]
+}
+
 # Generate Java constants from policy YAML files
 # This target generates a srcjar that is consumed by chrome_java via srcjar_deps
 # Using action_with_pydeps like upstream does
