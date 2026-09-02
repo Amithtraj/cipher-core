@@ -74,6 +74,7 @@ import org.chromium.chrome.browser.ntp_background_images.model.SponsoredTab;
 import org.chromium.chrome.browser.ntp_background_images.model.Wallpaper;
 import org.chromium.chrome.browser.ntp_background_images.util.FetchWallpaperWorkerTask;
 import org.chromium.chrome.browser.ntp_background_images.util.NTPImageUtil;
+import org.chromium.chrome.browser.ntp_background_images.util.SponsoredImageUtil;
 import org.chromium.chrome.browser.onboarding.OnboardingPrefManager;
 import org.chromium.chrome.browser.preferences.BravePref;
 import org.chromium.chrome.browser.preferences.BravePrefServiceBridge;
@@ -1160,15 +1161,16 @@ public class BraveNewTabPageLayout extends NewTabPageLayout
 
     private void getAndShowNTPImage() {
         assertNonNull(mSponsoredTab);
-        mSponsoredTab.getNTPImage(
-                /* allowSponsoredImage= */ true,
-                ntpImage -> {
-                    if (mActivity == null || mActivity.isFinishing() || mActivity.isDestroyed()) {
-                        return;
-                    }
-                    mNtpImageGlobal = ntpImage;
-                    maybeShowNTPImage();
-                });
+        // SecureOut: don't round-trip through NTPBackgroundImagesBridge to fetch a
+        // remotely component-updated (default or sponsored/branded) wallpaper -- that
+        // network fetch is cut entirely for privacy, and sponsored NTP wallpapers are
+        // out of scope for this build regardless. Always use the locally-bundled
+        // placeholder background so the NTP has a deterministic, non-photo default.
+        if (mActivity == null || mActivity.isFinishing() || mActivity.isDestroyed()) {
+            return;
+        }
+        mNtpImageGlobal = SponsoredImageUtil.getBackgroundImage();
+        maybeShowNTPImage();
     }
 
     private void initilizeSponsoredTab() {

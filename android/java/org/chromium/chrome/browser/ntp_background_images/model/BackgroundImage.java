@@ -5,15 +5,20 @@
 
 package org.chromium.chrome.browser.ntp_background_images.model;
 
+import org.chromium.build.annotations.Nullable;
+
 public class BackgroundImage extends NTPImage {
     private final int mImageDrawable;
     private final int mCenterPointX;
     private final int mCenterPointY;
     private String mImagePath;
-    private ImageCredit mImageCredit;
+    private @Nullable ImageCredit mImageCredit;
 
     public BackgroundImage(
-            int imageDrawable, int centerPointX, int centerPointY, ImageCredit imageCredit) {
+            int imageDrawable,
+            int centerPointX,
+            int centerPointY,
+            @Nullable ImageCredit imageCredit) {
         mImageDrawable = imageDrawable;
         mCenterPointX = centerPointX;
         mCenterPointY = centerPointY;
@@ -22,7 +27,10 @@ public class BackgroundImage extends NTPImage {
     }
 
     public BackgroundImage(
-            String imagePath, int centerPointX, int centerPointY, ImageCredit imageCredit) {
+            String imagePath,
+            int centerPointX,
+            int centerPointY,
+            @Nullable ImageCredit imageCredit) {
         mImageDrawable = 0;
         mCenterPointX = centerPointX;
         mCenterPointY = centerPointY;
@@ -52,7 +60,7 @@ public class BackgroundImage extends NTPImage {
         return mCenterPointY;
     }
 
-    public ImageCredit getImageCredit() {
+    public @Nullable ImageCredit getImageCredit() {
         return mImageCredit;
     }
 }

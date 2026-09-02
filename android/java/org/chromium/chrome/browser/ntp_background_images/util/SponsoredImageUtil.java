@@ -7,7 +7,6 @@ package org.chromium.chrome.browser.ntp_background_images.util;
 
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.ntp_background_images.model.BackgroundImage;
-import org.chromium.chrome.browser.ntp_background_images.model.ImageCredit;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,16 +25,13 @@ public class SponsoredImageUtil {
 
     public static final int MAX_TABS = 10;
 
+    // SecureOut: solid-color placeholder background (no photo, no attribution) --
+    // replaces Brave's remotely-fetched and bundled sponsored/default photo system.
     private static final List<BackgroundImage> sBackgroundImages =
             new ArrayList<BackgroundImage>(
                     Arrays.asList(
                             new BackgroundImage(
-                                    R.drawable.dylan_malval_sea_min,
-                                    1300,
-                                    720,
-                                    new ImageCredit(
-                                            "Dylan Malval",
-                                            "https://www.instagram.com/vass_captures/"))));
+                                    R.drawable.ntp_default_background, 1300, 720, null)));
 
     private static int sBackgroundImageIndex = getRandomIndex(sBackgroundImages.size());
 
