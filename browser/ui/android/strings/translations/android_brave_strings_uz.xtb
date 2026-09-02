@@ -182,7 +182,7 @@
 <translation id="7142548388914389999">Maxfiylikni himoyalovchi mahsulot tahliliga (P3A) ruxsat berish</translation>
 <translation id="5254037869598726291">Anomin ma’lumotlar SecureOut foýdalanuvchilarining umumiy foýdalanuv hajmini tahmin qilishda va mashhur funksialarni yaxshilashda yordam beradi.</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">SecureOut Qidiruvni yaxshilash uchun anonim qidiruv &amp; kўrib chiqish ma'lumotlarining bir qismini ulashing.</translation>
+<translation id="8659271182272561965">Brave Qidiruvni yaxshilash uchun anonim qidiruv &amp; kўrib chiqish ma'lumotlarining bir qismini ulashing.</translation>
 <translation id="933652931229970927">Diagnostika hisobotlarini avtomatik yuborish</translation>
 <translation id="5987838417172370108">SecureOut Brauzer ishlamay qolganida yoki muzlab qolganida diagnostika xisobotini avtomatik yuborish orqali SecureOut mahsulotining barqarorligini yaxshilashga yordam bering.</translation>
 <translation id="7977176350719484850">Taxm. tejalgan\ntrafik</translation>
@@ -221,11 +221,11 @@
 <translation id="834487290629916192">KEYINROQ</translation>
 <translation id="763369711159699222">SecureOut rivojlanishiga yordam bering</translation>
 <translation id="8025937231644975408">Qaysi xususiyatlardan eng ko'p foydalanayotganingizni bizga xabar bering.</translation>
-<translation id="2888496576732880897">SecureOut Qidiruvining o‘sishiga yordam bering</translation>
+<translation id="2888496576732880897">Brave Qidiruvining o‘sishiga yordam bering</translation>
 <translation id="7198716519700700181">Oqim vaqtida to'siqlarni blokirovka qiling</translation>
 <translation id="7095369065154683007">Indeksni kengaytirish va qidiruv natijalarini yaxshilashga yordam berish uchun Web Discovery Projectga qo'shiling. <ph name="LEARN_MORE_START"/>Batafsil ma'lumot<ph name="LEARN_MORE_END"/>.</translation>
 <translation id="4847979153841887006">SecureOut logotipi</translation>
-<translation id="4767173360729868049">SecureOut Qidiruviga yordam berishdagi illyustrasiya</translation>
+<translation id="4767173360729868049">Brave Qidiruviga yordam berishdagi illyustrasiya</translation>
 <translation id="8241918461631453498">To'siqlarni blokirovka qilish illyustratsiyasi</translation>
 <translation id="8213310572767907663">SecureOut-ni yaxshiroq qilish illyustratsiyasi</translation>
 <translation id="2427917529469438577">Sevimli oqim saytlarida zerikarli to'siqlarni blokirovka qiling.</translation>
@@ -256,8 +256,8 @@
 <translation id="1938402585819943124">Keyingi ekranda SecureOut'ni tanlang.</translation>
 <translation id="8926389886865778422">Boshqa soʻralmasin</translation>
 <translation id="745974920645827035">Mustaqil qidiruv, yaxshiroq maxfiylik bilan</translation>
-<translation id="2773167297815493692">SecureOut Qidiruv sizni profil qilmaydi.</translation>
-<translation id="5240031343741051161">SecureOut Qidiruvni sinab koʻring</translation>
+<translation id="2773167297815493692">Brave Qidiruv sizni profil qilmaydi.</translation>
+<translation id="5240031343741051161">Brave Qidiruvni sinab koʻring</translation>
 <translation id="5234764350956374838">Rad etish</translation>
 <translation id="6639570430554986719">YANVAR</translation>
 <translation id="1807352595146144483">FEVRAL</translation>
@@ -948,7 +948,7 @@ Dastlab yanada koʻproq maʼlumot baham koʻrsangiz, bizning yordam xizmatimiz m
 <translation id="7152095322071766507">Eng koʻp tashrif buyurilgan sayt</translation>
 <translation id="5456039738087398178">Bosh ekran vidjeti</translation>
 <translation id="703185154752046151">Vidjet asosiy ekran qoʻshildi</translation>
-<translation id="4635094429202343515">SecureOut Qidiruv vidjetini sinab ko‘ring</translation>
+<translation id="4635094429202343515">Brave Qidiruv vidjetini sinab ko‘ring</translation>
 <translation id="4809681171446727314">Uy ekraningizdan maxfiy, mustaqil qidiruvga kirish imkoniyati.</translation>
 <translation id="3280562213547448728">Ovozli qidiruv</translation>
 <translation id="3925312712530886302">Maxfiy qidiruvni ochish</translation>

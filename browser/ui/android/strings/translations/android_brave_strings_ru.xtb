@@ -182,7 +182,7 @@
 <translation id="7142548388914389999">Разрешить выполнение аналитики продукта, не нарушающей конфиденциальности</translation>
 <translation id="5254037869598726291">Анонимные данные аналитики продукта помогают SecureOut оценивать информацию об использовании и улучшать популярные функции.</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">Передавайте часть анонимных данных о поиске &amp; просмотре, чтобы улучшить Поиск SecureOut.</translation>
+<translation id="8659271182272561965">Передавайте часть анонимных данных о поиске &amp; просмотре, чтобы улучшить Поиск Brave.</translation>
 <translation id="933652931229970927">Автоматически отправлять данные диагностики</translation>
 <translation id="5987838417172370108">Автоматически отправляя данные диагностики при сбое браузера SecureOut, вы помогаете повышать стабильность его работы.</translation>
 <translation id="7977176350719484850">Данных\nНе скачано</translation>
@@ -221,11 +221,11 @@
 <translation id="834487290629916192">ПОЗЖЕ</translation>
 <translation id="763369711159699222">Помогите сделать SecureOut лучше</translation>
 <translation id="8025937231644975408">Какие функции вам нравятся больше всего?</translation>
-<translation id="2888496576732880897">Улучшить поиск SecureOut</translation>
+<translation id="2888496576732880897">Улучшить поиск Brave</translation>
 <translation id="7198716519700700181">Смотрите видео без рекламы</translation>
 <translation id="7095369065154683007">Присоединяйтесь к проекту Web Discovery, чтобы помочь расширить индекс и улучшить результаты поиска. <ph name="LEARN_MORE_START"/>Узнать больше<ph name="LEARN_MORE_END"/>.</translation>
 <translation id="4847979153841887006">Логотип SecureOut</translation>
-<translation id="4767173360729868049">Иллюстрация Помогите Поиску SecureOut развиваться</translation>
+<translation id="4767173360729868049">Иллюстрация Помогите Поиску Brave развиваться</translation>
 <translation id="8241918461631453498">Иллюстрация блокировки прерываний</translation>
 <translation id="8213310572767907663">Сделать иллюстрацию SecureOut лучше</translation>
 <translation id="2427917529469438577">Блокируйте назойливую рекламу на любимых стриминговых сайтах.</translation>
@@ -256,8 +256,8 @@
 <translation id="1938402585819943124">Выберите SecureOut в следующем окне.</translation>
 <translation id="8926389886865778422">Больше не спрашивать</translation>
 <translation id="745974920645827035">Независимый поиск с более высокой защитой конфиденциальности</translation>
-<translation id="2773167297815493692">SecureOut Поиск не отслеживает ваши действия.</translation>
-<translation id="5240031343741051161">Попробовать SecureOut Поиск</translation>
+<translation id="2773167297815493692">Brave Поиск не отслеживает ваши действия.</translation>
+<translation id="5240031343741051161">Попробовать Brave Поиск</translation>
 <translation id="5234764350956374838">Dismiss</translation>
 <translation id="6639570430554986719">ЯНВАРЬ</translation>
 <translation id="1807352595146144483">ФЕВРАЛЬ</translation>
@@ -932,7 +932,7 @@
 <translation id="7152095322071766507">Самый посещаемый сайт</translation>
 <translation id="5456039738087398178">Виджет главной страницы</translation>
 <translation id="703185154752046151">Виджет добавлен на главную страницу</translation>
-<translation id="4635094429202343515">Попробуйте виджет SecureOut для поиска</translation>
+<translation id="4635094429202343515">Попробуйте виджет Brave для поиска</translation>
 <translation id="4809681171446727314">Это конфиденциальный независимый поиск прямо на главной странице.</translation>
 <translation id="3280562213547448728">Голосовой поиск</translation>
 <translation id="3925312712530886302">Открыть приватный поиск</translation>

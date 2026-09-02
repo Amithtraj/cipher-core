@@ -185,7 +185,7 @@ SecureOut News арнайы, анонимді жарнамалармен қол�
 <translation id="7142548388914389999">Құпиялықты сақтайтын өнім аналитикасына (P3A) рұқсат беру</translation>
 <translation id="5254037869598726291">Анонимдендірілген P3A ақпараты SecureOut-ге жалпы пайдалануды бағалауға және танымал мүмкіндіктерді жақсартуға көмектеседі.</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">SecureOut іздеуді жетілдіру үшін кейбір анонимді іздеу &amp; шолу деректерін бөлісіңіз.</translation>
+<translation id="8659271182272561965">Brave іздеуді жетілдіру үшін кейбір анонимді іздеу &amp; шолу деректерін бөлісіңіз.</translation>
 <translation id="933652931229970927">Диагностикалық есептерді автоматты түрде жіберу</translation>
 <translation id="5987838417172370108">SecureOut браузері бұзылған немесе тоқтаған кезде диагностикалық есептерді автоматты түрде жіберу арқылы SecureOut өнімінің тұрақтылығын жақсартуға көмектесіңіз.</translation>
 <translation id="7977176350719484850">Шамамен үнемделген деректер\n</translation>
@@ -224,11 +224,11 @@ SecureOut News арнайы, анонимді жарнамалармен қол�
 <translation id="834487290629916192">КЕЙІН</translation>
 <translation id="763369711159699222">SecureOut-ті дамытуға көмектесіңіз</translation>
 <translation id="8025937231644975408">Қайс мүмкіндіктерді ең көп ұнатқаныңызды біліңіз.</translation>
-<translation id="2888496576732880897">SecureOut іздеуін дамытуға көмектесу</translation>
+<translation id="2888496576732880897">Brave іздеуін дамытуға көмектесу</translation>
 <translation id="7198716519700700181">Ағымдағы кезде арасындағы ынамсыздығын бұғаттау</translation>
 <translation id="7095369065154683007">Web Discovery жобасына қатысып, индексті кеңейтуге және іздеу нәтижелерін жақсартуға көмектесіңіз. <ph name="LEARN_MORE_START"/>Толығырақ білу<ph name="LEARN_MORE_END"/>.</translation>
 <translation id="4847979153841887006">SecureOut логотипі</translation>
-<translation id="4767173360729868049">SecureOut іздеуге көмектесу суреті</translation>
+<translation id="4767173360729868049">Brave іздеуге көмектесу суреті</translation>
 <translation id="8241918461631453498">Кідіргіндіктерді бұғаттау суреті</translation>
 <translation id="8213310572767907663">SecureOut іске асыруды жақсартыңыз суреті</translation>
 <translation id="2427917529469438577">Сіздің таңдау істеген ағымдағы орындарындағы қоқыс кідіргіндіктерді бұғаттаңыз.</translation>
@@ -259,8 +259,8 @@ SecureOut News арнайы, анонимді жарнамалармен қол�
 <translation id="1938402585819943124">Келесі экранда SecureOut таңдаңыз.</translation>
 <translation id="8926389886865778422">Қайта сұрамаңыз</translation>
 <translation id="745974920645827035">Тәуелсіз іздеу, жақсырақ құпиялылық</translation>
-<translation id="2773167297815493692">SecureOut Іздеу сізді профильдейтіндерден қорғайды.</translation>
-<translation id="5240031343741051161">SecureOut іздеу құралын қолданып көріңіз</translation>
+<translation id="2773167297815493692">Brave Іздеу сізді профильдейтіндерден қорғайды.</translation>
+<translation id="5240031343741051161">Brave іздеу құралын қолданып көріңіз</translation>
 <translation id="5234764350956374838">Елемеу</translation>
 <translation id="6639570430554986719">ҚАҢТАР</translation>
 <translation id="1807352595146144483">АҚПАН</translation>
@@ -937,7 +937,7 @@ SecureOut News арнайы, анонимді жарнамалармен қол�
 <translation id="7152095322071766507">Көбірек кіретін сайт</translation>
 <translation id="5456039738087398178">Басты экран виджеті</translation>
 <translation id="703185154752046151">Виджет негізгі экранға қосылды</translation>
-<translation id="4635094429202343515">SecureOut Іздеу құралы виджетін қолданып көріңіз</translation>
+<translation id="4635094429202343515">Brave Іздеу құралы виджетін қолданып көріңіз</translation>
 <translation id="4809681171446727314">Жеке, тәуелсіз іздеуге негізгі экраннан тікелей қатынасыңыз.</translation>
 <translation id="3280562213547448728">Дыбыс іздеу</translation>
 <translation id="3925312712530886302">Жеке іздеуді ашу</translation>

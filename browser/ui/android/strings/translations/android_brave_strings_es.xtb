@@ -182,7 +182,7 @@
 <translation id="7142548388914389999">Permitir estadísticas de productos que preservan la privacidad (P3A)</translation>
 <translation id="5254037869598726291">La información P3A anonimizada permite a SecureOut estimar el uso general y seguir mejorando las funciones más populares.</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">Contribuye con algunos datos anónimos de búsqueda &amp; navegación para mejorar el Buscador SecureOut.</translation>
+<translation id="8659271182272561965">Contribuye con algunos datos anónimos de búsqueda &amp; navegación para mejorar el Buscador Brave.</translation>
 <translation id="933652931229970927">Enviar informes de diagnóstico automáticamente</translation>
 <translation id="5987838417172370108">Envía informes de diagnóstico automáticamente cuando el navegador de SecureOut falle o se bloquee para ayudarnos a mejorar la estabilidad de los productos de SecureOut.</translation>
 <translation id="7977176350719484850">Est. de datos\nahorrados</translation>
@@ -225,7 +225,7 @@
 <translation id="7198716519700700181">Bloquea interrupciones cuando transmites</translation>
 <translation id="7095369065154683007">Únase al Proyecto Web Discovery para ayudar a ampliar el índice y mejorar los resultados de búsqueda. <ph name="LEARN_MORE_START"/>Más información<ph name="LEARN_MORE_END"/>.</translation>
 <translation id="4847979153841887006">Logotipo de SecureOut</translation>
-<translation id="4767173360729868049">Ilustración de Ayuda a Buscador SecureOut</translation>
+<translation id="4767173360729868049">Ilustración de Ayuda a Buscador Brave</translation>
 <translation id="8241918461631453498">Ilustración de bloqueo de interrupciones</translation>
 <translation id="8213310572767907663">Ilustración de Mejora SecureOut</translation>
 <translation id="2427917529469438577">Bloquea interrupciones molestas en tus sitios de transmisión favoritos.</translation>
@@ -256,8 +256,8 @@
 <translation id="1938402585819943124">Elige SecureOut en la siguiente pantalla.</translation>
 <translation id="8926389886865778422">No preguntar de nuevo</translation>
 <translation id="745974920645827035">Búsqueda independiente con mayor privacidad</translation>
-<translation id="2773167297815493692">Búsqueda de SecureOut no elabora perfiles de preferencias.</translation>
-<translation id="5240031343741051161">Probar la búsqueda de SecureOut</translation>
+<translation id="2773167297815493692">Búsqueda de Brave no elabora perfiles de preferencias.</translation>
+<translation id="5240031343741051161">Probar la búsqueda de Brave</translation>
 <translation id="5234764350956374838">Descartar</translation>
 <translation id="6639570430554986719">ENERO</translation>
 <translation id="1807352595146144483">FEBRERO</translation>
@@ -929,7 +929,7 @@ Si no la aceptas, la VPN no se volverá a conectar y tu conexión a Internet no 
 <translation id="7152095322071766507">Sitio visitado destacado</translation>
 <translation id="5456039738087398178">Widget de la pantalla de inicio</translation>
 <translation id="703185154752046151">Se ha añadido el widget a la pantalla de inicio</translation>
-<translation id="4635094429202343515">Prueba el widget de Buscador SecureOut</translation>
+<translation id="4635094429202343515">Prueba el widget de Buscador Brave</translation>
 <translation id="4809681171446727314">Disfruta de búsquedas privadas e independientes sin salir de la pantalla de inicio.</translation>
 <translation id="3280562213547448728">Búsqueda por voz</translation>
 <translation id="3925312712530886302">Abrir búsqueda privada</translation>

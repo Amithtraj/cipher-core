@@ -1162,10 +1162,14 @@ public class BraveNewTabPageLayout extends NewTabPageLayout
     private void getAndShowNTPImage() {
         assertNonNull(mSponsoredTab);
         // SecureOut: don't round-trip through NTPBackgroundImagesBridge to fetch a
-        // remotely component-updated (default or sponsored/branded) wallpaper -- that
-        // network fetch is cut entirely for privacy, and sponsored NTP wallpapers are
-        // out of scope for this build regardless. Always use the locally-bundled
-        // placeholder background so the NTP has a deterministic, non-photo default.
+        // remotely component-updated (default or sponsored/branded) wallpaper --
+        // sponsored NTP wallpapers are out of scope for this build regardless, and
+        // always use the locally-bundled placeholder background so the NTP has a
+        // deterministic, non-photo default. The underlying network fetch itself is
+        // also disabled on the native side (see the BUILDFLAG(IS_ANDROID) guard in
+        // NTPBackgroundImagesService::Init(), components/ntp_background_images/
+        // browser/ntp_background_images_service.cc) so this isn't just skipping the
+        // display of already-fetched data.
         if (mActivity == null || mActivity.isFinishing() || mActivity.isDestroyed()) {
             return;
         }

@@ -182,7 +182,7 @@
 <translation id="7142548388914389999">អនុញ្ញាតវិភាគផលិតផល​ការពារ​ភាពឯកជន (P3A)</translation>
 <translation id="5254037869598726291">ព័ត៌មាន P3A ដែលបានយកអនាមិកជួយ SecureOut ប៉ាន់ស្មានការប្រើប្រាស់សរុប និងធានាថា យើងកំពុងធ្វើឱ្យលក្ខណៈពិសេសសំខាន់ៗកាន់តែប្រសើរ។</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">រួមចំណែកទិន្នន័យស្វែងរក &amp; រុករកដែលមិនបញ្ចេញឈ្មោះមួយចំនួន ដើម្បីកែលម្អ SecureOut ស្វែងរក។</translation>
+<translation id="8659271182272561965">រួមចំណែកទិន្នន័យស្វែងរក &amp; រុករកដែលមិនបញ្ចេញឈ្មោះមួយចំនួន ដើម្បីកែលម្អ Brave ស្វែងរក។</translation>
 <translation id="933652931229970927">ផ្ញើរបាយការណ៍វិភាគដោយស្វ័យប្រវត្តិ</translation>
 <translation id="5987838417172370108">ជួយកែលម្អស្ថិរភាពផលិតផលរបស់ SecureOut ដោយផ្ញើរបាយការណ៍វិភាគដោយស្វ័យប្រវត្តិ នៅពេលដែលកម្មវិធីរុករក SecureOut គាំង ឬបង្កក។</translation>
 <translation id="7977176350719484850">ប៉ាន់ស្មាន ទិន្នន័យ\nបានរក្សាទុក</translation>
@@ -221,10 +221,10 @@
 <translation id="834487290629916192">ពេលក្រោយ</translation>
 <translation id="763369711159699222">ជួយធ្វើឱ្យ SecureOut កាន់តែប្រសើរឡើង</translation>
 <translation id="8025937231644975408">សូមប្រាប់ឱ្យយើងដឹងថាមុខងារមួយណាដែលអ្នកកំពុងរីករាយក្នុងការប្រើប្រាស់ច្រើនបំផុត។</translation>
-<translation id="2888496576732880897">ជួយកែប្រើ SecureOut ស្វែងរក</translation>
+<translation id="2888496576732880897">ជួយកែប្រើ Brave ស្វែងរក</translation>
 <translation id="7198716519700700181">ទប់ស្កាត់ការរំខានពេលអ្នក stream</translation>
 <translation id="4847979153841887006">និមិត្តសញ្ញា SecureOut</translation>
-<translation id="4767173360729868049">ឧបករណ៍ប្រើប្រាស់សម្រាប់ជួយ SecureOut ស្វែងរក</translation>
+<translation id="4767173360729868049">ឧបករណ៍ប្រើប្រាស់សម្រាប់ជួយ Brave ស្វែងរក</translation>
 <translation id="8241918461631453498">ឧបករណ៍ប្រើប្រាស់សម្រាប់ទប់ស្កាត់ការរំខាន</translation>
 <translation id="8213310572767907663">ឧបករណ៍ប្រើប្រាស់សម្រាប់ធ្វើឱ្យ SecureOut កាន់តែប្រសើរ</translation>
 <translation id="2427917529469438577">ទប់ស្កាត់ការរំខានដ៏烦 annoying នៅលើគេហទំព័រ stream 즐즐 ដែលអ្នកចូលចិត្ត។</translation>
@@ -255,7 +255,7 @@
 <translation id="1938402585819943124">ជ្រើសរើស SecureOut នៅលើអេក្រង់បន្ទាប់។</translation>
 <translation id="8926389886865778422">កុំសួរម្តងទៀត</translation>
 <translation id="745974920645827035">ការស្វែងរកឯករាជ្យជាមួយនឹងភាពឯកជនភាពប្រសើរជាងមុន</translation>
-<translation id="2773167297815493692">SecureOut ស្វែងរកមិនបង្កើតពហុភាពលើអ្នក។</translation>
+<translation id="2773167297815493692">Brave ស្វែងរកមិនបង្កើតពហុភាពលើអ្នក។</translation>
 <translation id="5240031343741051161">សាកល្បង Brave Search</translation>
 <translation id="5234764350956374838">ច្រានចោល</translation>
 <translation id="6639570430554986719">ខែមករា</translation>
@@ -944,7 +944,7 @@
 <translation id="7152095322071766507">គេហទំព័រដែលបានចូលច្រើនជាងគេ</translation>
 <translation id="5456039738087398178">ផ្ទាំងវិចិត្រអេក្រង់ដើម</translation>
 <translation id="703185154752046151">វិចិត្រចនាដែលបានបន្ថែមទៅផ្ទាំងគេហៈំព័រ</translation>
-<translation id="4635094429202343515">សាកល្បងវីជិតស្វែងរក SecureOut</translation>
+<translation id="4635094429202343515">សាកល្បងវីជិតស្វែងរក Brave</translation>
 <translation id="4809681171446727314">ចូលដំណើរការស្វែងរកឯករាជ្យ​ខ្លួន​ឯង​តាមផ្ទះរបស់អ្នក។</translation>
 <translation id="3280562213547448728">ការស្វែងរកឡើងលេខ</translation>
 <translation id="3925312712530886302">បើកការស្វែងរកឯកជន</translation>

@@ -182,7 +182,7 @@
 <translation id="7142548388914389999">Autoriser l'analyse de produits respectueuse de la vie privée (P3A)</translation>
 <translation id="5254037869598726291">Les données P3A anonymisées permettent à SecureOut d'estimer l'utilisation globale et de garantir que nous améliorons les fonctionnalités populaires.</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">Contribuez des données de navigation et de recherche anonymes pour améliorer le moteur de recherche SecureOut.</translation>
+<translation id="8659271182272561965">Contribuez des données de navigation et de recherche anonymes pour améliorer le moteur de recherche Brave.</translation>
 <translation id="933652931229970927">Envoyer automatiquement les rapports de diagnostic</translation>
 <translation id="5987838417172370108">Contribuez à améliorer la stabilité des produits de SecureOut en envoyant automatiquement des rapports de diagnostic lorsque le navigateur SecureOut plante ou se bloque.</translation>
 <translation id="7977176350719484850">Données\néconomisées</translation>
@@ -221,11 +221,11 @@
 <translation id="834487290629916192">PLUS TARD</translation>
 <translation id="763369711159699222">Aidez-nous à améliorer SecureOut</translation>
 <translation id="8025937231644975408">Indiquez-nous les fonctionnalités que vous préférez.</translation>
-<translation id="2888496576732880897">Aidez-nous à développer la recherche SecureOut</translation>
+<translation id="2888496576732880897">Aidez-nous à développer la recherche Brave</translation>
 <translation id="7198716519700700181">Bloquez les interruptions lorsque vous regardez en continu</translation>
 <translation id="7095369065154683007">Participez au Web Discovery Project pour aider à enrichir l'index et à améliorer les résultats de recherche. <ph name="LEARN_MORE_START"/>En savoir plus.<ph name="LEARN_MORE_END"/>.</translation>
 <translation id="4847979153841887006">Logo SecureOut</translation>
-<translation id="4767173360729868049">Illustration d'aide à la recherche SecureOut</translation>
+<translation id="4767173360729868049">Illustration d'aide à la recherche Brave</translation>
 <translation id="8241918461631453498">Illustration de blocage des interruptions</translation>
 <translation id="8213310572767907663">Illustration pour améliorer SecureOut</translation>
 <translation id="2427917529469438577">Bloquez les interruptions gênantes sur vos sites de streaming préférés.</translation>
@@ -256,7 +256,7 @@
 <translation id="1938402585819943124">Choisissez SecureOut sur le prochain écran.</translation>
 <translation id="8926389886865778422">Ne plus afficher ce message</translation>
 <translation id="745974920645827035">Une recherche indépendante avec une meilleure confidentialité</translation>
-<translation id="2773167297815493692">La recherche SecureOut n'établit pas de profil vous concernant.</translation>
+<translation id="2773167297815493692">La recherche Brave n'établit pas de profil vous concernant.</translation>
 <translation id="5240031343741051161">Essayer Brave Search</translation>
 <translation id="5234764350956374838">Fermer</translation>
 <translation id="6639570430554986719">JANVIER</translation>
@@ -929,7 +929,7 @@ Si vous n'acceptez pas cette demande, le VPN ne se reconnectera pas et votre con
 <translation id="7152095322071766507">Site le plus consulté</translation>
 <translation id="5456039738087398178">Gadget logiciel sur l'écran d'accueil</translation>
 <translation id="703185154752046151">Gadget logiciel ajouté à l'écran d'accueil</translation>
-<translation id="4635094429202343515">Essayez le widget de recherche SecureOut</translation>
+<translation id="4635094429202343515">Essayez le widget de recherche Brave</translation>
 <translation id="4809681171446727314">Utilisez un moteur de recherche indépendant et protégeant votre vie privée directement depuis votre écran d'accueil.</translation>
 <translation id="3280562213547448728">Recherche vocale</translation>
 <translation id="3925312712530886302">Ouvrir une recherche privée</translation>

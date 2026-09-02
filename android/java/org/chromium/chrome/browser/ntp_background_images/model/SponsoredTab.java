@@ -5,47 +5,16 @@
 
 package org.chromium.chrome.browser.ntp_background_images.model;
 
-import org.chromium.base.Callback;
 import org.chromium.chrome.browser.ntp_background_images.NTPBackgroundImagesBridge;
-import org.chromium.chrome.browser.ntp_background_images.util.NTPImageUtil;
-import org.chromium.chrome.browser.ntp_background_images.util.SponsoredImageUtil;
 
+// SecureOut: this class is now only used as a marker of whether the NTP background-image
+// feature has been initialized for a tab (see the `mSponsoredTab != null` checks in
+// BraveNewTabPageLayout/BraveNtpAdapter) -- BraveNewTabPageLayout.getAndShowNTPImage() no
+// longer calls into NTPBackgroundImagesBridge to fetch a wallpaper at all, so the
+// getNTPImage()/getNTPImageCallback() methods that used to do that (and the bridge reference
+// they needed) were removed as dead code. The constructor signature is left unchanged since
+// it's still the marker BraveNewTabPageLayout.initilizeSponsoredTab() constructs.
 public class SponsoredTab {
-    private final NTPBackgroundImagesBridge mNTPBackgroundImagesBridge;
-    private NTPImage mNtpImage;
-    private boolean mNTPImageReady;
-
     public SponsoredTab(
-            NTPBackgroundImagesBridge mNTPBackgroundImagesBridge, boolean allowSponsoredImage) {
-        this.mNTPBackgroundImagesBridge = mNTPBackgroundImagesBridge;
-    }
-
-    public void getNTPImage(boolean allowSponsoredImage, Callback<NTPImage> callback) {
-        // Return cached NTP image if available. We maintain only one NTP image per tab.
-        if (mNTPImageReady) {
-            callback.onResult(mNtpImage);
-            return;
-        }
-
-        NTPImageUtil.getNTPImage(
-                mNTPBackgroundImagesBridge,
-                allowSponsoredImage,
-                ntpImage -> getNTPImageCallback(ntpImage, callback));
-    }
-
-    private void getNTPImageCallback(NTPImage ntpImage, Callback<NTPImage> callback) {
-        mNtpImage = ntpImage;
-
-        if (mNtpImage == null) {
-            mNtpImage = SponsoredImageUtil.getBackgroundImage();
-        } else if (mNtpImage instanceof Wallpaper) {
-            Wallpaper wallpaper = (Wallpaper) mNtpImage;
-            if (wallpaper == null) {
-                mNtpImage = SponsoredImageUtil.getBackgroundImage();
-            }
-        }
-
-        mNTPImageReady = true;
-        callback.onResult(mNtpImage);
-    }
+            NTPBackgroundImagesBridge mNTPBackgroundImagesBridge, boolean allowSponsoredImage) {}
 }

@@ -182,7 +182,7 @@
 <translation id="7142548388914389999">允许保留隐私的产品分析 (P3A)</translation>
 <translation id="5254037869598726291">匿名的 P3A 信息有助于 SecureOut 估计总体使用量，并确保我们’在改进受欢迎的功能。</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">贡献一些匿名的搜索和浏览数据，以改进 SecureOut 搜索。</translation>
+<translation id="8659271182272561965">贡献一些匿名的搜索和浏览数据，以改进 Brave 搜索。</translation>
 <translation id="933652931229970927">自动发送诊断报告</translation>
 <translation id="5987838417172370108">SecureOut 浏览器崩溃或无响应时自动发送诊断报告，帮助提高 SecureOut\u2019s 产品稳定性。</translation>
 <translation id="7977176350719484850">预计\n节省的数据</translation>
@@ -221,11 +221,11 @@
 <translation id="834487290629916192">后来</translation>
 <translation id="763369711159699222">帮助让 SecureOut 变得更好</translation>
 <translation id="8025937231644975408">与我们分享您最喜欢的功能。</translation>
-<translation id="2888496576732880897">帮助 SecureOut 搜索不断进步</translation>
+<translation id="2888496576732880897">帮助 Brave 搜索不断进步</translation>
 <translation id="7198716519700700181">防止流媒体广告干扰</translation>
 <translation id="7095369065154683007">加入“网络探索项目”，帮助扩充索引并改善搜索结果。 <ph name="LEARN_MORE_START"/>了解更多<ph name="LEARN_MORE_END"/>.</translation>
 <translation id="4847979153841887006">SecureOut 徽标</translation>
-<translation id="4767173360729868049">帮助 SecureOut 搜索插图</translation>
+<translation id="4767173360729868049">帮助 Brave 搜索插图</translation>
 <translation id="8241918461631453498">阻止中断插图</translation>
 <translation id="8213310572767907663">改进 SecureOut 插图</translation>
 <translation id="2427917529469438577">在您喜欢的流媒体网站上屏蔽烦人的广告干扰。</translation>
@@ -256,8 +256,8 @@
 <translation id="1938402585819943124">在下个屏幕中选中 SecureOut。</translation>
 <translation id="8926389886865778422">不再询问</translation>
 <translation id="745974920645827035">在进行独立搜索时可受到更好的隐私保护</translation>
-<translation id="2773167297815493692">SecureOut 搜索不会记录您的个人资料。</translation>
-<translation id="5240031343741051161">尝试SecureOut搜索</translation>
+<translation id="2773167297815493692">Brave 搜索不会记录您的个人资料。</translation>
+<translation id="5240031343741051161">尝试Brave搜索</translation>
 <translation id="5234764350956374838">关闭</translation>
 <translation id="6639570430554986719">一月</translation>
 <translation id="1807352595146144483">二月</translation>
@@ -932,7 +932,7 @@
 <translation id="7152095322071766507">访问量最高的网站</translation>
 <translation id="5456039738087398178">主屏幕小部件</translation>
 <translation id="703185154752046151">添加到主屏幕的小部件</translation>
-<translation id="4635094429202343515">尝试 SecureOut 搜索小部件</translation>
+<translation id="4635094429202343515">尝试 Brave 搜索小部件</translation>
 <translation id="4809681171446727314">从您的主屏幕访问私人、独立搜索的权利。</translation>
 <translation id="3280562213547448728">语音搜索</translation>
 <translation id="3925312712530886302">打开无痕搜索</translation>

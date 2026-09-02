@@ -182,7 +182,7 @@
 <translation id="7142548388914389999">Cho phép phân tích sản phẩm bảo toàn quyền riêng tư (P3A)</translation>
 <translation id="5254037869598726291">Thông tin P3A ẩn danh hóa giúp SecureOut ước tính mức sử dụng tổng thể và bảo đảm rằng chúng tôi đang cải thiện những tính năng phổ biến.</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">Đóng góp một số dữ liệu tìm kiếm &amp; duyệt web ẩn danh để tinh chỉnh SecureOut Tìm kiếm.</translation>
+<translation id="8659271182272561965">Đóng góp một số dữ liệu tìm kiếm &amp; duyệt web ẩn danh để tinh chỉnh Brave Tìm kiếm.</translation>
 <translation id="933652931229970927">Tự động gửi báo cáo chẩn đoán</translation>
 <translation id="5987838417172370108">Giúp cải thiện độ ổn định của sản phẩm SecureOut bằng cách tự động gửi báo cáo chẩn đoán khi Trình duyệt SecureOut gặp sự cố hoặc đóng băng.</translation>
 <translation id="7977176350719484850">Dữ liệu ước tính\ntiết kiệm được</translation>
@@ -221,11 +221,11 @@
 <translation id="834487290629916192">ĐỂ SAU</translation>
 <translation id="763369711159699222">Giúp cải thiện SecureOut</translation>
 <translation id="8025937231644975408">Hãy cho chúng tôi biết bạn thích nhất tính năng nào.</translation>
-<translation id="2888496576732880897">Giúp SecureOut Tìm kiếm phát triển</translation>
+<translation id="2888496576732880897">Giúp Brave Tìm kiếm phát triển</translation>
 <translation id="7198716519700700181">Chặn Các Yếu Tố Ngắt Quãng Nội Dung Phát Trực Tuyến</translation>
 <translation id="7095369065154683007">Hãy tham gia Dự án Web Discovery để góp phần mở rộng chỉ mục và cải thiện kết quả tìm kiếm. <ph name="LEARN_MORE_START"/>Tìm hiểu thêm<ph name="LEARN_MORE_END"/>.</translation>
 <translation id="4847979153841887006">Logo SecureOut</translation>
-<translation id="4767173360729868049">Minh họa Giúp SecureOut Tìm kiếm</translation>
+<translation id="4767173360729868049">Minh họa Giúp Brave Tìm kiếm</translation>
 <translation id="8241918461631453498">Minh họa Chặn Các Yếu Tố Ngắt Quãng</translation>
 <translation id="8213310572767907663">Minh họa Làm cho SecureOut tốt hơn</translation>
 <translation id="2427917529469438577">Chặn các yếu tố ngắt quãng phiền nhiễu trên các trang nội dung trực tuyến bạn yêu thích.</translation>
@@ -256,8 +256,8 @@
 <translation id="1938402585819943124">Chọn SecureOut trên màn hình tiếp theo.</translation>
 <translation id="8926389886865778422">Đừng hỏi lại</translation>
 <translation id="745974920645827035">Tìm kiếm độc lập với quyền riêng tư tốt hơn</translation>
-<translation id="2773167297815493692">SecureOut Tìm kiếm không thu thập thông tin về bạn.</translation>
-<translation id="5240031343741051161">Dùng thử Tìm kiếm SecureOut</translation>
+<translation id="2773167297815493692">Brave Tìm kiếm không thu thập thông tin về bạn.</translation>
+<translation id="5240031343741051161">Dùng thử Tìm kiếm Brave</translation>
 <translation id="5234764350956374838">Dismiss</translation>
 <translation id="6639570430554986719">THÁNG 1</translation>
 <translation id="1807352595146144483">THÁNG 2</translation>
@@ -932,7 +932,7 @@ Nếu bạn không chấp nhận yêu cầu này, VPN sẽ không kết nối l�
 <translation id="7152095322071766507">Trang web được truy cập nhiều nhất</translation>
 <translation id="5456039738087398178">Tiện ích màn hình chính</translation>
 <translation id="703185154752046151">Đã thêm tiện ích vào màn hình chính</translation>
-<translation id="4635094429202343515">Dùng thử tiện ích SecureOut Tìm kiếm</translation>
+<translation id="4635094429202343515">Dùng thử tiện ích Brave Tìm kiếm</translation>
 <translation id="4809681171446727314">Truy cập tìm kiếm riêng tư, độc lập ngay từ màn hình chính của bạn.</translation>
 <translation id="3280562213547448728">Tìm kiếm bằng giọng nói</translation>
 <translation id="3925312712530886302">Mở tìm kiếm riêng tư</translation>

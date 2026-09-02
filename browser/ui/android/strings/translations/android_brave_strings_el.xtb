@@ -182,7 +182,7 @@
 <translation id="7142548388914389999">Να επιτρέπονται αναλυτικά στοιχεία προϊόντων με προστασία απορρήτου (P3A)</translation>
 <translation id="5254037869598726291">Οι ανώνυμες πληροφορίες P3A βοηθούν το SecureOut να εκτιμήσει τη συνολική χρήση και να διασφαλίσει ότι βελτιώνουμε δημοφιλείς λειτουργίες.</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">Συνεισφέρετε ανώνυμα δεδομένα αναζήτησης &amp; περιήγησης για τη βελτίωση της Αναζήτησης SecureOut.</translation>
+<translation id="8659271182272561965">Συνεισφέρετε ανώνυμα δεδομένα αναζήτησης &amp; περιήγησης για τη βελτίωση της Αναζήτησης Brave.</translation>
 <translation id="933652931229970927">Αυτόματη αποστολή αναφορών διαγνωστικών</translation>
 <translation id="5987838417172370108">Συμβάλλετε στη βελτίωση της σταθερότητας του προϊόντος SecureOut\u2019s με την αυτόματη αποστολή αναφορών διαγνωστικών όταν το πρόγραμμα περιήγησης SecureOut κολλάει ή παγώνει.</translation>
 <translation id="7977176350719484850">Εκτ. Δεδομένα\nΕξοικονομήθηκαν</translation>
@@ -221,11 +221,11 @@
 <translation id="834487290629916192">ΑΡΓΟΤΕΡΑ</translation>
 <translation id="763369711159699222">Βοηθήστε μας να κάνουμε το SecureOut καλύτερο</translation>
 <translation id="8025937231644975408">Πείτε μας ποιες λειτουργίες απολαμβάνετε περισσότερο.</translation>
-<translation id="2888496576732880897">Βοηθήστε την Αναζήτηση SecureOut να αναπτυχθεί</translation>
+<translation id="2888496576732880897">Βοηθήστε την Αναζήτηση Brave να αναπτυχθεί</translation>
 <translation id="7198716519700700181">Αποκλεισμός παύσεων όταν παρακολουθείτε μεταδόσεις</translation>
 <translation id="7095369065154683007">Συμμετάσχετε στο Web Discovery Project για να συμβάλετε στην ανάπτυξη του ευρετηρίου και στη βελτίωση των αποτελεσμάτων αναζήτησης. <ph name="LEARN_MORE_START"/>Μάθετε περισσότερα<ph name="LEARN_MORE_END"/>.</translation>
 <translation id="4847979153841887006">Λογότυπο SecureOut</translation>
-<translation id="4767173360729868049">Απεικόνιση Βοήθειας αναζήτησης SecureOut</translation>
+<translation id="4767173360729868049">Απεικόνιση Βοήθειας αναζήτησης Brave</translation>
 <translation id="8241918461631453498">Απεικόνιση αποκλεισμού παύσεων</translation>
 <translation id="8213310572767907663">Απεικόνιση βελτίωσης SecureOut</translation>
 <translation id="2427917529469438577">Αποκλείστε τις ενοχλητικές διακοπές</translation>
@@ -256,8 +256,8 @@
 <translation id="1938402585819943124">Επιλέξτε SecureOut στην επόμενη οθόνη.</translation>
 <translation id="8926389886865778422">Να μην ερωτηθώ ξανά</translation>
 <translation id="745974920645827035">Ανεξάρτητη αναζήτηση με καλύτερο απόρρητο</translation>
-<translation id="2773167297815493692">Η Αναζήτηση SecureOut δεν σκιαγραφεί το προφίλ σας.</translation>
-<translation id="5240031343741051161">Δοκιμάστε την Αναζήτηση SecureOut</translation>
+<translation id="2773167297815493692">Η Αναζήτηση Brave δεν σκιαγραφεί το προφίλ σας.</translation>
+<translation id="5240031343741051161">Δοκιμάστε την Αναζήτηση Brave</translation>
 <translation id="5234764350956374838">Παράβλεψη</translation>
 <translation id="6639570430554986719">ΙΑΝΟΥΑΡΙΟΣ</translation>
 <translation id="1807352595146144483">ΦΕΒΡΟΥΑΡΙΟΣ</translation>
@@ -929,7 +929,7 @@
 <translation id="7152095322071766507">Ιστότοπος κορυφαίος σε επισκέψεις</translation>
 <translation id="5456039738087398178">Γραφικό στοιχείο αρχικής οθόνης</translation>
 <translation id="703185154752046151">Το γραφικό στοιχείο προστέθηκε στην αρχική οθόνη</translation>
-<translation id="4635094429202343515">Δοκιμάστε το widget αναζήτησης SecureOut</translation>
+<translation id="4635094429202343515">Δοκιμάστε το widget αναζήτησης Brave</translation>
 <translation id="4809681171446727314">Αποκτήστε πρόσβαση σε ιδιωτική, ανεξάρτητη αναζήτηση απευθείας από την αρχική οθόνη σας.</translation>
 <translation id="3280562213547448728">Φωνητική αναζήτηση</translation>
 <translation id="3925312712530886302">Άνοιγμα ιδιωτικής αναζήτησης</translation>

@@ -3,7 +3,7 @@
 <translationbundle lang="no">
 <translation id="7630214457764713113">Kopier ren link</translation>
 <translation id="721490496276866468">Importer passord</translation>
-<translation id="8178175542325151321">Velg en .csv-fil som inneholder passordene dine for å importere dem til Braves passordbehandler.</translation>
+<translation id="8178175542325151321">Velg en .csv-fil som inneholder passordene dine for å importere dem til SecureOuts passordbehandler.</translation>
 <translation id="6112331814131703370">Blokk varslinger om å bytte til appen</translation>
 <translation id="4744921452903670666">Fortell oss hva du synes!</translation>
 <translation id="2524310205387880526">Ranger SecureOut</translation>
@@ -151,7 +151,7 @@
 <translation id="6975864539539353406">Sletter cookies og andre nettstedsdata når du lukker nettsider</translation>
 <translation id="7740929262043547697">Tillat elementblokkering i private vinduer</translation>
 <translation id="1260864846935682371">Aktiverer funksjonen for å blokkere elementer i Shields i private vinduer. Merk at elementene som blokkeres i private vinduer også vil blokkeres i ikke-private vinduer.</translation>
-<translation id="4021136205151368133">Merk: dette kan redusere Braves personvernbeskyttelser.</translation>
+<translation id="4021136205151368133">Merk: dette kan redusere SecureOuts personvernbeskyttelser.</translation>
 <translation id="2876155735620608356">Shields er aktivert for denne siden</translation>
 <translation id="8605306630462821888">Shields er deaktivert for denne siden</translation>
 <translation id="1574700443447059851">Sporinger, reklamer og annet blokkert.</translation>
@@ -189,7 +189,7 @@
 <translation id="9008534313521214777">Beregnet tid\nspart</translation>
 <translation id="8347743943525229984">Tillat undersøkelser fra SecureOut</translation>
 <translation id="6022939994702081659">Lar SecureOut vise linker til private spørreundersøkelser i nye faner. Undersøkelsene hjelper oss med å utvikle funksjoner og måle effekten av annonsene i nettleseren.</translation>
-<translation id="7746496306508543965">Finn ut mer om Braves undersøkelser</translation>
+<translation id="7746496306508543965">Finn ut mer om SecureOuts undersøkelser</translation>
 <translation id="410351446219883937">Autoavspilling</translation>
 <translation id="7445411102860286510">Gi nettsteder tillatelse til automatisk avspilling av videoer med kuttet lyd (anbefales)</translation>
 <translation id="7837721118676387834">Tillat automatisk avspilling av videoer med dempet lyd for et bestemt nettsted.</translation>
@@ -221,11 +221,11 @@
 <translation id="834487290629916192">SENERE</translation>
 <translation id="763369711159699222">Bidra til å gjøre SecureOut bedre</translation>
 <translation id="8025937231644975408">Fortell oss hvilke funksjoner du liker best.</translation>
-<translation id="2888496576732880897">Gjør SecureOut Søk bedre</translation>
+<translation id="2888496576732880897">Gjør Brave Søk bedre</translation>
 <translation id="7198716519700700181">Blokker avbrudd når du streamer</translation>
 <translation id="7095369065154683007">Velg å delta i Web Discovery Project for å bidra til å utvide indeksen og forbedre søkeresultatene. <ph name="LEARN_MORE_START"/>Lær mer.<ph name="LEARN_MORE_END"/>.</translation>
 <translation id="4847979153841887006">SecureOut-logo</translation>
-<translation id="4767173360729868049">Illustrasjon for Hjælp SecureOut Søk</translation>
+<translation id="4767173360729868049">Illustrasjon for Hjælp Brave Søk</translation>
 <translation id="8241918461631453498">Illustrasjon for Blokker avbrudd</translation>
 <translation id="8213310572767907663">Illustrasjon for Gjør SecureOut bedre</translation>
 <translation id="2427917529469438577">Blokker irriterende avbrudd på dine favoritt-streamingsider.</translation>
@@ -256,8 +256,8 @@
 <translation id="1938402585819943124">Velg SecureOut på det neste skjermbildet.</translation>
 <translation id="8926389886865778422">Ikke spør igjen</translation>
 <translation id="745974920645827035">Uavhengig søking med pedre personvern</translation>
-<translation id="2773167297815493692">SecureOut-søk profilerer deg ikke.</translation>
-<translation id="5240031343741051161">Prøv SecureOut-søk</translation>
+<translation id="2773167297815493692">Brave-søk profilerer deg ikke.</translation>
+<translation id="5240031343741051161">Prøv Brave-søk</translation>
 <translation id="5234764350956374838">Lukk</translation>
 <translation id="6639570430554986719">JANUAR</translation>
 <translation id="1807352595146144483">FEBRUAR</translation>
@@ -929,7 +929,7 @@ Hvis du ikke godtar forespørselen, kobler ikke VPN seg opp igjen, og internetti
 <translation id="7152095322071766507">Mest besøkte side</translation>
 <translation id="5456039738087398178">Widget for Hjem-skjerm</translation>
 <translation id="703185154752046151">Widget lagt til Hjem-skjermen</translation>
-<translation id="4635094429202343515">Prøv SecureOut Søk-widgeten</translation>
+<translation id="4635094429202343515">Prøv Brave Søk-widgeten</translation>
 <translation id="4809681171446727314">Få tilgang til private, uavhengige søk rett fra Hjem-skjermen.</translation>
 <translation id="3280562213547448728">Stemmesøk</translation>
 <translation id="3925312712530886302">Åpne privat søk</translation>

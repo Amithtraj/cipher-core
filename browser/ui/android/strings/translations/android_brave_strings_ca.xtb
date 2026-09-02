@@ -182,7 +182,7 @@
 <translation id="7142548388914389999">Permet l'anàlisi de productes que preserven la privacitat (P3A)</translation>
 <translation id="5254037869598726291">La informació anonimitzada P3A ajuda a SecureOut a estimar l'ús general, i assegurar que millorem característiques populars.</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">Contribuïu amb algunes dades anònimes de cerca i navegació per millorar el Cercador de SecureOut.</translation>
+<translation id="8659271182272561965">Contribuïu amb algunes dades anònimes de cerca i navegació per millorar el Cercador de Brave.</translation>
 <translation id="933652931229970927">Envia informes de diagnòstic automàticament</translation>
 <translation id="5987838417172370108">Ajuda a millorar l'estabilitat del producte de SecureOut\u2019s enviant automàticament informes de diagnòstic quan el Navegador de SecureOut falla o es congela.</translation>
 <translation id="7977176350719484850">Data estimada\ndesada</translation>
@@ -221,11 +221,11 @@
 <translation id="834487290629916192">MÉS TARD</translation>
 <translation id="763369711159699222">Ajuda a millorar SecureOut</translation>
 <translation id="8025937231644975408">Feu-nos saber quines funcions us agraden més.</translation>
-<translation id="2888496576732880897">Ajuda al Cercador de SecureOut a créixer</translation>
+<translation id="2888496576732880897">Ajuda al Cercador de Brave a créixer</translation>
 <translation id="7198716519700700181">Bloqueja les interrupcions mentre veus vídeos</translation>
 <translation id="7095369065154683007">Subscriu-te al Projecte de Descobriment Web per ajudar a fer créixer l'índex i millorar els resultats de cerca. <ph name="LEARN_MORE_START"/>Obteniu més informació<ph name="LEARN_MORE_END"/>.</translation>
 <translation id="4847979153841887006">Logotip de SecureOut</translation>
-<translation id="4767173360729868049">Il·lustració d'ajuda al Cercador de SecureOut</translation>
+<translation id="4767173360729868049">Il·lustració d'ajuda al Cercador de Brave</translation>
 <translation id="8241918461631453498">Il·lustració de bloqueig d'interrupcions</translation>
 <translation id="8213310572767907663">Il·lustració per millorar SecureOut</translation>
 <translation id="2427917529469438577">Bloqueja les interrupcions als teus llocs preferits on veure vídeos.</translation>
@@ -256,8 +256,8 @@
 <translation id="1938402585819943124">Selecciona SecureOut a la pantalla següent.</translation>
 <translation id="8926389886865778422">No m'ho tornis a preguntar</translation>
 <translation id="745974920645827035">Cerca independent amb millor privacitat</translation>
-<translation id="2773167297815493692">El cercador de SecureOut no crea un perfil vostre.</translation>
-<translation id="5240031343741051161">Prova el cercador de SecureOut</translation>
+<translation id="2773167297815493692">El cercador de Brave no crea un perfil vostre.</translation>
+<translation id="5240031343741051161">Prova el cercador de Brave</translation>
 <translation id="5234764350956374838">Omet</translation>
 <translation id="6639570430554986719">GENER</translation>
 <translation id="1807352595146144483">FEBRER</translation>
@@ -929,7 +929,7 @@ Si no acceptes la sol·licitud, la VPN no es tornarà a connectar i la teva conn
 <translation id="7152095322071766507">Lloc més visitat</translation>
 <translation id="5456039738087398178">Giny de pantalla d'inici</translation>
 <translation id="703185154752046151">Giny afegit a la pantalla d'inici</translation>
-<translation id="4635094429202343515">Prova el widget del Cercador de SecureOut</translation>
+<translation id="4635094429202343515">Prova el widget del Cercador de Brave</translation>
 <translation id="4809681171446727314">Accedeix a la cerca privada i independent des de la pantalla d'inici.</translation>
 <translation id="3280562213547448728">Cerca per veu</translation>
 <translation id="3925312712530886302">Obre una cerca privada</translation>

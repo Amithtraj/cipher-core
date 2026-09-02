@@ -182,7 +182,7 @@
 <translation id="7142548388914389999">Võimalda privaatsust säilitav tooteanalüüs (P3A)</translation>
 <translation id="5254037869598726291">Anonüümitud P3A teave aitab SecureOut'il hinnata üldist kasutust ja tagada, et parandame menukaid funktsioone.</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">Panusta veidi anonüümseid otsingu- &amp; sirvimisandmeid, et täiustada SecureOut otsingut.</translation>
+<translation id="8659271182272561965">Panusta veidi anonüümseid otsingu- &amp; sirvimisandmeid, et täiustada Brave otsingut.</translation>
 <translation id="933652931229970927">Saada diagnostikaaruanded automaatselt</translation>
 <translation id="5987838417172370108">Aidake parandada SecureOut'i toote stabiilsust, saates automaatselt diagnostikaaruandeid, kui SecureOut'i brauser läheb krahhi või hangub.</translation>
 <translation id="7977176350719484850">Hin. andmed\nSalvestatud</translation>
@@ -221,11 +221,11 @@
 <translation id="834487290629916192">HILJEM</translation>
 <translation id="763369711159699222">Aidake SecureOut'i paremaks muuta</translation>
 <translation id="8025937231644975408">Andke meile teada, millised funktsioonid teile kõige rohkem meeldivad.</translation>
-<translation id="2888496576732880897">Aita SecureOut otsingul kasvada</translation>
+<translation id="2888496576732880897">Aita Brave otsingul kasvada</translation>
 <translation id="7198716519700700181">Blokeeri häired voogesituse ajal</translation>
 <translation id="7095369065154683007">Liituge Web Discovery Projectiga, et aidata indeksit laiendada ja otsingutulemusi parandada. <ph name="LEARN_MORE_START"/>Lisateave<ph name="LEARN_MORE_END"/>.</translation>
 <translation id="4847979153841887006">SecureOut'i logo</translation>
-<translation id="4767173360729868049">Aidake SecureOut otsingut kasvada illustratsioon</translation>
+<translation id="4767173360729868049">Aidake Brave otsingut kasvada illustratsioon</translation>
 <translation id="8241918461631453498">Häirete blokeerimise illustratsioon</translation>
 <translation id="8213310572767907663">Tee SecureOut'i paremaks illustratsioon</translation>
 <translation id="2427917529469438577">Blokeeri ärritavad häired oma lemmikuallikates.</translation>
@@ -256,8 +256,8 @@
 <translation id="1938402585819943124">Valige järgmisel kuval SecureOut.</translation>
 <translation id="8926389886865778422">Ära enam küsi</translation>
 <translation id="745974920645827035">Sõltumatu otsing ja suurem privaatsus</translation>
-<translation id="2773167297815493692">SecureOut'i otsing ei jälgi teid.</translation>
-<translation id="5240031343741051161">Proovi SecureOut'i otsingut</translation>
+<translation id="2773167297815493692">Brave'i otsing ei jälgi teid.</translation>
+<translation id="5240031343741051161">Proovi Brave'i otsingut</translation>
 <translation id="5234764350956374838">Loobu</translation>
 <translation id="6639570430554986719">JAANUAR</translation>
 <translation id="1807352595146144483">VEEBRUAR</translation>
@@ -930,7 +930,7 @@ Kui te selle taotlusega ei nõustu, siis VPN-i ühendust ei taastata ja teie int
 <translation id="7152095322071766507">Kõige rohkem kasutatud veebisait</translation>
 <translation id="5456039738087398178">Avakuva vidin</translation>
 <translation id="703185154752046151">Vidinat lisati avakuvale</translation>
-<translation id="4635094429202343515">Proovige SecureOut'i otsinguvidinat</translation>
+<translation id="4635094429202343515">Proovige Brave'i otsinguvidinat</translation>
 <translation id="4809681171446727314">Privaatse ja sõltumatu otsingu kasutamine otse avakuvalt.</translation>
 <translation id="3280562213547448728">Hääleotsing</translation>
 <translation id="3925312712530886302">Ava privaatne otsing</translation>

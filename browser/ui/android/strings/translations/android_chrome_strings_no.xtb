@@ -39,7 +39,7 @@
 <translation id="1142732900304639782">Ikke tilby å oversette disse nettstedene</translation>
 <translation id="1143193470214071120">Lukk et vindu eller administrer vinduer</translation>
 <translation id="1149725087019908252">Skanner <ph name="FILE_NAME"/></translation>
-<translation id="7083341910267693582"><ph name="APP_NAME"/> åpnes i SecureOut. Ved å fortsette samtykker du i <ph name="BEGIN_LINK1"/>Braves vilkår for bruk<ph name="END_LINK1"/> og <ph name="BEGIN_LINK2"/>tilleggsvilkårene for bruk av SecureOut og ChromeOS<ph name="END_LINK2"/>.</translation>
+<translation id="7083341910267693582"><ph name="APP_NAME"/> åpnes i SecureOut. Ved å fortsette samtykker du i <ph name="BEGIN_LINK1"/>SecureOuts vilkår for bruk<ph name="END_LINK1"/> og <ph name="BEGIN_LINK2"/>tilleggsvilkårene for bruk av SecureOut og ChromeOS<ph name="END_LINK2"/>.</translation>
 <translation id="7443574521624544928">Du har ikke passord lagret i SecureOut Passordlagring.</translation>
 <translation id="115483310321669804">Bruk passordet <ph name="PASSWORD"/></translation>
 <translation id="4489415936688888898">Gemini i SecureOut</translation>
@@ -302,10 +302,10 @@ Bare personer som har passordfrasen din, kan lese de krypterte dataene. Passordf
 <translation id="2341410551640223969">Kunne ikke installere <ph name="WEBAPK_NAME"/>.</translation>
 <translation id="3587672679800759167">Total datamengde som brukes av SecureOut, deriblant kontoer, bokmerker og lagrede innstillinger</translation>
 <translation id="2354001756790975382">Andre bokmerker</translation>
-<translation id="2767094839186957509">Braves personvernregler</translation>
+<translation id="2767094839186957509">SecureOuts personvernregler</translation>
 <translation id="2359808026110333948">Fortsett</translation>
 <translation id="2362083820973145409">Logget på som <ph name="USER_NAME"/>. <ph name="USER_EMAIL"/>. Åpner innstillinger.</translation>
-<translation id="351551888962017708">Flere sider forhåndslastes. Sider kan bli forhåndslastet via Braves tjenere når andre nettsteder eller apper ber om det.</translation>
+<translation id="351551888962017708">Flere sider forhåndslastes. Sider kan bli forhåndslastet via SecureOuts tjenere når andre nettsteder eller apper ber om det.</translation>
 <translation id="2366554533468315977">Prishistorikk for dette alternativet fra hele nettet</translation>
 <translation id="2367818124433749493">Utviklersnarveier</translation>
 <translation id="2369058545741334020">Åpne i lesemodus</translation>
@@ -322,7 +322,7 @@ Bare personer som har passordfrasen din, kan lese de krypterte dataene. Passordf
 <translation id="2426805022920575512">Velg en annen konto</translation>
 <translation id="2427025860753516072">{FILE_COUNT,plural, =1{Videoer, 1 video på listen}other{Videoer, # videoer på listen}}</translation>
 <translation id="2433507940547922241">Utseende</translation>
-<translation id="6209052069534739007">Når SecureOut-nettsteder eller -apper ber om privat forhåndslasting av linker på sidene sine, medfører det at SecureOut krypterer og forhåndslaster sider gjennom Braves tjenere uten informasjonskapsler. Dermed skjules identiteten din for det forhåndslastede nettstedet.</translation>
+<translation id="6209052069534739007">Når SecureOut-nettsteder eller -apper ber om privat forhåndslasting av linker på sidene sine, medfører det at SecureOut krypterer og forhåndslaster sider gjennom SecureOuts tjenere uten informasjonskapsler. Dermed skjules identiteten din for det forhåndslastede nettstedet.</translation>
 <translation id="7174054574169352743">Betalingsmåter og annen informasjon fra SecureOut Wallet</translation>
 <translation id="2450083983707403292">Vil du laste ned <ph name="FILE_NAME"/> på nytt?</translation>
 <translation id="2451607499823206582">Sporing</translation>
@@ -486,7 +486,7 @@ Bare personer som har passordfrasen din, kan lese de krypterte dataene. Passordf
 <translation id="3066573403916685335">Flytt ned</translation>
 <translation id="3067505415088964188">Prisen er lav</translation>
 <translation id="3070005020161560471">Oversett automatisk</translation>
-<translation id="1094255666887095087"><ph name="APP_NAME"/> åpnes i SecureOut. Ved å fortsette samtykker du i <ph name="BEGIN_LINK1"/>Braves vilkår for bruk<ph name="END_LINK1"/> og <ph name="BEGIN_LINK2"/>tilleggsvilkårene for bruk av SecureOut og ChromeOS<ph name="END_LINK2"/>. <ph name="BEGIN_LINK3"/>Personvernreglene<ph name="END_LINK3"/> gjelder også.</translation>
+<translation id="1094255666887095087"><ph name="APP_NAME"/> åpnes i SecureOut. Ved å fortsette samtykker du i <ph name="BEGIN_LINK1"/>SecureOuts vilkår for bruk<ph name="END_LINK1"/> og <ph name="BEGIN_LINK2"/>tilleggsvilkårene for bruk av SecureOut og ChromeOS<ph name="END_LINK2"/>. <ph name="BEGIN_LINK3"/>Personvernreglene<ph name="END_LINK3"/> gjelder også.</translation>
 <translation id="3080375898390966733">Utfør fanesøk med Google Lens</translation>
 <translation id="3080525922482950719">Du kan lagre sider for å lese dem senere eller uten nett</translation>
 <translation id="3087734570205094154">Bunn</translation>
@@ -578,7 +578,7 @@ Bare personer som har passordfrasen din, kan lese de krypterte dataene. Passordf
 <translation id="3527085408025491307">Mappe</translation>
 <translation id="3542235761944717775"><ph name="KILOBYTES"/> kB er tilgjengelig</translation>
 <translation id="3547933853190131743">Søk med AI-modus</translation>
-<translation id="719175600387583059">Siden de forhåndslastede sidene er krypterte og nettstedet eller appen som linker til sidene, er et SecureOut-nettsted eller en SecureOut-app, får ikke Braves tjenere noen ny informasjon ved privat forhåndslasting av disse sidene.</translation>
+<translation id="719175600387583059">Siden de forhåndslastede sidene er krypterte og nettstedet eller appen som linker til sidene, er et SecureOut-nettsted eller en SecureOut-app, får ikke SecureOuts tjenere noen ny informasjon ved privat forhåndslasting av disse sidene.</translation>
 <translation id="3549657413697417275">Søk i loggen</translation>
 <translation id="3557336313807607643">Legg til i kontakter</translation>
 <translation id="3560831525486613327">Åpne en ny fane-side</translation>
@@ -632,7 +632,7 @@ Bare personer som har passordfrasen din, kan lese de krypterte dataene. Passordf
 <translation id="376561056759077985">Noen av dataene er ikke lagret ennå</translation>
 <translation id="3770620323585347665">Gi vinduet et navn</translation>
 <translation id="3771290962915251154">Denne innstillingen er avslått fordi foreldrekontroll er på</translation>
-<translation id="1138681184697033370">Braves vilkår for bruk</translation>
+<translation id="1138681184697033370">SecureOuts vilkår for bruk</translation>
 <translation id="3777796259512476958">Logger deg av de fleste nettsteder</translation>
 <translation id="5933788931400900138">Du skannet en QR-kode for å logge på SecureOut. Bekreft at du vil hente passordene, bokmerkene med mer fra denne profilen.</translation>
 <translation id="3791957072666773229">{TAB_COUNT,plural, =1{1 fane}other{# faner}}</translation>
@@ -828,7 +828,7 @@ SecureOut-kontoen din kan ha andre former for nettleserlogger, for eksempel søk
 <translation id="2724914440849807699">Feil med SecureOut-kontoen</translation>
 <translation id="4599585406846903742">Visning med én side</translation>
 <translation id="4601095002996233687">Dybdeskanninger av mistenkelige nedlastinger.</translation>
-<translation id="3047078595137661468">Når nettsteder eller apper ber om privat forhåndslasting av linker på sidene sine, medfører det at SecureOut krypterer og forhåndslaster sider gjennom Braves tjenere uten informasjonskapsler. Dermed skjules identiteten din for det forhåndslastede nettstedet.</translation>
+<translation id="3047078595137661468">Når nettsteder eller apper ber om privat forhåndslasting av linker på sidene sine, medfører det at SecureOut krypterer og forhåndslaster sider gjennom SecureOuts tjenere uten informasjonskapsler. Dermed skjules identiteten din for det forhåndslastede nettstedet.</translation>
 <translation id="4616150815774728855">Åpne <ph name="WEBAPK_NAME"/></translation>
 <translation id="4634124774493850572">Bruk passord</translation>
 <translation id="6005362221286220739">{PASSWORDS_COUNT,plural, =1{1 passord og andre elementer er bare lagret på denne enheten. For å bruke dem på andre enheter, lagre dem i SecureOut-kontoen din.}other{# passord og andre elementer er bare lagret på denne enheten. For å bruke dem på andre enheter, lagre dem i SecureOut-kontoen din.}}</translation>
@@ -955,7 +955,7 @@ SecureOut-kontoen din kan ha andre former for nettleserlogger, for eksempel søk
 <translation id="5122378528687922675">Spør forelderen din (<ph name="PARENT_NAME_1"/> eller <ph name="PARENT_NAME_2"/>) hvis du trenger hjelp</translation>
 <translation id="5130015735779747822">Rull til bunnen av siden</translation>
 <translation id="5142281402488957685">For å se nye artikler, dra ned for å laste inn feeden på nytt</translation>
-<translation id="8164849572238219995">Noen av sidene du besøker, er forhåndslastede. Sider kan bli forhåndslastet via Braves tjenere når de er linket på SecureOut-nettsteder eller i SecureOut-apper.</translation>
+<translation id="8164849572238219995">Noen av sidene du besøker, er forhåndslastede. Sider kan bli forhåndslastet via SecureOuts tjenere når de er linket på SecureOut-nettsteder eller i SecureOut-apper.</translation>
 <translation id="5152843274749979095">Ingen støttede apper er installert</translation>
 <translation id="5161254044473106830">Du må oppgi en tittel</translation>
 <translation id="5161262286013276579">Arket for passnøkkelbekreftelse er åpnet</translation>
@@ -1545,7 +1545,7 @@ For å endre denne innstillingen, <ph name="BEGIN_LINK"/>slett SecureOut-dataene
 <translation id="7507207699631365376">Se denne leverandørens <ph name="BEGIN_LINK"/>personvernerklæring<ph name="END_LINK"/></translation>
 <translation id="750886945254958667">Behold denne gruppen for å legge til faner senere, eller forlat den hvis du ikke vil ha tilgang til den lenger</translation>
 <translation id="7514365320538308">Last ned</translation>
-<translation id="9075033240840348521">Bruk Braves standardkryptering for passordene i SecureOut-kontoen din</translation>
+<translation id="9075033240840348521">Bruk SecureOuts standardkryptering for passordene i SecureOut-kontoen din</translation>
 <translation id="7518079994230200553">Dette alternativet er ikke tilgjengelig akkurat nå.</translation>
 <translation id="751961395872307827">Kan ikke koble til nettstedet</translation>
 <translation id="7523960634226602883">Bruk Google Lens for å søke med kameraet</translation>
@@ -1723,7 +1723,7 @@ For å endre denne innstillingen, <ph name="BEGIN_LINK"/>slett SecureOut-dataene
 <translation id="8250920743982581267">Dokumenter</translation>
 <translation id="8257429805444572809">Sluttet å abonnere på <ph name="DOMAIN"/>.</translation>
 <translation id="8258999165172757081">Lagt til</translation>
-<translation id="2876689296031086375">Siden de forhåndslastede sidene er krypterte, får ikke SecureOut vite noe om det forhåndslastede sideinnholdet. Braves tjenere får vite hvilke nettsteder som forhåndslastes privat. Denne informasjonen brukes bare til å forhåndslaste sidene og blir ikke knyttet til annen informasjon i SecureOut-kontoen din.</translation>
+<translation id="2876689296031086375">Siden de forhåndslastede sidene er krypterte, får ikke SecureOut vite noe om det forhåndslastede sideinnholdet. SecureOuts tjenere får vite hvilke nettsteder som forhåndslastes privat. Denne informasjonen brukes bare til å forhåndslaste sidene og blir ikke knyttet til annen informasjon i SecureOut-kontoen din.</translation>
 <translation id="8261506727792406068">Slett</translation>
 <translation id="82619448491672958">Se andre faner</translation>
 <translation id="3895752892853969272">Åpne SecureOut-menyen</translation>

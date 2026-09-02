@@ -182,7 +182,7 @@
 <translation id="7142548388914389999">গোপনীয়তা-রক্ষাকারী পণ্য বিশ্লেষককে (P3A) অনুমতি দিন</translation>
 <translation id="5254037869598726291">বেনামী P3A তথ্য SecureOut-কে সামগ্রিক ব্যবহার অনুমান করতে সাহায্য করে এবং আমরা যে জনপ্রিয় ফিচারগুলি উন্নত করছি তা নিশ্চিত করে।</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">SecureOut সার্চ-কে আরও উন্নত করতে কিছু বেনামী সার্চ ও ব্রাউজিং ডেটা প্রদান করুন।</translation>
+<translation id="8659271182272561965">Brave সার্চ-কে আরও উন্নত করতে কিছু বেনামী সার্চ ও ব্রাউজিং ডেটা প্রদান করুন।</translation>
 <translation id="933652931229970927">স্বয়ংক্রিয়ভাবে ক্র্যাশ রিপোর্টগুলো পাঠায়</translation>
 <translation id="5987838417172370108">SecureOut ব্রাউজার ক্র্যাশ করলে বা আটকে গেলে স্বয়ংক্রিয়ভাবে সমস্যা নির্ণয়ের রিপোর্টগুলো পাঠিয়ে SecureOut এর পণ্যের স্থিতিশীলতা উন্নত করতে সহায়তা করুন।</translation>
 <translation id="7977176350719484850">আনুমানিক ডেটা\nসাশ্রয়</translation>
@@ -221,11 +221,11 @@
 <translation id="834487290629916192">পরে</translation>
 <translation id="763369711159699222">SecureOut কে আরও ভালো করে তুলতে সাহায্য করুন৷</translation>
 <translation id="8025937231644975408">আপনি সবচেয়ে বেশি যে ফিচারগুলি উপভোগ করছেন তা আমাদের জানান।</translation>
-<translation id="2888496576732880897">SecureOut অনুসন্ধান-কে উন্নত হতে সহায়তা করুন</translation>
+<translation id="2888496576732880897">Brave অনুসন্ধান-কে উন্নত হতে সহায়তা করুন</translation>
 <translation id="7198716519700700181">আপনি যখন স্ট্রিম করেন তখন বাধা ব্লক করুন</translation>
 <translation id="7095369065154683007">ইন্ডেক্স বৃদ্ধি করতে এবং অনুসন্ধান ফলাফল উন্নত করতে ওয়েব ডিসকভারি প্রকল্পে অংশগ্রহণ করুন। <ph name="LEARN_MORE_START"/>আরও জানুন<ph name="LEARN_MORE_END"/>.</translation>
 <translation id="4847979153841887006">SecureOut লোগো</translation>
-<translation id="4767173360729868049">SecureOut সার্চ সাহায্যের চিত্র</translation>
+<translation id="4767173360729868049">Brave সার্চ সাহায্যের চিত্র</translation>
 <translation id="8241918461631453498">বাধা ব্লক করার চিত্র</translation>
 <translation id="8213310572767907663">SecureOut-কে আরও ভালো করার চিত্র</translation>
 <translation id="2427917529469438577">আপনার প্রিয় স্ট্রিমিং সাইটে বিরক্তিকর বাধা ব্লক করুন।</translation>
@@ -256,8 +256,8 @@
 <translation id="1938402585819943124">পররবর্তী স্ক্রিনে SecureOut নির্বাচন করুন।</translation>
 <translation id="8926389886865778422">আর জিজ্ঞাসা করবেন না</translation>
 <translation id="745974920645827035">উন্নত গোপনীয়তার সাথে স্বাধীন অনুসন্ধান</translation>
-<translation id="2773167297815493692">SecureOut সার্চ আপনার ব্যক্তিত্ব বিচার করে না।</translation>
-<translation id="5240031343741051161">SecureOut সার্চ ব্যবহার করুন</translation>
+<translation id="2773167297815493692">Brave সার্চ আপনার ব্যক্তিত্ব বিচার করে না।</translation>
+<translation id="5240031343741051161">Brave সার্চ ব্যবহার করুন</translation>
 <translation id="5234764350956374838">খারিজ</translation>
 <translation id="6639570430554986719">জানুয়ারি</translation>
 <translation id="1807352595146144483">ফেব্রুয়ারি</translation>
@@ -929,7 +929,7 @@
 <translation id="7152095322071766507">সেরা ভিজিটেড সাইট</translation>
 <translation id="5456039738087398178">হোম স্ক্রীন উইজেট</translation>
 <translation id="703185154752046151">হোম স্ক্রীনে উইজেট যোগ করা হয়েছে</translation>
-<translation id="4635094429202343515">SecureOut সার্চ উইজেট ব্যবহার করে দেখুন</translation>
+<translation id="4635094429202343515">Brave সার্চ উইজেট ব্যবহার করে দেখুন</translation>
 <translation id="4809681171446727314">সরাসরি আপনার হোম স্ক্রীন থেকে ব্যক্তিগত, স্বাধীন সার্চ অ্যাক্সেস করুন।</translation>
 <translation id="3280562213547448728">ভয়েস অনুসন্ধান</translation>
 <translation id="3925312712530886302">ব্যক্তিগত অনুসন্ধান খুলুন</translation>

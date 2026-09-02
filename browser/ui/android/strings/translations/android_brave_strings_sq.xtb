@@ -33,7 +33,7 @@
 <translation id="4930155581888391118">Aktivizo njoftimet nga SecureOut për të fituar Shpërblime SecureOut.</translation>
 <translation id="325187916104529570">Hap Cilësimet dhe aktivizo njoftimet e pajisjes për Reklamat SecureOut.</translation>
 <translation id="5744802588121897886">Aktivizo njoftimet SecureOut</translation>
-<translation id="7307834434086582547">Aktivizo/Çaktivizo Mbrojtjen e Braves</translation>
+<translation id="7307834434086582547">Aktivizo/Çaktivizo Mbrojtjen e SecureOuts</translation>
 <translation id="15346379325756892">Kalo në mënyrën pamje-në-pamje</translation>
 <translation id="6945863270524203017">Merr përditësime të përjavshme të privatësisë për bllokimin e gjurmuesve dhe reklamave.</translation>
 <translation id="4324735664183300693">Aktivizo njoftimet</translation>
@@ -182,7 +182,7 @@
 <translation id="7142548388914389999">Lejo analiza produkti që ruajnë privatësinë (P3A)</translation>
 <translation id="5254037869598726291">Informacioni i anomizuar P3A ndihmon SecureOut të vlerësojë përdorimin e përgjithshëm dhe të sigurojë që ne po përmirësojmë funksionet popullore.</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">Kontribuoni disa të dhëna anonime kërkimi &amp; shfletimi për të përmirësuar Kërkimin SecureOut.</translation>
+<translation id="8659271182272561965">Kontribuoni disa të dhëna anonime kërkimi &amp; shfletimi për të përmirësuar Kërkimin Brave.</translation>
 <translation id="933652931229970927">Dërgo automatikisht raporte diagnostikimi</translation>
 <translation id="5987838417172370108">Ndihmoni në përmirësimin e stabilitetit të produktit SecureOut duke dërguar automatikisht raporte diagnostike kur Shfletuesi SecureOut bie ose ngrihet.</translation>
 <translation id="7977176350719484850">Rreth Internet\nI kursyer</translation>
@@ -221,11 +221,11 @@
 <translation id="834487290629916192">MË VONË</translation>
 <translation id="763369711159699222">Ndihmo në përmirësimin e SecureOut</translation>
 <translation id="8025937231644975408">Na tregoni cilat veçori ju pëlqejnë më shumë.</translation>
-<translation id="2888496576732880897">Ndihmojini Kërkimit SecureOut të rritet</translation>
+<translation id="2888496576732880897">Ndihmojini Kërkimit Brave të rritet</translation>
 <translation id="7198716519700700181">Blokoni ndërprerjet kur transmetoni</translation>
 <translation id="7095369065154683007">Përfshihuni në Projektin e Zbulimit në Ueb për të ndihmuar në rritjen e indeksit dhe përmirësimin e rezultateve të kërkimit. <ph name="LEARN_MORE_START"/>Mëso më shumë<ph name="LEARN_MORE_END"/>.</translation>
 <translation id="4847979153841887006">Logoja e SecureOut</translation>
-<translation id="4767173360729868049">Ilustrimi i ndihmës për Kërkimin SecureOut</translation>
+<translation id="4767173360729868049">Ilustrimi i ndihmës për Kërkimin Brave</translation>
 <translation id="8241918461631453498">Ilustrimi i bllokimit të ndërprerjeve</translation>
 <translation id="8213310572767907663">Ilustrimi i përmirësimit të SecureOut</translation>
 <translation id="2427917529469438577">Blokoni ndërprerjet e irrituese në sajtet tuaja të preferuara të transmetimit.</translation>
@@ -256,8 +256,8 @@
 <translation id="1938402585819943124">Zgjidhni SecureOut në ekranin tjetër.</translation>
 <translation id="8926389886865778422">Mos pyet sërish</translation>
 <translation id="745974920645827035">Kërkimi i pavarur me privatësi të përmirësuar</translation>
-<translation id="2773167297815493692">Kërkimi SecureOut nuk të profilizon.</translation>
-<translation id="5240031343741051161">Provo Kërkimin SecureOut</translation>
+<translation id="2773167297815493692">Kërkimi Brave nuk të profilizon.</translation>
+<translation id="5240031343741051161">Provo Kërkimin Brave</translation>
 <translation id="5234764350956374838">Heq</translation>
 <translation id="6639570430554986719">JANAR</translation>
 <translation id="1807352595146144483">SHKURT</translation>
@@ -929,7 +929,7 @@ Nëse nuk e pranoni këtë kërkesë, VPN nuk do të rindërlidhet dhe lidhja ju
 <translation id="7152095322071766507">Saidi më i vizituar</translation>
 <translation id="5456039738087398178">Mini-aplikacion i ekranit bazë</translation>
 <translation id="703185154752046151">Widget-i shtua në ekranin kryesor</translation>
-<translation id="4635094429202343515">Provo widget-in e Kërkimit SecureOut</translation>
+<translation id="4635094429202343515">Provo widget-in e Kërkimit Brave</translation>
 <translation id="4809681171446727314">Hyni në kërkimin privat dhe të pavarur drejtpërdrejt nga ekrani juaj kryesor.</translation>
 <translation id="3280562213547448728">Kërkimi me zë</translation>
 <translation id="3925312712530886302">Hap kërkimin privat</translation>

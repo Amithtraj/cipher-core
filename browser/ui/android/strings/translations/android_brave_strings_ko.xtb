@@ -182,7 +182,7 @@
 <translation id="7142548388914389999">프라이버시 보호 제품 분석(P3A) 허용</translation>
 <translation id="5254037869598726291">익명 P3A 정보는 SecureOut가 총체적인 사용 패턴을 평가하여 인기 기능을 개선하는 데 도움이 됩니다.</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">SecureOut 검색을 개선하기 위해 익명의 검색 및 브라우징 데이터를 제공하세요.</translation>
+<translation id="8659271182272561965">Brave 검색을 개선하기 위해 익명의 검색 및 브라우징 데이터를 제공하세요.</translation>
 <translation id="933652931229970927">진단 보고서 자동 전송</translation>
 <translation id="5987838417172370108">SecureOut 브라우저가 작동이 멎거나 프리징이 발생하면 진단 보고서를 자동 전송하여 SecureOut 제품 안정성 향상에 도움을 주세요.</translation>
 <translation id="7977176350719484850">절약 예상\n데이터량</translation>
@@ -221,11 +221,11 @@
 <translation id="834487290629916192">나중에</translation>
 <translation id="763369711159699222">SecureOut 개선에 참여</translation>
 <translation id="8025937231644975408">어떤 기능이 가장 마음에 드는지 알려주세요.</translation>
-<translation id="2888496576732880897">SecureOut 검색 성장 지원</translation>
+<translation id="2888496576732880897">Brave 검색 성장 지원</translation>
 <translation id="7198716519700700181">스트리밍 서비스 이용 시 방해 요소 차단</translation>
 <translation id="7095369065154683007">웹 디스커버리 프로젝트에 참여하여 색인 확장과 검색 결과 개선을 도와주세요. <ph name="LEARN_MORE_START"/>자세히 알아보기<ph name="LEARN_MORE_END"/>.</translation>
 <translation id="4847979153841887006">SecureOut 로고</translation>
-<translation id="4767173360729868049">SecureOut 검색 지원 일러스트레이션</translation>
+<translation id="4767173360729868049">Brave 검색 지원 일러스트레이션</translation>
 <translation id="8241918461631453498">방해 요소 차단 일러스트레이션</translation>
 <translation id="8213310572767907663">SecureOut 개선 일러스트레이션</translation>
 <translation id="2427917529469438577">즐겨 찾는 스트리밍 사이트에서 성가신 방해 요소를 차단하세요.</translation>
@@ -256,7 +256,7 @@
 <translation id="1938402585819943124">다음 화면에서 SecureOut를 선택하세요.</translation>
 <translation id="8926389886865778422">이 메시지 그만 보기</translation>
 <translation id="745974920645827035">프라이버시가 한층 강화된 독립적 검색</translation>
-<translation id="2773167297815493692">SecureOut 검색은 사용자를 프로파일링하지 않습니다.</translation>
+<translation id="2773167297815493692">Brave 검색은 사용자를 프로파일링하지 않습니다.</translation>
 <translation id="5240031343741051161">Brave Search 이용하기</translation>
 <translation id="5234764350956374838">숨기기</translation>
 <translation id="6639570430554986719">1월</translation>
@@ -932,7 +932,7 @@
 <translation id="7152095322071766507">가장 자주 방문한 사이트</translation>
 <translation id="5456039738087398178">홈 화면 위젯</translation>
 <translation id="703185154752046151">홈 화면에 위젯 추가됨</translation>
-<translation id="4635094429202343515">SecureOut 검색 위젯을 사용해 보세요</translation>
+<translation id="4635094429202343515">Brave 검색 위젯을 사용해 보세요</translation>
 <translation id="4809681171446727314">프라이버시가 보호되는 독립적인 검색을 홈 화면에서 바로 이용할 수 있습니다.</translation>
 <translation id="3280562213547448728">음성 검색</translation>
 <translation id="3925312712530886302">비공개 검색 열기</translation>

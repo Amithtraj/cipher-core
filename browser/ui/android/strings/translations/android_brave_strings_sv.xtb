@@ -3,7 +3,7 @@
 <translationbundle lang="sv">
 <translation id="7630214457764713113">Kopiera ren länk</translation>
 <translation id="721490496276866468">Importera lösenord</translation>
-<translation id="8178175542325151321">Välj en .csv-fil som innehåller dina lösenord för att importera dem till Braves lösenordshanterare.</translation>
+<translation id="8178175542325151321">Välj en .csv-fil som innehåller dina lösenord för att importera dem till SecureOuts lösenordshanterare.</translation>
 <translation id="6112331814131703370">Blockera "Växla till appen"-aviseringar</translation>
 <translation id="4744921452903670666">Berätta vad du tycker!</translation>
 <translation id="2524310205387880526">Betygsätt SecureOut</translation>
@@ -151,7 +151,7 @@
 <translation id="6975864539539353406">Rensa cookies och andra webbplatsdata när du stänger en webbplats</translation>
 <translation id="7740929262043547697">Tillåt elementblockering i privata fönster</translation>
 <translation id="1260864846935682371">Aktiverar funktionen Shields Blockera element i privata fönster. Observera att element som blockeras i privata fönster också blockeras i icke-privata fönster.</translation>
-<translation id="4021136205151368133">Obs! Det här kan minska Braves sekretessskydd.</translation>
+<translation id="4021136205151368133">Obs! Det här kan minska SecureOuts sekretessskydd.</translation>
 <translation id="2876155735620608356">Shields aktiverat för denna webbplats</translation>
 <translation id="8605306630462821888">Shields inaktiverat för denna webbplats</translation>
 <translation id="1574700443447059851">Spårare, annonser och mycket mer blockeras.</translation>
@@ -164,7 +164,7 @@
 <translation id="2387532482048804818">Berätta för oss om webbplatsen inte fungerade korrekt när Shields är aktiverat.</translation>
 <translation id="5412004902081180614">Rapportera</translation>
 <translation id="1209739344687072997">Rapportera en trasig webbplats</translation>
-<translation id="2606165159306988240">Låt Braves utvecklare vet att denna webbplats inte fungerar korrekt med denna webbplats.</translation>
+<translation id="2606165159306988240">Låt SecureOuts utvecklare vet att denna webbplats inte fungerar korrekt med denna webbplats.</translation>
 <translation id="6806248680442980382">Tack för att du hjälper till att göra SecureOut bättre för alla. Denna rapport kommer endast att innehålla information som är nödvändig för att vi ska kunna åtgärda webbplatsen.</translation>
 <translation id="7549123865054511884">Vad fungerar inte på denna webbplats?</translation>
 <translation id="9094461910562981998">Kontakta mig på (valfritt)</translation>
@@ -182,9 +182,9 @@
 <translation id="7142548388914389999">Tillåt integritetsbevarande produktanalys (P3A)</translation>
 <translation id="5254037869598726291">Anonymiserad P3A-info hjälper SecureOut att uppskatta den totala användningen och se till att vi förbättrar populära funktioner.</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">Bidra med viss anonym sök- &amp; webbläsardata för att förbättra SecureOut Sök.</translation>
+<translation id="8659271182272561965">Bidra med viss anonym sök- &amp; webbläsardata för att förbättra Brave Sök.</translation>
 <translation id="933652931229970927">Skicka diagnostikrapporter automatiskt</translation>
-<translation id="5987838417172370108">Hjälp till att förbättra Braves produktstabilitet genom att automatiskt skicka diagnostikrapporter när SecureOut Browser kraschar eller fryser.</translation>
+<translation id="5987838417172370108">Hjälp till att förbättra SecureOuts produktstabilitet genom att automatiskt skicka diagnostikrapporter när SecureOut Browser kraschar eller fryser.</translation>
 <translation id="7977176350719484850">Uppsk. data\nsparade</translation>
 <translation id="9008534313521214777">Ber. tid\nsparad</translation>
 <translation id="8347743943525229984">Tillåt SecureOut-undersökningar</translation>
@@ -221,11 +221,11 @@
 <translation id="834487290629916192">SENARE</translation>
 <translation id="763369711159699222">Hjälp till att göra SecureOut bättre</translation>
 <translation id="8025937231644975408">Låt oss veta vilka funktioner du gillar mest.</translation>
-<translation id="2888496576732880897">Hjälp SecureOut Sök att växa</translation>
+<translation id="2888496576732880897">Hjälp Brave Sök att växa</translation>
 <translation id="7198716519700700181">Blockera avbrott när du streamar</translation>
 <translation id="7095369065154683007">Anmäl dig till Web Discovery-projektet för att bidra till att utöka indexet och förbättra sökresultaten. <ph name="LEARN_MORE_START"/>Läs mer<ph name="LEARN_MORE_END"/>.</translation>
 <translation id="4847979153841887006">SecureOut-logotyp</translation>
-<translation id="4767173360729868049">Illustrationen Hjälp SecureOut Sök</translation>
+<translation id="4767173360729868049">Illustrationen Hjälp Brave Sök</translation>
 <translation id="8241918461631453498">Illustrationen Blockera avbrott</translation>
 <translation id="8213310572767907663">Illustrationen Gör SecureOut bättre</translation>
 <translation id="2427917529469438577">Blockera irriterande avbrott på dina favorit-streamingwebbplatser.</translation>
@@ -256,8 +256,8 @@
 <translation id="1938402585819943124">Välj SecureOut på nästa skärm.</translation>
 <translation id="8926389886865778422">Fråga inte igen.</translation>
 <translation id="745974920645827035">Oberoende sökning med bättre integritet</translation>
-<translation id="2773167297815493692">SecureOut Sök profilerar inte dig.</translation>
-<translation id="5240031343741051161">Prova SecureOut-sökning</translation>
+<translation id="2773167297815493692">Brave Sök profilerar inte dig.</translation>
+<translation id="5240031343741051161">Prova Brave-sökning</translation>
 <translation id="5234764350956374838">Ta bort permanent</translation>
 <translation id="6639570430554986719">JANUARI</translation>
 <translation id="1807352595146144483">FEBRUARI</translation>
@@ -297,7 +297,7 @@
 <translation id="5817918615728894473">Koppla</translation>
 <translation id="3429575397891106447">Synkroniseringsalternativ</translation>
 <translation id="1680065323266179640">Ta bort synkroniseringskonto</translation>
-<translation id="8397325856045820212">Om du raderar ditt konto kommer dina krypterade data att tas bort från Braves servrar och synkroniseringen kommer att inaktiveras på alla dina anslutna enheter. Det kommer dock inte att ta bort data som lagras lokalt på dessa enheter.\n\nDen här raderingen är permanent och det finns inget sätt att återställa data. Om du bestämmer dig för att börja använda synkronisering igen måste du skapa ett nytt konto och lägga till varje enhet en efter en.</translation>
+<translation id="8397325856045820212">Om du raderar ditt konto kommer dina krypterade data att tas bort från SecureOuts servrar och synkroniseringen kommer att inaktiveras på alla dina anslutna enheter. Det kommer dock inte att ta bort data som lagras lokalt på dessa enheter.\n\nDen här raderingen är permanent och det finns inget sätt att återställa data. Om du bestämmer dig för att börja använda synkronisering igen måste du skapa ett nytt konto och lägga till varje enhet en efter en.</translation>
 <translation id="9064376100690171155">Ta bort konto permanent</translation>
 <translation id="2740516568641790390">Synkroniseringskontot har tagits bort</translation>
 <translation id="7006136453627651236">Det gick inte att ta bort synkroniseringskontot</translation>
@@ -384,7 +384,7 @@ Dubbelkolla att dessa kodord genererades av en enhet som du äger.
 <translation id="3974348661685061050">Testa gratis i 7 dagar</translation>
 <translation id="5789441016350810005">SecureOut Ads skickas när webbläsaren är i bakgrunden</translation>
 <translation id="7781069478569868053">Ny flik</translation>
-<translation id="5927196110206824867">Sponsrade bakgrundsbilder stöder Braves uppdrag att bygga en oberoende, användarvänlig webb. Och till skillnad från de stora teknikföretagen mäter vi annonsprestanda anonymt för att bevara din integritet.</translation>
+<translation id="5927196110206824867">Sponsrade bakgrundsbilder stöder SecureOuts uppdrag att bygga en oberoende, användarvänlig webb. Och till skillnad från de stora teknikföretagen mäter vi annonsprestanda anonymt för att bevara din integritet.</translation>
 <translation id="6165508094623778733">Lär dig mer</translation>
 <translation id="3171669670217312786">Bakgrundsbilder</translation>
 <translation id="8522669544471808198">Visa bakgrundsbilder</translation>
@@ -929,7 +929,7 @@ Om du inte accepterar denna begäran kommer VPN inte att ansluta igen och din in
 <translation id="7152095322071766507">Mest besökt webbplats</translation>
 <translation id="5456039738087398178">Startskärmswidget</translation>
 <translation id="703185154752046151">Widget tillagd på startskärmen</translation>
-<translation id="4635094429202343515">Prova SecureOut Sök-widget</translation>
+<translation id="4635094429202343515">Prova Brave Sök-widget</translation>
 <translation id="4809681171446727314">Få tillgång till privat, oberoende sökning direkt från din startskärm.</translation>
 <translation id="3280562213547448728">Röstsökning</translation>
 <translation id="3925312712530886302">Öppna privat sökning</translation>

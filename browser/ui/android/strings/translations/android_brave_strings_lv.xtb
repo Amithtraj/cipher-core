@@ -182,7 +182,7 @@
 <translation id="7142548388914389999">Atļaut privātuma nodrošināšanas produktu analīzi (P3A)</translation>
 <translation id="5254037869598726291">Anonimizēta P3A informācija palīdz SecureOut noteikt vispārējo lietošanas apmēru un ļauj uzlabot populāras funkcijas.</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">Sniedziet daļu anonīmu meklēšanas un pārlūkošanas datu, lai uzlabotu SecureOut meklēšanu.</translation>
+<translation id="8659271182272561965">Sniedziet daļu anonīmu meklēšanas un pārlūkošanas datu, lai uzlabotu Brave meklēšanu.</translation>
 <translation id="933652931229970927">Automātiski nosūtīt diagnostikas ziņojumus</translation>
 <translation id="5987838417172370108">Palīdziet uzlabot SecureOut\u2019s produktu stabilitāti, automātiski nosūtot diagnostikas ziņojumus, kad SecureOut pārlūks avarē vai pārstāj darboties.</translation>
 <translation id="7977176350719484850">Apr. ietaupītie\ndati</translation>
@@ -221,7 +221,7 @@
 <translation id="834487290629916192">VĒLĀK</translation>
 <translation id="763369711159699222">Palīdziet uzlabot SecureOut</translation>
 <translation id="8025937231644975408">Paziņojiet mums, kuras funkcijas jums patīk visvairāk.</translation>
-<translation id="2888496576732880897">Atbalstiet SecureOut meklēšanas izaugsmi</translation>
+<translation id="2888496576732880897">Atbalstiet Brave meklēšanas izaugsmi</translation>
 <translation id="7198716519700700181">Bloķējiet traucējumus, kad pārraidāt saturu</translation>
 <translation id="7095369065154683007">Pievienojieties projektam „Web Discovery“, lai palīdzētu paplašināt indeksu un uzlabot meklēšanas rezultātus. <ph name="LEARN_MORE_START"/>Uzzināt vairāk<ph name="LEARN_MORE_END"/>.</translation>
 <translation id="4847979153841887006">SecureOut logotips</translation>
@@ -256,8 +256,8 @@
 <translation id="1938402585819943124">Izvēlieties SecureOut nākamajā ekrānā</translation>
 <translation id="8926389886865778422">Nejautāt atkārtoti</translation>
 <translation id="745974920645827035">Neatkarīga meklēšana ar labāku privātumu</translation>
-<translation id="2773167297815493692">SecureOut meklēšana neprofilē jūs.</translation>
-<translation id="5240031343741051161">Izmēģiniet SecureOut meklēšanu</translation>
+<translation id="2773167297815493692">Brave meklēšana neprofilē jūs.</translation>
+<translation id="5240031343741051161">Izmēģiniet Brave meklēšanu</translation>
 <translation id="5234764350956374838">Noraidīt</translation>
 <translation id="6639570430554986719">JANVĀRIS</translation>
 <translation id="1807352595146144483">FEBRUĀRIS</translation>
@@ -933,7 +933,7 @@ Ja šo pieprasījumu nepieņemsiet, savienojums ar VPN netiks atkārtoti izveido
 <translation id="7152095322071766507">Visapmeklētākā vietne</translation>
 <translation id="5456039738087398178">Sākuma ekrāna logrīks</translation>
 <translation id="703185154752046151">Logrīks pievienots sākuma ekrānam</translation>
-<translation id="4635094429202343515">Izmēģini SecureOut meklēšanas logrīku</translation>
+<translation id="4635094429202343515">Izmēģini Brave meklēšanas logrīku</translation>
 <translation id="4809681171446727314">Piekļūsti privātai, neatkarīgai meklēšanai taisni no sākuma ekrāna.</translation>
 <translation id="3280562213547448728">Balss meklēšana</translation>
 <translation id="3925312712530886302">Atvērt privāto meklēšanu</translation>

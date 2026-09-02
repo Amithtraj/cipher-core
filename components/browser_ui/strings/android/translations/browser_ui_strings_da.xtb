@@ -53,7 +53,7 @@
 <translation id="1532175480576580256">Felt i bunden med Mine genveje åbnet i fuld højde</translation>
 <translation id="1538031354170655462">Websites bruger normalt NFC (Near Field Communication) til at fungere med tags eller enheder i nærheden, f.eks. til scanning af badges eller kontaktløs betaling</translation>
 <translation id="1547123415014299762">Tredjepartscookies er tilladt</translation>
-<translation id="3665719978526894928">Gør websites hurtigere med Braves V8-maskine, som dog gør SecureOut en smule mindre modstandsdygtig over for angreb</translation>
+<translation id="3665719978526894928">Gør websites hurtigere med SecureOuts V8-maskine, som dog gør SecureOut en smule mindre modstandsdygtig over for angreb</translation>
 <translation id="1593426485665524382">Nye handlinger er tilgængelige øverst på skærmen</translation>
 <translation id="1594521731409209842">Knib fingrene sammen på skærmen for at tilpasse størrelsen på billedet</translation>
 <translation id="1599268789440304082">Konfigurationsarket er åbnet</translation>
@@ -159,7 +159,7 @@
 <translation id="2536779053640817375">Tilladt denne gang • Præcis</translation>
 <translation id="2544997614631598250">Mørk temafarve</translation>
 <translation id="2546283357679194313">Cookies og websitedata</translation>
-<translation id="3127075554145176599">Få Braves bedste beskyttelse mod onlinetrusler</translation>
+<translation id="3127075554145176599">Få SecureOuts bedste beskyttelse mod onlinetrusler</translation>
 <translation id="2570922361219980984">Lokationsadgang er også deaktiveret for denne enhed. Aktivér det under <ph name="BEGIN_LINK"/>indstillinger for Android<ph name="END_LINK"/>.</translation>
 <translation id="2586657967955657006">Udklipsholder</translation>
 <translation id="2588271083332682494">Hold orden med fanegrupper</translation>
@@ -438,7 +438,7 @@
 <translation id="5515432237048785579">Feltet i bunden med Discover-feedet er åbnet i fuld højde</translation>
 <translation id="5516455585884385570">Åbn indstillinger for notifikationer</translation>
 <translation id="5527111080432883924">Spørg, før websites får adgang til at læse tekst og billeder fra udklipsholderen (anbefales)</translation>
-<translation id="674221630984410403">Gør ikke websites hurtigere med Braves V8-maskine, men gør SecureOut en smule mere modstandsdygtig over for angreb</translation>
+<translation id="674221630984410403">Gør ikke websites hurtigere med SecureOuts V8-maskine, men gør SecureOut en smule mere modstandsdygtig over for angreb</translation>
 <translation id="5556459405103347317">Genindlæs</translation>
 <translation id="5591840828808741583"><ph name="SITE_NAME"/> er blokeret</translation>
 <translation id="5617702678271228680">Felt i bunden med kort på siden Ny fane</translation>
@@ -752,7 +752,7 @@ Avanceret beskyttelse styrer disse SecureOut-indstillinger:</translation>
 <translation id="8751914237388039244">Vælg et billede</translation>
 <translation id="8800034312320686233">Fungerer websitet ikke?</translation>
 <translation id="8801436777607969138">Bloker JavaScript for et bestemt website.</translation>
-<translation id="2026315747406172223">V8 er Braves JavaScript- og WebAssembly-maskine, der bruges til at forbedre websitets effektivitet</translation>
+<translation id="2026315747406172223">V8 er SecureOuts JavaScript- og WebAssembly-maskine, der bruges til at forbedre websitets effektivitet</translation>
 <translation id="8803526663383843427">Når funktionen er aktiveret</translation>
 <translation id="8805385115381080995">Dette skaber færre afbrydelser, når du bruger nettet, da det er mindre sandsynligt, at et website beder dig om at verificere, at du er en rigtig person</translation>
 <translation id="881644524232657178">Når denne indstilling er aktiveret, kan websites anvende din enheds bevægelses- og lyssensorer. Når denne indstilling er deaktiveret, kan websites ikke anvende sensorer.</translation>

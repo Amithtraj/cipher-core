@@ -29,6 +29,7 @@
 #include "brave/components/ntp_background_images/browser/sponsored_images_component_data.h"
 #include "brave/components/ntp_background_images/browser/switches.h"
 #include "brave/components/ntp_background_images/browser/url_constants.h"
+#include "build/build_config.h"
 #include "components/component_updater/component_updater_service.h"
 #include "components/prefs/pref_registry_simple.h"
 #include "components/prefs/pref_service.h"
@@ -139,6 +140,16 @@ NTPBackgroundImagesService::~NTPBackgroundImagesService() = default;
 void NTPBackgroundImagesService::Init() {
   pref_change_registrar_.Init(pref_service_);
 
+#if BUILDFLAG(IS_ANDROID)
+  // SecureOut: Android no longer displays a component-updater-delivered NTP
+  // wallpaper (default or sponsored) at all -- see
+  // BraveNewTabPageLayout.getAndShowNTPImage() on the Java side, which now
+  // always uses a local placeholder instead of calling into this service.
+  // Registering these components here would still perform a real network
+  // fetch/periodic update check for data nothing on Android ever reads, so
+  // skip it entirely rather than just not displaying the result.
+  return;
+#else
   // Flag override for testing or demo purposes
   base::FilePath override_sponsored_images_component_path(
       base::CommandLine::ForCurrentProcess()->GetSwitchValuePath(
@@ -157,6 +168,7 @@ void NTPBackgroundImagesService::Init() {
             &NTPBackgroundImagesService::OnVariationsCountryPrefChanged,
             weak_factory_.GetWeakPtr()));
   }
+#endif  // BUILDFLAG(IS_ANDROID)
 }
 
 void NTPBackgroundImagesService::StartTearDown() {

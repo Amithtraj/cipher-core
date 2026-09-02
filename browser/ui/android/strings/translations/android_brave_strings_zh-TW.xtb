@@ -182,7 +182,7 @@
 <translation id="7142548388914389999">允許保護私隱的產品分析 (P3A)</translation>
 <translation id="5254037869598726291">匿名的 P3A 資訊可協助 SecureOut 預估整體使用量，並確保我們可以改進受歡迎的功能。</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">貢獻部分匿名的搜尋與瀏覽資料，以改善 SecureOut 搜尋。</translation>
+<translation id="8659271182272561965">貢獻部分匿名的搜尋與瀏覽資料，以改善 Brave 搜尋。</translation>
 <translation id="933652931229970927">自動傳送診斷報告</translation>
 <translation id="5987838417172370108">在 SecureOut 瀏覽器當機或凍結時自動傳送診斷報告，協助改善 SecureOut 的產品穩定性。</translation>
 <translation id="7977176350719484850">預估節省\n時間</translation>
@@ -221,11 +221,11 @@
 <translation id="834487290629916192">稍後</translation>
 <translation id="763369711159699222">協助提升 SecureOut 品質。</translation>
 <translation id="8025937231644975408">請告訴我們您最喜愛的功能有哪些。</translation>
-<translation id="2888496576732880897">幫助 SecureOut 搜尋成長</translation>
+<translation id="2888496576732880897">幫助 Brave 搜尋成長</translation>
 <translation id="7198716519700700181">觀看串流媒體時防止受到中斷</translation>
 <translation id="7095369065154683007">加入「Web Discovery Project」，協助擴充索引並改善搜尋結果。 <ph name="LEARN_MORE_START"/>了解更多<ph name="LEARN_MORE_END"/>。</translation>
 <translation id="4847979153841887006">SecureOut 標誌</translation>
-<translation id="4767173360729868049">幫助 SecureOut 搜尋插圖</translation>
+<translation id="4767173360729868049">幫助 Brave 搜尋插圖</translation>
 <translation id="8241918461631453498">防止受到中斷插圖</translation>
 <translation id="8213310572767907663">改進 SecureOut 插圖</translation>
 <translation id="2427917529469438577">在你最愛的串流網站阻擋惱人干擾。</translation>
@@ -256,8 +256,8 @@
 <translation id="1938402585819943124">在下一個畫面中選擇 SecureOut。</translation>
 <translation id="8926389886865778422">不再詢問這個問題</translation>
 <translation id="745974920645827035">進行獨立搜尋時，隱私可受到更完善的保護</translation>
-<translation id="2773167297815493692">SecureOut 搜尋不會建立您的使用者輪廓。</translation>
-<translation id="5240031343741051161">尝试SecureOut搜索</translation>
+<translation id="2773167297815493692">Brave 搜尋不會建立您的使用者輪廓。</translation>
+<translation id="5240031343741051161">尝试Brave搜索</translation>
 <translation id="5234764350956374838">關閉</translation>
 <translation id="6639570430554986719">一月</translation>
 <translation id="1807352595146144483">二月</translation>
@@ -932,7 +932,7 @@
 <translation id="7152095322071766507">最常造訪的網站</translation>
 <translation id="5456039738087398178">主畫面小工具</translation>
 <translation id="703185154752046151">新增至主畫面的小工具</translation>
-<translation id="4635094429202343515">試試 SecureOut 搜尋小工具</translation>
+<translation id="4635094429202343515">試試 Brave 搜尋小工具</translation>
 <translation id="4809681171446727314">透過您的主畫面執行私密的獨立搜尋作業。</translation>
 <translation id="3280562213547448728">語音搜尋</translation>
 <translation id="3925312712530886302">開啟無痕搜尋</translation>

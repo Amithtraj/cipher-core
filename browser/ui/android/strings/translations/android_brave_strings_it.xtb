@@ -182,7 +182,7 @@
 <translation id="7142548388914389999">Acconsenti all'analisi dei prodotti di tutela della privacy (P3A).</translation>
 <translation id="5254037869598726291">Le informazioni di analisi P3A rese anonime consentono a SecureOut di stimare l'utilizzo complessivo e ci aiutano a migliorare le funzioni più popolari.</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">Contribuisci con alcuni dati anonimi di ricerca e navigazione per migliorare Ricerca SecureOut.</translation>
+<translation id="8659271182272561965">Contribuisci con alcuni dati anonimi di ricerca e navigazione per migliorare Ricerca Brave.</translation>
 <translation id="933652931229970927">Invia automaticamente i rapporti di diagnostica</translation>
 <translation id="5987838417172370108">Contribuisci ad aumentare la stabilità di SecureOut inviando automaticamente i rapporti di diagnostica quando il browser di SecureOut si arresta in modo anomalo o resta bloccato.</translation>
 <translation id="7977176350719484850">Dati\nrisparmiati</translation>
@@ -221,11 +221,11 @@
 <translation id="834487290629916192">PIÙ TARDI</translation>
 <translation id="763369711159699222">Aiutaci a migliorare SecureOut</translation>
 <translation id="8025937231644975408">Facci sapere quali funzioni ti piacciono di più.</translation>
-<translation id="2888496576732880897">Aiuta Ricerca SecureOut a crescere</translation>
+<translation id="2888496576732880897">Aiuta Ricerca Brave a crescere</translation>
 <translation id="7198716519700700181">Blocca le interruzioni mentre guardi in streaming</translation>
 <translation id="7095369065154683007">Partecipi al progetto Web Discovery per contribuire all’ampliamento dell’indice e al miglioramento dei risultati di ricerca. <ph name="LEARN_MORE_START"/>Per saperne di più<ph name="LEARN_MORE_END"/>.</translation>
 <translation id="4847979153841887006">Logo SecureOut</translation>
-<translation id="4767173360729868049">Illustrazione Aiuta Ricerca SecureOut</translation>
+<translation id="4767173360729868049">Illustrazione Aiuta Ricerca Brave</translation>
 <translation id="8241918461631453498">Illustrazione Blocca interruzioni</translation>
 <translation id="8213310572767907663">Illustrazione Rendi SecureOut migliore</translation>
 <translation id="2427917529469438577">Blocca quelle fastidiose interruzioni sui tuoi siti di streaming preferiti.</translation>
@@ -256,8 +256,8 @@
 <translation id="1938402585819943124">Scegli SecureOut nella prossima schermata.</translation>
 <translation id="8926389886865778422">Non visualizzare più questo avviso</translation>
 <translation id="745974920645827035">Ricerca indipendente con privacy migliore</translation>
-<translation id="2773167297815493692">Ricerca SecureOut non effettua la profilazione dell’utente.</translation>
-<translation id="5240031343741051161">Prova la Ricerca SecureOut</translation>
+<translation id="2773167297815493692">Ricerca Brave non effettua la profilazione dell’utente.</translation>
+<translation id="5240031343741051161">Prova la Ricerca Brave</translation>
 <translation id="5234764350956374838">Ignora</translation>
 <translation id="6639570430554986719">GENNAIO</translation>
 <translation id="1807352595146144483">FEBBRAIO</translation>
@@ -929,7 +929,7 @@ Se non accetti questa richiesta, la VPN non si riconnetterà e la tua connession
 <translation id="7152095322071766507">Sito più visitato</translation>
 <translation id="5456039738087398178">Widget schermata iniziale</translation>
 <translation id="703185154752046151">Widget aggiunto alla schermata iniziale</translation>
-<translation id="4635094429202343515">Prova il widget di Ricerca SecureOut</translation>
+<translation id="4635094429202343515">Prova il widget di Ricerca Brave</translation>
 <translation id="4809681171446727314">Accedi allo strumento di ricerca, indipendente e rispettoso della privacy, direttamente dalla schermata iniziale.</translation>
 <translation id="3280562213547448728">Ricerca vocale</translation>
 <translation id="3925312712530886302">Apri ricerca privata</translation>

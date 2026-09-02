@@ -182,7 +182,7 @@
 <translation id="7142548388914389999">Az adatvédelmet megőrző termékelemzés (P3A) engedélyezése</translation>
 <translation id="5254037869598726291">Az anonimizált P3A információk segítségével a SecureOut felmérheti az átlagos használatot, és biztosíthatja a népszerű funkciók folyamatos fejlesztését.</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">Járulj hozzá némi névtelen keresési &amp; böngészési adattal a SecureOut keresés finomításához.</translation>
+<translation id="8659271182272561965">Járulj hozzá némi névtelen keresési &amp; böngészési adattal a Brave keresés finomításához.</translation>
 <translation id="933652931229970927">Diagnosztikai jelentések automatikus elküldése</translation>
 <translation id="5987838417172370108">Segítsen fejleszteni a SecureOut termékstabilitását azáltal, hogy engedélyezi a diagnosztikai jelentések automatikus elküldését a SecureOut böngésző összeomlása vagy lefagyása esetén.</translation>
 <translation id="7977176350719484850">Becs. adatok\nmentve</translation>
@@ -221,11 +221,11 @@
 <translation id="834487290629916192">KÉSŐBB</translation>
 <translation id="763369711159699222">Segítsen a SecureOut továbbfejlesztésében</translation>
 <translation id="8025937231644975408">Tudassa velünk, mely funkciókat élvezi leginkább.</translation>
-<translation id="2888496576732880897">Segítsen a SecureOut kereső fejlesztésében</translation>
+<translation id="2888496576732880897">Segítsen a Brave kereső fejlesztésében</translation>
 <translation id="7198716519700700181">Megszakítások letiltása streamelés közben</translation>
 <translation id="7095369065154683007">Csatlakozzon a Web Discovery Projecthez, hogy segítsen bővíteni az indexet és javítani a keresési eredményeket. <ph name="LEARN_MORE_START"/>További információk<ph name="LEARN_MORE_END"/>.</translation>
 <translation id="4847979153841887006">SecureOut logó</translation>
-<translation id="4767173360729868049">Segítsen a SecureOut keresés fejlesztésében illusztráció</translation>
+<translation id="4767173360729868049">Segítsen a Brave keresés fejlesztésében illusztráció</translation>
 <translation id="8241918461631453498">Megszakítások letiltása illusztráció</translation>
 <translation id="8213310572767907663">A SecureOut jobb illusztráció</translation>
 <translation id="2427917529469438577">Tiltsa le a zavaró megszakításokat a kedvenc streaming oldalain.</translation>
@@ -256,8 +256,8 @@
 <translation id="1938402585819943124">Válassza ki a SecureOut-et a következő képernyőként.</translation>
 <translation id="8926389886865778422">Többször ne figyelmeztessen</translation>
 <translation id="745974920645827035">Független keresés jobb adatvédelemmel</translation>
-<translation id="2773167297815493692">A SecureOut Keresés nem készít Önről profilt.</translation>
-<translation id="5240031343741051161">A SecureOut kereső kipróbálása</translation>
+<translation id="2773167297815493692">A Brave Keresés nem készít Önről profilt.</translation>
+<translation id="5240031343741051161">A Brave kereső kipróbálása</translation>
 <translation id="5234764350956374838">Elvetés</translation>
 <translation id="6639570430554986719">JANUÁR</translation>
 <translation id="1807352595146144483">FEBRUÁR</translation>
@@ -929,7 +929,7 @@ other {<ph name="CITY_COUNT_MANY"/> város - }
 <translation id="7152095322071766507">Leggyakrabban látogatott oldal</translation>
 <translation id="5456039738087398178">Kezdőképernyős modul</translation>
 <translation id="703185154752046151">Modul hozzáadva a kezdőképernyőhöz</translation>
-<translation id="4635094429202343515">Próbálja ki a SecureOut keresési modulját</translation>
+<translation id="4635094429202343515">Próbálja ki a Brave keresési modulját</translation>
 <translation id="4809681171446727314">Hozzáférés egy privát, független keresőhöz egyenesen a kezdőképernyőjén.</translation>
 <translation id="3280562213547448728">Hangalapú keresés</translation>
 <translation id="3925312712530886302">Privát keresés megnyitása</translation>
