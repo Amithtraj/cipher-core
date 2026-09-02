@@ -54,6 +54,11 @@ public class BraveLeoPrefUtils {
     }
 
     public static void setIsSubscriptionActive(boolean value) {
+        // Same reasoning as getIsSubscriptionActive(): the pref is unregistered when AI Chat
+        // is not compiled in, and setBoolean() on an unregistered pref trips a CHECK.
+        if (!BraveConfig.ENABLE_AI_CHAT || !ChromeFeatureList.isEnabled(BraveFeatureList.AI_CHAT)) {
+            return;
+        }
         Profile profileToUse = BraveLeoPrefUtils.getProfile();
         if (profileToUse == null) {
             Log.e(TAG, "BraveLeoPrefUtils.setIsSubscriptionActive profile is null");
@@ -81,6 +86,11 @@ public class BraveLeoPrefUtils {
     }
 
     public static void setChatPurchaseToken(String token) {
+        // Same reasoning as getIsSubscriptionActive(): the prefs touched below are unregistered
+        // when AI Chat is not compiled in.
+        if (!BraveConfig.ENABLE_AI_CHAT || !ChromeFeatureList.isEnabled(BraveFeatureList.AI_CHAT)) {
+            return;
+        }
         Profile profileToUse = BraveLeoPrefUtils.getProfile();
         if (profileToUse == null) {
             Log.e(TAG, "BraveLeoPrefUtils.setChatPurchaseToken profile is null");
@@ -102,6 +112,11 @@ public class BraveLeoPrefUtils {
     }
 
     public static boolean getIsHistoryEnabled() {
+        // Same reasoning as getIsSubscriptionActive(): the pref is unregistered when AI Chat
+        // is not compiled in, and getBoolean() on an unregistered pref trips a CHECK.
+        if (!BraveConfig.ENABLE_AI_CHAT || !ChromeFeatureList.isEnabled(BraveFeatureList.AI_CHAT)) {
+            return false;
+        }
         Profile profileToUse = BraveLeoPrefUtils.getProfile();
         if (profileToUse == null) {
             Log.e(TAG, "BraveLeoPrefUtils.getIsHistoryEnabled profile is null");
@@ -111,6 +126,11 @@ public class BraveLeoPrefUtils {
     }
 
     public static void setIsHistoryEnabled(boolean isEnabled) {
+        // Same reasoning as getIsSubscriptionActive(): the pref is unregistered when AI Chat
+        // is not compiled in, and setBoolean() on an unregistered pref trips a CHECK.
+        if (!BraveConfig.ENABLE_AI_CHAT || !ChromeFeatureList.isEnabled(BraveFeatureList.AI_CHAT)) {
+            return;
+        }
         Profile profileToUse = BraveLeoPrefUtils.getProfile();
         if (profileToUse == null) {
             Log.e(TAG, "BraveLeoPrefUtils.getIsHistoryEnabled profile is null");
@@ -141,6 +161,11 @@ public class BraveLeoPrefUtils {
     }
 
     public static void setChatPackageName() {
+        // Same reasoning as getIsSubscriptionActive(): the pref is unregistered when AI Chat
+        // is not compiled in, and setString() on an unregistered pref trips a CHECK.
+        if (!BraveConfig.ENABLE_AI_CHAT || !ChromeFeatureList.isEnabled(BraveFeatureList.AI_CHAT)) {
+            return;
+        }
         Profile profileToUse = BraveLeoPrefUtils.getProfile();
         if (profileToUse == null) {
             Log.e(TAG, "BraveLeoPrefUtils.setChatPackageName profile is null");
@@ -153,6 +178,11 @@ public class BraveLeoPrefUtils {
     }
 
     public static void setChatProductId(String productId) {
+        // Same reasoning as getIsSubscriptionActive(): the pref is unregistered when AI Chat
+        // is not compiled in, and setString() on an unregistered pref trips a CHECK.
+        if (!BraveConfig.ENABLE_AI_CHAT || !ChromeFeatureList.isEnabled(BraveFeatureList.AI_CHAT)) {
+            return;
+        }
         Profile profileToUse = BraveLeoPrefUtils.getProfile();
         if (profileToUse == null) {
             Log.e(TAG, "BraveLeoPrefUtils.setChatProductId profile is null");
@@ -170,6 +200,11 @@ public class BraveLeoPrefUtils {
     }
 
     public static boolean isSubscriptionLinked() {
+        // Same reasoning as getIsSubscriptionActive(): the pref is unregistered when AI Chat
+        // is not compiled in, and getInteger() on an unregistered pref trips a CHECK.
+        if (!BraveConfig.ENABLE_AI_CHAT || !ChromeFeatureList.isEnabled(BraveFeatureList.AI_CHAT)) {
+            return false;
+        }
         Profile profileToUse = BraveLeoPrefUtils.getProfile();
         if (profileToUse == null) {
             Log.e(TAG, "BraveLeoPrefUtils.isSubscriptionLinked profile is null");

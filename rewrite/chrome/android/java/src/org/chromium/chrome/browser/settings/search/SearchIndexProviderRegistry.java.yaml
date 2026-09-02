@@ -66,7 +66,10 @@ substitutions:
 
   - description:
       'Append Brave settings search index providers at the end of ALL_PROVIDERS
-      (using FQN to avoid adding imports)'
+      (using FQN to avoid adding imports). VPN/Leo/Leo-default-model are
+      omitted here and appended conditionally instead, since their fragments
+      crash on open when their feature is not compiled into this build (see
+      the following substitution).'
     regex:
       re_pattern:
         '(public static final List<SearchIndexProvider> ALL_PROVIDERS
@@ -77,8 +80,6 @@ substitutions:
                             org.chromium.components.browser_ui.site_settings.BraveSiteSettingsPreferencesBase.SEARCH_INDEX_DATA_PROVIDER,
                             org.chromium.chrome.browser.password_manager.settings.PasswordSettings.SEARCH_INDEX_DATA_PROVIDER,
                             org.chromium.chrome.browser.privacy.settings.BravePrivacySettings.SEARCH_INDEX_DATA_PROVIDER,
-                            org.chromium.chrome.browser.settings.BraveLeoDefaultModelPreferences.SEARCH_INDEX_DATA_PROVIDER,
-                            org.chromium.chrome.browser.settings.BraveLeoPreferences.SEARCH_INDEX_DATA_PROVIDER,
                             org.chromium.chrome.browser.settings.BraveLicensePreferences.SEARCH_INDEX_DATA_PROVIDER,
                             org.chromium.chrome.browser.settings.MediaPreferences.SEARCH_INDEX_DATA_PROVIDER,
                             org.chromium.chrome.browser.settings.BackgroundImagesPreferences.SEARCH_INDEX_DATA_PROVIDER,
@@ -88,7 +89,6 @@ substitutions:
                             org.chromium.chrome.browser.settings.BraveSyncScreensPreference.SEARCH_INDEX_DATA_PROVIDER,
                             org.chromium.chrome.browser.settings.BraveWebrtcPolicyPreferencesFragment.SEARCH_INDEX_DATA_PROVIDER,
                             org.chromium.chrome.browser.settings.developer.BraveQAPreferences.SEARCH_INDEX_DATA_PROVIDER,
-                            org.chromium.chrome.browser.vpn.settings.BraveVpnPreferences.SEARCH_INDEX_DATA_PROVIDER,
                             org.chromium.brave.browser.customize_menu.settings.BraveCustomizeMenuPreferenceFragment.SEARCH_INDEX_DATA_PROVIDER,
                             org.chromium.chrome.browser.password_entry_edit.BlockedCredentialFragmentView.SEARCH_INDEX_DATA_PROVIDER,
                             org.chromium.chrome.browser.password_entry_edit.CredentialEditFragmentView.SEARCH_INDEX_DATA_PROVIDER,
@@ -98,3 +98,33 @@ substitutions:
                             org.chromium.chrome.browser.settings.AppearancePreferences.SEARCH_INDEX_DATA_PROVIDER,
                             org.chromium.chrome.browser.language.settings.BraveLanguageSettings.SEARCH_INDEX_DATA_PROVIDER,
                             org.chromium.chrome.browser.sync.settings.BraveManageSyncSettings.SEARCH_INDEX_DATA_PROVIDER);
+
+            static {
+                // VPN and Leo/AI-Chat settings screens crash on open when their feature is not
+                // compiled into this build (native worker is null / prefs are unregistered);
+                // only index them for search when the corresponding buildflag is enabled.
+                java.util.ArrayList<SearchIndexProvider> braveConditionalProviders =
+                        new java.util.ArrayList<>(ALL_PROVIDERS);
+                if (org.chromium.chrome.browser.BraveConfig.ENABLE_AI_CHAT) {
+                    braveConditionalProviders.add(
+                            org.chromium.chrome.browser.settings.BraveLeoDefaultModelPreferences
+                                    .SEARCH_INDEX_DATA_PROVIDER);
+                    braveConditionalProviders.add(
+                            org.chromium.chrome.browser.settings.BraveLeoPreferences
+                                    .SEARCH_INDEX_DATA_PROVIDER);
+                }
+                if (org.chromium.chrome.browser.BraveConfig.ENABLE_BRAVE_VPN) {
+                    braveConditionalProviders.add(
+                            org.chromium.chrome.browser.vpn.settings.BraveVpnPreferences
+                                    .SEARCH_INDEX_DATA_PROVIDER);
+                }
+                ALL_PROVIDERS = List.copyOf(braveConditionalProviders);
+            }
+
+  - description:
+      'ALL_PROVIDERS is now reassigned by the static block above (to
+      conditionally add VPN/Leo providers), so it can no longer be `final`'
+    regex:
+      pattern:
+        'public static final List<SearchIndexProvider> ALL_PROVIDERS ='
+      replace: 'public static List<SearchIndexProvider> ALL_PROVIDERS ='

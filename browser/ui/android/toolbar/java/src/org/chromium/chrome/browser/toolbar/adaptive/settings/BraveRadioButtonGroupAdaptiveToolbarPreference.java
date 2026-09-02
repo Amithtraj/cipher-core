@@ -16,6 +16,7 @@ import androidx.preference.PreferenceViewHolder;
 import org.chromium.base.BraveFeatureList;
 import org.chromium.build.annotations.NullMarked;
 import org.chromium.build.annotations.Nullable;
+import org.chromium.chrome.browser.BraveConfig;
 import org.chromium.chrome.browser.flags.ChromeFeatureList;
 import org.chromium.chrome.browser.toolbar.R;
 import org.chromium.chrome.browser.toolbar.adaptive.AdaptiveToolbarButtonVariant;
@@ -73,12 +74,16 @@ public class BraveRadioButtonGroupAdaptiveToolbarPreference
                 (RadioButtonWithDescription) holder.findViewById(R.id.adaptive_option_brave_leo);
         if (!sIsJunitTesting
                 && mBraveLeoButton != null
-                && (!ChromeFeatureList.isEnabled(BraveFeatureList.AI_CHAT)
+                && (!BraveConfig.ENABLE_AI_CHAT
+                        || !ChromeFeatureList.isEnabled(BraveFeatureList.AI_CHAT)
                         || sLeoDisabledByPolicy)) {
             mBraveLeoButton.setVisibility(View.GONE);
         }
         mBraveWalletButton =
                 (RadioButtonWithDescription) holder.findViewById(R.id.adaptive_option_brave_wallet);
+        if (!sIsJunitTesting && mBraveWalletButton != null && !BraveConfig.ENABLE_BRAVE_WALLET) {
+            mBraveWalletButton.setVisibility(View.GONE);
+        }
 
         super.onBindViewHolder(holder);
 

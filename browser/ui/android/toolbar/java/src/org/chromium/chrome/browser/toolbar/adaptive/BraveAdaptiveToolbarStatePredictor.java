@@ -10,6 +10,7 @@ import android.content.Context;
 import org.chromium.base.BraveFeatureList;
 import org.chromium.build.annotations.NullMarked;
 import org.chromium.build.annotations.Nullable;
+import org.chromium.chrome.browser.BraveConfig;
 import org.chromium.chrome.browser.flags.ChromeFeatureList;
 import org.chromium.chrome.browser.profiles.Profile;
 import org.chromium.ui.permissions.AndroidPermissionDelegate;
@@ -46,9 +47,10 @@ public class BraveAdaptiveToolbarStatePredictor
             case AdaptiveToolbarButtonVariant.DOWNLOADS:
                 return true;
             case AdaptiveToolbarButtonVariant.LEO:
-                return ChromeFeatureList.isEnabled(BraveFeatureList.AI_CHAT);
+                return BraveConfig.ENABLE_AI_CHAT
+                        && ChromeFeatureList.isEnabled(BraveFeatureList.AI_CHAT);
             case AdaptiveToolbarButtonVariant.WALLET:
-                return true;
+                return BraveConfig.ENABLE_BRAVE_WALLET;
         }
 
         return BraveAdaptiveToolbarStatePredictorDummySuper.isValidSegment(variant);

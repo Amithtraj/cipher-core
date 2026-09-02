@@ -1,5 +1,5 @@
 diff --git a/chrome/android/java/src/org/chromium/chrome/browser/settings/search/SearchIndexProviderRegistry.java b/chrome/android/java/src/org/chromium/chrome/browser/settings/search/SearchIndexProviderRegistry.java
-index a0e827c068d03b2f027f2f40d2fed33a2b6044a7..963e29acc4b576ab60c463dca7fcd0400a1de076 100644
+index a0e827c068d03b2f027f2f40d2fed33a2b6044a7..fb605508b97a9b70c772ba4c2bf665eacfc774e7 100644
 --- a/chrome/android/java/src/org/chromium/chrome/browser/settings/search/SearchIndexProviderRegistry.java
 +++ b/chrome/android/java/src/org/chromium/chrome/browser/settings/search/SearchIndexProviderRegistry.java
 @@ -7,7 +7,6 @@ package org.chromium.chrome.browser.settings.search;
@@ -31,7 +31,13 @@ index a0e827c068d03b2f027f2f40d2fed33a2b6044a7..963e29acc4b576ab60c463dca7fcd040
  import org.chromium.chrome.browser.ssl.HttpsFirstModeSettingsFragment;
  import org.chromium.chrome.browser.sync.settings.AccountManagementFragment;
  import org.chromium.chrome.browser.sync.settings.GoogleServicesSettings;
-@@ -93,7 +89,7 @@ public final class SearchIndexProviderRegistry {
+@@ -88,12 +84,12 @@ public final class SearchIndexProviderRegistry {
+      * <p>When you create a new searchable PreferenceFragment, you must add its
+      * SEARCH_INDEX_DATA_PROVIDER to this list.
+      */
+-    public static final List<SearchIndexProvider> ALL_PROVIDERS =
++    public static List<SearchIndexProvider> ALL_PROVIDERS =
+             List.of(
                      // MainSettings always comes at the top. This fixes the order of the header
                      // groups in which they will be shown in the search results since the index
                      // uses LinkedHashMap internally.
@@ -59,7 +65,7 @@ index a0e827c068d03b2f027f2f40d2fed33a2b6044a7..963e29acc4b576ab60c463dca7fcd040
                      SafetyCheckSettingsFragment.SEARCH_INDEX_DATA_PROVIDER,
                      TabsSettings.SEARCH_INDEX_DATA_PROVIDER,
                      ManageSyncSettings.SEARCH_INDEX_DATA_PROVIDER,
-@@ -159,5 +152,30 @@ public final class SearchIndexProviderRegistry {
+@@ -159,5 +152,49 @@ public final class SearchIndexProviderRegistry {
                      DownloadSettings.SEARCH_INDEX_DATA_PROVIDER,
                      DeveloperSettings.SEARCH_INDEX_DATA_PROVIDER,
                      TracingSettings.SEARCH_INDEX_DATA_PROVIDER,
@@ -69,8 +75,6 @@ index a0e827c068d03b2f027f2f40d2fed33a2b6044a7..963e29acc4b576ab60c463dca7fcd040
 +                    org.chromium.components.browser_ui.site_settings.BraveSiteSettingsPreferencesBase.SEARCH_INDEX_DATA_PROVIDER,
 +                    org.chromium.chrome.browser.password_manager.settings.PasswordSettings.SEARCH_INDEX_DATA_PROVIDER,
 +                    org.chromium.chrome.browser.privacy.settings.BravePrivacySettings.SEARCH_INDEX_DATA_PROVIDER,
-+                    org.chromium.chrome.browser.settings.BraveLeoDefaultModelPreferences.SEARCH_INDEX_DATA_PROVIDER,
-+                    org.chromium.chrome.browser.settings.BraveLeoPreferences.SEARCH_INDEX_DATA_PROVIDER,
 +                    org.chromium.chrome.browser.settings.BraveLicensePreferences.SEARCH_INDEX_DATA_PROVIDER,
 +                    org.chromium.chrome.browser.settings.MediaPreferences.SEARCH_INDEX_DATA_PROVIDER,
 +                    org.chromium.chrome.browser.settings.BackgroundImagesPreferences.SEARCH_INDEX_DATA_PROVIDER,
@@ -80,7 +84,6 @@ index a0e827c068d03b2f027f2f40d2fed33a2b6044a7..963e29acc4b576ab60c463dca7fcd040
 +                    org.chromium.chrome.browser.settings.BraveSyncScreensPreference.SEARCH_INDEX_DATA_PROVIDER,
 +                    org.chromium.chrome.browser.settings.BraveWebrtcPolicyPreferencesFragment.SEARCH_INDEX_DATA_PROVIDER,
 +                    org.chromium.chrome.browser.settings.developer.BraveQAPreferences.SEARCH_INDEX_DATA_PROVIDER,
-+                    org.chromium.chrome.browser.vpn.settings.BraveVpnPreferences.SEARCH_INDEX_DATA_PROVIDER,
 +                    org.chromium.brave.browser.customize_menu.settings.BraveCustomizeMenuPreferenceFragment.SEARCH_INDEX_DATA_PROVIDER,
 +                    org.chromium.chrome.browser.password_entry_edit.BlockedCredentialFragmentView.SEARCH_INDEX_DATA_PROVIDER,
 +                    org.chromium.chrome.browser.password_entry_edit.CredentialEditFragmentView.SEARCH_INDEX_DATA_PROVIDER,
@@ -90,4 +93,26 @@ index a0e827c068d03b2f027f2f40d2fed33a2b6044a7..963e29acc4b576ab60c463dca7fcd040
 +                    org.chromium.chrome.browser.settings.AppearancePreferences.SEARCH_INDEX_DATA_PROVIDER,
 +                    org.chromium.chrome.browser.language.settings.BraveLanguageSettings.SEARCH_INDEX_DATA_PROVIDER,
 +                    org.chromium.chrome.browser.sync.settings.BraveManageSyncSettings.SEARCH_INDEX_DATA_PROVIDER);
++
++    static {
++        // VPN and Leo/AI-Chat settings screens crash on open when their feature is not
++        // compiled into this build (native worker is null / prefs are unregistered);
++        // only index them for search when the corresponding buildflag is enabled.
++        java.util.ArrayList<SearchIndexProvider> braveConditionalProviders =
++                new java.util.ArrayList<>(ALL_PROVIDERS);
++        if (org.chromium.chrome.browser.BraveConfig.ENABLE_AI_CHAT) {
++            braveConditionalProviders.add(
++                    org.chromium.chrome.browser.settings.BraveLeoDefaultModelPreferences
++                            .SEARCH_INDEX_DATA_PROVIDER);
++            braveConditionalProviders.add(
++                    org.chromium.chrome.browser.settings.BraveLeoPreferences
++                            .SEARCH_INDEX_DATA_PROVIDER);
++        }
++        if (org.chromium.chrome.browser.BraveConfig.ENABLE_BRAVE_VPN) {
++            braveConditionalProviders.add(
++                    org.chromium.chrome.browser.vpn.settings.BraveVpnPreferences
++                            .SEARCH_INDEX_DATA_PROVIDER);
++        }
++        ALL_PROVIDERS = List.copyOf(braveConditionalProviders);
++    }
  }
