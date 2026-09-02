@@ -9,6 +9,7 @@ import("//brave/android/java/org/chromium/chrome/browser/billing/sources.gni")
 import("//brave/android/java/org/chromium/chrome/browser/playlist/sources.gni")
 import("//brave/build/android/bytecode/bytecode_rewriter.gni")
 import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
+import("//brave/components/playlist/core/common/buildflags/buildflags.gni")
 
 declare_args() {
   brave_android_manifest_includes = []
@@ -67,7 +68,6 @@ brave_chrome_java_deps = [
   "//brave/components/browser_ui/site_settings/android:java",
   "//brave/components/browser_ui/widget/android:java",
   "//brave/components/misc_metrics/common:mojom_java",
-  "//brave/components/playlist/core/common/mojom:mojom_java",
   "//brave/components/safe_browsing/android:brave_safe_browsing_java",
   "//brave/components/skus/common:mojom_java",
   "//brave/components/url_sanitizer/core/common/mojom:mojom_java",
@@ -101,6 +101,11 @@ brave_chrome_java_deps += brave_app_playlist_deps
 if (enable_brave_wallet) {
   brave_chrome_java_deps +=
       [ "//brave/components/brave_wallet/common:mojom_java" ]
+}
+
+if (enable_playlist) {
+  brave_chrome_java_deps +=
+      [ "//brave/components/playlist/core/common/mojom:mojom_java" ]
 }
 
 brave_chrome_all_java_deps = [
