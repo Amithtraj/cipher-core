@@ -961,8 +961,13 @@ if (is_android) {
     "//brave/browser/android:android_browser_process",
     "//brave/browser/android:tabs_impl",
     "//brave/browser/android/preferences",
-    "//brave/browser/notifications",
   ]
+  # //brave/browser/notifications (brave_ads notification handler) only
+  # exists when enable_brave_ads is on -- see assert() in its own BUILD.gn.
+  if (enable_brave_ads) {
+    brave_chrome_browser_allow_circular_includes_from +=
+        [ "//brave/browser/notifications" ]
+  }
 }
 
 # TODO(https://github.com/brave/brave-browser/issues/43310):
