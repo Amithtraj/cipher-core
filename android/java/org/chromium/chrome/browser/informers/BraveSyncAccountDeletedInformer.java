@@ -10,6 +10,7 @@ import org.jni_zero.CalledByNative;
 import org.chromium.base.ContextUtils;
 import org.chromium.base.Log;
 import org.chromium.chrome.R;
+import org.chromium.chrome.browser.BraveConfig;
 import org.chromium.chrome.browser.BraveSyncWorker;
 import org.chromium.chrome.browser.app.BraveActivity;
 import org.chromium.chrome.browser.settings.BraveSyncScreensPreference;
@@ -30,6 +31,12 @@ public class BraveSyncAccountDeletedInformer {
 
     @CalledByNative
     public static void show() {
+        // Sync's Settings entry point is compiled out of this build (see
+        // BraveConfig.ENABLE_BRAVE_SYNC); don't offer a second path back into
+        // the Sync UI via this snackbar's "Re-create" action.
+        if (!BraveConfig.ENABLE_BRAVE_SYNC) {
+            return;
+        }
         try {
             BraveActivity activity = BraveActivity.getBraveActivity();
 

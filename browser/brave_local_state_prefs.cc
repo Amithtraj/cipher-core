@@ -174,7 +174,14 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
   // map, referrals service, SERP tab helper, Brave Origin service) that
   // remain compiled in even when the stats updater itself is excluded, so
   // it must always be registered.
-  registry->RegisterBooleanPref(kStatsReportingEnabled, true);
+  //
+  // Disabled by default on Android (SecureOut): this pref is the single
+  // gate checked at the point of actually sending a request by both
+  // BraveReferralsService::InitReferral() (referral/promo pings) and
+  // BraveStatsUpdater::OnServerPingTimerFired() (usage pings) before any
+  // network activity occurs, so defaulting it off here stops both without
+  // needing to touch either call site directly.
+  registry->RegisterBooleanPref(kStatsReportingEnabled, !BUILDFLAG(IS_ANDROID));
 #if BUILDFLAG(ENABLE_BRAVE_STATS_UPDATER)
   brave_stats::RegisterLocalStatePrefs(registry);
 #endif

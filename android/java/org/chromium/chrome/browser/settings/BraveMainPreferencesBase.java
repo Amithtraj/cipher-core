@@ -278,6 +278,9 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
         if (!BraveConfig.ENABLE_AI_CHAT) {
             removePreferenceIfPresent(PREF_BRAVE_LEO);
         }
+        if (!BraveConfig.ENABLE_BRAVE_SYNC) {
+            removePreferenceIfPresent(PREF_SYNC);
+        }
         updateSearchEnginePreference();
 
         updateSummaries();
@@ -406,7 +409,11 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
             removePreferenceIfPresent(PREF_HOME_SCREEN_WIDGET);
         }
 
-        setPreferenceOrder(PREF_SYNC, ++generalOrder);
+        if (BraveConfig.ENABLE_BRAVE_SYNC) {
+            setPreferenceOrder(PREF_SYNC, ++generalOrder);
+        } else {
+            removePreferenceIfPresent(PREF_SYNC);
+        }
         setPreferenceOrder(PREF_BRAVE_STATS, ++generalOrder);
         // if notification is not available (eg. for emulators)
         if (findPreference(PREF_NOTIFICATIONS) != null) {
@@ -890,6 +897,9 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
                     if (!BraveConfig.ENABLE_AI_CHAT
                             || BraveLeoPrefUtils.isLeoDisabledByPolicy(profile)) {
                         indexData.removeEntry(getUniqueId(PREF_BRAVE_LEO));
+                    }
+                    if (!BraveConfig.ENABLE_BRAVE_SYNC) {
+                        indexData.removeEntry(getUniqueId(PREF_SYNC));
                     }
                     if (!BraveConfig.ENABLE_BRAVE_NEWS
                             || BraveNewsPolicy.isDisabledByPolicy(profile)) {

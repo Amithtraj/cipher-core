@@ -20,4 +20,8 @@ public class BraveConfig {
   public static final boolean ENABLE_AI_CHAT = BRAVE_ANDROID_ENABLE_AI_CHAT;
   public static final boolean ENABLE_PLAYLIST = BRAVE_ANDROID_ENABLE_PLAYLIST;
   public static final boolean ENABLE_BRAVE_WALLET = BRAVE_ANDROID_ENABLE_BRAVE_WALLET;
+  public static final boolean ENABLE_BRAVE_SYNC = BRAVE_ANDROID_ENABLE_BRAVE_SYNC;
+  public static final boolean ENABLE_P3A = BRAVE_ANDROID_ENABLE_P3A;
+  public static final boolean ENABLE_BRAVE_STATS_REPORTING =
+      BRAVE_ANDROID_ENABLE_BRAVE_STATS_REPORTING;
 }

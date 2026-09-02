@@ -9,15 +9,20 @@
 #include "base/android/jni_string.h"
 #include "brave/browser/android/safe_browsing/buildflags.h"
 #include "brave/browser/brave_browser_process.h"
+#include "brave/browser/brave_stats/buildflags.h"
+#if BUILDFLAG(ENABLE_BRAVE_STATS_UPDATER)
 #include "brave/browser/brave_stats/brave_stats_updater.h"
+#endif  // BUILDFLAG(ENABLE_BRAVE_STATS_UPDATER)
 #include "chrome/android/chrome_jni_headers/BraveActivity_jni.h"
 
 namespace chrome {
 namespace android {
 
 static void JNI_BraveActivity_RestartStatsUpdater(JNIEnv* env) {
+#if BUILDFLAG(ENABLE_BRAVE_STATS_UPDATER)
   g_brave_browser_process->brave_stats_updater()->Stop();
   g_brave_browser_process->brave_stats_updater()->Start();
+#endif  // BUILDFLAG(ENABLE_BRAVE_STATS_UPDATER)
 }
 
 static base::android::ScopedJavaLocalRef<jstring>

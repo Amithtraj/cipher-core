@@ -3,6 +3,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import("//brave/browser/brave_stats/buildflags.gni")
 import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
 import("//brave/components/brave_news/common/buildflags/buildflags.gni")
 import("//brave/components/brave_rewards/core/buildflags/buildflags.gni")
@@ -19,6 +20,21 @@ import("//build/config/android/rules.gni")
 
 declare_args() {
   brave_android_developer_options_code = ""
+
+  # Disabled for Cipher/SecureOut: Brave Sync's server endpoint is already
+  # neutralized to a dead .invalid host (brave/components/brave_sync/BUILD.gn)
+  # and there is no Google/Chrome-account-based sign-in path in Brave's own
+  # Sync (it uses a self-contained QR/word-code chain instead), so the only
+  # remaining way to reach it is the Settings entry point below. Removing
+  # that entry point (see BraveConfig.ENABLE_BRAVE_SYNC) makes the feature
+  # both unreachable and non-functional.
+  enable_brave_sync_android_ui = false
+
+  # Disabled for Cipher/SecureOut: kP3AEnabled already defaults to false on
+  # Android (brave/components/p3a/p3a_service.cc), so this only removes the
+  # Settings toggle that could otherwise flip it back on (see
+  # BraveConfig.ENABLE_P3A).
+  enable_p3a_android_ui = false
 }
 
 java_cpp_enum("brave_android_java_enums_srcjar") {
@@ -43,6 +59,13 @@ java_cpp_template("brave_config_java") {
     "BRAVE_ANDROID_ENABLE_AI_CHAT=$enable_ai_chat",
     "BRAVE_ANDROID_ENABLE_PLAYLIST=$enable_playlist",
     "BRAVE_ANDROID_ENABLE_BRAVE_WALLET=$enable_brave_wallet",
+    "BRAVE_ANDROID_ENABLE_BRAVE_SYNC=$enable_brave_sync_android_ui",
+    "BRAVE_ANDROID_ENABLE_P3A=$enable_p3a_android_ui",
+
+    # Reuses the same flag that gates whether the native usage-ping updater
+    # is compiled in at all (see brave/browser/brave_stats/buildflags.gni),
+    # so the Settings toggle and the feature it controls can never disagree.
+    "BRAVE_ANDROID_ENABLE_BRAVE_STATS_REPORTING=$enable_brave_stats_updater",
   ]
 }
 

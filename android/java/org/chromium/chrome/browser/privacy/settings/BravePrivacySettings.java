@@ -26,6 +26,7 @@ import org.chromium.brave_shields.mojom.FilterListConstants;
 import org.chromium.build.annotations.NullMarked;
 import org.chromium.build.annotations.Nullable;
 import org.chromium.chrome.R;
+import org.chromium.chrome.browser.BraveConfig;
 import org.chromium.chrome.browser.BraveFeatureUtil;
 import org.chromium.chrome.browser.BraveLaunchIntentDispatcher;
 import org.chromium.chrome.browser.BraveLocalState;
@@ -404,8 +405,9 @@ public class BravePrivacySettings extends PrivacySettings {
         mClearBrowsingDataOnExit = (ChromeSwitchPreference) findPreference(PREF_CLEAR_ON_EXIT);
         mClearBrowsingDataOnExit.setOnPreferenceChangeListener(this);
 
-        // Hide P3A setting if it's managed by policy
-        if (BraveLocalState.get().isManagedPreference(BravePref.P3A_ENABLED)) {
+        // Hide P3A setting if it's not compiled into this build or it's managed by policy
+        if (!BraveConfig.ENABLE_P3A
+                || BraveLocalState.get().isManagedPreference(BravePref.P3A_ENABLED)) {
             removePreferenceIfPresent(PREF_SEND_P3A);
             mSendP3A = null;
         } else {
@@ -422,8 +424,10 @@ public class BravePrivacySettings extends PrivacySettings {
             mSendCrashReports.setOnPreferenceChangeListener(this);
         }
 
-        // Hide stats usage ping setting if it's managed by policy
-        if (BraveLocalState.get().isManagedPreference(BravePref.STATS_REPORTING_ENABLED)) {
+        // Hide stats usage ping setting if it's not compiled into this build or it's managed by
+        // policy
+        if (!BraveConfig.ENABLE_BRAVE_STATS_REPORTING
+                || BraveLocalState.get().isManagedPreference(BravePref.STATS_REPORTING_ENABLED)) {
             removePreferenceIfPresent(PREF_BRAVE_STATS_USAGE_PING);
             mBraveStatsUsagePing = null;
         } else {
@@ -1066,15 +1070,17 @@ public class BravePrivacySettings extends PrivacySettings {
                         indexData.removeEntryForKey(frag, PREF_ENS);
                         indexData.removeEntryForKey(frag, PREF_SNS);
                     }
-                    if (BraveLocalState.get().isManagedPreference(BravePref.P3A_ENABLED)) {
+                    if (!BraveConfig.ENABLE_P3A
+                            || BraveLocalState.get().isManagedPreference(BravePref.P3A_ENABLED)) {
                         indexData.removeEntryForKey(frag, PREF_SEND_P3A);
                     }
                     if (!PrivacyPreferencesManagerImpl.getInstance()
                             .isUsageAndCrashReportingPermittedByPolicy()) {
                         indexData.removeEntryForKey(frag, PREF_SEND_CRASH_REPORTS);
                     }
-                    if (BraveLocalState.get()
-                            .isManagedPreference(BravePref.STATS_REPORTING_ENABLED)) {
+                    if (!BraveConfig.ENABLE_BRAVE_STATS_REPORTING
+                            || BraveLocalState.get()
+                                    .isManagedPreference(BravePref.STATS_REPORTING_ENABLED)) {
                         indexData.removeEntryForKey(frag, PREF_BRAVE_STATS_USAGE_PING);
                     }
 

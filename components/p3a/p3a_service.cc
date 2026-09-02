@@ -93,8 +93,17 @@ P3AService::~P3AService() = default;
 
 void P3AService::RegisterPrefs(PrefRegistrySimple* registry, bool first_run) {
   MessageManager::RegisterPrefs(registry);
-  registry->RegisterBooleanPref(kP3AEnabled,
-                                !BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED));
+  // Disabled by default on Android (SecureOut) in addition to Brave Origin
+  // builds: `is_brave_origin_branded` cannot be true for Android builds
+  // (see brave/components/brave_origin/buildflags/buildflags.gni's
+  // assert), so it is excluded explicitly here. This is the actual runtime
+  // gate for P3A -- P3AService::Init() only calls
+  // MessageManager::Start() (which schedules uploads) when this pref is
+  // true, so defaulting it off is sufficient to stop all P3A network
+  // activity without any other code change.
+  registry->RegisterBooleanPref(
+      kP3AEnabled,
+      !BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED) && !BUILDFLAG(IS_ANDROID));
   // New users are shown the P3A notice via the welcome page.
   registry->RegisterBooleanPref(kP3ANoticeAcknowledged, first_run);
 

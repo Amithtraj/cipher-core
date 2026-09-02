@@ -10,11 +10,16 @@ declare_args() {
   # non-empty URL for the assert() below while guaranteeing no request
   # ever reaches a real brave.com stats-ping endpoint. Note the stats
   # updater feature itself is already compiled out below for Cipher
-  # (is_brave_origin_branded is true), so this value is also unreachable
-  # dead code in practice; kept non-live for defense in depth.
+  # (is_brave_origin_branded is true on Linux/desktop; is_android is
+  # unconditionally excluded below since is_brave_origin_branded is not
+  # supported on Android), so this value is also unreachable dead code
+  # in practice; kept non-live for defense in depth.
   brave_stats_updater_url = "https://usage-ping.invalid"
 
-  enable_brave_stats_updater = !is_brave_origin_branded
+  # SecureOut Android: brave_origin branding can't be used on Android (see
+  # brave/components/brave_origin/buildflags/buildflags.gni's assert), so
+  # explicitly exclude is_android here too to disable the stats updater.
+  enable_brave_stats_updater = !is_brave_origin_branded && !is_android
 }
 
 if (is_official_build && enable_brave_stats_updater) {

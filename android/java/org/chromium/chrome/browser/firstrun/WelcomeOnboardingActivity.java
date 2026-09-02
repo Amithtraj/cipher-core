@@ -299,7 +299,12 @@ public class WelcomeOnboardingActivity extends FirstRunActivityBase
     public void finishNativeInitialization() {
         super.finishNativeInitialization();
 
-        mIsP3aManaged = BraveLocalState.get().isManagedPreference(BravePref.P3A_ENABLED);
+        // Treat P3A as "managed" (hides the onboarding toggle entirely, same as an
+        // enterprise policy would -- see OnboardingStepAdapter) when it's not compiled
+        // into this build, so onboarding can't be used to turn it back on.
+        mIsP3aManaged =
+                !BraveConfig.ENABLE_P3A
+                        || BraveLocalState.get().isManagedPreference(BravePref.P3A_ENABLED);
         mIsCrashReportingManaged =
                 !PrivacyPreferencesManagerImpl.getInstance()
                         .isUsageAndCrashReportingPermittedByPolicy();
