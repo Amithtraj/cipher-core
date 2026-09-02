@@ -15,15 +15,24 @@ declare_args() {
   # commit), so this endpoint is unreachable in practice; kept non-live for
   # defense in depth, matching the Sync/variations/stats/updater endpoints.
   p3a_star_randomness_host = "https://star-randsrv.invalid"
+
+  # Disabled for Cipher: same rationale as p3a_star_randomness_host above,
+  # applied to P3A's sibling constellation upload endpoint (normally
+  # collector.bsg.brave.com, consumed at components/p3a/uploader.cc).
+  p3a_constellation_upload_host = "https://collector.bsg.invalid"
 }
 
 if (is_official_build) {
   assert(p3a_star_randomness_host != "")
+  assert(p3a_constellation_upload_host != "")
 }
 
 buildflag_header("buildflags") {
   header = "buildflags.h"
-  flags = [ "P3A_STAR_RANDOMNESS_HOST=\"$p3a_star_randomness_host\"" ]
+  flags = [
+    "P3A_STAR_RANDOMNESS_HOST=\"$p3a_star_randomness_host\"",
+    "P3A_CONSTELLATION_UPLOAD_HOST=\"$p3a_constellation_upload_host\"",
+  ]
 }
 
 static_library("p3a") {

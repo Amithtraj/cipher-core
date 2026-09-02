@@ -28,11 +28,27 @@ public class BraveHttpURLConnectionFactoryImplTest {
     @Test
     @SmallTest
     public void testUploadUrlHasProductVersionGuid() {
+        // Cipher disables the crash-report upload URL entirely for non-official builds (see
+        // BraveHttpURLConnectionFactoryImpl), so force an official build here to exercise the
+        // URL-construction logic this test actually verifies.
+        VersionInfo.setOverridesForTesting(/* official= */ true, /* stable= */ null, /* local= */ null);
         HttpURLConnectionFactory httpURLConnectionFactory = new BraveHttpURLConnectionFactoryImpl();
         HttpURLConnection connection = httpURLConnectionFactory.createHttpURLConnection("");
+        Assert.assertNotNull(connection);
         Uri uri = Uri.parse(connection.getURL().toString());
         Assert.assertEquals("Brave_Android", uri.getQueryParameter("product"));
         Assert.assertEquals(VersionInfo.getProductVersion(), uri.getQueryParameter("version"));
         Assert.assertEquals("00000000-0000-0000-0000-000000000000", uri.getQueryParameter("guid"));
+    }
+
+    @Test
+    @SmallTest
+    public void testUploadUrlDisabledForNonOfficialBuild() {
+        // Non-official builds (which is what every Cipher build is) must never construct a
+        // real crash-report upload URL: BraveHttpURLConnectionFactoryImpl.createHttpURLConnection
+        // returns null unless VersionInfo.isOfficialBuild() is true.
+        VersionInfo.setOverridesForTesting(/* official= */ false, /* stable= */ null, /* local= */ null);
+        HttpURLConnectionFactory httpURLConnectionFactory = new BraveHttpURLConnectionFactoryImpl();
+        Assert.assertNull(httpURLConnectionFactory.createHttpURLConnection(""));
     }
 }
