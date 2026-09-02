@@ -14,6 +14,7 @@
 #include "base/strings/strcat.h"
 #include "base/strings/string_number_conversions.h"
 #include "brave/brave_domains/service_domains.h"
+#include "brave/components/p3a/buildflags.h"
 #include "brave/components/p3a/metric_log_type.h"
 #include "brave/components/p3a/switches.h"
 #include "url/url_constants.h"
@@ -24,7 +25,6 @@ namespace {
 
 constexpr uint64_t kDefaultUploadIntervalSeconds = 60;  // 1 minute.
 constexpr char kConstellationCollectorHostPrefix[] = "collector.bsg";
-constexpr char kRandomnessHostPrefix[] = "star-randsrv.bsg";
 
 base::TimeDelta MaybeOverrideTimeDeltaFromCommandLine(
     base::CommandLine* cmdline,
@@ -88,7 +88,11 @@ P3AConfig::P3AConfig()
       randomize_upload_interval(true),
       p3a_constellation_upload_host(
           GetDefaultHost(kConstellationCollectorHostPrefix)),
-      star_randomness_host(GetDefaultHost(kRandomnessHostPrefix)) {
+      // Disabled for Cipher: neutralized to a .invalid host (see BUILD.gn's
+      // p3a_star_randomness_host) instead of being derived from the real
+      // brave.com service domain, matching the Sync/variations/stats/
+      // updater endpoints.
+      star_randomness_host(BUILDFLAG(P3A_STAR_RANDOMNESS_HOST)) {
   CheckURL(GURL(star_randomness_host));
   for (MetricLogType log_type : kAllMetricLogTypes) {
     fake_star_epochs[log_type] = std::nullopt;

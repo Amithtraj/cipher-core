@@ -54,7 +54,6 @@ import org.chromium.chrome.browser.preferences.ChromeSharedPreferences;
 import org.chromium.chrome.browser.privacy.settings.PrivacyPreferencesManagerImpl;
 import org.chromium.chrome.browser.util.PackageUtils;
 import org.chromium.components.user_prefs.UserPrefs;
-import org.chromium.components.web_discovery.WebDiscoveryPrefs;
 import org.chromium.ui.base.DeviceFormFactor;
 import org.chromium.ui.text.ChromeClickableSpan;
 import org.chromium.ui.text.SpanApplier;
@@ -219,25 +218,21 @@ public class WelcomeOnboardingActivity extends FirstRunActivityBase
     }
 
     private boolean isWDPSettingAvailable() {
-        if (!BraveConfig.WEB_DISCOVERY_ENABLED) {
-            return false;
-        }
-        return !UserPrefs.get(
-                        assumeNonNull(getProfileProviderSupplier().get()).getOriginalProfile())
-                .isManagedPreference(WebDiscoveryPrefs.WEB_DISCOVERY_ENABLED);
+        // Disabled for Cipher: treat the Web Discovery Project page as policy-managed/hidden
+        // unconditionally (same "managed" treatment mIsP3aManaged applies to the P3A checkbox),
+        // so this onboarding page never appears. WebDiscoveryPrefs.WEB_DISCOVERY_ENABLED already
+        // defaults to false at the pref level, so this is purely closing the redundant
+        // onboarding UI surface, not re-doing pref-default work.
+        return false;
     }
 
-    private void setMetricsReportingConsent(final boolean enabled, final boolean markAsShown) {
+    private void setMetricsReportingConsent(final boolean enabled) {
         try {
             // Updates reporting consent for first run.
             UmaSessionStats.changeMetricsReportingState(
                     enabled, ChangeMetricsReportingStateCalledFrom.UI_FIRST_RUN);
         } catch (Exception e) {
             Log.e(TAG, "CrashReportingOnboarding", e);
-        }
-        if (markAsShown) {
-            // Marks crash reporting message as shown.
-            OnboardingPrefManager.getInstance().setP3aCrashReportingMessageShown(true);
         }
     }
 
@@ -378,12 +373,12 @@ public class WelcomeOnboardingActivity extends FirstRunActivityBase
     }
 
     private boolean getCrashReportingPreference() {
-        if (PackageUtils.isFirstInstall(this)
-                && !OnboardingPrefManager.getInstance().isP3aCrashReportingMessageShown()) {
-            setMetricsReportingConsent(true, true);
-            return true;
-        }
-
+        // Disabled for Cipher: this used to force-enable crash-reporting consent
+        // (setMetricsReportingConsent(true, true)) on first install, uploading crash reports
+        // before the user ever saw a checkbox. Mirror getP3aPreference()'s pattern instead --
+        // report the actual current consent value and let the checkbox above (bound via
+        // mStepAdapter.setCrashReportingChecked) and its onCrashReportingPreferenceChanged
+        // callback be the only way consent is ever set to true.
         boolean isCrashReporting = false;
         try {
             isCrashReporting =
@@ -536,7 +531,7 @@ public class WelcomeOnboardingActivity extends FirstRunActivityBase
 
     @Override
     public void onCrashReportingPreferenceChanged(final boolean enabled) {
-        setMetricsReportingConsent(enabled, false);
+        setMetricsReportingConsent(enabled);
     }
 
     @Override

@@ -19,6 +19,15 @@ public class BraveHttpURLConnectionFactoryImpl extends HttpURLConnectionFactoryI
 
     @Override
     public @Nullable HttpURLConnection createHttpURLConnection(String url) {
+        // Disabled for Cipher: mirror the C++ path in
+        // chromium_src/components/crash/core/app/crash_reporter_client.cc, which returns an
+        // empty upload URL (no crash server) for non-official builds. This build is never
+        // officially signed/branded, so this guard permanently disables the upload target;
+        // VersionInfo.isOfficialBuild() is already the Java-visible equivalent of the C++
+        // OFFICIAL_BUILD macro used there.
+        if (!VersionInfo.isOfficialBuild()) {
+            return null;
+        }
         String version = VersionInfo.getProductVersion();
         String braveUploadUrl = String.format(CRASH_URL_STRING_TEMPLATE, version);
         return super.createHttpURLConnection(braveUploadUrl);

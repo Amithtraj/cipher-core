@@ -6,6 +6,26 @@
 import("//build/buildflag_header.gni")
 import("//testing/test.gni")
 
+declare_args() {
+  # Disabled for Cipher: point at an RFC 2606 .invalid host so the value
+  # stays a well-formed, non-empty URL (required by the assert() below for
+  # official builds) while guaranteeing no request ever reaches a real
+  # brave.com STAR randomness server. P3A itself already defaults to
+  # disabled on Android (kP3AEnabled, see the Sync/P3A/stats-removal
+  # commit), so this endpoint is unreachable in practice; kept non-live for
+  # defense in depth, matching the Sync/variations/stats/updater endpoints.
+  p3a_star_randomness_host = "https://star-randsrv.invalid"
+}
+
+if (is_official_build) {
+  assert(p3a_star_randomness_host != "")
+}
+
+buildflag_header("buildflags") {
+  header = "buildflags.h"
+  flags = [ "P3A_STAR_RANDOMNESS_HOST=\"$p3a_star_randomness_host\"" ]
+}
+
 static_library("p3a") {
   sources = [
     "component_installer.cc",
@@ -63,6 +83,7 @@ static_library("p3a") {
   public_deps = [ "//brave/components/p3a_utils" ]
 
   deps = [
+    ":buildflags",
     "constellation/rs/cxx:rust_lib",
     "//base",
     "//brave/brave_domains",
