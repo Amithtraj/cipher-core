@@ -6,12 +6,22 @@
 import("//build/buildflag_header.gni")
 
 declare_args() {
-  # Disabled for Cipher: .invalid (RFC 2606) keeps these well-formed,
-  # non-empty URLs for the assert() below while guaranteeing no request
-  # ever reaches a real brave.com/bravesoftware.com component-updater
-  # (extension update) endpoint.
-  updater_dev_endpoint = "https://go-updater-dev.invalid/extensions"
-  updater_prod_endpoint = "https://go-updater.invalid/extensions"
+  # Re-enabled for SecureOut (2026-09-03, Android hardening Task 6): this is
+  # Chromium/Brave's general component-updater/extension-updater delivery
+  # channel, and it is the *only* channel Shields' ad/tracker/cosmetic
+  # filter lists ship through -- disabling it (originally done here as part
+  # of the broader Sync/stats/variations/services-key lockdown) silently
+  # killed all filter-list-dependent Shields blocking. Re-pointed at
+  # Brave's real endpoints so filter lists can update again. This is a
+  # narrow, scoped reconnection of this one delivery channel only: Sync,
+  # variations, stats-updater, and the Brave-services-key header remain
+  # disabled via their own separate, independent mechanisms (see
+  # components/brave_sync/BUILD.gn, components/variations/buildflags.gni,
+  # browser/brave_stats/buildflags.gni, and
+  # browser/net/brave_service_key_network_delegate_helper.cc) and are
+  # unaffected by this change.
+  updater_dev_endpoint = "https://go-updater-dev.bravesoftware.com/extensions"
+  updater_prod_endpoint = "https://go-updater.brave.com/extensions"
 }
 
 if (is_official_build) {

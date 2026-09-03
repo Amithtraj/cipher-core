@@ -40,10 +40,13 @@ int OnBeforeStartTransaction_BraveServiceKey(
     net::HttpRequestHeaders* headers,
     const ResponseCallback& next_callback,
     T<BraveRequestInfo> ctx) {
-  // UPDATER_DEV_ENDPOINT/UPDATER_PROD_ENDPOINT are disabled for Cipher (see
-  // components/update_client/BUILD.gn), so they are intentionally left out
-  // of this allow-list: keeping them would still attach the services-key
-  // header to the now-inert component-updater requests.
+  // UPDATER_DEV_ENDPOINT/UPDATER_PROD_ENDPOINT were re-enabled for
+  // SecureOut (2026-09-03, Android hardening Task 6) to restore Shields
+  // filter-list delivery -- see components/update_client/BUILD.gn. They
+  // remain intentionally left out of this allow-list: the
+  // Brave-services-key header stays disabled independently of the
+  // component-updater endpoint itself, so component-updater requests (now
+  // real, live requests) go out without it.
   static const base::NoDestructor<std::vector<std::string>> allowed_domains{{
       kExtensionUpdaterDomain,
 // Gate3 is used by both Rewards and Wallet, but only Rewards OAuth requests
